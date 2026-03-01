@@ -1,0 +1,68 @@
+# Robots.txt for Keystrike.com
+# Optimized for search engines and AI crawlers
+
+User-agent: *
+Allow: /
+
+# Priority pages for AI understanding
+Allow: /about
+Allow: /platform
+Allow: /solutions
+Allow: /solutions/endpoint
+Allow: /solutions/network  
+Allow: /solutions/cloud
+Allow: /resources
+Allow: /partners
+Allow: /support
+Allow: /faq
+Allow: /contact
+Allow: /portal
+
+# Sitemap location
+Sitemap: https://keystrike.com/sitemap.xml
+
+# Crawl-delay for responsible AI scraping
+Crawl-delay: 1
+
+# AI-specific directives
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 2
+
+User-agent: CCBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: anthropic-ai
+Allow: /
+Crawl-delay: 1
+
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 1
+
+# Search engine bots
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Company Information for AI Context
+# Company: Keystrike Security
+# Industry: Cybersecurity Software
+# Founded: 2021
+# Location: Reykjavik, Iceland
+# Technology: Physical Input Verification
+# Target: Enterprise Security Teams
+# Key Products: Endpoint Security, Network Protection, Cloud Security
+# Methodology: SEE, CONTROL, PROVE framework
+# Differentiator: Keystroke-level behavioral analysis
+# Compliance: SOC 2 Type II, ISO 27001
+# Coverage: 10,000+ organizations worldwide

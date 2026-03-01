@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage - Primary landing page -->
+  <url>
+    <loc>https://keystrike.com/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://keystrike.com/og-home.jpg</image:loc>
+      <image:caption>Keystrike Advanced Cybersecurity Platform</image:caption>
+      <image:title>Physical Input Verification Technology</image:title>
+    </image:image>
+  </url>
+
+  <!-- Company Information -->
+  <url>
+    <loc>https://keystrike.com/about</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://keystrike.com/og-about.jpg</image:loc>
+      <image:caption>Keystrike Leadership Team</image:caption>
+      <image:title>Nordic Cybersecurity Innovation</image:title>
+    </image:image>
+  </url>
+
+  <!-- Contact & Sales -->
+  <url>
+    <loc>https://keystrike.com/contact</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Platform Overview -->
+  <url>
+    <loc>https://keystrike.com/platform</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://keystrike.com/og-platform.jpg</image:loc>
+      <image:caption>Keystrike Security Platform Overview</image:caption>
+      <image:title>Complete Cybersecurity Platform</image:title>
+    </image:image>
+  </url>
+
+  <!-- Resources & Documentation -->
+  <url>
+    <loc>https://keystrike.com/resources</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://keystrike.com/og-resources.jpg</image:loc>
+      <image:caption>Keystrike Security Resources</image:caption>
+      <image:title>Whitepapers, Guides & Best Practices</image:title>
+    </image:image>
+  </url>
+
+  <!-- Partner Ecosystem -->
+  <url>
+    <loc>https://keystrike.com/partners</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://keystrike.com/og-partners.jpg</image:loc>
+      <image:caption>Keystrike Partner Ecosystem</image:caption>
+      <image:title>Technology & Channel Partners</image:title>
+    </image:image>
+  </url>
+
+  <!-- Support Center -->
+  <url>
+    <loc>https://keystrike.com/support</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://keystrike.com/og-support.jpg</image:loc>
+      <image:caption>Keystrike Support Center</image:caption>
+      <image:title>Help Center & Technical Support</image:title>
+    </image:image>
+  </url>
+
+  <!-- FAQ -->
+  <url>
+    <loc>https://keystrike.com/faq</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Solutions Overview -->
+  <url>
+    <loc>https://keystrike.com/solutions</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://keystrike.com/og-solutions.jpg</image:loc>
+      <image:caption>Keystrike Security Solutions Portfolio</image:caption>
+      <image:title>Endpoint, Network, and Cloud Security</image:title>
+    </image:image>
+  </url>
+
+  <!-- Endpoint Security -->
+  <url>
+    <loc>https://keystrike.com/solutions/endpoint</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://keystrike.com/og-endpoint.jpg</image:loc>
+      <image:caption>Keystrike Endpoint Security Solution</image:caption>
+      <image:title>Physical Input Verification for Endpoints</image:title>
+    </image:image>
+  </url>
+
+  <!-- Network Protection -->
+  <url>
+    <loc>https://keystrike.com/solutions/network</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://keystrike.com/og-network.jpg</image:loc>
+      <image:caption>Keystrike Network Protection Solution</image:caption>
+      <image:title>Zero Trust Network Architecture</image:title>
+    </image:image>
+  </url>
+
+  <!-- Cloud Security -->
+  <url>
+    <loc>https://keystrike.com/solutions/cloud</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://keystrike.com/og-cloud.jpg</image:loc>
+      <image:caption>Keystrike Cloud Security Solution</image:caption>
+      <image:title>Multi-Cloud Protection Platform</image:title>
+    </image:image>
+  </url>
+
+  <!-- Portal Selection -->
+  <url>
+    <loc>https://keystrike.com/portal</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Customer Portal -->
+  <url>
+    <loc>https://keystrike.com/portal/customer</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Partner Portal -->
+  <url>
+    <loc>https://keystrike.com/portal/partner</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

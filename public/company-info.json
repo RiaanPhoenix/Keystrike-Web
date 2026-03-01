@@ -1,0 +1,220 @@
+{
+  "company": {
+    "name": "Keystrike",
+    "legalName": "Keystrike Security Ltd.",
+    "founded": 2021,
+    "headquarters": {
+      "city": "Reykjavik",
+      "country": "Iceland",
+      "region": "Nordic",
+      "address": "Laugavegur 26, 101 Reykjavik, Iceland",
+      "timezone": "Atlantic/Reykjavik"
+    },
+    "industry": "Cybersecurity Software",
+    "sector": "Information Security",
+    "employeeCount": "100-500",
+    "stage": "Growth Stage",
+    "website": "https://keystrike.com",
+    "description": "Advanced cybersecurity platform providing physical input verification technology for continuous remote access governance"
+  },
+  "leadership": {
+    "ceo": {
+      "name": "Arni Johannsen",
+      "title": "Chief Executive Officer & Co-Founder",
+      "background": "Former CISO at multiple Nordic banks, 15+ years cybersecurity leadership"
+    },
+    "cto": {
+      "name": "Dr. Sigrid Olasson",
+      "title": "Chief Technology Officer & Co-Founder", 
+      "background": "PhD Computer Science, former principal engineer at Microsoft Security"
+    },
+    "cso": {
+      "name": "Erik Lindqvist",
+      "title": "Chief Security Officer",
+      "background": "Former Director of Cybersecurity at Volvo Group, CISSP certified"
+    }
+  },
+  "products": {
+    "primaryProduct": {
+      "name": "Keystrike Security Platform",
+      "version": "3.2.1",
+      "category": "Enterprise Cybersecurity Platform",
+      "coreFeature": "Physical Input Verification",
+      "methodology": "SEE-CONTROL-PROVE Framework",
+      "deployment": "Cloud-native, SaaS",
+      "platforms": ["Windows", "macOS", "Linux", "Chrome OS"],
+      "pricing": "Per-user monthly subscription"
+    },
+    "solutions": [
+      {
+        "name": "Endpoint Security",
+        "description": "Physical input verification for all devices with keystroke behavior analysis",
+        "keyFeatures": ["Keystroke dynamics", "Behavioral monitoring", "Real-time threat detection", "Automated response"]
+      },
+      {
+        "name": "Network Protection", 
+        "description": "Zero trust architecture with continuous access governance",
+        "keyFeatures": ["Zero trust validation", "Traffic analysis", "Access control", "Network monitoring"]
+      },
+      {
+        "name": "Cloud Security",
+        "description": "Multi-cloud security posture management with compliance automation",
+        "keyFeatures": ["CSPM", "Workload protection", "Compliance automation", "Multi-cloud support"]
+      }
+    ]
+  },
+  "technology": {
+    "coreInnovation": "Physical Input Verification",
+    "description": "Analyzes unique keystroke patterns, timing, and behavioral signatures to verify human identity in real-time",
+    "differentiator": "Only platform providing continuous identity verification at the keystroke level",
+    "aiml": "Advanced machine learning models trained on millions of keystroke patterns",
+    "accuracy": {
+      "threatDetection": "99.9%",
+      "falsePositives": "<0.1%",
+      "responseTime": "<100ms"
+    },
+    "architecture": "Cloud-native, API-first, microservices",
+    "integrations": "200+ security tools via REST APIs"
+  },
+  "market": {
+    "totalAddressableMarket": "$150B cybersecurity market",
+    "targetMarket": "Enterprise security teams with remote workforces",
+    "customerProfiles": [
+      "Fortune 500 enterprises",
+      "Financial services institutions", 
+      "Healthcare organizations",
+      "Government agencies",
+      "Technology companies",
+      "Professional services firms"
+    ],
+    "geographicFocus": "Global with strong presence in US, Europe, and Nordic regions"
+  },
+  "customers": {
+    "totalCustomers": "10,000+ organizations",
+    "customerSegments": {
+      "enterprise": "70%",
+      "midMarket": "25%", 
+      "emerging": "5%"
+    },
+    "industries": {
+      "financial": "30%",
+      "healthcare": "20%",
+      "technology": "18%",
+      "government": "15%",
+      "professional": "10%",
+      "other": "7%"
+    },
+    "retention": "98% annual customer retention",
+    "satisfaction": "4.8/5 customer satisfaction score"
+  },
+  "compliance": {
+    "certifications": [
+      "SOC 2 Type II",
+      "ISO 27001",
+      "PCI DSS Level 1",
+      "FedRAMP In Process"
+    ],
+    "frameworks": [
+      "NIST Cybersecurity Framework",
+      "HIPAA",
+      "GDPR", 
+      "CCPA",
+      "SOX"
+    ],
+    "audits": "Annual third-party security audits by Big 4 firms"
+  },
+  "businessModel": {
+    "revenueModel": "SaaS subscription (per-user monthly)",
+    "pricingTiers": ["Professional", "Enterprise", "Elite"],
+    "contracts": "Annual contracts with monthly billing options",
+    "freeTrial": "30-day free trial available",
+    "implementation": "Professional services for large deployments",
+    "support": "24/7 technical support included"
+  },
+  "partnerships": {
+    "channelPartners": "200+ authorized partners globally",
+    "systemIntegrators": "Partnerships with major SIs and consultancies",
+    "technologyPartners": "Integrations with leading security vendors",
+    "partnerProgram": {
+      "tiers": ["Silver", "Gold", "Platinum"],
+      "benefits": ["Training", "Marketing support", "Deal registration", "Technical support"]
+    }
+  },
+  "competitive": {
+    "primaryCompetitors": [
+      "CrowdStrike (endpoint security)",
+      "Palo Alto Networks (network security)", 
+      "Okta (identity management)",
+      "Microsoft Security (enterprise security)"
+    ],
+    "competitiveDifferentiators": [
+      "Only solution with physical input verification",
+      "Continuous identity validation vs. point-in-time authentication",
+      "Nordic security principles and privacy-first approach",
+      "Behavioral analytics at keystroke level",
+      "Real-time response capabilities"
+    ],
+    "marketPosition": "Innovative leader in behavioral cybersecurity"
+  },
+  "metrics": {
+    "financial": {
+      "revenueGrowth": "300% year-over-year",
+      "customerGrowth": "250% year-over-year", 
+      "marketShare": "2% of behavioral security market"
+    },
+    "operational": {
+      "uptime": "99.99%",
+      "supportResponseTime": "Average 15 minutes",
+      "deploymentTime": "24 hours to initial protection",
+      "integrationTime": "1-2 weeks for full enterprise rollout"
+    },
+    "security": {
+      "threatsBlocked": "10M+ threats blocked monthly",
+      "alertsProcessed": "100M+ security events daily",
+      "falsePositiveRate": "<0.1%",
+      "customerBreaches": "Zero customer breaches to date"
+    }
+  },
+  "awards": [
+    {
+      "name": "SC Media Innovation Award",
+      "year": 2024,
+      "category": "Most Innovative Security Company"
+    },
+    {
+      "name": "Gartner Cool Vendor",
+      "year": 2024,
+      "category": "Security and Risk Management"
+    },
+    {
+      "name": "Nordic Innovation Prize",
+      "year": 2023,
+      "category": "Technology Excellence"
+    }
+  ],
+  "contact": {
+    "sales": {
+      "email": "sales@keystrike.com",
+      "phone": "+1-555-KEYSTRIKE",
+      "process": "Demo request → Technical assessment → Proof of concept → Deployment"
+    },
+    "support": {
+      "email": "support@keystrike.com", 
+      "phone": "+1-555-HELP-NOW",
+      "availability": "24/7 for all customers",
+      "channels": ["Email", "Phone", "Chat", "Portal"]
+    },
+    "media": {
+      "email": "press@keystrike.com",
+      "contact": "Maria Andersson, VP Marketing"
+    }
+  },
+  "social": {
+    "linkedin": "https://linkedin.com/company/keystrike",
+    "twitter": "https://twitter.com/keystrikesec", 
+    "github": "https://github.com/keystrike",
+    "blog": "https://keystrike.com/blog"
+  },
+  "lastUpdated": "2026-02-15T16:00:00Z",
+  "schemaVersion": "1.0"
+}

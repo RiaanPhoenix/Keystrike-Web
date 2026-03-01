@@ -1,0 +1,84 @@
+{
+  "name": "Keystrike - Advanced Cybersecurity Platform",
+  "short_name": "Keystrike",
+  "description": "Physical input verification technology for enterprise cybersecurity. SEE, CONTROL, and PROVE your security posture with Nordic precision.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "dir": "ltr",
+  "categories": ["business", "productivity", "security"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Contact Sales",
+      "short_name": "Contact",
+      "description": "Contact Keystrike sales team",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/shortcut-contact.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Customer Portal",
+      "short_name": "Portal",
+      "description": "Access customer portal", 
+      "url": "/portal/customer",
+      "icons": [
+        {
+          "src": "/shortcut-portal.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Solutions",
+      "short_name": "Solutions",
+      "description": "View security solutions",
+      "url": "/solutions", 
+      "icons": [
+        {
+          "src": "/shortcut-solutions.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Keystrike Desktop Dashboard"
+    },
+    {
+      "src": "/screenshot-mobile.png", 
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Keystrike Mobile Interface"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

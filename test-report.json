@@ -1,0 +1,127 @@
+{
+  "timestamp": "2026-02-15T17:41:49.099Z",
+  "baseUrl": "http://localhost:3000",
+  "summary": {
+    "total": 11,
+    "passed": 9,
+    "failed": 2,
+    "successRate": "81.8%"
+  },
+  "pageTests": [
+    {
+      "name": "Homepage Load",
+      "path": "/",
+      "status": 308,
+      "size": 0,
+      "pass": false,
+      "issues": [
+        "Title should contain \"Keystrike\", got \"\"",
+        "Content should contain \"Advanced Cybersecurity\"",
+        "Content seems too small - possible error",
+        "Missing viewport meta tag",
+        "Missing OpenGraph tags"
+      ],
+      "title": ""
+    },
+    {
+      "name": "About Page",
+      "path": "/about",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "size": 115821,
+      "pass": true,
+      "issues": [],
+      "title": "About Keystrike | Nordic Precision Meets Human-Centric Innovation | Keystrike"
+    },
+    {
+      "name": "Solutions Overview",
+      "path": "/solutions",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "size": 130406,
+      "pass": true,
+      "issues": [],
+      "title": "Cybersecurity Solutions | Endpoint, Network &amp; Cloud Security | Keystrike"
+    },
+    {
+      "name": "Endpoint Security",
+      "path": "/solutions/endpoint",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "size": 178129,
+      "pass": true,
+      "issues": [],
+      "title": "Endpoint Security Solution | Physical Input Verification | Keystrike"
+    },
+    {
+      "name": "FAQ Page",
+      "path": "/faq",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "size": 129726,
+      "pass": false,
+      "issues": [
+        "Title should contain \"FAQ\", got \"Frequently Asked Questions | Keystrike Cybersecurity | Keystrike\""
+      ],
+      "title": "Frequently Asked Questions | Keystrike Cybersecurity | Keystrike"
+    },
+    {
+      "name": "Contact Page",
+      "path": "/contact",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "size": 112358,
+      "pass": true,
+      "issues": [],
+      "title": "Contact Keystrike | Request Demo &amp; Security Assessment | Keystrike"
+    },
+    {
+      "name": "Portal Selection",
+      "path": "/portal",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "size": 110313,
+      "pass": true,
+      "issues": [],
+      "title": "Keystrike Portals | Customer &amp; Partner Access | Keystrike"
+    }
+  ],
+  "staticTests": [
+    {
+      "name": "Sitemap",
+      "path": "/sitemap.xml",
+      "status": 200,
+      "contentType": "application/xml",
+      "size": 3802,
+      "pass": true,
+      "issues": []
+    },
+    {
+      "name": "Robots.txt",
+      "path": "/robots.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=UTF-8",
+      "size": 1256,
+      "pass": true,
+      "issues": []
+    },
+    {
+      "name": "Manifest",
+      "path": "/manifest.json",
+      "status": 200,
+      "contentType": "application/json; charset=UTF-8",
+      "size": 2053,
+      "pass": true,
+      "issues": []
+    },
+    {
+      "name": "Company Info",
+      "path": "/company-info.json",
+      "status": 200,
+      "contentType": "application/json; charset=UTF-8",
+      "size": 7647,
+      "pass": true,
+      "issues": []
+    }
+  ]
+}
