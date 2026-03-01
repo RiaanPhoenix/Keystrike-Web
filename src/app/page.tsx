@@ -222,7 +222,7 @@ export default function Home() {
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-lg shadow-lg">
               <thead>
-                <tr style={{backgroundColor: '#0D6E6E'}}>
+                <tr style={{backgroundColor: 'var(--accent)'}}>
                   <th className="px-6 py-4 text-left text-white font-bold text-lg">Tool</th>
                   <th className="px-6 py-4 text-left text-white font-bold text-lg">The Blind Spot</th>
                   <th className="px-6 py-4 text-left text-white font-bold text-lg">The Fix</th>
