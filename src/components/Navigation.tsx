@@ -71,12 +71,9 @@ export default function Navigation({ currentPage }: { currentPage?: string }) {
             </nav>
           </div>
           <div className="flex items-center space-x-4">
-            <button className="btn btn-secondary">
-              Customer Login
-            </button>
             <a href="/contact">
               <button className="btn btn-primary">
-                Contact Sales
+                Contact Us
               </button>
             </a>
           </div>
