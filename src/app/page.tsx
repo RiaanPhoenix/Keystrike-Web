@@ -207,85 +207,67 @@ export default function Home() {
       {/* Statistics banner moved below video section */}
 
       {/* Continuous Access Governance Banner */}
+      {/* How Keystrike Completes the Security Stack */}
       <section className="bg-surface-secondary py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
-              Continuous Access Governance Engine
+              How Keystrike Completes the Security Stack
             </h2>
-            <p className="text-xl text-text-primary">
-              Keystrike closes the gap between access intent and access reality
+            <p className="text-xl text-text-primary max-w-4xl mx-auto">
+              Keystrike doesn't replace any tool in the stack. It completes each one by giving it the ground truth and session-level verification it was never designed to provide.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl font-bold text-text-primary mb-6">Complete Your Identity Stack</h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-surface-muted rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-text-primary font-bold text-sm">IAM</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-text-primary">Identity & Access Management</h4>
-                    <p className="text-text-secondary text-sm">Your existing IAM foundation</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-surface-muted rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-text-primary font-bold text-sm">PAM</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-text-primary">Privileged Access Management</h4>
-                    <p className="text-text-secondary text-sm">Critical access controls</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-surface-muted rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-text-primary font-bold text-sm">SIEM</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-text-primary">Security Information & Event Management</h4>
-                    <p className="text-text-secondary text-sm">Centralized security monitoring</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-sm">KS</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-text-primary">Keystrike Physical Input Verification</h4>
-                    <p className="text-accent text-sm">The missing piece - completes your identity stack</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-surface rounded-lg p-8 border border-border">
-              <h4 className="text-xl font-bold text-text-primary mb-6 text-center">Potential Integrations</h4>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center py-4 bg-surface-secondary rounded-lg">
-                  <div className="font-semibold text-text-primary text-sm">CrowdStrike</div>
-                  <div className="text-text-muted text-xs">Endpoint Detection</div>
-                </div>
-                <div className="text-center py-4 bg-surface-secondary rounded-lg">
-                  <div className="font-semibold text-text-primary text-sm">Okta</div>
-                  <div className="text-text-muted text-xs">Identity Management</div>
-                </div>
-                <div className="text-center py-4 bg-surface-secondary rounded-lg">
-                  <div className="font-semibold text-text-primary text-sm">Splunk</div>
-                  <div className="text-text-muted text-xs">SIEM Platform</div>
-                </div>
-                <div className="text-center py-4 bg-surface-secondary rounded-lg">
-                  <div className="font-semibold text-text-primary text-sm">Azure AD</div>
-                  <div className="text-text-muted text-xs">Cloud Directory</div>
-                </div>
-              </div>
-              <div className="text-center mt-6">
-                <button className="btn btn-secondary text-sm">
-                  View All Integrations
-                </button>
-              </div>
-            </div>
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white rounded-lg shadow-lg">
+              <thead>
+                <tr style={{backgroundColor: '#0D6E6E'}}>
+                  <th className="px-6 py-4 text-left text-white font-bold text-lg">Tool</th>
+                  <th className="px-6 py-4 text-left text-white font-bold text-lg">Gap for Remote Access</th>
+                  <th className="px-6 py-4 text-left text-white font-bold text-lg">Keystrike Fills</th>
+                  <th className="px-6 py-4 text-left text-white font-bold text-lg">Talk Track</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-white border-b border-gray-100">
+                  <td className="px-6 py-6 font-bold text-text-primary text-lg">PAM</td>
+                  <td className="px-6 py-6 text-text-primary">Credentials managed, not continuously verified</td>
+                  <td className="px-6 py-6 text-text-primary">
+                    <strong>Pillar 2:</strong> Cryptographic attestation beyond credential checkout.<br/>
+                    <strong>Pillar 1:</strong> Live map surfaces all access paths outside PAM scope.
+                  </td>
+                  <td className="px-6 py-6 text-text-primary">PAM controls the vault. Keystrike verifies who controls every command inside the session — and maps every access path your PAM doesn't manage.</td>
+                </tr>
+                <tr className="bg-gray-50 border-b border-gray-100">
+                  <td className="px-6 py-6 font-bold text-text-primary text-lg">IGA / MFA</td>
+                  <td className="px-6 py-6 text-text-primary">Lifecycle focus; slow to detect privilege abuse</td>
+                  <td className="px-6 py-6 text-text-primary">
+                    <strong>Pillar 1:</strong> Live map detects misuse across active sessions.<br/>
+                    <strong>Pillar 2:</strong> Attestation blocks unauthorized commands in real time.
+                  </td>
+                  <td className="px-6 py-6 text-text-primary">IGA manages entitlements. Keystrike shows when those entitlements are being misused live — and stops the damage before it occurs.</td>
+                </tr>
+                <tr className="bg-white border-b border-gray-100">
+                  <td className="px-6 py-6 font-bold text-text-primary text-lg">SIEM</td>
+                  <td className="px-6 py-6 text-text-primary">Log aggregation; delayed alerts on past events</td>
+                  <td className="px-6 py-6 text-text-primary">
+                    <strong>Pillar 1:</strong> Live topology as a new data source.<br/>
+                    <strong>Pillar 2:</strong> Zero-false-positive attestation failures as definitive IOCs.
+                  </td>
+                  <td className="px-6 py-6 text-text-primary">SIEM correlates events after the fact. Keystrike feeds it cryptographic signals and live topology data that make every alert more accurate.</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-6 py-6 font-bold text-text-primary text-lg">ZTNA</td>
+                  <td className="px-6 py-6 text-text-primary">Verifies access at connection; cannot see inside the session</td>
+                  <td className="px-6 py-6 text-text-primary">
+                    <strong>Pillar 1:</strong> Maps east-west movement inside the trusted perimeter.<br/>
+                    <strong>Pillar 2:</strong> Extends zero trust from connection grant to command execution.
+                  </td>
+                  <td className="px-6 py-6 text-text-primary">ZTNA controls the door. Keystrike verifies every action taken inside the room — and maps everything ZTNA can't see.</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
