@@ -45,12 +45,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-text-primary mb-6" itemProp="name">
-              Advanced Cybersecurity.{" "}
-              <span className="text-accent">Simplified.</span>
+              <span className="text-accent">THE IDENTITY GAP</span>
             </h1>
             <div className="text-xl text-text-primary mb-8 max-w-3xl mx-auto" itemProp="description">
-              <p>Protect your organization with real-time, enforceable security boundary.</p>
-              <p>Across interactive remote access activity.</p>
+              <p className="text-2xl font-bold mb-4">Attackers Don't Break In. They Log In.</p>
+              <p className="mb-4">Your identity stack is hardened. But after access is granted, remote sessions remain invisible, unenforced, and wide open. That's where the real damage happens.</p>
+              <p className="text-xl font-semibold">Keystrike makes every remote action visible, enforceable, and provable in real time — interrupting attack chains before they cause damage.</p>
             </div>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
               <a href="/contact" className="btn btn-primary text-lg px-8 py-3" 
