@@ -224,8 +224,8 @@ export default function Home() {
               <thead>
                 <tr style={{backgroundColor: '#0D6E6E'}}>
                   <th className="px-6 py-4 text-left text-white font-bold text-lg">Tool</th>
-                  <th className="px-6 py-4 text-left text-white font-bold text-lg">Gap for Remote Access</th>
-                  <th className="px-6 py-4 text-left text-white font-bold text-lg">Keystrike Fills</th>
+                  <th className="px-6 py-4 text-left text-white font-bold text-lg">The Blind Spot</th>
+                  <th className="px-6 py-4 text-left text-white font-bold text-lg">The Fix</th>
                   <th className="px-6 py-4 text-left text-white font-bold text-lg">Why it Works</th>
                 </tr>
               </thead>
