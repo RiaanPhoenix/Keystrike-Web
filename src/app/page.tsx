@@ -207,71 +207,6 @@ export default function Home() {
       {/* Statistics banner moved below video section */}
 
       {/* Continuous Access Governance Banner */}
-      {/* How Keystrike Completes the Security Stack */}
-      <section className="bg-surface-secondary py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
-              How Keystrike Completes the Security Stack
-            </h2>
-            <p className="text-xl text-text-primary max-w-4xl mx-auto">
-              The tools in your stack were built to do one thing well. Keystrike fills the gaps between them, giving each one the session-level visibility it was never designed to have.
-            </p>
-          </div>
-          
-          <div className="overflow-x-auto">
-            <table className="w-full bg-white rounded-lg shadow-lg">
-              <thead>
-                <tr style={{backgroundColor: 'var(--accent)'}}>
-                  <th className="px-6 py-4 text-left text-white font-bold text-lg">Tool</th>
-                  <th className="px-6 py-4 text-left text-white font-bold text-lg">The Blind Spot</th>
-                  <th className="px-6 py-4 text-left text-white font-bold text-lg">The Fix</th>
-                  <th className="px-6 py-4 text-left text-white font-bold text-lg">Why it Works</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-white border-b border-gray-100">
-                  <td className="px-6 py-6 font-bold text-text-primary text-lg">PAM</td>
-                  <td className="px-6 py-6 text-text-primary">Credentials managed, not continuously verified</td>
-                  <td className="px-6 py-6 text-text-primary">
-                    <strong>CONTROL:</strong> Cryptographic attestation beyond credential checkout.<br/>
-                    <strong>SEE:</strong> Live map surfaces all access paths outside PAM scope.
-                  </td>
-                  <td className="px-6 py-6 text-text-primary">PAM controls the vault. Keystrike verifies who controls every command inside the session — and maps every access path your PAM doesn't manage.</td>
-                </tr>
-                <tr className="bg-gray-50 border-b border-gray-100">
-                  <td className="px-6 py-6 font-bold text-text-primary text-lg">IGA / MFA</td>
-                  <td className="px-6 py-6 text-text-primary">Lifecycle focus; slow to detect privilege abuse</td>
-                  <td className="px-6 py-6 text-text-primary">
-                    <strong>SEE:</strong> Live map detects misuse across active sessions.<br/>
-                    <strong>CONTROL:</strong> Attestation blocks unauthorized commands in real time.
-                  </td>
-                  <td className="px-6 py-6 text-text-primary">IGA manages entitlements. Keystrike shows when those entitlements are being misused live — and stops the damage before it occurs.</td>
-                </tr>
-                <tr className="bg-white border-b border-gray-100">
-                  <td className="px-6 py-6 font-bold text-text-primary text-lg">SIEM</td>
-                  <td className="px-6 py-6 text-text-primary">Log aggregation; delayed alerts on past events</td>
-                  <td className="px-6 py-6 text-text-primary">
-                    <strong>SEE:</strong> Live topology as a new data source.<br/>
-                    <strong>CONTROL:</strong> Zero-false-positive attestation failures as definitive IOCs.
-                  </td>
-                  <td className="px-6 py-6 text-text-primary">SIEM correlates events after the fact. Keystrike feeds it cryptographic signals and live topology data that make every alert more accurate.</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="px-6 py-6 font-bold text-text-primary text-lg">ZTNA</td>
-                  <td className="px-6 py-6 text-text-primary">Verifies access at connection; cannot see inside the session</td>
-                  <td className="px-6 py-6 text-text-primary">
-                    <strong>SEE:</strong> Maps east-west movement inside the trusted perimeter.<br/>
-                    <strong>CONTROL:</strong> Extends zero trust from connection grant to command execution.
-                  </td>
-                  <td className="px-6 py-6 text-text-primary">ZTNA controls the door. Keystrike verifies every action taken inside the room — and maps everything ZTNA can't see.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
       {/* How Keystrike Works - Video Section */}
       <section className="bg-surface py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -345,6 +280,71 @@ export default function Home() {
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How Keystrike Completes the Security Stack */}
+      <section className="bg-surface-secondary py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
+              How Keystrike Completes the Security Stack
+            </h2>
+            <p className="text-xl text-text-primary max-w-4xl mx-auto">
+              The tools in your stack were built to do one thing well. Keystrike fills the gaps between them, giving each one the session-level visibility it was never designed to have.
+            </p>
+          </div>
+          
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white rounded-lg shadow-lg">
+              <thead>
+                <tr style={{backgroundColor: 'var(--accent)'}}>
+                  <th className="px-6 py-4 text-left text-white font-bold text-lg">Tool</th>
+                  <th className="px-6 py-4 text-left text-white font-bold text-lg">The Blind Spot</th>
+                  <th className="px-6 py-4 text-left text-white font-bold text-lg">The Fix</th>
+                  <th className="px-6 py-4 text-left text-white font-bold text-lg">Why it Works</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-white border-b border-gray-100">
+                  <td className="px-6 py-6 font-bold text-text-primary text-lg">PAM</td>
+                  <td className="px-6 py-6 text-text-primary">Credentials managed, not continuously verified</td>
+                  <td className="px-6 py-6 text-text-primary">
+                    <strong>CONTROL:</strong> Cryptographic attestation beyond credential checkout.<br/>
+                    <strong>SEE:</strong> Live map surfaces all access paths outside PAM scope.
+                  </td>
+                  <td className="px-6 py-6 text-text-primary">PAM controls the vault. Keystrike verifies who controls every command inside the session — and maps every access path your PAM doesn't manage.</td>
+                </tr>
+                <tr className="bg-gray-50 border-b border-gray-100">
+                  <td className="px-6 py-6 font-bold text-text-primary text-lg">IGA / MFA</td>
+                  <td className="px-6 py-6 text-text-primary">Lifecycle focus; slow to detect privilege abuse</td>
+                  <td className="px-6 py-6 text-text-primary">
+                    <strong>SEE:</strong> Live map detects misuse across active sessions.<br/>
+                    <strong>CONTROL:</strong> Attestation blocks unauthorized commands in real time.
+                  </td>
+                  <td className="px-6 py-6 text-text-primary">IGA manages entitlements. Keystrike shows when those entitlements are being misused live — and stops the damage before it occurs.</td>
+                </tr>
+                <tr className="bg-white border-b border-gray-100">
+                  <td className="px-6 py-6 font-bold text-text-primary text-lg">SIEM</td>
+                  <td className="px-6 py-6 text-text-primary">Log aggregation; delayed alerts on past events</td>
+                  <td className="px-6 py-6 text-text-primary">
+                    <strong>SEE:</strong> Live topology as a new data source.<br/>
+                    <strong>CONTROL:</strong> Zero-false-positive attestation failures as definitive IOCs.
+                  </td>
+                  <td className="px-6 py-6 text-text-primary">SIEM correlates events after the fact. Keystrike feeds it cryptographic signals and live topology data that make every alert more accurate.</td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-6 py-6 font-bold text-text-primary text-lg">ZTNA</td>
+                  <td className="px-6 py-6 text-text-primary">Verifies access at connection; cannot see inside the session</td>
+                  <td className="px-6 py-6 text-text-primary">
+                    <strong>SEE:</strong> Maps east-west movement inside the trusted perimeter.<br/>
+                    <strong>CONTROL:</strong> Extends zero trust from connection grant to command execution.
+                  </td>
+                  <td className="px-6 py-6 text-text-primary">ZTNA controls the door. Keystrike verifies every action taken inside the room — and maps everything ZTNA can't see.</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
