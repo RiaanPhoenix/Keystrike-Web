@@ -110,9 +110,10 @@ export default function Home() {
             Stop Attacks Inside Your <span className="text-accent">Remote Sessions</span>
           </h2>
           <div className="text-lg text-text-primary leading-relaxed space-y-4">
-            <p>Authentication is no longer the finish line, it's the new starting point for attackers. Once inside a legitimate session, malicious actors become invisible, bypassing identity and endpoint tools to move laterally and strike.</p>
-            <p>The gap isn't identity. It's session governance.</p>
-            <p className="text-xl md:text-2xl font-bold text-text-primary"><strong>Keystrike makes every remote action visible and enforceable in real-time. By verifying the human behind the keys, we interrupt attack chains before they cause damage.</strong></p>
+            <p>Every organization defines who should have access. Almost none can see what that access actually does.</p>
+            <p>Once a remote session begins, identity tooling stops. Security teams can't tell how many connections are live, what systems are being touched, or whether activity matches approved intent.</p>
+            <p>Logs get collected after the damage is done. Authentication may be strong. Sessions are still opaque.</p>
+            <p className="text-xl md:text-2xl font-bold text-text-primary"><strong>Keystrike was founded on one conviction: you can't control what you can't continuously see - and verify.</strong></p>
           </div>
         </div>
       </section>
