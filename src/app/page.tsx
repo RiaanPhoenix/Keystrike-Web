@@ -234,8 +234,8 @@ export default function Home() {
                   <td className="px-6 py-6 font-bold text-text-primary text-lg">PAM</td>
                   <td className="px-6 py-6 text-text-primary">Credentials managed, not continuously verified</td>
                   <td className="px-6 py-6 text-text-primary">
-                    <strong>Pillar 2:</strong> Cryptographic attestation beyond credential checkout.<br/>
-                    <strong>Pillar 1:</strong> Live map surfaces all access paths outside PAM scope.
+                    <strong>CONTROL:</strong> Cryptographic attestation beyond credential checkout.<br/>
+                    <strong>SEE:</strong> Live map surfaces all access paths outside PAM scope.
                   </td>
                   <td className="px-6 py-6 text-text-primary">PAM controls the vault. Keystrike verifies who controls every command inside the session — and maps every access path your PAM doesn't manage.</td>
                 </tr>
@@ -243,8 +243,8 @@ export default function Home() {
                   <td className="px-6 py-6 font-bold text-text-primary text-lg">IGA / MFA</td>
                   <td className="px-6 py-6 text-text-primary">Lifecycle focus; slow to detect privilege abuse</td>
                   <td className="px-6 py-6 text-text-primary">
-                    <strong>Pillar 1:</strong> Live map detects misuse across active sessions.<br/>
-                    <strong>Pillar 2:</strong> Attestation blocks unauthorized commands in real time.
+                    <strong>SEE:</strong> Live map detects misuse across active sessions.<br/>
+                    <strong>CONTROL:</strong> Attestation blocks unauthorized commands in real time.
                   </td>
                   <td className="px-6 py-6 text-text-primary">IGA manages entitlements. Keystrike shows when those entitlements are being misused live — and stops the damage before it occurs.</td>
                 </tr>
@@ -252,8 +252,8 @@ export default function Home() {
                   <td className="px-6 py-6 font-bold text-text-primary text-lg">SIEM</td>
                   <td className="px-6 py-6 text-text-primary">Log aggregation; delayed alerts on past events</td>
                   <td className="px-6 py-6 text-text-primary">
-                    <strong>Pillar 1:</strong> Live topology as a new data source.<br/>
-                    <strong>Pillar 2:</strong> Zero-false-positive attestation failures as definitive IOCs.
+                    <strong>SEE:</strong> Live topology as a new data source.<br/>
+                    <strong>CONTROL:</strong> Zero-false-positive attestation failures as definitive IOCs.
                   </td>
                   <td className="px-6 py-6 text-text-primary">SIEM correlates events after the fact. Keystrike feeds it cryptographic signals and live topology data that make every alert more accurate.</td>
                 </tr>
@@ -261,8 +261,8 @@ export default function Home() {
                   <td className="px-6 py-6 font-bold text-text-primary text-lg">ZTNA</td>
                   <td className="px-6 py-6 text-text-primary">Verifies access at connection; cannot see inside the session</td>
                   <td className="px-6 py-6 text-text-primary">
-                    <strong>Pillar 1:</strong> Maps east-west movement inside the trusted perimeter.<br/>
-                    <strong>Pillar 2:</strong> Extends zero trust from connection grant to command execution.
+                    <strong>SEE:</strong> Maps east-west movement inside the trusted perimeter.<br/>
+                    <strong>CONTROL:</strong> Extends zero trust from connection grant to command execution.
                   </td>
                   <td className="px-6 py-6 text-text-primary">ZTNA controls the door. Keystrike verifies every action taken inside the room — and maps everything ZTNA can't see.</td>
                 </tr>
