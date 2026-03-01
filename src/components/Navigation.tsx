@@ -39,16 +39,6 @@ export default function Navigation({ currentPage }: { currentPage?: string }) {
                 Resources
               </a>
               <a 
-                href="/partners" 
-                className={`px-3 py-2 text-sm font-medium ${
-                  currentPage === 'partners' 
-                    ? 'text-accent' 
-                    : 'text-text-secondary hover:text-text-primary'
-                }`}
-              >
-                Partners
-              </a>
-              <a 
                 href="/about" 
                 className={`px-3 py-2 text-sm font-medium ${
                   currentPage === 'about' 
