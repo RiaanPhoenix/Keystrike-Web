@@ -57,7 +57,7 @@ export default function Home() {
                  data-action="request-demo" data-context="hero-section">
                 Request Demo
               </a>
-              <a href="/contact" className="btn btn-secondary text-lg px-8 py-3"
+              <a href="/contact" className="btn btn-primary text-lg px-8 py-3"
                  data-action="free-trial" data-context="hero-section">
                 Start Free Trial
               </a>
