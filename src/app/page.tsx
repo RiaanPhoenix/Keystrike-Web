@@ -215,7 +215,7 @@ export default function Home() {
               How Keystrike Completes the Security Stack
             </h2>
             <p className="text-xl text-text-primary max-w-4xl mx-auto">
-              Keystrike doesn't replace any tool in the stack. It completes each one by giving it the ground truth and session-level verification it was never designed to provide.
+              The tools in your stack were built to do one thing well. Keystrike fills the gaps between them, giving each one the session-level visibility it was never designed to have.
             </p>
           </div>
           
