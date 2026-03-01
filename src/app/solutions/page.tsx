@@ -56,8 +56,8 @@ export default function Solutions() {
             <button className="btn btn-primary text-lg px-8 py-3">
               Request Demo
             </button>
-            <button className="btn btn-secondary text-lg px-8 py-3">
-              Free Remote Access Overview
+            <button className="btn btn-primary text-lg px-8 py-3">
+              Free Remote Access Risk Assessment
             </button>
             <button className="btn btn-primary text-lg px-8 py-3">
               Free Trial
@@ -283,7 +283,7 @@ export default function Solutions() {
               Schedule Demo
             </button>
             <button className="border-2 border-white text-white px-8 py-3 text-lg font-medium rounded-lg hover:bg-white hover:text-accent transition-colors">
-              Free Remote Access Overview
+              Free Remote Access Risk Assessment
             </button>
           </div>
         </div>

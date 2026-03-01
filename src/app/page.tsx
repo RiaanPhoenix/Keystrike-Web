@@ -63,9 +63,9 @@ export default function Home() {
               </a>
             </div>
             <div className="flex justify-center mb-12">
-              <a href="/contact" className="btn btn-secondary text-lg px-8 py-3"
+              <a href="/contact" className="btn btn-primary text-lg px-8 py-3"
                  data-action="free-overview" data-context="hero-section">
-                Free Remote Access Overview
+                Free Remote Access Risk Assessment
               </a>
             </div>
             
