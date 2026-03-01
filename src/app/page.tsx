@@ -226,7 +226,7 @@ export default function Home() {
                   <th className="px-6 py-4 text-left text-white font-bold text-lg">Tool</th>
                   <th className="px-6 py-4 text-left text-white font-bold text-lg">Gap for Remote Access</th>
                   <th className="px-6 py-4 text-left text-white font-bold text-lg">Keystrike Fills</th>
-                  <th className="px-6 py-4 text-left text-white font-bold text-lg">Talk Track</th>
+                  <th className="px-6 py-4 text-left text-white font-bold text-lg">Why it Works</th>
                 </tr>
               </thead>
               <tbody>
