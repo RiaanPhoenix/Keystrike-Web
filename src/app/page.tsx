@@ -382,6 +382,11 @@ export default function Home() {
               <span className="stat-label">days attackers stay undetected</span>
             </div>
             <div className="ticker-divider">·</div>
+            <div className="ticker-item">
+              <span className="stat-number">30%</span>
+              <span className="stat-label">of breaches involve third parties</span>
+            </div>
+            <div className="ticker-divider">·</div>
             {/* Duplicate for seamless loop */}
             <div className="ticker-item">
               <span className="stat-number">50%</span>
@@ -401,6 +406,11 @@ export default function Home() {
             <div className="ticker-item">
               <span className="stat-number">280</span>
               <span className="stat-label">days attackers stay undetected</span>
+            </div>
+            <div className="ticker-divider">·</div>
+            <div className="ticker-item">
+              <span className="stat-number">30%</span>
+              <span className="stat-label">of breaches involve third parties</span>
             </div>
             <div className="ticker-divider">·</div>
           </div>
