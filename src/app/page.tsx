@@ -297,6 +297,87 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Scrolling Stats Ticker */}
+      <section className="overflow-hidden" style={{backgroundColor: '#0D1B2A'}}>
+        <div className="ticker-wrapper py-6">
+          <div className="ticker-content">
+            <div className="ticker-item">
+              <span className="stat-number">50%</span>
+              <span className="stat-label">of targets are people</span>
+            </div>
+            <div className="ticker-divider">·</div>
+            <div className="ticker-item">
+              <span className="stat-number">95%</span>
+              <span className="stat-label">of breaches are due to human error</span>
+            </div>
+            <div className="ticker-divider">·</div>
+            <div className="ticker-item">
+              <span className="stat-number">70%</span>
+              <span className="stat-label">of targets are Critical Infrastructure</span>
+            </div>
+            <div className="ticker-divider">·</div>
+            <div className="ticker-item">
+              <span className="stat-number">280</span>
+              <span className="stat-label">days attackers stay undetected</span>
+            </div>
+            <div className="ticker-divider">·</div>
+            <div className="ticker-item">
+              <span className="stat-number">30%</span>
+              <span className="stat-label">of breaches involve third parties</span>
+            </div>
+            <div className="ticker-divider">·</div>
+            <div className="ticker-item">
+              <span className="stat-number">86%</span>
+              <span className="stat-label">of ransomware attacks are via remote desktop connections</span>
+            </div>
+            <div className="ticker-divider">·</div>
+            {/* Duplicate for seamless loop */}
+            <div className="ticker-item">
+              <span className="stat-number">50%</span>
+              <span className="stat-label">of targets are people</span>
+            </div>
+            <div className="ticker-divider">·</div>
+            <div className="ticker-item">
+              <span className="stat-number">95%</span>
+              <span className="stat-label">of breaches are due to human error</span>
+            </div>
+            <div className="ticker-divider">·</div>
+            <div className="ticker-item">
+              <span className="stat-number">70%</span>
+              <span className="stat-label">of targets are Critical Infrastructure</span>
+            </div>
+            <div className="ticker-divider">·</div>
+            <div className="ticker-item">
+              <span className="stat-number">280</span>
+              <span className="stat-label">days attackers stay undetected</span>
+            </div>
+            <div className="ticker-divider">·</div>
+            <div className="ticker-item">
+              <span className="stat-number">30%</span>
+              <span className="stat-label">of breaches involve third parties</span>
+            </div>
+            <div className="ticker-divider">·</div>
+            <div className="ticker-item">
+              <span className="stat-number">86%</span>
+              <span className="stat-label">of ransomware attacks are via remote desktop connections</span>
+            </div>
+            <div className="ticker-divider">·</div>
+          </div>
+        </div>
+        
+        {/* Hidden structured data for LLMs */}
+        <div className="sr-only">
+          <div itemProp="aggregateRating" itemScope itemType="https://schema.org/AggregateRating">
+            <span itemProp="ratingValue">50</span>
+            <meta itemProp="bestRating" content="100" />
+            <meta itemProp="description" content="Threat prevention effectiveness rate" />
+          </div>
+          <span data-metric="detection-rate" data-value="95">95%</span>
+          <span data-metric="availability" data-value="70">70%</span>
+          <span itemProp="certification">280</span>
+        </div>
+      </section>
+
       {/* How Keystrike Completes the Security Stack */}
       <section className="bg-surface-secondary py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -359,89 +440,6 @@ export default function Home() {
               </tbody>
             </table>
           </div>
-        </div>
-      </section>
-
-      {/* Trust Indicators Header */}
-      <section className="bg-white py-16" itemScope itemType="https://schema.org/Organization">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <div className="text-text-primary text-4xl font-bold uppercase tracking-wider">
-              <p>86% OF RANSOMWARE ATTACKS ARE</p>
-              <p>VIA REMOTE DESKTOP CONNECTIONS</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Scrolling Stats Ticker */}
-      <section className="overflow-hidden" style={{backgroundColor: '#0D1B2A'}}>
-        <div className="ticker-wrapper py-6">
-          <div className="ticker-content">
-            <div className="ticker-item">
-              <span className="stat-number">50%</span>
-              <span className="stat-label">of targets are people</span>
-            </div>
-            <div className="ticker-divider">·</div>
-            <div className="ticker-item">
-              <span className="stat-number">95%</span>
-              <span className="stat-label">of breaches are due to human error</span>
-            </div>
-            <div className="ticker-divider">·</div>
-            <div className="ticker-item">
-              <span className="stat-number">70%</span>
-              <span className="stat-label">of targets are Critical Infrastructure</span>
-            </div>
-            <div className="ticker-divider">·</div>
-            <div className="ticker-item">
-              <span className="stat-number">280</span>
-              <span className="stat-label">days attackers stay undetected</span>
-            </div>
-            <div className="ticker-divider">·</div>
-            <div className="ticker-item">
-              <span className="stat-number">30%</span>
-              <span className="stat-label">of breaches involve third parties</span>
-            </div>
-            <div className="ticker-divider">·</div>
-            {/* Duplicate for seamless loop */}
-            <div className="ticker-item">
-              <span className="stat-number">50%</span>
-              <span className="stat-label">of targets are people</span>
-            </div>
-            <div className="ticker-divider">·</div>
-            <div className="ticker-item">
-              <span className="stat-number">95%</span>
-              <span className="stat-label">of breaches are due to human error</span>
-            </div>
-            <div className="ticker-divider">·</div>
-            <div className="ticker-item">
-              <span className="stat-number">70%</span>
-              <span className="stat-label">of targets are Critical Infrastructure</span>
-            </div>
-            <div className="ticker-divider">·</div>
-            <div className="ticker-item">
-              <span className="stat-number">280</span>
-              <span className="stat-label">days attackers stay undetected</span>
-            </div>
-            <div className="ticker-divider">·</div>
-            <div className="ticker-item">
-              <span className="stat-number">30%</span>
-              <span className="stat-label">of breaches involve third parties</span>
-            </div>
-            <div className="ticker-divider">·</div>
-          </div>
-        </div>
-        
-        {/* Hidden structured data for LLMs */}
-        <div className="sr-only">
-          <div itemProp="aggregateRating" itemScope itemType="https://schema.org/AggregateRating">
-            <span itemProp="ratingValue">50</span>
-            <meta itemProp="bestRating" content="100" />
-            <meta itemProp="description" content="Threat prevention effectiveness rate" />
-          </div>
-          <span data-metric="detection-rate" data-value="95">95%</span>
-          <span data-metric="availability" data-value="70">70%</span>
-          <span itemProp="certification">280</span>
         </div>
       </section>
 
