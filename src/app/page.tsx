@@ -565,10 +565,10 @@ export default function Home() {
       <section className="bg-accent py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Strengthen Your Security Posture?
+            Stop Accepting the Blind Spot
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join organizations moving from reactive detection after breaches to proactive real-time control before damage occurs.
+            Most organizations are surprised by what they find in the first 48 hours. See what's happening inside your sessions → Book a Live Demo
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
             <button className="bg-white text-accent px-8 py-3 text-lg font-medium rounded-lg hover:bg-gray-50 transition-colors">
