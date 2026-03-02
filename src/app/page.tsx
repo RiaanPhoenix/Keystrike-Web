@@ -435,44 +435,35 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-6">
-                One Product. <span className="text-accent">Complete Protection.</span>
+                Everything That Happens <span className="text-accent">After Login</span>
               </h2>
               <p className="text-xl text-text-primary mb-8">
-                Unlike traditional security solutions that add layers of complexity, Keystrike completes your identity stack with physical input verification—the missing piece in continuous remote access governance.
+                Keystrike doesn't replace your existing stack, it completes it. By governing what happens inside every remote session, it closes the one gap your identity, PAM, and SIEM tools were never built to close.
               </p>
-              <div className="space-y-6 mb-8">
-                <div className="flex items-start space-x-4">
-                  <div className="w-6 h-6 bg-accent rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-text-primary">Live View of All Remote Access</h3>
-                    <p className="text-text-primary">Consolidates fragmented remote access environment into a single, comprehensive view of every connection, user and protocol.</p>
-                  </div>
+              <div className="space-y-8 mb-8">
+                <div>
+                  <h3 className="text-xl font-bold text-text-primary mb-2">
+                    <span className="text-accent">SEE</span> — <em>Full Session Visibility</em>
+                  </h3>
+                  <p className="text-text-primary">
+                    A live, continuous map of every remote connection: Who is in, what systems they are touching, and whether it matches approved intent.
+                  </p>
                 </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-6 h-6 bg-accent rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-text-primary">Real-Time Enforcement</h3>
-                    <p className="text-text-primary">Enforces legitimacy in real-time blocking malicious actions before attackers can move laterally or execute ransomware.</p>
-                  </div>
+                <div>
+                  <h3 className="text-xl font-bold text-text-primary mb-2">
+                    <span className="text-accent">CONTROL</span> — <em>Real-Time Enforcement</em>
+                  </h3>
+                  <p className="text-text-primary">
+                    Block unauthorized commands the moment they occur: Stop lateral movement and ransomware execution before damage is done, not after.
+                  </p>
                 </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-6 h-6 bg-accent rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-text-primary">Physical Verification</h3>
-                    <p className="text-text-primary">Automatically blocks any command not tied to verified physical input and sends alerts immediately.</p>
-                  </div>
+                <div>
+                  <h3 className="text-xl font-bold text-text-primary mb-2">
+                    <span className="text-accent">PROVE</span> — <em>Cryptographic Audit Trail</em>
+                  </h3>
+                  <p className="text-text-primary">
+                    Every session, cryptographically attested and audit-ready: Definitive proof of governance for compliance, incident response, and regulatory review.
+                  </p>
                 </div>
               </div>
               <button className="btn btn-primary text-lg px-8 py-3">
