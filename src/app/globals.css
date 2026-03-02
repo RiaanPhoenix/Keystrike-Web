@@ -249,7 +249,7 @@ body {
   align-items: center;
   gap: 2rem;
   white-space: nowrap;
-  animation: ticker 60s linear infinite;
+  animation: ticker 59.5s linear infinite;
   will-change: transform;
 }
 
@@ -265,33 +265,33 @@ body {
 }
 
 .stat-number {
-  font-size: 1.875rem;
+  font-size: 2.25rem;
   font-weight: 700;
-  color: #0D6E6E;
+  color: white;
   line-height: 1;
 }
 
 .stat-label {
-  font-size: 0.875rem;
+  font-size: 1.125rem;
   color: white;
   line-height: 1.2;
 }
 
 .ticker-divider {
-  color: #0D6E6E;
-  font-size: 1.5rem;
+  color: white;
+  font-size: 1.75rem;
   font-weight: bold;
   flex-shrink: 0;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 @media (max-width: 768px) {
   .stat-number {
-    font-size: 1.5rem;
+    font-size: 1.875rem;
   }
   
   .stat-label {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
   
   .ticker-content {
@@ -299,6 +299,6 @@ body {
   }
   
   .ticker-divider {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 }

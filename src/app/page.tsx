@@ -502,10 +502,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
-              Join Critical Infrastructure Providers
+              Don't Take Our Word for It
             </h2>
             <p className="text-xl text-text-primary">
-              See how organizations like yours achieve continuous security governance
+              Here's what CISOs say once they can see inside every session
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
