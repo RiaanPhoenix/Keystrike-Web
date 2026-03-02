@@ -221,7 +221,7 @@ export default function Solutions() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="card p-6 text-center">
+            <a href="/solutions/financial" className="card p-6 text-center hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/>
@@ -230,9 +230,10 @@ export default function Solutions() {
               </div>
               <h3 className="font-bold text-text-primary mb-2">Financial Services</h3>
               <p className="text-text-secondary text-sm">PCI DSS compliance and fraud prevention with physical input verification</p>
-            </div>
+              <div className="mt-4 text-accent text-sm font-medium">Learn More →</div>
+            </a>
             
-            <div className="card p-6 text-center">
+            <a href="/solutions/healthcare" className="card p-6 text-center hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clipRule="evenodd"/>
@@ -240,9 +241,10 @@ export default function Solutions() {
               </div>
               <h3 className="font-bold text-text-primary mb-2">Healthcare</h3>
               <p className="text-text-secondary text-sm">HIPAA compliance and patient data protection through secure access controls</p>
-            </div>
+              <div className="mt-4 text-accent text-sm font-medium">Learn More →</div>
+            </a>
             
-            <div className="card p-6 text-center">
+            <a href="/solutions/government" className="card p-6 text-center hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clipRule="evenodd"/>
@@ -251,9 +253,10 @@ export default function Solutions() {
               </div>
               <h3 className="font-bold text-text-primary mb-2">Government</h3>
               <p className="text-text-secondary text-sm">FedRAMP and security clearance environments with advanced threat detection</p>
-            </div>
+              <div className="mt-4 text-accent text-sm font-medium">Learn More →</div>
+            </a>
             
-            <div className="card p-6 text-center">
+            <a href="/solutions/manufacturing" className="card p-6 text-center hover:shadow-lg transition-shadow">
               <div className="w-12 h-12 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd"/>
@@ -261,7 +264,8 @@ export default function Solutions() {
               </div>
               <h3 className="font-bold text-text-primary mb-2">Manufacturing</h3>
               <p className="text-text-secondary text-sm">Industrial IoT security and operational technology protection</p>
-            </div>
+              <div className="mt-4 text-accent text-sm font-medium">Learn More →</div>
+            </a>
           </div>
         </div>
       </section>
