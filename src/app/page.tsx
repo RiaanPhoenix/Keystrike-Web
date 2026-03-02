@@ -1,6 +1,7 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
+import TestimonialCarousel from '@/components/TestimonialCarousel';
 
 export const metadata: Metadata = {
   title: 'Advanced Cybersecurity Platform | Physical Input Verification',
@@ -34,6 +35,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
 };
+
+
 
 export default function Home() {
   return (
@@ -466,9 +469,6 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <button className="btn btn-primary text-lg px-8 py-3">
-                See Keystrike in Action
-              </button>
             </div>
             <div className="bg-surface rounded-lg p-8 border border-border">
               <div className="text-center">
@@ -479,75 +479,39 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold text-text-primary mb-4">Interactive Demo</h3>
                 <p className="text-text-secondary mb-6">Experience the Keystrike dashboard and see real-time threat detection in action</p>
-                <div className="bg-surface-secondary rounded-lg p-6 border border-border">
+                <div className="bg-surface-secondary rounded-lg p-6 border border-border mb-6">
                   <p className="text-text-muted text-sm">Demo visualization placeholder</p>
                 </div>
+                <button className="btn btn-primary text-lg px-8 py-3">
+                  See Keystrike in Action
+                </button>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 5: Social Proof */}
-      <section className="bg-surface py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
-              Don't Take Our Word for It
-            </h2>
-            <p className="text-xl text-text-primary">
-              Here's what CISOs say once they can see inside every session
-            </p>
+      {/* Testimonials Section - Two Pillar Layout */}
+      <section className="bg-surface">
+        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+          {/* Left Pillar - Banner */}
+          <div className="flex items-center justify-center p-8 lg:p-16" style={{backgroundColor: '#0D1B2A'}}>
+            <div className="max-w-lg text-center lg:text-left">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Your Sessions Are Running. <span className="text-accent">Are You Watching?</span>
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+                Once a remote session begins, identity tooling stops. Security teams can't see what systems are being touched, whether activity matches approved intent, or when something goes wrong — until after the damage is done.
+              </p>
+              <a href="/contact" className="inline-block border-2 border-white text-white px-8 py-3 text-lg font-medium rounded-lg hover:bg-white hover:text-[#0D1B2A] transition-colors">
+                Stop the Blind Spot
+              </a>
+            </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="card p-8">
-              <div className="mb-6">
-                <div className="flex text-accent mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                    </svg>
-                  ))}
-                </div>
-              </div>
-              <p className="text-text-primary mb-6 italic">"In operational technology environments, authentication alone isn't enough. Our control systems underpin national infrastructure, and any misuse of privileged access has real-world consequences. Keystrike continuously validates human presence during active OT sessions, significantly reducing the risk of credential misuse against systems that keep the power grid stable and secure."</p>
-              <div>
-                <div className="font-semibold text-text-primary">CISO</div>
-                <div className="text-text-primary text-sm">National Power Grid Operator</div>
-              </div>
-            </div>
-            <div className="card p-8">
-              <div className="mb-6">
-                <div className="flex text-accent mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                    </svg>
-                  ))}
-                </div>
-              </div>
-              <p className="text-text-primary mb-6 italic">"Under DORA, financial institutions must demonstrate not just strong controls, but operational resilience under stress. For a central bank, credential compromise is not an IT issue, it is systemic risk. Keystrike strengthens our control framework by continuously validating real user presence during privileged sessions, reducing the likelihood of unauthorized access to critical financial infrastructure and reinforcing trust in the stability of the financial system."</p>
-              <div>
-                <div className="font-semibold text-text-primary">CISO</div>
-                <div className="text-text-primary text-sm">Nordic Central Bank</div>
-              </div>
-            </div>
-            <div className="card p-8">
-              <div className="mb-6">
-                <div className="flex text-accent mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                    </svg>
-                  ))}
-                </div>
-              </div>
-              <p className="text-text-primary mb-6 italic">"For a city government, cybersecurity is about maintaining continuity of essential public services and protecting citizen data. Credential-based attacks against municipal systems can disrupt operations and erode public trust. Keystrike strengthens our resilience by continuously validating real user presence during privileged sessions, reducing the risk of unauthorised access across critical city infrastructure."</p>
-              <div>
-                <div className="font-semibold text-text-primary">CISO</div>
-                <div className="text-text-primary text-sm">City of Tulsa</div>
-              </div>
-            </div>
+
+          {/* Right Pillar - Testimonial Carousel */}
+          <div className="flex items-center justify-center p-8 lg:p-16" style={{backgroundColor: '#F5F7FA'}}>
+            <TestimonialCarousel />
           </div>
         </div>
       </section>
