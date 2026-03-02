@@ -107,13 +107,10 @@ export default function Home() {
       <section className="bg-surface-secondary py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-8">
-            Stop Attacks Inside Your <span className="text-accent">Remote Sessions</span>
+            Your Sessions Are Running. <span className="text-accent">Are You Watching?</span>
           </h2>
           <div className="text-lg text-text-primary leading-relaxed space-y-4">
-            <p>Every organization defines who should have access. Almost none can see what that access actually does.</p>
-            <p>Once a remote session begins, identity tooling stops. Security teams can't tell how many connections are live, what systems are being touched, or whether activity matches approved intent.</p>
-            <p>Logs get collected after the damage is done. Authentication may be strong. Sessions are still opaque.</p>
-            <p className="text-xl md:text-2xl font-bold text-text-primary"><strong>Keystrike was founded on one conviction: you can't control what you can't continuously see - and verify.</strong></p>
+            <p>Once a remote session begins, identity tooling stops. Security teams can't see what systems are being touched, whether activity matches approved intent, or when something goes wrong — until after the damage is done.</p>
           </div>
         </div>
       </section>
