@@ -106,14 +106,27 @@ export default function Home() {
         />
       </section>
 
-      {/* Stop Attacks Banner */}
-      <section className="bg-surface-secondary py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-8">
-            Your Sessions Are Running. <span className="text-accent">Are You Watching?</span>
-          </h2>
-          <div className="text-lg text-text-primary leading-relaxed space-y-4">
-            <p>Once a remote session begins, identity tooling stops. Security teams can't see what systems are being touched, whether activity matches approved intent, or when something goes wrong — until after the damage is done.</p>
+      {/* Testimonials Section - Two Pillar Layout */}
+      <section className="bg-surface">
+        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+          {/* Left Pillar - Banner */}
+          <div className="flex items-center justify-center p-8 lg:p-16" style={{backgroundColor: '#0D1B2A'}}>
+            <div className="max-w-lg text-center lg:text-left">
+              <h2 className="text-3xl md:text-4xl font-light text-white mb-6">
+                Your Sessions Are Running. <span className="text-white">Are You Watching?</span>
+              </h2>
+              <p className="text-xl text-gray-100 mb-8 leading-relaxed">
+                Once a remote session begins, identity tooling stops. Security teams can't see what systems are being touched, whether activity matches approved intent, or when something goes wrong — until after the damage is done.
+              </p>
+              <a href="/contact" className="inline-block border-2 border-white text-white px-8 py-3 text-lg font-medium rounded-lg hover:bg-white hover:text-[#0D1B2A] transition-colors">
+                Stop the Blind Spot
+              </a>
+            </div>
+          </div>
+
+          {/* Right Pillar - Testimonial Carousel */}
+          <div className="flex items-center justify-center p-8 lg:p-16 bg-white">
+            <TestimonialCarousel />
           </div>
         </div>
       </section>
@@ -487,31 +500,6 @@ export default function Home() {
                 </button>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section - Two Pillar Layout */}
-      <section className="bg-surface">
-        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
-          {/* Left Pillar - Banner */}
-          <div className="flex items-center justify-center p-8 lg:p-16" style={{backgroundColor: '#0D1B2A'}}>
-            <div className="max-w-lg text-center lg:text-left">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Your Sessions Are Running. <span className="text-accent">Are You Watching?</span>
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                Once a remote session begins, identity tooling stops. Security teams can't see what systems are being touched, whether activity matches approved intent, or when something goes wrong — until after the damage is done.
-              </p>
-              <a href="/contact" className="inline-block border-2 border-white text-white px-8 py-3 text-lg font-medium rounded-lg hover:bg-white hover:text-[#0D1B2A] transition-colors">
-                Stop the Blind Spot
-              </a>
-            </div>
-          </div>
-
-          {/* Right Pillar - Testimonial Carousel */}
-          <div className="flex items-center justify-center p-8 lg:p-16" style={{backgroundColor: '#F5F7FA'}}>
-            <TestimonialCarousel />
           </div>
         </div>
       </section>
