@@ -116,7 +116,7 @@ export default function Home() {
                 Your Sessions Are Running. <span className="text-white">Are You Watching?</span>
               </h2>
               <p className="text-xl text-gray-100 mb-8 leading-relaxed">
-                Once a remote session begins, identity tooling stops. Security teams can't see what systems are being touched, whether activity matches approved intent, or when something goes wrong — until after the damage is done.
+                Once a remote session begins, identity tooling stops. Security teams can't see what systems are being touched, whether activity matches approved intent, or when something goes wrong, until after the damage is done.
               </p>
               <a href="/contact" className="inline-block border-2 border-white text-white px-8 py-3 text-lg font-medium rounded-lg hover:bg-white hover:text-[#0D1B2A] transition-colors">
                 Stop the Blind Spot
