@@ -1,22 +1,24 @@
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Keystrike | Nordic Precision Meets Human-Centric Innovation',
-  description: 'Founded in 2021, Keystrike delivers physical input verification technology with Nordic precision. Led by expert cybersecurity professionals, protecting democratic society at civilization scale.',
+  title: 'About Keystrike | Cybersecurity Innovation & Excellence',
+  description: 'Meet the team behind Keystrike\'s physical input verification technology. We strive for excellence, innovation, and empathy in cybersecurity. Learn about our mission and values.',
   keywords: [
+    'keystrike about',
     'cybersecurity company',
-    'Nordic innovation',
     'physical input verification',
     'keystrike leadership',
-    'security company Iceland',
+    'security innovation',
     'cybersecurity team',
     'enterprise security',
     'human-centric security',
-    'Nordic precision'
+    'keystrike founders'
   ],
   openGraph: {
-    title: 'About Keystrike | Nordic Cybersecurity Innovation',
-    description: 'Meet the team behind physical input verification technology. Founded in Reykjavik, protecting 10,000+ organizations worldwide with Nordic precision.',
+    title: 'About Keystrike | Meet Our Cybersecurity Innovation Team',
+    description: 'Founded by cybersecurity pioneers, Keystrike delivers physical input verification technology with a focus on excellence, innovation, and customer success.',
     url: '/about',
     images: [
       {
@@ -35,153 +37,132 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation Header */}
-      <header className="bg-surface border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
-                <a href="/" className="text-2xl font-bold text-text-primary">Keystrike</a>
-              </div>
-              <nav className="hidden md:ml-10 md:flex md:space-x-8">
-                <a href="#" className="text-text-secondary hover:text-text-primary px-3 py-2 text-sm font-medium">Solutions</a>
-                <a href="#" className="text-text-secondary hover:text-text-primary px-3 py-2 text-sm font-medium">Platform</a>
-                <a href="#" className="text-text-secondary hover:text-text-primary px-3 py-2 text-sm font-medium">Resources</a>
-                <a href="#" className="text-text-secondary hover:text-text-primary px-3 py-2 text-sm font-medium">Partners</a>
-                <a href="/about" className="text-accent px-3 py-2 text-sm font-medium">Company</a>
-                <a href="#" className="text-text-secondary hover:text-text-primary px-3 py-2 text-sm font-medium">Support</a>
-              </nav>
-            </div>
-            <div className="flex items-center space-x-4">
-              <button className="btn btn-secondary">
-                Customer Login
-              </button>
-              <button className="btn btn-primary">
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Navigation currentPage="about" />
 
       {/* Hero Section */}
       <section className="bg-surface py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-text-primary mb-6">
-            Nordic Precision Meets{" "}
-            <span className="text-accent">Human-Centric Innovation</span>
+            What Makes Us{" "}
+            <span className="text-accent">Keystrike?</span>
           </h1>
           <p className="text-xl text-text-secondary mb-8 max-w-3xl mx-auto">
-            At Keystrike, we believe sophisticated security should be approachable. Our mission is to protect democratic society 
-            at civilization scale through physical input verification—the missing piece in continuous remote access governance.
+            We're building the future of cybersecurity through physical input verification technology, 
+            guided by our core values of excellence, innovation, empathy, and human-centric design.
           </p>
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="bg-surface-secondary py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-text-primary mb-6">Our Mission</h2>
-              <p className="text-lg text-text-secondary mb-6">
-                To bridge the identity gap in cybersecurity by providing physical input verification that completes 
-                the security stack. We're not just another security layer—we're the foundation that makes all other 
-                security tools more effective.
-              </p>
-              <p className="text-text-secondary">
-                86% of cyberattacks happen after access is granted. Traditional security focuses on perimeters, 
-                but the real battle is at the keystroke level. That's where we make our stand.
-              </p>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold text-text-primary mb-6">Our Vision</h2>
-              <p className="text-lg text-text-secondary mb-6">
-                To become the infrastructure that protects democratic society at civilization scale. We envision 
-                a world where sophisticated cybersecurity is as intuitive and reliable as turning on a light switch.
-              </p>
-              <p className="text-text-secondary">
-                Nordic precision in design, human-centric in approach, global in impact. We're building the security 
-                foundation for the digital age.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Core Values */}
-      <section className="bg-surface py-20">
+      <section className="bg-surface-secondary py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
               Our Core Values
             </h2>
             <p className="text-xl text-text-secondary">
-              The principles that guide everything we build
+              The principles that guide everything we build and every decision we make
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="card p-8 text-center">
-              <div className="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
+          
+          <div className="space-y-16">
+            {/* We strive for excellence */}
+            <div className="card p-8">
+              <div className="flex items-start space-x-6">
+                <div className="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-text-primary mb-4">We strive for excellence</h3>
+                  <p className="text-text-secondary leading-relaxed">
+                    We work to attract, foster, and retain the best talent for business, expecting and delivering high performance by setting and achieving ambitious goals. Believing that we all individually win when the company succeeds, we remain accountable, share responsibilities, and take ownership.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-text-primary mb-4">Simplicity</h3>
-              <p className="text-text-secondary text-sm">
-                Advanced security should be simple to implement, manage, and understand. 
-                Complexity is the enemy of security.
-              </p>
             </div>
-            <div className="card p-8 text-center">
-              <div className="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clipRule="evenodd"/>
-                </svg>
+
+            {/* The customer is our cornerstone */}
+            <div className="card p-8">
+              <div className="flex items-start space-x-6">
+                <div className="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clipRule="evenodd"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-text-primary mb-4">The customer is our cornerstone</h3>
+                  <p className="text-text-secondary leading-relaxed">
+                    We empower our customers by simplifying and securing their lives and livelihood, advancing our shared belief that everyone deserves genuine and easy security. We are committed to the idea that business works best when it acts in the service of society.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-text-primary mb-4">Innovation</h3>
-              <p className="text-text-secondary text-sm">
-                We solve problems others haven't even recognized yet. Physical input verification 
-                is just the beginning.
-              </p>
             </div>
-            <div className="card p-8 text-center">
-              <div className="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clipRule="evenodd"/>
-                </svg>
+
+            {/* We are innovative */}
+            <div className="card p-8">
+              <div className="flex items-start space-x-6">
+                <div className="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clipRule="evenodd"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-text-primary mb-4">We are innovative</h3>
+                  <p className="text-text-secondary leading-relaxed">
+                    As pioneers in the field of cybersecurity, we are unafraid to break the mold and challenge conventions. Building on our academic roots, we foster research and collaboration both within and outside our organization. We make decisive choices and anticipate changes to shape a future-ready approach. We value diverse perspectives, knowing they spark innovation and create stronger connections.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-text-primary mb-4">Human-Centric</h3>
-              <p className="text-text-secondary text-sm">
-                Technology serves people, not the other way around. Our solutions empower teams 
-                rather than burden them.
-              </p>
             </div>
-            <div className="card p-8 text-center">
-              <div className="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-                </svg>
+
+            {/* We act with empathy and integrity */}
+            <div className="card p-8">
+              <div className="flex items-start space-x-6">
+                <div className="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-text-primary mb-4">We act with empathy and integrity</h3>
+                  <p className="text-text-secondary leading-relaxed">
+                    We say what we mean, take responsibility for our actions, and remain open, transparent, and honest. We foster a collaborative and supportive environment, welcoming challenges while ensuring everyone feels seen, heard, valued, and empowered to succeed. With humility and respect, we seek diverse opinions, backgrounds, and experiences to build trust and strengthen connections.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-text-primary mb-4">Excellence</h3>
-              <p className="text-text-secondary text-sm">
-                Nordic precision in everything we do. Elite quality doesn't have to mean 
-                inaccessible complexity.
-              </p>
+            </div>
+
+            {/* We are playful and balanced */}
+            <div className="card p-8">
+              <div className="flex items-start space-x-6">
+                <div className="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-.464 5.535a1 1 0 10-1.415-1.414 3 3 0 01-4.242 0 1 1 0 00-1.415 1.414 5 5 0 007.072 0z" clipRule="evenodd"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-text-primary mb-4">We are playful and balanced</h3>
+                  <p className="text-text-secondary leading-relaxed">
+                    We are endlessly curious, tenacious tinkerers who embrace challenges with a sense of fun and enthusiasm. We value a healthy work-life balance, cherishing every aspect of our lives and recognizing that success is a collective effort—it truly takes a village!
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Leadership Team */}
-      <section className="bg-surface-secondary py-20">
+      <section className="bg-surface py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
-              Leadership Team
+              Our Management Team
             </h2>
             <p className="text-xl text-text-secondary">
-              Experienced leaders from cybersecurity, technology, and Nordic innovation
+              Cybersecurity pioneers and technology innovators building the future of security
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -191,11 +172,11 @@ export default function About() {
                   <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-text-primary mb-2">Arni Johannsen</h3>
-              <p className="text-accent text-sm font-medium mb-4">Chief Executive Officer</p>
+              <h3 className="text-xl font-bold text-text-primary mb-2">Valdimar Oskarsson</h3>
+              <p className="text-accent text-sm font-medium mb-4">Co-founder, CEO</p>
               <p className="text-text-secondary text-sm">
-                Former CISO at Nordic Financial Group. 15+ years securing critical infrastructure 
-                across Scandinavia. Passionate about making sophisticated security accessible.
+                Visionary leader driving the mission to secure digital infrastructure through innovative 
+                cybersecurity solutions and human-centric technology design.
               </p>
             </div>
             <div className="card p-8 text-center">
@@ -204,11 +185,11 @@ export default function About() {
                   <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-text-primary mb-2">Dr. Elena Volkov</h3>
-              <p className="text-accent text-sm font-medium mb-4">Chief Technology Officer</p>
+              <h3 className="text-xl font-bold text-text-primary mb-2">Ymir Vigfusson, PhD</h3>
+              <p className="text-accent text-sm font-medium mb-4">Co-founder, CTO</p>
               <p className="text-text-secondary text-sm">
-                Ph.D. in Computer Science from KTH. Lead architect of physical input verification 
-                technology. Published researcher in keystroke dynamics and behavioral biometrics.
+                Lead architect of physical input verification technology. Ph.D. researcher with extensive 
+                background in cybersecurity innovation and academic excellence.
               </p>
             </div>
             <div className="card p-8 text-center">
@@ -217,112 +198,113 @@ export default function About() {
                   <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-text-primary mb-2">Marcus Chen</h3>
-              <p className="text-accent text-sm font-medium mb-4">Chief Operating Officer</p>
+              <h3 className="text-xl font-bold text-text-primary mb-2">Arni Thor Arnason</h3>
+              <p className="text-accent text-sm font-medium mb-4">Co-founder, COO</p>
               <p className="text-text-secondary text-sm">
-                Former VP of Operations at CrowdStrike. Expert in scaling cybersecurity operations 
-                globally. Focused on customer success and enterprise deployment excellence.
+                Operations leader focused on scaling global deployment and ensuring customer success 
+                across enterprise environments and critical infrastructure.
+              </p>
+            </div>
+            <div className="card p-8 text-center">
+              <div className="w-24 h-24 bg-surface-muted rounded-full mx-auto mb-6 flex items-center justify-center">
+                <svg className="w-12 h-12 text-text-muted" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"/>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-text-primary mb-2">Arni S. Petursson</h3>
+              <p className="text-accent text-sm font-medium mb-4">Co-founder, COO</p>
+              <p className="text-text-secondary text-sm">
+                Strategic operations co-leader driving organizational excellence and sustainable growth 
+                while maintaining our commitment to innovation and customer service.
+              </p>
+            </div>
+            <div className="card p-8 text-center">
+              <div className="w-24 h-24 bg-surface-muted rounded-full mx-auto mb-6 flex items-center justify-center">
+                <svg className="w-12 h-12 text-text-muted" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"/>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-text-primary mb-2">Steindor Gudmundsson</h3>
+              <p className="text-accent text-sm font-medium mb-4">Co-founder, CPO</p>
+              <p className="text-text-secondary text-sm">
+                Product visionary ensuring our cybersecurity solutions meet real-world needs while 
+                maintaining simplicity and ease of deployment for enterprise customers.
+              </p>
+            </div>
+            <div className="card p-8 text-center">
+              <div className="w-24 h-24 bg-surface-muted rounded-full mx-auto mb-6 flex items-center justify-center">
+                <svg className="w-12 h-12 text-text-muted" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"/>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-text-primary mb-2">Johanna Vigdis Gudmundsdottir</h3>
+              <p className="text-accent text-sm font-medium mb-4">VP Business Development</p>
+              <p className="text-text-secondary text-sm">
+                Business development leader driving strategic partnerships and market expansion 
+                initiatives to accelerate Keystrike's growth in enterprise cybersecurity markets.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Company Milestones */}
-      <section className="bg-surface py-20">
+      {/* Customer Testimonials */}
+      <section className="bg-surface-secondary py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
-              Our Journey
+              Trusted by Security Leaders
             </h2>
             <p className="text-xl text-text-secondary">
-              Key milestones in building the future of cybersecurity
+              See how organizations are using Keystrike to strengthen their security posture
             </p>
           </div>
-          <div className="space-y-8">
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="w-full md:w-1/4 text-center md:text-right">
-                <div className="text-2xl font-bold text-accent mb-2">2021</div>
-                <div className="text-text-muted text-sm">Foundation Year</div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div className="card p-8">
+              <div className="flex justify-center mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                  </svg>
+                ))}
               </div>
-              <div className="w-8 h-8 bg-accent rounded-full flex-shrink-0"></div>
-              <div className="w-full md:w-3/4">
-                <h3 className="text-xl font-bold text-text-primary mb-2">Company Founded</h3>
-                <p className="text-text-secondary">
-                  Keystrike established in Reykjavik with initial funding and core team assembly. 
-                  First physical input verification prototypes developed.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="w-full md:w-1/4 text-center md:text-right">
-                <div className="text-2xl font-bold text-accent mb-2">2022</div>
-                <div className="text-text-muted text-sm">Technology Development</div>
-              </div>
-              <div className="w-8 h-8 bg-accent rounded-full flex-shrink-0"></div>
-              <div className="w-full md:w-3/4">
-                <h3 className="text-xl font-bold text-text-primary mb-2">Platform Launch</h3>
-                <p className="text-text-secondary">
-                  Beta platform released to select Nordic enterprises. First successful keystroke 
-                  anomaly detection in production environments.
-                </p>
+              <p className="text-text-primary mb-6 italic leading-relaxed">
+                "When I learned about Keystrike, I loved the simplicity. Keystrike ensures that only our own employees are accessing our servers, not adversaries who have hacked our employees. But Keystrike also doesn't bother or distract our employees at all, which is a great win-win: stronger security without added inconvenience."
+              </p>
+              <div className="border-t border-border pt-6">
+                <div className="font-semibold text-text-primary">Heimir Kristjánsson</div>
+                <div className="text-text-secondary text-sm">Cyber Security Operations Manager</div>
+                <div className="text-accent text-sm font-medium mt-1">Amer Sports</div>
               </div>
             </div>
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="w-full md:w-1/4 text-center md:text-right">
-                <div className="text-2xl font-bold text-accent mb-2">2023</div>
-                <div className="text-text-muted text-sm">Market Expansion</div>
+
+            <div className="card p-8">
+              <div className="flex justify-center mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                  </svg>
+                ))}
               </div>
-              <div className="w-8 h-8 bg-accent rounded-full flex-shrink-0"></div>
-              <div className="w-full md:w-3/4">
-                <h3 className="text-xl font-bold text-text-primary mb-2">Series A Funding</h3>
-                <p className="text-text-secondary">
-                  $15M Series A led by Nordic Capital. European market expansion begins. 
-                  First 1,000 customers onboarded successfully.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="w-full md:w-1/4 text-center md:text-right">
-                <div className="text-2xl font-bold text-accent mb-2">2024</div>
-                <div className="text-text-muted text-sm">Global Recognition</div>
-              </div>
-              <div className="w-8 h-8 bg-accent rounded-full flex-shrink-0"></div>
-              <div className="w-full md:w-3/4">
-                <h3 className="text-xl font-bold text-text-primary mb-2">Industry Awards</h3>
-                <p className="text-text-secondary">
-                  SC Media Innovation Award winner. Gartner Cool Vendor recognition. 
-                  SOC 2 Type II certification achieved.
-                </p>
+              <p className="text-text-primary mb-6 italic leading-relaxed">
+                "In about 20 minutes, I had Keystrike up and running. The deployment is simple, well thought out, with clear documentation. Now Keystrike helps us establish that commands are genuine and trustworthy by detecting lurking attackers and blocking when they inject themselves into active sessions. With the combination of powerful technology and ease of deployment, I highly recommend testing Keystrike."
+              </p>
+              <div className="border-t border-border pt-6">
+                <div className="font-semibold text-text-primary">Steven Brill</div>
+                <div className="text-text-secondary text-sm">VP of IT Operations and Security</div>
+                <div className="text-accent text-sm font-medium mt-1">Global Water Resources</div>
               </div>
             </div>
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="w-full md:w-1/4 text-center md:text-right">
-                <div className="text-2xl font-bold text-accent mb-2">2025</div>
-                <div className="text-text-muted text-sm">Scale & Innovation</div>
-              </div>
-              <div className="w-8 h-8 bg-accent rounded-full flex-shrink-0"></div>
-              <div className="w-full md:w-3/4">
-                <h3 className="text-xl font-bold text-text-primary mb-2">AI Integration</h3>
-                <p className="text-text-secondary">
-                  Advanced AI threat detection launched. 10,000+ organizations protected globally. 
-                  Partnership program with leading security vendors initiated.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="w-full md:w-1/4 text-center md:text-right">
-                <div className="text-2xl font-bold text-accent mb-2">2026</div>
-                <div className="text-text-muted text-span">Current Focus</div>
-              </div>
-              <div className="w-8 h-8 bg-accent rounded-full flex-shrink-0 animate-pulse"></div>
-              <div className="w-full md:w-3/4">
-                <h3 className="text-xl font-bold text-text-primary mb-2">Global Infrastructure</h3>
-                <p className="text-text-secondary">
-                  Building the security infrastructure for democratic society at civilization scale. 
-                  Continuous remote access governance becomes the new standard.
-                </p>
-              </div>
+          </div>
+
+          {/* Quick Deployment Highlight */}
+          <div className="text-center">
+            <div className="inline-flex items-center space-x-4 bg-accent bg-opacity-10 rounded-full px-6 py-3">
+              <div className="text-accent font-bold text-2xl">20min</div>
+              <div className="text-text-primary font-medium">Deploys in 20 minutes</div>
+              <div className="text-text-secondary">•</div>
+              <div className="text-text-primary">Try Keystrike free for 30 days</div>
             </div>
           </div>
         </div>
@@ -353,17 +335,17 @@ export default function About() {
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-text-primary mb-2">European Operations</h3>
-              <p className="text-text-secondary text-sm">Copenhagen, Denmark</p>
+              <h3 className="text-lg font-bold text-text-primary mb-2">North American Office</h3>
+              <p className="text-text-secondary text-sm">Austin, Texas</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 000-4 2 2 0 000 4z" clipRule="evenodd"/>
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-text-primary mb-2">North American Office</h3>
-              <p className="text-text-secondary text-sm">Austin, Texas</p>
+              <h3 className="text-lg font-bold text-text-primary mb-2">Middle East Office</h3>
+              <p className="text-text-secondary text-sm">Dubai, UAE</p>
             </div>
           </div>
         </div>
@@ -380,59 +362,17 @@ export default function About() {
             Experience Nordic precision in cybersecurity.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-white text-accent px-8 py-3 text-lg font-medium rounded-lg hover:bg-gray-50 transition-colors">
+            <a href="/contact" className="bg-white text-accent px-8 py-3 text-lg font-medium rounded-lg hover:bg-gray-50 transition-colors">
               Request Demo
-            </button>
-            <button className="border-2 border-white text-white px-8 py-3 text-lg font-medium rounded-lg hover:bg-white hover:text-accent transition-colors">
-              Explore Careers
-            </button>
+            </a>
+            <a href="/contact" className="border-2 border-white text-white px-8 py-3 text-lg font-medium rounded-lg hover:bg-white hover:text-accent transition-colors">
+              Contact Us
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-surface border-t border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <div className="text-2xl font-bold text-text-primary mb-4">Keystrike</div>
-              <p className="text-text-secondary text-sm mb-4">
-                Advanced cybersecurity. Simplified. Nordic precision meets human-centric innovation.
-              </p>
-              <p className="text-text-muted text-xs">
-                © 2026 Keystrike. All rights reserved.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold text-text-primary mb-4">Solutions</h4>
-              <ul className="space-y-2 text-text-secondary text-sm">
-                <li><a href="#" className="hover:text-accent">Endpoint Security</a></li>
-                <li><a href="#" className="hover:text-accent">Network Protection</a></li>
-                <li><a href="#" className="hover:text-accent">Cloud Security</a></li>
-                <li><a href="#" className="hover:text-accent">Enterprise Suite</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-text-primary mb-4">Company</h4>
-              <ul className="space-y-2 text-text-secondary text-sm">
-                <li><a href="/about" className="hover:text-accent">About Us</a></li>
-                <li><a href="#" className="hover:text-accent">Leadership</a></li>
-                <li><a href="#" className="hover:text-accent">Careers</a></li>
-                <li><a href="/contact" className="hover:text-accent">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-text-primary mb-4">Support</h4>
-              <ul className="space-y-2 text-text-secondary text-sm">
-                <li><a href="#" className="hover:text-accent">Documentation</a></li>
-                <li><a href="#" className="hover:text-accent">Customer Portal</a></li>
-                <li><a href="#" className="hover:text-accent">Partner Portal</a></li>
-                <li><a href="#" className="hover:text-accent">Contact Support</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

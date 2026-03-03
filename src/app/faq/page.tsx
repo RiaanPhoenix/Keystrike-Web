@@ -1,37 +1,11 @@
+'use client';
+
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import type { Metadata } from 'next';
+import { useState, useMemo } from 'react';
+import Head from 'next/head';
 
-export const metadata: Metadata = {
-  title: 'Frequently Asked Questions | Keystrike Cybersecurity',
-  description: 'Common questions about Keystrike cybersecurity platform, physical input verification technology, pricing, implementation, and support. Expert answers from Nordic security innovators.',
-  keywords: [
-    'keystrike faq',
-    'physical input verification questions',
-    'cybersecurity platform help',
-    'keystroke analysis faq',
-    'enterprise security questions',
-    'implementation questions',
-    'support questions',
-    'pricing questions'
-  ],
-  openGraph: {
-    title: 'Keystrike FAQ | Physical Input Verification Questions',
-    description: 'Get answers to common questions about physical input verification technology, implementation, pricing, and cybersecurity platform capabilities.',
-    url: '/faq',
-    images: [
-      {
-        url: '/og-faq.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Keystrike FAQ - Expert Cybersecurity Answers',
-      },
-    ],
-  },
-  alternates: {
-    canonical: '/faq',
-  },
-};
+// Metadata moved to layout.tsx since this is now a client component
 
 const faqData = [
   // Executive Overview
@@ -197,7 +171,7 @@ const faqData = [
   // Use Cases
   {
     question: "What are the most common use cases?",
-    answer: "Enterprise IT: Protect domain controllers, AD/Entra services, identity providers, databases, and other crown jewels where a single compromise could be catastrophic. OT/ICS: Enforce control on jump boxes and bastion hosts at network segment boundaries so only verified human input can operate high-value systems. Desktop Support (preliminary): Confirm that remote desktop interactions truly originate from authorized IT staff. Data Centers: Ensure every privileged action across critical infrastructure is cryptographically tied to a verified human operator. MSSPs: Enforce operator accountability across multi-tenant environments, so every keystroke on managed client infrastructure is attributed to a verified human — not a script, bot, or compromised credential.",
+    answer: "Enterprise IT: Protect domain controllers, AD/Entra services, identity providers, databases, and other crown jewels where a single compromise could be catastrophic.\n\nOT/ICS: Enforce control on jump boxes and bastion hosts at network segment boundaries so only verified human input can operate high-value systems.\n\nDesktop Support (preliminary): Confirm that remote desktop interactions truly originate from authorized IT staff.\n\nData Centers: Ensure every privileged action across critical infrastructure is cryptographically tied to a verified human operator.\n\nMSSPs: Enforce operator accountability across multi-tenant environments, so every keystroke on managed client infrastructure is attributed to a verified human — not a script, bot, or compromised credential.",
     category: "Use Cases"
   },
   {
@@ -359,6 +333,41 @@ const faqData = [
 ];
 
 export default function FAQ() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
+  // Get unique categories from FAQ data
+  const categories = useMemo(() => {
+    const uniqueCategories = [...new Set(faqData.map(faq => faq.category))].sort();
+    return ['All', ...uniqueCategories];
+  }, []);
+
+  // Filter FAQ data based on search query and category
+  const filteredFaqs = useMemo(() => {
+    let filtered = faqData;
+
+    // Filter by category
+    if (selectedCategory !== 'All') {
+      filtered = filtered.filter(faq => faq.category === selectedCategory);
+    }
+
+    // Filter by search query
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      filtered = filtered.filter(faq => 
+        faq.question.toLowerCase().includes(query) || 
+        faq.answer.toLowerCase().includes(query)
+      );
+    }
+
+    return filtered;
+  }, [searchQuery, selectedCategory]);
+
+  // Clear search function
+  const clearSearch = () => {
+    setSearchQuery('');
+  };
+
   // Structured data for FAQ schema
   const faqSchema = {
     "@context": "https://schema.org",
@@ -374,8 +383,19 @@ export default function FAQ() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
+    <>
+      <Head>
+        <title>Frequently Asked Questions | Keystrike Cybersecurity</title>
+        <meta name="description" content="Common questions about Keystrike cybersecurity platform, physical input verification technology, pricing, implementation, and support. Expert answers from Nordic security innovators." />
+        <meta name="keywords" content="keystrike faq, physical input verification questions, cybersecurity platform help, keystroke analysis faq, enterprise security questions, implementation questions, support questions, pricing questions" />
+        <meta property="og:title" content="Keystrike FAQ | Physical Input Verification Questions" />
+        <meta property="og:description" content="Get answers to common questions about physical input verification technology, implementation, pricing, and cybersecurity platform capabilities." />
+        <meta property="og:url" content="/faq" />
+        <link rel="canonical" href="/faq" />
+      </Head>
+      
+      <div className="min-h-screen bg-background">
+        <Navigation />
 
       {/* Structured Data for LLMs */}
       <script
@@ -398,11 +418,77 @@ export default function FAQ() {
         </div>
       </section>
 
+      {/* Search and Filter Section */}
+      <section className="bg-surface py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Search Bar */}
+          <div className="relative mb-8">
+            <div className="relative">
+              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                <svg className="w-5 h-5 text-text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+              <input
+                type="text"
+                placeholder="Search questions — e.g. compliance, pricing, integration..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-12 py-4 text-lg border-l-4 border-accent bg-white rounded-lg shadow-sm focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
+                aria-label="Search FAQ questions"
+              />
+              {searchQuery && (
+                <button
+                  onClick={clearSearch}
+                  className="absolute inset-y-0 right-0 pr-4 flex items-center text-text-muted hover:text-text-primary transition-colors"
+                  aria-label="Clear search"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              )}
+            </div>
+          </div>
+
+          {/* Category Filter Pills */}
+          <div className="flex flex-wrap gap-3 mb-8">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedCategory === category
+                    ? 'bg-accent text-white'
+                    : 'border border-accent text-accent hover:bg-accent hover:text-white'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
+          {/* Results Count */}
+          <div className="mb-6 text-text-muted">
+            {searchQuery || selectedCategory !== 'All' ? (
+              <p>
+                Showing {filteredFaqs.length} of {faqData.length} questions
+                {searchQuery && ` for "${searchQuery}"`}
+                {selectedCategory !== 'All' && ` in ${selectedCategory}`}
+              </p>
+            ) : (
+              <p>{faqData.length} questions available</p>
+            )}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Content */}
       <section className="bg-surface-secondary py-20" itemScope itemType="https://schema.org/FAQPage">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-8">
-            {faqData.map((faq, index) => (
+          {filteredFaqs.length > 0 ? (
+            <div className="space-y-8 transition-all duration-300">
+              {filteredFaqs.map((faq, index) => (
               <article 
                 key={index} 
                 className="card p-8"
@@ -419,7 +505,12 @@ export default function FAQ() {
                   itemType="https://schema.org/Answer"
                 >
                   <div itemProp="text">
-                    {faq.answer}
+                    {faq.answer.split('\n').map((line, lineIndex) => (
+                      <span key={lineIndex}>
+                        {line}
+                        {lineIndex < faq.answer.split('\n').length - 1 && <br />}
+                      </span>
+                    ))}
                   </div>
                 </div>
                 <div className="mt-4">
@@ -429,7 +520,36 @@ export default function FAQ() {
                 </div>
               </article>
             ))}
-          </div>
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <div className="card p-8">
+                <div className="text-text-muted mb-4">
+                  <svg className="w-16 h-16 mx-auto mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-text-primary mb-4">No results for that query</h3>
+                <p className="text-text-secondary mb-6">
+                  Try a different search term, select a different category, or contact our team for personalized help.
+                </p>
+                <div className="flex flex-col sm:flex-row justify-center gap-4">
+                  <button
+                    onClick={() => {
+                      setSearchQuery('');
+                      setSelectedCategory('All');
+                    }}
+                    className="btn btn-secondary"
+                  >
+                    Clear All Filters
+                  </button>
+                  <a href="/contact" className="btn btn-primary">
+                    Contact Our Team
+                  </a>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
@@ -479,7 +599,8 @@ export default function FAQ() {
         </div>
       </div>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 }
