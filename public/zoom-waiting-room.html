@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keystrike Zoom Waiting Room</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0f1419 0%, #1a2332 50%, #0f1419 100%);
+            position: relative;
+        }
+        
+        /* Subtle cyber-resilience background pattern */
+        .background-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.03;
+            background-image: 
+                linear-gradient(90deg, rgba(20, 184, 166, 0.1) 1px, transparent 1px),
+                linear-gradient(rgba(20, 184, 166, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: 1;
+        }
+        
+        /* Subtle network lines overlay */
+        .network-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(20, 184, 166, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(20, 184, 166, 0.08) 0%, transparent 50%);
+            z-index: 2;
+        }
+        
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 108px; /* 10% safe margin */
+            text-align: center;
+        }
+        
+        .main-title {
+            font-size: 84px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.1;
+            margin-bottom: 48px;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            letter-spacing: -1px;
+        }
+        
+        .waiting-message {
+            font-size: 32px;
+            font-weight: 500;
+            color: #e2e8f0;
+            line-height: 1.4;
+            margin-bottom: 64px;
+            max-width: 800px;
+        }
+        
+        .event-details {
+            font-size: 24px;
+            font-weight: 400;
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 48px;
+        }
+        
+        .hosted-by {
+            color: #14b8a6;
+            font-weight: 600;
+        }
+        
+        .speaker-info {
+            margin-top: 16px;
+        }
+        
+        .logo-container {
+            position: absolute;
+            bottom: 64px;
+            right: 64px;
+            z-index: 20;
+        }
+        
+        .keystrike-logo {
+            height: 80px;
+            width: auto;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+        }
+        
+        /* Accent elements */
+        .accent-line {
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, #14b8a6, #06b6d4);
+            border-radius: 2px;
+            margin: 32px auto;
+        }
+        
+        .recipe-icon {
+            position: absolute;
+            top: 120px;
+            left: 120px;
+            font-size: 48px;
+            color: rgba(20, 184, 166, 0.1);
+            z-index: 3;
+        }
+        
+        .blueprint-lines {
+            position: absolute;
+            top: 200px;
+            right: 150px;
+            width: 200px;
+            height: 150px;
+            border: 1px solid rgba(20, 184, 166, 0.08);
+            border-radius: 4px;
+            z-index: 3;
+        }
+        
+        .blueprint-lines::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            height: 1px;
+            background: rgba(20, 184, 166, 0.08);
+        }
+        
+        .blueprint-lines::after {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 20px;
+            right: 20px;
+            height: 1px;
+            background: rgba(20, 184, 166, 0.08);
+        }
+    </style>
+</head>
+<body>
+    <div class="background-pattern"></div>
+    <div class="network-overlay"></div>
+    
+    <!-- Subtle decorative elements -->
+    <div class="recipe-icon">📋</div>
+    <div class="blueprint-lines"></div>
+    
+    <div class="container">
+        <h1 class="main-title">The Recipe for Resilience –<br>A Survival Guide</h1>
+        
+        <div class="accent-line"></div>
+        
+        <p class="waiting-message">
+            <strong>You're in the right place.</strong><br>
+            The host will let you in shortly — the session is about to begin.
+        </p>
+        
+        <div class="event-details">
+            <div class="hosted-by">Hosted by Keystrike.</div>
+            <div class="speaker-info">
+                <strong>Speaker:</strong> Dr. Ymir Vigfusson, PhD, CTO and co-founder of Keystrike.
+            </div>
+        </div>
+    </div>
+    
+    <div class="logo-container">
+        <img src="keystrike-logo.png" class="keystrike-logo" alt="Keystrike Logo" />
+    </div>
+</body>
+</html>

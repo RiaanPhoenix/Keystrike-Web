@@ -55,6 +55,20 @@ export default function Navigation({ currentPage }: { currentPage?: string }) {
                       <div className="font-medium">Healthcare</div>
                       <div className="text-xs text-text-secondary mt-1">HIPAA compliance and patient data protection</div>
                     </a>
+                    <a 
+                      href="/solutions/mssps" 
+                      className="block px-4 py-3 text-sm text-text-primary hover:bg-surface-muted hover:text-accent transition-colors"
+                    >
+                      <div className="font-medium">MSSPs</div>
+                      <div className="text-xs text-text-secondary mt-1">Managed security service provider solutions</div>
+                    </a>
+                    <a 
+                      href="/solutions/data-centers" 
+                      className="block px-4 py-3 text-sm text-text-primary hover:bg-surface-muted hover:text-accent transition-colors"
+                    >
+                      <div className="font-medium">Data Centers</div>
+                      <div className="text-xs text-text-secondary mt-1">Critical infrastructure and facility security</div>
+                    </a>
                     <div className="border-t border-gray-100 mt-2 pt-2">
                       <a 
                         href="/solutions" 
