@@ -1,4 +1,10 @@
+'use client';
+import { useState } from 'react';
+
 export default function Navigation({ currentPage }: { currentPage?: string }) {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileSolutionsOpen, setIsMobileSolutionsOpen] = useState(false);
+
   return (
     <header className="bg-surface border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -134,13 +140,162 @@ export default function Navigation({ currentPage }: { currentPage?: string }) {
             </nav>
           </div>
           <div className="flex items-center space-x-4">
-            <a href="/contact">
+            <a href="/contact" className="hidden md:block">
               <button className="btn btn-primary">
                 Contact Us
               </button>
             </a>
+            {/* Mobile menu button */}
+            <button
+              className="md:hidden p-2 rounded-md text-text-secondary hover:text-text-primary hover:bg-surface-muted"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              <span className="sr-only">Open main menu</span>
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
           </div>
         </div>
+
+        {/* Mobile navigation menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-surface border-t border-border">
+              {/* Mobile Solutions Dropdown */}
+              <div className="space-y-1">
+                <button
+                  onClick={() => setIsMobileSolutionsOpen(!isMobileSolutionsOpen)}
+                  className={`w-full text-left px-3 py-2 text-base font-medium flex items-center justify-between ${
+                    currentPage === 'solutions' 
+                      ? 'text-accent' 
+                      : 'text-text-secondary hover:text-text-primary'
+                  }`}
+                >
+                  Solutions
+                  <svg 
+                    className={`w-4 h-4 transform transition-transform ${isMobileSolutionsOpen ? 'rotate-180' : ''}`} 
+                    fill="currentColor" 
+                    viewBox="0 0 20 20"
+                  >
+                    <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </button>
+                
+                {isMobileSolutionsOpen && (
+                  <div className="pl-4 space-y-1">
+                    <a 
+                      href="/solutions/manufacturing" 
+                      className="block px-3 py-2 text-sm text-text-primary hover:text-accent"
+                    >
+                      <div className="font-medium">Operational Technology & Manufacturing</div>
+                      <div className="text-xs text-text-secondary mt-1">Industrial IoT and SCADA security</div>
+                    </a>
+                    <a 
+                      href="/solutions/financial" 
+                      className="block px-3 py-2 text-sm text-text-primary hover:text-accent"
+                    >
+                      <div className="font-medium">Banking</div>
+                      <div className="text-xs text-text-secondary mt-1">PCI DSS compliance and fraud prevention</div>
+                    </a>
+                    <a 
+                      href="/solutions/government" 
+                      className="block px-3 py-2 text-sm text-text-primary hover:text-accent"
+                    >
+                      <div className="font-medium">Government</div>
+                      <div className="text-xs text-text-secondary mt-1">FedRAMP and security clearance environments</div>
+                    </a>
+                    <a 
+                      href="/solutions/healthcare" 
+                      className="block px-3 py-2 text-sm text-text-primary hover:text-accent"
+                    >
+                      <div className="font-medium">Healthcare</div>
+                      <div className="text-xs text-text-secondary mt-1">HIPAA compliance and patient data protection</div>
+                    </a>
+                    <a 
+                      href="/solutions/mssps" 
+                      className="block px-3 py-2 text-sm text-text-primary hover:text-accent"
+                    >
+                      <div className="font-medium">MSSPs</div>
+                      <div className="text-xs text-text-secondary mt-1">Managed security service provider solutions</div>
+                    </a>
+                    <a 
+                      href="/solutions/data-centers" 
+                      className="block px-3 py-2 text-sm text-text-primary hover:text-accent"
+                    >
+                      <div className="font-medium">Data Centers</div>
+                      <div className="text-xs text-text-secondary mt-1">Critical infrastructure and facility security</div>
+                    </a>
+                    <a 
+                      href="/solutions" 
+                      className="block px-3 py-2 text-sm text-accent font-medium"
+                    >
+                      View All Solutions →
+                    </a>
+                  </div>
+                )}
+              </div>
+
+              <a 
+                href="/platform" 
+                className={`block px-3 py-2 text-base font-medium ${
+                  currentPage === 'platform' 
+                    ? 'text-accent' 
+                    : 'text-text-secondary hover:text-text-primary'
+                }`}
+              >
+                Platform
+              </a>
+              <a 
+                href="/resources" 
+                className={`block px-3 py-2 text-base font-medium ${
+                  currentPage === 'resources' 
+                    ? 'text-accent' 
+                    : 'text-text-secondary hover:text-text-primary'
+                }`}
+              >
+                Resources
+              </a>
+              <a 
+                href="/about" 
+                className={`block px-3 py-2 text-base font-medium ${
+                  currentPage === 'about' 
+                    ? 'text-accent' 
+                    : 'text-text-secondary hover:text-text-primary'
+                }`}
+              >
+                Company
+              </a>
+              <a 
+                href="/faq" 
+                className={`block px-3 py-2 text-base font-medium ${
+                  currentPage === 'faq' 
+                    ? 'text-accent' 
+                    : 'text-text-secondary hover:text-text-primary'
+                }`}
+              >
+                FAQ
+              </a>
+              <a 
+                href="/support" 
+                className={`block px-3 py-2 text-base font-medium ${
+                  currentPage === 'support' 
+                    ? 'text-accent' 
+                    : 'text-text-secondary hover:text-text-primary'
+                }`}
+              >
+                Support
+              </a>
+              <div className="pt-4 pb-3 border-t border-border">
+                <a href="/contact">
+                  <button className="btn btn-primary w-full">
+                    Contact Us
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );
