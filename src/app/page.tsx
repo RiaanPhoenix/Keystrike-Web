@@ -436,10 +436,10 @@ export default function Home() {
               <div className="space-y-8 mb-8">
                 <div>
                   <h3 className="text-xl font-bold text-text-primary mb-2">
-                    <span className="text-accent">SEE</span> — <em>Full Session Visibility</em>
+                    <span className="text-accent">SEE</span> — <em>Real-Time Privileged Session Visibility</em>
                   </h3>
                   <p className="text-text-primary">
-                    A live, continuous map of every remote connection: Who is in, what systems they are touching, and whether it matches approved intent.
+                    Continuous monitoring of every active privileged session; which accounts are connected, which systems are being accessed, and whether session activity matches the verified intent of the access request. Unauthorized lateral movement is detectable the moment it begins.
                   </p>
                 </div>
                 <div>
