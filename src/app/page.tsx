@@ -362,7 +362,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
-              How Keystrike Completes the Security Stack
+              How Keystrike Closes the Post-Authentication Gap in Your Security Stack
             </h2>
             <p className="text-xl text-text-primary max-w-4xl mx-auto">
               The tools in your stack were built to do one thing well. Keystrike fills the gaps between them, giving each one the session-level visibility it was never designed to have.
