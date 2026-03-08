@@ -55,18 +55,18 @@ export default function Home() {
               <p className="mb-4">Built for environments operating under DORA, NIS2, and IEC 62443.</p>
               <p className="text-2xl font-semibold">Keystrike is a privileged session monitoring platform that makes every remote action visible, controllable, and provable in real time.</p>
             </div>
-            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-              <a href="/contact" className="bg-white text-[#0D1B2A] hover:bg-gray-100 px-8 py-3 text-lg font-bold rounded-lg transition-colors inline-block" 
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-[16px] mb-4">
+              <a href="/contact" className="w-full sm:w-auto bg-[#0D3D3D] text-[#FFFFFF] hover:bg-[#1A5252] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-none transition-colors text-center" 
                  data-action="request-demo" data-context="hero-section">
                 See Keystrike in Your Environment
               </a>
-              <a href="/contact" className="btn btn-secondary text-lg px-8 py-3"
+              <a href="/contact" className="w-full sm:w-auto bg-transparent text-[#0D3D3D] hover:bg-[rgba(13,61,61,0.08)] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-[1.5px] border-solid border-[#0D3D3D] transition-colors text-center"
                  data-action="free-trial" data-context="hero-section">
                 Start a Free Session Audit
               </a>
             </div>
-            <div className="flex justify-center mb-12">
-              <a href="/contact" className="btn btn-primary text-lg px-8 py-3"
+            <div className="flex justify-center mt-4">
+              <a href="/contact" className="w-full sm:w-[calc(2*28px+2*auto+16px)] md:w-auto bg-transparent text-[#0D3D3D] hover:bg-[rgba(13,61,61,0.08)] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-[1.5px] border-solid border-[#0D3D3D] transition-colors text-center min-w-[320px] sm:min-w-[480px]"
                  data-action="free-overview" data-context="hero-section">
                 Take the Remote Access Risk Assessment
               </a>
