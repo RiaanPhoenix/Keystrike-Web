@@ -56,7 +56,7 @@ export default function Home() {
               <p className="text-2xl font-semibold">Keystrike is a privileged session monitoring platform that makes every remote action visible, controllable, and provable in real time.</p>
             </div>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-              <a href="/contact" className="btn btn-primary text-lg px-8 py-3" 
+              <a href="/contact" className="bg-white text-[#0D1B2A] hover:bg-gray-100 px-8 py-3 text-lg font-bold rounded-lg transition-colors inline-block" 
                  data-action="request-demo" data-context="hero-section">
                 See Keystrike in Your Environment
               </a>
