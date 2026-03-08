@@ -452,10 +452,10 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-text-primary mb-2">
-                    <span className="text-accent">PROVE</span> — <em>Cryptographic Audit Trail</em>
+                    <span className="text-accent">PROVE</span> — <em>Tamper-Evident Session Audit Trail</em>
                   </h3>
                   <p className="text-text-primary">
-                    Every session, cryptographically attested and audit-ready: Definitive proof of governance for compliance, incident response, and regulatory review.
+                    Every privileged session produces a cryptographically attested, tamper-evident record of all activity. Session evidence meets the evidentiary standard required by DORA, NIS2, and IEC 62443, and is available on demand for board reporting, incident response, and regulatory audit.
                   </p>
                 </div>
               </div>
