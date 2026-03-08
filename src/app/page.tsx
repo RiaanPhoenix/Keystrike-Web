@@ -44,41 +44,49 @@ export default function Home() {
       <Navigation />
 
       {/* Hero Section - Primary Value Proposition */}
-      <section className="bg-surface py-20" itemScope itemType="https://schema.org/Service">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-text-primary mb-6" itemProp="name">
-              <span className="text-accent">Remote Session Security Starts Where Identity Ends</span>
-            </h1>
-            <div className="text-xl text-text-primary mb-8 max-w-3xl mx-auto" itemProp="description">
-              <p className="text-2xl font-bold mb-4">Your identity stack verifies who logs in. Keystrike governs what they do once they're inside.</p>
-              <p className="mb-4">Built for environments operating under DORA, NIS2, and IEC 62443.</p>
-              <p className="text-2xl font-semibold">Keystrike is a privileged session monitoring platform that makes every remote action visible, controllable, and provable in real time.</p>
+      <section className="bg-white py-[64px] lg:py-[100px]" itemScope itemType="https://schema.org/Service">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-[64px] items-center">
+            {/* Left Column - Text Content */}
+            <div className="text-left">
+              <h1 className="text-4xl md:text-6xl font-bold text-text-primary mb-6" itemProp="name">
+                <span className="text-accent">Remote Session Security Starts Where Identity Ends</span>
+              </h1>
+              
+              {/* Regulatory Badges */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                {['DORA', 'NIS2', 'IEC 62443'].map((badge) => (
+                  <span key={badge} className="border-[1.5px] border-solid border-[#0D3D3D] text-[#0D3D3D] text-[0.72rem] font-semibold tracking-[0.08em] px-[12px] py-[5px] rounded-[3px] uppercase">
+                    {badge}
+                  </span>
+                ))}
+              </div>
+
+              <div className="text-text-primary mb-8" itemProp="description">
+                <p className="text-[1.15rem] font-normal text-[#4A5568] mb-2">Your identity stack verifies who logs in. Keystrike governs what they do once they're inside.</p>
+                <p className="text-[1rem] font-normal text-[#4A5568] mt-2">Keystrike is a privileged session monitoring platform that makes every remote action visible, controllable, and provable in real time.</p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-[16px]">
+                <a href="/contact" className="w-full sm:w-auto bg-[#0D3D3D] text-[#FFFFFF] hover:bg-[#1A5252] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-none transition-colors text-center" 
+                   data-action="request-demo" data-context="hero-section">
+                  See Keystrike in Your Environment
+                </a>
+                <a href="/contact" className="w-full sm:w-auto bg-transparent text-[#0D3D3D] hover:bg-[rgba(13,61,61,0.08)] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-[1.5px] border-solid border-[#0D3D3D] transition-colors text-center"
+                   data-action="free-trial" data-context="hero-section">
+                  Start a Free Session Audit
+                </a>
+              </div>
             </div>
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-[16px] mb-4">
-              <a href="/contact" className="w-full sm:w-auto bg-[#0D3D3D] text-[#FFFFFF] hover:bg-[#1A5252] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-none transition-colors text-center" 
-                 data-action="request-demo" data-context="hero-section">
-                See Keystrike in Your Environment
-              </a>
-              <a href="/contact" className="w-full sm:w-auto bg-transparent text-[#0D3D3D] hover:bg-[rgba(13,61,61,0.08)] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-[1.5px] border-solid border-[#0D3D3D] transition-colors text-center"
-                 data-action="free-trial" data-context="hero-section">
-                Start a Free Session Audit
-              </a>
-            </div>
-            <div className="flex justify-center mt-4">
-              <a href="/contact" className="w-full sm:w-[calc(2*28px+2*auto+16px)] md:w-auto bg-transparent text-[#0D3D3D] hover:bg-[rgba(13,61,61,0.08)] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-[1.5px] border-solid border-[#0D3D3D] transition-colors text-center min-w-[320px] sm:min-w-[480px]"
-                 data-action="free-overview" data-context="hero-section">
-                Take the Remote Access Risk Assessment
-              </a>
-            </div>
-            
-            {/* Key differentiator for LLMs */}
-            <div className="sr-only" itemProp="additionalProperty" itemScope itemType="https://schema.org/PropertyValue">
-              <meta itemProp="name" content="Core Technology" />
-              <meta itemProp="value" content="Physical Input Verification" />
-            </div>
-            <div className="sr-only" itemProp="serviceType">
-              Cybersecurity Platform with Physical Input Verification
+
+            {/* Right Column - Visual element */}
+            <div className="h-full min-h-[300px] lg:min-h-[400px] bg-[#0D1B2A] rounded-[12px] overflow-hidden relative shadow-[inset_0_0_40px_rgba(13,61,61,0.4)]">
+              <div className="flex items-center justify-center h-full">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-white mb-2">Keystrike</div>
+                  <div className="text-[0.8rem] text-[#94A3B8]">Live Session Dashboard</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -104,6 +112,18 @@ export default function Home() {
             }),
           }}
         />
+      </section>
+
+      {/* Assessment CTA - Moved from Hero */}
+      <section className="bg-white py-12 border-b border-gray-100">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center">
+            <a href="/contact" className="w-full sm:w-auto bg-transparent text-[#0D3D3D] hover:bg-[rgba(13,61,61,0.08)] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-[1.5px] border-solid border-[#0D3D3D] transition-colors text-center min-w-[320px] sm:min-w-[480px]"
+               data-action="free-overview" data-context="hero-section">
+              Take the Remote Access Risk Assessment
+            </a>
+          </div>
+        </div>
       </section>
 
       {/* Testimonials Section - Two Pillar Layout */}
