@@ -137,6 +137,60 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Statistics Banner */}
+      <section className="w-full bg-[#0D1B2A] py-10 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center justify-around gap-8 md:gap-4 text-center">
+            
+            {/* Stat 1 */}
+            <div className="flex flex-col items-center">
+              <div className="mb-1">
+                <span className="text-4xl md:text-5xl font-bold text-white">67%</span>
+                <span className="text-lg md:text-xl font-light text-[#A0AEC0] ml-2">of targets are Critical Infrastructure</span>
+              </div>
+              <span className="text-[10px] text-[#4A5568] uppercase tracking-wider">Verizon DBIR</span>
+            </div>
+
+            <div className="hidden md:block text-white text-2xl">•</div>
+            <div className="block md:hidden w-12 h-px bg-[#4A5568]"></div>
+
+            {/* Stat 2 */}
+            <div className="flex flex-col items-center">
+              <div className="mb-1">
+                <span className="text-4xl md:text-5xl font-bold text-white">280 days</span>
+                <span className="text-lg md:text-xl font-light text-[#A0AEC0] ml-2">attackers stay undetected on average</span>
+              </div>
+              <span className="text-[10px] text-[#4A5568] uppercase tracking-wider">IBM Cost of a Data Breach Report</span>
+            </div>
+
+            <div className="hidden md:block text-white text-2xl">•</div>
+            <div className="block md:hidden w-12 h-px bg-[#4A5568]"></div>
+
+            {/* Stat 3 */}
+            <div className="flex flex-col items-center">
+              <div className="mb-1">
+                <span className="text-4xl md:text-5xl font-bold text-white">30%</span>
+                <span className="text-lg md:text-xl font-light text-[#A0AEC0] ml-2">of breaches involve third parties</span>
+              </div>
+              <span className="text-[10px] text-[#4A5568] uppercase tracking-wider">Verizon DBIR</span>
+            </div>
+
+            <div className="hidden md:block text-white text-2xl">•</div>
+            <div className="block md:hidden w-12 h-px bg-[#4A5568]"></div>
+
+            {/* Stat 4 */}
+            <div className="flex flex-col items-center">
+              <div className="mb-1">
+                <span className="text-4xl md:text-5xl font-bold text-white">86%</span>
+                <span className="text-lg md:text-xl font-light text-[#A0AEC0] ml-2">of ransomware attacks use valid remote credentials</span>
+              </div>
+              <span className="text-[10px] text-[#4A5568] uppercase tracking-wider">Sophos Ransomware Report</span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* Solutions Overview - Three Strategic Pillars */}
       <section className="bg-surface py-20" itemScope itemType="https://schema.org/Product">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
