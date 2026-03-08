@@ -135,28 +135,28 @@ export default function ManufacturingPage() {
                 IT-to-OT Lateral Movement: Stopping Attackers Before They Cross the Air Gap
               </h3>
               
-              <div className=\"space-y-4 mb-6\">
-                <p className=\"text-[#4A5568] leading-relaxed\">
+              <div className="space-y-4 mb-6">
+                <p className="text-[#4A5568] leading-relaxed">
                   In 2023, Volt Typhoon — a Chinese state-linked threat actor — maintained persistent access to Littleton Electric Light and Water in Massachusetts for over 300 days by moving laterally from IT into OT. No session-level control existed to detect or block commands originating from the compromised IT environment.
                 </p>
                 
-                <p className=\"text-[#4A5568] leading-relaxed\">
+                <p className="text-[#4A5568] leading-relaxed">
                   Keystrike enforces session-level isolation between IT and OT. Stolen credentials, inherited access, and compromised IT sessions cannot produce attested commands in OT systems.
                 </p>
               </div>
 
-              <ul className=\"space-y-3\">
-                <li className=\"flex items-start\">
-                  <div className=\"w-1.5 h-1.5 bg-[#0D3D3D] rounded-full mt-2 mr-3 flex-shrink-0\"></div>
-                  <span className=\"text-[#4A5568] text-[0.9rem]\">Lateral movement from IT to OT blocked at the session level</span>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <div className="w-1.5 h-1.5 bg-[#0D3D3D] rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-[#4A5568] text-[0.9rem]">Lateral movement from IT to OT blocked at the session level</span>
                 </li>
-                <li className=\"flex items-start\">
-                  <div className=\"w-1.5 h-1.5 bg-[#0D3D3D] rounded-full mt-2 mr-3 flex-shrink-0\"></div>
-                  <span className=\"text-[#4A5568] text-[0.9rem]\">IT/OT segmentation enforced without network re-architecture</span>
+                <li className="flex items-start">
+                  <div className="w-1.5 h-1.5 bg-[#0D3D3D] rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-[#4A5568] text-[0.9rem]">IT/OT segmentation enforced without network re-architecture</span>
                 </li>
-                <li className=\"flex items-start\">
-                  <div className=\"w-1.5 h-1.5 bg-[#0D3D3D] rounded-full mt-2 mr-3 flex-shrink-0\"></div>
-                  <span className=\"text-[#4A5568] text-[0.9rem]\">Pumps, valves, turbines, meters, and substations protected from unverified commands</span>
+                <li className="flex items-start">
+                  <div className="w-1.5 h-1.5 bg-[#0D3D3D] rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <span className="text-[#4A5568] text-[0.9rem]">Pumps, valves, turbines, meters, and substations protected from unverified commands</span>
                 </li>
               </ul>
             </div>
@@ -165,16 +165,216 @@ export default function ManufacturingPage() {
       </section>
 
       {/* Section 3 - Regulatory Compliance */}
-      <section className=\"bg-white py-18\">
-        <div className=\"max-w-[1100px] mx-auto px-4 text-center\">
+      <section className="bg-white py-[72px]">
+        <div className="max-w-[1100px] mx-auto px-4 text-center">
           {/* Section Eyebrow */}
-          <div className=\"text-[0.72rem] font-semibold tracking-[0.10em] text-[#0D3D3D] uppercase mb-6\">
+          <div className="text-[0.72rem] font-semibold tracking-[0.10em] text-[#0D3D3D] uppercase mb-6">
             Regulatory Compliance
           </div>
 
           {/* Section H2 */}
-          <h2 className=\"text-3xl md:text-4xl font-bold text-[#0F1623] mb-8\">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0F1623] mb-8">
             Meeting NERC CIP, IEC 62443, EPA, and NIST Requirements Without Disrupting Operations
           </h2>
 
-          {/* Body Paragraph */}\n          <div className=\"max-w-[680px] mx-auto mb-8\">\n            <p className=\"text-[#4A5568] leading-relaxed\">\n              Keystrike produces continuous, tamper-evident session records that meet the evidentiary standard required by OT security regulations. Compliance is a byproduct of governance — not additional overhead.\n            </p>\n          </div>\n\n          {/* Badge Pills */}\n          <div className=\"flex flex-wrap justify-center gap-2 mb-8\">\n            {[\n              'NERC CIP',\n              'EPA Safe Drinking Water Act', \n              'IEC 62443',\n              'ISO 27001',\n              'NIST CSF',\n              'State Energy & Water Regulations'\n            ].map((badge) => (\n              <span \n                key={badge}\n                className=\"border-[1.5px] border-solid border-[#0D3D3D] text-[#0D3D3D] text-[0.72rem] font-semibold tracking-[0.08em] px-[14px] py-[6px] rounded-[3px]\"\n              >\n                {badge}\n              </span>\n            ))}\n          </div>\n\n          {/* Second Body Paragraph */}\n          <div className=\"max-w-[680px] mx-auto\">\n            <p className=\"text-[#4A5568] leading-relaxed\">\n              Keystrike integrates with SCADA, ICS, IAM, and SIEM systems to enforce policy-driven access, log every operator action, and generate audit-ready evidence for board reporting, incident response, and regulatory review.\n            </p>\n          </div>\n        </div>\n      </section>\n\n      {/* Section 4 - Tech Stack Comparison Table */}\n      <section className=\"bg-[#F4F5F7] py-18\">\n        <div className=\"max-w-[1100px] mx-auto px-4\">\n          {/* Section Eyebrow */}\n          <div className=\"text-[0.72rem] font-semibold tracking-[0.10em] text-[#0D3D3D] uppercase mb-6 text-center\">\n            Post-Authentication Security Gap\n          </div>\n\n          {/* Section H2 */}\n          <h2 className=\"text-3xl md:text-4xl font-bold text-[#0F1623] text-center mb-12\">\n            Why Perimeter and Detection Tools Leave OT Exposed After Authentication\n          </h2>\n\n          {/* Table */}\n          <div className=\"overflow-x-auto bg-white rounded-lg shadow-sm mb-8\">\n            <table className=\"w-full\">\n              <thead>\n                <tr className=\"bg-[#0D3D3D]\">\n                  <th className=\"px-6 py-4 text-left text-white font-semibold text-[0.85rem]\">Security Tool</th>\n                  <th className=\"px-6 py-4 text-left text-white font-semibold text-[0.85rem]\">What It Protects</th>\n                  <th className=\"px-6 py-4 text-left text-white font-semibold text-[0.85rem]\">Post-Authentication Gap</th>\n                </tr>\n              </thead>\n              <tbody>\n                <tr className=\"bg-white border-b border-gray-100\">\n                  <td className=\"px-6 py-4 text-[#0F1623] text-[0.9rem]\">Firewall / VPN</td>\n                  <td className=\"px-6 py-4 text-[#0F1623] text-[0.9rem]\">Network perimeter</td>\n                  <td className=\"px-6 py-4 text-[#0F1623] text-[0.9rem]\">Session activity after access is granted</td>\n                </tr>\n                <tr className=\"bg-[#F9FAFB] border-b border-gray-100\">\n                  <td className=\"px-6 py-4 text-[#0F1623] text-[0.9rem]\">MFA</td>\n                  <td className=\"px-6 py-4 text-[#0F1623] text-[0.9rem]\">Login authentication</td>\n                  <td className=\"px-6 py-4 text-[#0F1623] text-[0.9rem]\">Actions inside authenticated sessions</td>\n                </tr>\n                <tr className=\"bg-white border-b border-gray-100\">\n                  <td className=\"px-6 py-4 text-[#0F1623] text-[0.9rem]\">EDR / SIEM</td>\n                  <td className=\"px-6 py-4 text-[#0F1623] text-[0.9rem]\">Endpoint threats and event correlation</td>\n                  <td className=\"px-6 py-4 text-[#0F1623] text-[0.9rem]\">Real-time command execution — detection happens after</td>\n                </tr>\n                <tr className=\"bg-[#0D3D3D]\">\n                  <td className=\"px-6 py-4 text-white font-semibold text-[0.9rem]\">Keystrike</td>\n                  <td className=\"px-6 py-4 text-white font-semibold text-[0.9rem]\">Every command in every privileged session</td>\n                  <td className=\"px-6 py-4 text-white font-semibold text-[0.9rem]\">None. Unauthorised commands blocked before execution.</td>\n                </tr>\n              </tbody>\n            </table>\n          </div>\n\n          {/* Privacy Note */}\n          <div className=\"text-center max-w-[640px] mx-auto\">\n            <p className=\"text-[#4A5568] text-[0.9rem]\">\n              Keystrike does not record keystrokes, commands, or personally identifiable information. Session verification is cryptographic, not behavioural — no false positives, no privacy exposure.\n            </p>\n          </div>\n        </div>\n      </section>\n\n      {/* Section 5 - Incident Table */}\n      <section className=\"bg-white py-18\">\n        <div className=\"max-w-[1100px] mx-auto px-4\">\n          {/* Section Eyebrow */}\n          <div className=\"text-[0.72rem] font-semibold tracking-[0.10em] text-[#0D3D3D] uppercase mb-6 text-center\">\n            Documented OT Incidents\n          </div>\n\n          {/* Section H2 */}\n          <h2 className=\"text-3xl md:text-4xl font-bold text-[#0F1623] text-center mb-12\">\n            Real OT Attacks on Water, Energy, and Utility Infrastructure — and the Session Gap That Enabled Them\n          </h2>\n\n          {/* Incident Table */}\n          <div className=\"overflow-x-auto bg-white rounded-lg shadow-sm\">\n            <table className=\"w-full\">\n              <thead>\n                <tr className=\"bg-[#0D3D3D]\">\n                  <th className=\"px-6 py-4 text-left text-white font-semibold text-[0.85rem]\">Incident</th>\n                  <th className=\"px-6 py-4 text-left text-white font-semibold text-[0.85rem]\">The Gap</th>\n                  <th className=\"px-6 py-4 text-left text-white font-semibold text-[0.85rem]\">How Keystrike Closes It</th>\n                </tr>\n              </thead>\n              <tbody>\n                <tr className=\"bg-white border-b border-gray-100\">\n                  <td className=\"px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed\">\n                    Texas Water Systems (2024) — Attackers caused a water tank overflow in Muleshoe, Texas, forcing manual SCADA shutdowns.\n                  </td>\n                  <td className=\"px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed\">\n                    No session-level verification existed to block unauthorised remote commands.\n                  </td>\n                  <td className=\"px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed\">\n                    Keystrike blocks unattested remote commands before execution. The overflow and shutdown would have been prevented.\n                  </td>\n                </tr>\n                <tr className=\"bg-[#F9FAFB] border-b border-gray-100\">\n                  <td className=\"px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed\">\n                    American Water (2024) — The largest US regulated water utility suffered unauthorised network access, triggering precautionary OT shutdowns.\n                  </td>\n                  <td className=\"px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed\">\n                    No session-level evidence existed to confirm OT systems were unaffected, forcing precautionary operational disruption.\n                  </td>\n                  <td className=\"px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed\">\n                    Keystrike provides verifiable session-level evidence that no unauthorised commands reached OT — reducing or eliminating the need for precautionary shutdowns.\n                  </td>\n                </tr>\n                <tr className=\"bg-white border-b border-gray-100\">\n                  <td className=\"px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed\">\n                    Volt Typhoon / Littleton Electric Light & Water (2023) — Chinese state-linked actors maintained 300+ days of persistent access via lateral IT-to-OT movement.\n                  </td>\n                  <td className=\"px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed\">\n                    Session activity inside legitimate connections was not verified at the command level, enabling long-term undetected access.\n                  </td>\n                  <td className=\"px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed\">\n                    Keystrike's continuous session verification would have blocked unattested commands throughout, neutralising persistent access regardless of entry method.\n                  </td>\n                </tr>\n                <tr className=\"bg-[#F9FAFB]\">\n                  <td className=\"px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed\">\n                    Utility Identity Compromise (2025) — 81% of water and electricity utility attacks compromise identity systems to pivot into OT networks. (Semperis)\n                  </td>\n                  <td className=\"px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed\">\n                    Valid stolen credentials provide unrestricted OT command access with no session-level verification in place.\n                  </td>\n                  <td className=\"px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed\">\n                    Keystrike blocks commands from stolen credentials that cannot pass physical attestation. Operational integrity is preserved even after full identity compromise.\n                  </td>\n                </tr>\n              </tbody>\n            </table>\n          </div>\n        </div>\n      </section>\n\n      {/* Section 6 - Closing CTA */}\n      <section className=\"bg-[#0D1B2A] py-20 text-center\">\n        <div className=\"max-w-[1100px] mx-auto px-4\">\n          {/* H2 */}\n          <h2 className=\"text-white font-bold text-[1.6rem] max-w-[640px] mx-auto mb-8 leading-tight\">\n            Continuous Session Governance for Water, Energy, and Utility Infrastructure\n          </h2>\n\n          {/* Body Paragraph */}\n          <div className=\"max-w-[580px] mx-auto mb-10\">\n            <p className=\"text-[#CBD5E1] text-[1rem] leading-[1.75]\">\n              Compromised credentials, hijacked sessions, and unverified vendor access are the three most common paths to OT operational disruption. Keystrike closes all three — without replacing existing infrastructure, recording operator activity, or slowing legitimate workflows.\n            </p>\n          </div>\n\n          {/* Buttons */}\n          <div className=\"flex flex-col sm:flex-row justify-center gap-4 mb-6\">\n            <button className=\"bg-white text-[#0D1B2A] font-semibold rounded-[5px] px-[28px] py-[14px] hover:bg-gray-100 transition-colors\">\n              See Keystrike in Your OT Environment\n            </button>\n            <button className=\"bg-transparent border-[1.5px] border-white text-white font-semibold rounded-[5px] px-[28px] py-[14px] hover:bg-white hover:bg-opacity-10 transition-colors\">\n              Take the Remote Access Risk Assessment\n            </button>\n          </div>\n\n          {/* Contact Line */}\n          <div className=\"text-[#64748B] text-[0.8rem] mt-6\">\n            To speak with a Keystrike engineer: connect@keystrike.com\n          </div>\n        </div>\n      </section>\n\n    </div>\n  );\n}\n
+          {/* Body Paragraph */}
+          <div className="max-w-[680px] mx-auto mb-8">
+            <p className="text-[#4A5568] leading-relaxed">
+              Keystrike produces continuous, tamper-evident session records that meet the evidentiary standard required by OT security regulations. Compliance is a byproduct of governance — not additional overhead.
+            </p>
+          </div>
+
+          {/* Badge Pills */}
+          <div className="flex flex-wrap justify-center gap-2 mb-8">
+            {[
+              'NERC CIP',
+              'EPA Safe Drinking Water Act', 
+              'IEC 62443',
+              'ISO 27001',
+              'NIST CSF',
+              'State Energy & Water Regulations'
+            ].map((badge) => (
+              <span 
+                key={badge}
+                className="border-[1.5px] border-solid border-[#0D3D3D] text-[#0D3D3D] text-[0.72rem] font-semibold tracking-[0.08em] px-[14px] py-[6px] rounded-[3px]"
+              >
+                {badge}
+              </span>
+            ))}
+          </div>
+
+          {/* Second Body Paragraph */}
+          <div className="max-w-[680px] mx-auto">
+            <p className="text-[#4A5568] leading-relaxed">
+              Keystrike integrates with SCADA, ICS, IAM, and SIEM systems to enforce policy-driven access, log every operator action, and generate audit-ready evidence for board reporting, incident response, and regulatory review.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4 - Tech Stack Comparison Table */}
+      <section className="bg-[#F4F5F7] py-[72px]">
+        <div className="max-w-[1100px] mx-auto px-4">
+          {/* Section Eyebrow */}
+          <div className="text-[0.72rem] font-semibold tracking-[0.10em] text-[#0D3D3D] uppercase mb-6 text-center">
+            Post-Authentication Security Gap
+          </div>
+
+          {/* Section H2 */}
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0F1623] text-center mb-12">
+            Why Perimeter and Detection Tools Leave OT Exposed After Authentication
+          </h2>
+
+          {/* Table */}
+          <div className="overflow-x-auto bg-white rounded-lg shadow-sm mb-8">
+            <table className="w-full">
+              <thead>
+                <tr className="bg-[#0D3D3D]">
+                  <th className="px-6 py-4 text-left text-white font-semibold text-[0.85rem]">Security Tool</th>
+                  <th className="px-6 py-4 text-left text-white font-semibold text-[0.85rem]">What It Protects</th>
+                  <th className="px-6 py-4 text-left text-white font-semibold text-[0.85rem]">Post-Authentication Gap</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-white border-b border-gray-100">
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem]">Firewall / VPN</td>
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem]">Network perimeter</td>
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem]">Session activity after access is granted</td>
+                </tr>
+                <tr className="bg-[#F9FAFB] border-b border-gray-100">
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem]">MFA</td>
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem]">Login authentication</td>
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem]">Actions inside authenticated sessions</td>
+                </tr>
+                <tr className="bg-white border-b border-gray-100">
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem]">EDR / SIEM</td>
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem]">Endpoint threats and event correlation</td>
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem]">Real-time command execution — detection happens after</td>
+                </tr>
+                <tr className="bg-[#0D3D3D]">
+                  <td className="px-6 py-4 text-white font-semibold text-[0.9rem]">Keystrike</td>
+                  <td className="px-6 py-4 text-white font-semibold text-[0.9rem]">Every command in every privileged session</td>
+                  <td className="px-6 py-4 text-white font-semibold text-[0.9rem]">None. Unauthorised commands blocked before execution.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* Privacy Note */}
+          <div className="text-center max-w-[640px] mx-auto">
+            <p className="text-[#4A5568] text-[0.9rem]">
+              Keystrike does not record keystrokes, commands, or personally identifiable information. Session verification is cryptographic, not behavioural — no false positives, no privacy exposure.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 5 - Incident Table */}
+      <section className="bg-white py-[72px]">
+        <div className="max-w-[1100px] mx-auto px-4">
+          {/* Section Eyebrow */}
+          <div className="text-[0.72rem] font-semibold tracking-[0.10em] text-[#0D3D3D] uppercase mb-6 text-center">
+            Documented OT Incidents
+          </div>
+
+          {/* Section H2 */}
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0F1623] text-center mb-12">
+            Real OT Attacks on Water, Energy, and Utility Infrastructure — and the Session Gap That Enabled Them
+          </h2>
+
+          {/* Incident Table */}
+          <div className="overflow-x-auto bg-white rounded-lg shadow-sm">
+            <table className="w-full">
+              <thead>
+                <tr className="bg-[#0D3D3D]">
+                  <th className="px-6 py-4 text-left text-white font-semibold text-[0.85rem]">Incident</th>
+                  <th className="px-6 py-4 text-left text-white font-semibold text-[0.85rem]">The Gap</th>
+                  <th className="px-6 py-4 text-left text-white font-semibold text-[0.85rem]">How Keystrike Closes It</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-white border-b border-gray-100">
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
+                    Texas Water Systems (2024) — Attackers caused a water tank overflow in Muleshoe, Texas, forcing manual SCADA shutdowns.
+                  </td>
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
+                    No session-level verification existed to block unauthorised remote commands.
+                  </td>
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
+                    Keystrike blocks unattested remote commands before execution. The overflow and shutdown would have been prevented.
+                  </td>
+                </tr>
+                <tr className="bg-[#F9FAFB] border-b border-gray-100">
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
+                    American Water (2024) — The largest US regulated water utility suffered unauthorised network access, triggering precautionary OT shutdowns.
+                  </td>
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
+                    No session-level evidence existed to confirm OT systems were unaffected, forcing precautionary operational disruption.
+                  </td>
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
+                    Keystrike provides verifiable session-level evidence that no unauthorised commands reached OT — reducing or eliminating the need for precautionary shutdowns.
+                  </td>
+                </tr>
+                <tr className="bg-white border-b border-gray-100">
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
+                    Volt Typhoon / Littleton Electric Light & Water (2023) — Chinese state-linked actors maintained 300+ days of persistent access via lateral IT-to-OT movement.
+                  </td>
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
+                    Session activity inside legitimate connections was not verified at the command level, enabling long-term undetected access.
+                  </td>
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
+                    Keystrike's continuous session verification would have blocked unattested commands throughout, neutralising persistent access regardless of entry method.
+                  </td>
+                </tr>
+                <tr className="bg-[#F9FAFB]">
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
+                    Utility Identity Compromise (2025) — 81% of water and electricity utility attacks compromise identity systems to pivot into OT networks. (Semperis)
+                  </td>
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
+                    Valid stolen credentials provide unrestricted OT command access with no session-level verification in place.
+                  </td>
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
+                    Keystrike blocks commands from stolen credentials that cannot pass physical attestation. Operational integrity is preserved even after full identity compromise.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 6 - Closing CTA */}
+      <section className="bg-[#0D1B2A] py-20 text-center">
+        <div className="max-w-[1100px] mx-auto px-4">
+          {/* H2 */}
+          <h2 className="text-white font-bold text-[1.6rem] max-w-[640px] mx-auto mb-8 leading-tight">
+            Continuous Session Governance for Water, Energy, and Utility Infrastructure
+          </h2>
+
+          {/* Body Paragraph */}
+          <div className="max-w-[580px] mx-auto mb-10">
+            <p className="text-[#CBD5E1] text-[1rem] leading-[1.75]">
+              Compromised credentials, hijacked sessions, and unverified vendor access are the three most common paths to OT operational disruption. Keystrike closes all three — without replacing existing infrastructure, recording operator activity, or slowing legitimate workflows.
+            </p>
+          </div>
+
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
+            <button className="bg-white text-[#0D1B2A] font-semibold rounded-[5px] px-[28px] py-[14px] hover:bg-[#F0F0F0] transition-colors">
+              See Keystrike in Your OT Environment
+            </button>
+            <button className="bg-transparent border-[1.5px] border-white text-white font-semibold rounded-[5px] px-[28px] py-[14px] hover:bg-white hover:bg-opacity-10 transition-colors">
+              Take the Remote Access Risk Assessment
+            </button>
+          </div>
+
+          {/* Contact Line */}
+          <div className="text-[#64748B] text-[0.8rem] mt-6">
+            To speak with a Keystrike engineer: connect@keystrike.com
+          </div>
+        </div>
+      </section>
+
+    </div>
+  );
+}
