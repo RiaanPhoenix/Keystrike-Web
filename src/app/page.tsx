@@ -48,27 +48,27 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-text-primary mb-6" itemProp="name">
-              <span className="text-accent">THE IDENTITY GAP</span>
+              <span className="text-accent">Remote Session Security Starts Where Identity Ends</span>
             </h1>
             <div className="text-xl text-text-primary mb-8 max-w-3xl mx-auto" itemProp="description">
-              <p className="text-2xl font-bold mb-4">Attackers Don't Break In. They Log In.</p>
-              <p className="mb-4">Your identity stack is hardened. But after access is granted, remote sessions remain invisible, unenforced, and wide open. That's where the real damage happens.</p>
-              <p className="text-xl font-semibold">Keystrike makes every remote action visible, enforceable, and provable in real time — interrupting attack chains before they cause damage.</p>
+              <p className="text-2xl font-bold mb-4">Your identity stack verifies who logs in. Keystrike governs what they do once they're inside.</p>
+              <p className="mb-4">Built for environments operating under DORA, NIS2, and IEC 62443.</p>
+              <p className="text-2xl font-semibold">Keystrike is a privileged session monitoring platform that makes every remote action visible, controllable, and provable in real time.</p>
             </div>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
               <a href="/contact" className="btn btn-primary text-lg px-8 py-3" 
                  data-action="request-demo" data-context="hero-section">
-                Request Demo
+                See Keystrike in Your Environment
               </a>
               <a href="/contact" className="btn btn-primary text-lg px-8 py-3"
                  data-action="free-trial" data-context="hero-section">
-                Start Free Trial
+                Start a Free Session Audit
               </a>
             </div>
             <div className="flex justify-center mb-12">
               <a href="/contact" className="btn btn-primary text-lg px-8 py-3"
                  data-action="free-overview" data-context="hero-section">
-                Free Remote Access Risk Assessment
+                Take the Remote Access Risk Assessment
               </a>
             </div>
             
@@ -113,13 +113,19 @@ export default function Home() {
           <div className="flex items-center justify-center p-8 lg:p-16" style={{backgroundColor: '#0D1B2A'}}>
             <div className="max-w-lg text-center lg:text-left">
               <h2 className="text-3xl md:text-4xl font-light text-white mb-6">
-                Your Sessions Are Running. <span className="text-white">Are You Watching?</span>
+                What Happens Inside a Remote Session <span className="text-white">Is the Blind Spot</span>
               </h2>
               <p className="text-xl text-gray-100 mb-8 leading-relaxed">
-                Once a remote session begins, identity tooling stops. Security teams can't see what systems are being touched, whether activity matches approved intent, or when something goes wrong, until after the damage is done.
+                Privileged remote access is the most common entry point in OT, ICS, and enterprise breaches. Credential-based attacks succeed not because identity fails but because nothing governs the session after authentication.
+              </p>
+              <p className="text-xl text-gray-100 mb-8 leading-relaxed">
+                Keystrike enforces session-level controls in real time: continuous user verification, action-level audit trails, and instant interruption of unauthorized execution. No changes to your existing identity infrastructure.
+              </p>
+              <p className="text-xl text-gray-100 mb-8 leading-relaxed">
+                Built for organizations operating under DORA, NIS2, and IEC 62443.
               </p>
               <a href="/contact" className="inline-block border-2 border-white text-white px-8 py-3 text-lg font-medium rounded-lg hover:bg-white hover:text-[#0D1B2A] transition-colors">
-                Stop the Blind Spot
+                Close the Post-Authentication Gap
               </a>
             </div>
           </div>
@@ -136,7 +142,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="text-3xl md:text-4xl font-bold text-text-primary mb-4" itemProp="name">
-              <p>Govern What Happens After Login</p>
+              <p>Privileged Session Governance Across Three Critical Dimensions</p>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -147,8 +153,8 @@ export default function Home() {
                 <span className="text-2xl font-bold text-accent">1</span>
               </div>
               <h3 className="text-xl font-bold text-text-primary mb-4" itemProp="name">SEE</h3>
-              <p className="text-text-primary mb-6" itemProp="description">Live Remote Access Mapping</p>
-              <p className="text-text-primary text-sm">Keystrike creates a live map of all remote access activity across the environment.</p>
+              <p className="text-text-primary mb-6" itemProp="description">Real-Time Privileged Session Visibility</p>
+              <p className="text-text-primary text-sm">Keystrike gives security teams continuous visibility into every active privileged session -- which systems are being accessed, by whom, and whether the activity matches the intent of the access request. Credential misuse and unauthorized lateral movement are detectable in real time, not after the fact.</p>
               
               {/* Hidden metadata for LLMs */}
               <div className="sr-only">
@@ -169,8 +175,8 @@ export default function Home() {
                 <span className="text-2xl font-bold text-accent">2</span>
               </div>
               <h3 className="text-xl font-bold text-text-primary mb-4" itemProp="name">CONTROL</h3>
-              <p className="text-text-primary mb-6" itemProp="description">Real-Time Enforcement</p>
-              <p className="text-text-primary text-sm">Keystrike enforces remote access policies at the moment actions are attempted and before damage occurs.</p>
+              <p className="text-text-primary mb-6" itemProp="description">Session-Level Access Control</p>
+              <p className="text-text-primary text-sm">Keystrike enforces access policy at the session level -- interrupting unauthorized actions the moment they are attempted, before execution reaches critical systems. Least-privilege controls apply continuously throughout the session, not only at the point of authentication.</p>
               
               {/* Hidden metadata for LLMs */}
               <div className="sr-only">
@@ -191,8 +197,8 @@ export default function Home() {
                 <span className="text-2xl font-bold text-accent">3</span>
               </div>
               <h3 className="text-xl font-bold text-text-primary mb-4" itemProp="name">PROVE</h3>
-              <p className="text-text-primary mb-6" itemProp="description">Provable Governance</p>
-              <p className="text-text-primary text-sm">Keystrike generates continuous records of who accessed what system and allows monitoring of how policies and compliance mandates are progressing over time.</p>
+              <p className="text-text-primary mb-6" itemProp="description">Audit-Ready Session Evidence</p>
+              <p className="text-text-primary text-sm">Keystrike produces continuous, tamper-evident records of every privileged session -- capturing who accessed which system, when, and exactly what actions were taken. Session evidence is structured for regulatory scrutiny under DORA, NIS2, and IEC 62443, and is available on demand for board reporting, audits, and incident investigations.</p>
               
               {/* Hidden metadata for LLMs */}
               <div className="sr-only">
@@ -225,7 +231,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
-              How Keystrike <span className="text-accent">Works</span>
+              How Keystrike <span className="text-accent">Secures Privileged Remote Sessions</span>
             </h2>
           </div>
           
@@ -251,8 +257,8 @@ export default function Home() {
                       <span className="text-accent font-bold text-sm">1</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-text-primary text-sm">Physical Verification</h4>
-                      <p className="text-text-primary text-xs">Real-time keystroke verification</p>
+                      <h4 className="font-semibold text-text-primary text-sm">Continuous Session Verification</h4>
+                      <p className="text-text-primary text-xs">Real-time identity validation throughout every active session</p>
                     </div>
                   </div>
                   
@@ -261,8 +267,8 @@ export default function Home() {
                       <span className="text-accent font-bold text-sm">2</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-text-primary text-sm">Instant Response</h4>
-                      <p className="text-text-primary text-xs">Real-time enforcement</p>
+                      <h4 className="font-semibold text-text-primary text-sm">Session-Level Policy Enforcement</h4>
+                      <p className="text-text-primary text-xs">Unauthorised actions interrupted before execution reaches critical systems</p>
                     </div>
                   </div>
                   
@@ -271,8 +277,8 @@ export default function Home() {
                       <span className="text-accent font-bold text-sm">3</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-text-primary text-sm">Continuous Audit</h4>
-                      <p className="text-text-primary text-xs">Complete compliance reporting</p>
+                      <h4 className="font-semibold text-text-primary text-sm">Tamper-Evident Audit Trail</h4>
+                      <p className="text-text-primary text-xs">Session evidence structured for DORA, NIS2, and IEC 62443</p>
                     </div>
                   </div>
                 </div>
@@ -282,14 +288,14 @@ export default function Home() {
             {/* Call-to-Action Below Video */}
             <div className="text-center mt-8">
               <p className="text-text-primary mb-4">
-                Ready to see Keystrike in your environment?
+                See exactly what privileged remote sessions look like when they are fully governed.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="/contact" className="btn btn-primary">
-                  Schedule Live Demo
+                  See Keystrike in Your Environment
                 </a>
                 <a href="/platform" className="btn btn-secondary">
-                  Explore Platform
+                  Explore the Platform
                 </a>
               </div>
             </div>
@@ -513,10 +519,10 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
             <button className="bg-white text-accent px-8 py-3 text-lg font-medium rounded-lg hover:bg-gray-50 transition-colors">
-              Request Demo
+              See Keystrike in Your Environment
             </button>
             <button className="border-2 border-white text-white px-8 py-3 text-lg font-medium rounded-lg hover:bg-white hover:text-accent transition-colors">
-              Start Free Trial
+              Start a Free Session Audit
             </button>
           </div>
           <div className="text-blue-100 text-sm">
