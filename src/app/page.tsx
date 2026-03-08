@@ -444,10 +444,10 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-text-primary mb-2">
-                    <span className="text-accent">CONTROL</span> — <em>Real-Time Enforcement</em>
+                    <span className="text-accent">CONTROL</span> — <em>Session-Level Policy Enforcement</em>
                   </h3>
                   <p className="text-text-primary">
-                    Block unauthorized commands the moment they occur: Stop lateral movement and ransomware execution before damage is done, not after.
+                    Unauthorized command execution is blocked at the moment of attempt; before lateral movement spreads, before ransomware executes, and before a compromised credential becomes a confirmed breach.
                   </p>
                 </div>
                 <div>
