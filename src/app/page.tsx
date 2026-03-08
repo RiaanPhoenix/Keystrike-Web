@@ -60,7 +60,7 @@ export default function Home() {
                  data-action="request-demo" data-context="hero-section">
                 See Keystrike in Your Environment
               </a>
-              <a href="/contact" className="btn btn-primary text-lg px-8 py-3"
+              <a href="/contact" className="btn btn-secondary text-lg px-8 py-3"
                  data-action="free-trial" data-context="hero-section">
                 Start a Free Session Audit
               </a>
@@ -491,10 +491,10 @@ export default function Home() {
             Most security leaders who run their first privileged session audit find active exposure within 48 hours; unmonitored third-party sessions, credentials that should have been revoked, or session activity that has never been reviewed. Keystrike shows you exactly what is happening inside your environment right now.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-            <button className="bg-white text-accent px-8 py-3 text-lg font-medium rounded-lg hover:bg-gray-50 transition-colors">
+            <button className="btn btn-primary text-lg px-8 py-3">
               See Keystrike in Your Environment
             </button>
-            <button className="border-2 border-white text-white px-8 py-3 text-lg font-medium rounded-lg hover:bg-white hover:text-accent transition-colors">
+            <button className="btn btn-secondary text-lg px-8 py-3">
               Start a Free Session Audit
             </button>
           </div>
