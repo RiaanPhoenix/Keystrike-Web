@@ -365,7 +365,7 @@ export default function Home() {
               How Keystrike Closes the Post-Authentication Gap in Your Security Stack
             </h2>
             <p className="text-xl text-text-primary max-w-4xl mx-auto">
-              The tools in your stack were built to do one thing well. Keystrike fills the gaps between them, giving each one the session-level visibility it was never designed to have.
+              PAM, IGA, SIEM, and ZTNA were each built to solve a specific problem. None were built to govern what happens inside a privileged remote session after access is granted. Keystrike closes that gap -- without replacing any of them.
             </p>
           </div>
           
