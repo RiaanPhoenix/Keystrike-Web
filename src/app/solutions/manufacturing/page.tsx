@@ -10,41 +10,77 @@ export default function ManufacturingPage() {
     <div className="min-h-screen bg-[#F4F5F7]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
       
       {/* Section 1 - Header */}
-      <section className="bg-white py-20 lg:py-[80px] lg:pb-[64px]">
-        <div className="max-w-[1100px] mx-auto px-4 text-center">
-          {/* Eyebrow Label */}
-          <div className="text-[0.72rem] font-semibold tracking-[0.10em] text-[#0D3D3D] uppercase mb-6">
-            Critical Infrastructure · OT · ICS · SCADA · Utilities
-          </div>
+      <section className="bg-white py-14 lg:py-20">
+        <div className="max-w-[1200px] mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Column - Text Content */}
+            <div className="text-left">
+              {/* Eyebrow Label */}
+              <div className="text-[0.72rem] font-semibold tracking-[0.10em] text-[#0D3D3D] uppercase mb-6">
+                Critical Infrastructure · OT · ICS · SCADA · Utilities
+              </div>
 
-          {/* H1 */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0F1623] tracking-[-0.02em] mb-8 leading-tight">
-            Operational Technology Security: Governing Every Privileged Session in Critical Infrastructure
-          </h1>
+              {/* H1 */}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0F1623] tracking-[-0.02em] mb-5 leading-tight">
+                Operational Technology Security: Governing Every Privileged Session in Critical Infrastructure
+              </h1>
 
-          {/* H2 */}
-          <h2 className="text-[1.15rem] font-normal text-[#4A5568] max-w-[680px] mx-auto mb-8 leading-relaxed">
-            Perimeter Controls Stop Intrusions. Session-Level Governance Stops Operational Disruption.
-          </h2>
+              {/* H2 (Subheadline) */}
+              <h2 className="text-[1.15rem] font-normal text-[#4A5568] mb-6 leading-relaxed">
+                Perimeter Controls Stop Intrusions. Session-Level Governance Stops Operational Disruption.
+              </h2>
 
-          {/* Body Paragraphs */}
-          <div className="max-w-[640px] mx-auto space-y-6 mb-10">
-            <p className="text-[1rem] font-normal text-[#4A5568] leading-relaxed">
-              Firewalls, VPNs, and MFA protect access points. They do not govern what happens inside a session once access is granted. In water, energy, electricity, and utility environments, a single unauthorised command can trip a breaker, shut down a pump, or contaminate a water supply.
-            </p>
+              {/* Body Paragraphs */}
+              <div className="space-y-6 mb-8">
+                <p className="text-[1rem] font-normal text-[#4A5568] leading-relaxed">
+                  Firewalls, VPNs, and MFA protect access points. They do not govern what happens inside a session once access is granted. In water, energy, electricity, and utility environments, a single unauthorised command can trip a breaker, shut down a pump, or contaminate a water supply.
+                </p>
 
-            <p className="text-[1rem] font-normal text-[#4A5568] leading-relaxed">
-              Keystrike is a privileged session monitoring platform built for OT and critical infrastructure environments. It verifies in real time that every operator command originates from a physically present, authenticated human on an authorised device — before it executes. No changes to existing infrastructure required.
-            </p>
-          </div>
+                <p className="text-[1rem] font-normal text-[#4A5568] leading-relaxed">
+                  Keystrike is a privileged session monitoring platform built for OT and critical infrastructure environments. It verifies in real time that every operator command originates from a physically present, authenticated human on an authorised device — before it executes. No changes to existing infrastructure required.
+                </p>
+              </div>
 
-          {/* Dark Navy Callout Block */}
-          <div className="bg-[#0D1B2A] p-6 rounded-md max-w-[680px] mx-auto text-center">
-            <div className="text-white font-bold text-[1.1rem] mb-2">
-              91% of critical infrastructure organisations experienced OT security breaches in the past 18 months
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <button className="bg-[#0D3D3D] text-white font-semibold rounded-[5px] px-7 py-3.5 hover:bg-[#1A5252] transition-colors">
+                  See Keystrike in Your OT Environment
+                </button>
+                <button className="bg-transparent border-[1.5px] border-[#0D3D3D] text-[#0D3D3D] font-semibold rounded-[5px] px-7 py-3.5 hover:bg-[#0D3D3D] hover:bg-opacity-[0.08] transition-colors">
+                  Take the Remote Access Risk Assessment
+                </button>
+              </div>
+
+              {/* Dark Navy Callout Block */}
+              <div className="bg-[#0D1B2A] p-6 rounded-md text-left">
+                <div className="text-white font-bold text-[1.1rem] mb-2">
+                  91% of critical infrastructure organisations experienced OT security breaches in the past 18 months
+                </div>
+                <div className="text-[#94A3B8] text-[0.8rem] font-normal">
+                  with half resulting in service interruptions or system corruption — Chemical Processing, 2025
+                </div>
+              </div>
             </div>
-            <div className="text-[#94A3B8] text-[0.8rem] font-normal">
-              with half resulting in service interruptions or system corruption — Chemical Processing, 2025
+
+            {/* Right Column - Visual Panel */}
+            <div className="hidden md:flex flex-col items-center justify-center bg-[#0D1B2A] rounded-xl h-full min-h-[440px] shadow-2xl relative overflow-hidden">
+              {/* Inner Glow Overlay */}
+              <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_40px_rgba(13,61,61,0.4)]"></div>
+              
+              <div className="text-center z-10">
+                <div className="text-white text-3xl font-bold mb-10 tracking-tight">Keystrike</div>
+                
+                <div className="space-y-4 font-mono text-[0.8rem]">
+                  <div className="text-[#4DB6AC]">SESSION VERIFIED · operator01 · 14:32:07</div>
+                  <div className="text-[#4DB6AC]">COMMAND ATTESTED · substation-ctrl-04 · 14:32:09</div>
+                  <div className="flex items-center justify-center text-[#EF9A9A]">
+                    UNATTESTED INPUT BLOCKED · external-vendor · 14:32:11
+                    <span className="ml-3 flex h-1.5 w-1.5 rounded-full bg-[#EF9A9A] animate-pulse"></span>
+                  </div>
+                </div>
+                
+                <div className="mt-8 text-[#94A3B8] text-[0.8rem]">Live Session Dashboard</div>
+              </div>
             </div>
           </div>
         </div>
