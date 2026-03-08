@@ -33,11 +33,11 @@ export default function ManufacturingPage() {
               {/* Body Paragraphs */}
               <div className="space-y-6 mb-8">
                 <p className="text-[1rem] font-normal text-[#4A5568] leading-relaxed">
-                  Firewalls, VPNs, and MFA protect access points. They do not govern what happens inside a session once access is granted. In water, energy, electricity, and utility environments, a single unauthorised command can trip a breaker, shut down a pump, or contaminate a water supply.
+                  Firewalls, VPNs, and MFA protect access points. They do not govern what happens after login. In water, energy, and utility environments, one unauthorised command can trip a breaker, shut down a pump, or contaminate a water supply.
                 </p>
 
                 <p className="text-[1rem] font-normal text-[#4A5568] leading-relaxed">
-                  Keystrike is a privileged session monitoring platform built for OT and critical infrastructure environments. It verifies in real time that every operator command originates from a physically present, authenticated human on an authorised device — before it executes. No changes to existing infrastructure required.
+                  Keystrike is a privileged session monitoring platform that verifies every operator command originates from an authenticated human on an authorized device, before it executes. No infrastructure changes required.
                 </p>
               </div>
 
