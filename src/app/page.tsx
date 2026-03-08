@@ -107,31 +107,31 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section - Two Pillar Layout */}
-      <section className="bg-surface">
+      <section className="bg-[#0D1B2A]">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
           {/* Left Pillar - Banner */}
-          <div className="flex items-center justify-center p-8 lg:p-16" style={{backgroundColor: '#0D1B2A'}}>
+          <div className="flex items-center justify-center px-4 py-8 lg:px-20 lg:py-16">
             <div className="max-w-lg text-center lg:text-left">
               <h2 className="text-3xl md:text-4xl font-light text-white mb-6">
                 What Happens Inside a Remote Session <span className="text-white">Is the Blind Spot</span>
               </h2>
-              <p className="text-xl text-gray-100 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-100 mb-6 leading-relaxed">
                 Privileged remote access is the most common entry point in OT, ICS, and enterprise breaches. Credential-based attacks succeed not because identity fails but because nothing governs the session after authentication.
               </p>
-              <p className="text-xl text-gray-100 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-100 mb-6 leading-relaxed">
                 Keystrike enforces session-level controls in real time: continuous user verification, action-level audit trails, and instant interruption of unauthorized execution. No changes to your existing identity infrastructure.
               </p>
               <p className="text-xl text-gray-100 mb-8 leading-relaxed">
                 Built for organizations operating under DORA, NIS2, and IEC 62443.
               </p>
-              <a href="/contact" className="inline-block border-2 border-white text-white px-8 py-3 text-lg font-medium rounded-lg hover:bg-white hover:text-[#0D1B2A] transition-colors">
+              <a href="/contact" className="inline-block bg-[#FFFFFF] text-[#0D1B2A] hover:bg-[#F0F0F0] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] transition-colors">
                 Close the Post-Authentication Gap
               </a>
             </div>
           </div>
 
           {/* Right Pillar - Testimonial Carousel */}
-          <div className="flex items-center justify-center p-8 lg:p-16 bg-white">
+          <div className="flex items-center justify-center px-4 py-8 lg:px-20 lg:py-16">
             <TestimonialCarousel />
           </div>
         </div>
