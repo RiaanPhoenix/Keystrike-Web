@@ -485,7 +485,7 @@ export default function Home() {
       <section className="bg-accent py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Stop Accepting the Blind Spot
+            Your Privileged Sessions Are Running. Find Out What Is Inside Them.
           </h2>
           <p className="text-xl text-blue-100 mb-8">
             Most organizations are surprised by what they find in the first 48 hours. See what's happening inside your sessions → Book a Live Demo
