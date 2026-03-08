@@ -431,7 +431,7 @@ export default function Home() {
                 Privileged Remote Session Governance: See, Control, and Prove Everything After Login
               </h2>
               <p className="text-xl text-text-primary mb-8">
-                Keystrike doesn't replace your existing stack, it completes it. By governing what happens inside every remote session, it closes the one gap your identity, PAM, and SIEM tools were never built to close.
+                Keystrike does not replace your existing stack — it completes it. Identity tools, PAM, SIEM, and ZTNA were each built to solve one specific problem. None of them govern what happens inside a privileged remote session once access is granted. Keystrike closes that gap without replacing any of them.
               </p>
               <div className="space-y-8 mb-8">
                 <div>
