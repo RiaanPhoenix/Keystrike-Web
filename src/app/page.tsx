@@ -467,13 +467,13 @@ export default function Home() {
                     <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-text-primary mb-4">Interactive Demo</h3>
-                <p className="text-text-secondary mb-6">Experience the Keystrike dashboard and see real-time threat detection in action</p>
+                <h3 className="text-xl font-bold text-text-primary mb-4">See It Live</h3>
+                <p className="text-text-secondary mb-6">See real-time privileged session monitoring, enforcement, and audit evidence in a live Keystrike environment.</p>
                 <div className="bg-surface-secondary rounded-lg p-6 border border-border mb-6">
                   <p className="text-text-muted text-sm">Demo visualization placeholder</p>
                 </div>
                 <button className="btn btn-primary text-lg px-8 py-3">
-                  See Keystrike in Action
+                  See Keystrike in Your Environment
                 </button>
               </div>
             </div>
