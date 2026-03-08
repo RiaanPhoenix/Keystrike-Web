@@ -428,7 +428,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-6">
-                Everything That Happens <span className="text-accent">After Login</span>
+                Privileged Remote Session Governance: See, Control, and Prove Everything After Login
               </h2>
               <p className="text-xl text-text-primary mb-8">
                 Keystrike doesn't replace your existing stack, it completes it. By governing what happens inside every remote session, it closes the one gap your identity, PAM, and SIEM tools were never built to close.
