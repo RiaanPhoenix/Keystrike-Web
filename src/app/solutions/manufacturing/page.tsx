@@ -86,45 +86,48 @@ export default function ManufacturingPage() {
         </div>
       </section>
 
-      {/* Section 2 - Three Scenarios */}
+      {/* Section 2 - Attack Scenarios & Incidents */}
       <section className="bg-[#F4F5F7] py-20">
         <div className="max-w-[1100px] mx-auto px-4">
           {/* Section Eyebrow */}
           <div className="text-[0.72rem] font-semibold tracking-[0.10em] text-[#0D3D3D] uppercase mb-6 text-center">
-            Where OT Security Breaks Down After Login
+            WHERE OT SECURITY BREAKS DOWN AFTER LOGIN
           </div>
 
           {/* Section H2 */}
           <h2 className="text-3xl md:text-4xl font-bold text-[#0F1623] text-center mb-12">
-            Three Critical OT Attack Scenarios — and How Keystrike Stops Them
+            Three Critical OT Attack Scenarios — and the Real Incidents That Prove the Risk
           </h2>
 
-          {/* Cards */}
+          {/* Cards stack */}
           <div className="space-y-8">
-            {/* Card 1 */}
+            {/* CARD 1 */}
             <div className="bg-white border border-[#DDE1E9] rounded-lg p-10">
               <h3 className="text-xl font-bold text-[#0F1623] mb-6">
                 Unauthorised Remote Commands in Water and Energy SCADA Systems
               </h3>
               
-              <div className="space-y-4 mb-6">
-                <p className="text-[#4A5568] leading-relaxed">
-                  In January 2024, attackers caused a water tank overflow in Muleshoe, Texas by exploiting unverified remote sessions in a municipal SCADA system. No session-level verification existed to block the commands before they executed.
-                </p>
-                
-                <p className="text-[#4A5568] leading-relaxed">
-                  Keystrike blocks every unattested command in real time — whether the session is hijacked, the credentials are stolen, or the command originates from an automated script. Only verified physical operator input reaches OT systems.
-                </p>
+              <p className="text-[#4A5568] leading-relaxed mb-4">
+                Hijacked sessions and unverified remote commands are sufficient to cause operational disruption — no full system compromise required. A single automated or malicious command can trip a breaker, shut down a pump, or alter water pressure.
+              </p>
+
+              {/* Incident Callout */}
+              <div className="bg-[#F4F5F7] border-l-[3px] border-[#0D3D3D] p-4 rounded-[4px] my-4 text-[#4A5568] leading-relaxed">
+                In January 2024, attackers caused a water tank overflow in Muleshoe, Texas by exploiting unverified remote sessions in a municipal SCADA system, forcing operators to switch to manual control. The attack was attributed to foreign hacking groups. — Chemical Processing, 2025
               </div>
+
+              <p className="text-[#4A5568] leading-relaxed mb-6">
+                <strong>Keystrike response:</strong> Keystrike blocks every unattested command in real time. Only verified physical operator input reaches OT systems — whether the session is hijacked, credentials are stolen, or the command originates from an automated script.
+              </p>
 
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <div className="w-1.5 h-1.5 bg-[#0D3D3D] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span className="text-[#4A5568] text-[0.9rem]">Breach prevention at the command level, before execution</span>
+                  <span className="text-[#4A5568] text-[0.9rem]">Command-level breach prevention before execution</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-1.5 h-1.5 bg-[#0D3D3D] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span className="text-[#4A5568] text-[0.9rem]">Operational continuity maintained across water, energy, and electricity infrastructure</span>
+                  <span className="text-[#4A5568] text-[0.9rem]">Operational continuity across water, energy, and electricity infrastructure</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-1.5 h-1.5 bg-[#0D3D3D] rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -133,21 +136,24 @@ export default function ManufacturingPage() {
               </ul>
             </div>
 
-            {/* Card 2 */}
+            {/* CARD 2 */}
             <div className="bg-white border border-[#DDE1E9] rounded-lg p-10">
               <h3 className="text-xl font-bold text-[#0F1623] mb-6">
                 Third-Party Vendor Access as an OT Attack Vector
               </h3>
               
-              <div className="space-y-4 mb-6">
-                <p className="text-[#4A5568] leading-relaxed">
-                  The Oldsmar, Florida water treatment incident demonstrated how compromised vendor credentials can give attackers direct access to operational controls — in that case, an attempt to raise sodium hydroxide to dangerous levels via a legitimate remote access tool.
-                </p>
-                
-                <p className="text-[#4A5568] leading-relaxed">
-                  Keystrike validates every vendor and contractor action before it executes. Compromised credentials cannot produce commands that pass Keystrike's physical attestation requirement.
-                </p>
+              <p className="text-[#4A5568] leading-relaxed mb-4">
+                Utilities depend on contractors and vendors for maintenance and monitoring. Compromised vendor credentials are among the most common initial access vectors in OT environments — and once inside, no session-level verification exists to stop what happens next.
+              </p>
+
+              {/* Incident Callout */}
+              <div className="bg-[#F4F5F7] border-l-[3px] border-[#0D3D3D] p-4 rounded-[4px] my-4 text-[#4A5568] leading-relaxed">
+                In the Oldsmar, Florida water treatment incident, an attacker used a legitimate remote access tool to raise sodium hydroxide to dangerous levels — endangering thousands of residents. The session appeared legitimate. The command was not. — ICS-CERT
               </div>
+
+              <p className="text-[#4A5568] leading-relaxed mb-6">
+                <strong>Keystrike response:</strong> Keystrike validates every vendor and contractor action before execution. Compromised credentials cannot produce commands that pass Keystrike's physical attestation requirement.
+              </p>
 
               <ul className="space-y-3">
                 <li className="flex items-start">
@@ -165,21 +171,24 @@ export default function ManufacturingPage() {
               </ul>
             </div>
 
-            {/* Card 3 */}
+            {/* CARD 3 */}
             <div className="bg-white border border-[#DDE1E9] rounded-lg p-10">
               <h3 className="text-xl font-bold text-[#0F1623] mb-6">
                 IT-to-OT Lateral Movement: Stopping Attackers Before They Cross the Air Gap
               </h3>
               
-              <div className="space-y-4 mb-6">
-                <p className="text-[#4A5568] leading-relaxed">
-                  In 2023, Volt Typhoon — a Chinese state-linked threat actor — maintained persistent access to Littleton Electric Light and Water in Massachusetts for over 300 days by moving laterally from IT into OT. No session-level control existed to detect or block commands originating from the compromised IT environment.
-                </p>
-                
-                <p className="text-[#4A5568] leading-relaxed">
-                  Keystrike enforces session-level isolation between IT and OT. Stolen credentials, inherited access, and compromised IT sessions cannot produce attested commands in OT systems.
-                </p>
+              <p className="text-[#4A5568] leading-relaxed mb-4">
+                Most OT breaches begin in IT. Attackers use phishing, stolen credentials, or vendor access to move laterally into operational control systems — exploiting the absence of session-level verification between IT and OT environments.
+              </p>
+
+              {/* Incident Callout */}
+              <div className="bg-[#F4F5F7] border-l-[3px] border-[#0D3D3D] p-4 rounded-[4px] my-4 text-[#4A5568] leading-relaxed">
+                In 2023, Volt Typhoon — a Chinese state-linked threat actor — maintained persistent access to Littleton Electric Light and Water in Massachusetts for over 300 days via lateral IT-to-OT movement. No session-level control existed to detect or block commands from the compromised IT environment. — CISA Advisory, 2024
               </div>
+
+              <p className="text-[#4A5568] leading-relaxed mb-6">
+                <strong>Keystrike response:</strong> Keystrike enforces session-level isolation between IT and OT. Stolen credentials and compromised IT sessions cannot produce attested commands in OT systems — regardless of how network access was achieved.
+              </p>
 
               <ul className="space-y-3">
                 <li className="flex items-start">
@@ -305,79 +314,41 @@ export default function ManufacturingPage() {
         </div>
       </section>
 
-      {/* Section 5 - Incident Table */}
-      <section className="bg-white py-[72px]">
+      {/* Section 6 - Closing CTA */}
+      <section className="bg-[#0D1B2A] py-20 text-center">
         <div className="max-w-[1100px] mx-auto px-4">
-          {/* Section Eyebrow */}
-          <div className="text-[0.72rem] font-semibold tracking-[0.10em] text-[#0D3D3D] uppercase mb-6 text-center">
-            Documented OT Incidents
-          </div>
-
-          {/* Section H2 */}
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0F1623] text-center mb-12">
-            Real OT Attacks on Water, Energy, and Utility Infrastructure — and the Session Gap That Enabled Them
+          {/* H2 */}
+          <h2 className="text-white font-bold text-[1.6rem] max-w-[640px] mx-auto mb-8 leading-tight">
+            Continuous Session Governance for Water, Energy, and Utility Infrastructure
           </h2>
 
-          {/* Incident Table */}
-          <div className="overflow-x-auto bg-white rounded-lg shadow-sm">
-            <table className="w-full">
-              <thead>
-                <tr className="bg-[#0D3D3D]">
-                  <th className="px-6 py-4 text-left text-white font-semibold text-[0.85rem]">Incident</th>
-                  <th className="px-6 py-4 text-left text-white font-semibold text-[0.85rem]">The Gap</th>
-                  <th className="px-6 py-4 text-left text-white font-semibold text-[0.85rem]">How Keystrike Closes It</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-white border-b border-gray-100">
-                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
-                    Texas Water Systems (2024) — Attackers caused a water tank overflow in Muleshoe, Texas, forcing manual SCADA shutdowns.
-                  </td>
-                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
-                    No session-level verification existed to block unauthorised remote commands.
-                  </td>
-                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
-                    Keystrike blocks unattested remote commands before execution. The overflow and shutdown would have been prevented.
-                  </td>
-                </tr>
-                <tr className="bg-[#F9FAFB] border-b border-gray-100">
-                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
-                    American Water (2024) — The largest US regulated water utility suffered unauthorised network access, triggering precautionary OT shutdowns.
-                  </td>
-                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
-                    No session-level evidence existed to confirm OT systems were unaffected, forcing precautionary operational disruption.
-                  </td>
-                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
-                    Keystrike provides verifiable session-level evidence that no unauthorised commands reached OT — reducing or eliminating the need for precautionary shutdowns.
-                  </td>
-                </tr>
-                <tr className="bg-white border-b border-gray-100">
-                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
-                    Volt Typhoon / Littleton Electric Light & Water (2023) — Chinese state-linked actors maintained 300+ days of persistent access via lateral IT-to-OT movement.
-                  </td>
-                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
-                    Session activity inside legitimate connections was not verified at the command level, enabling long-term undetected access.
-                  </td>
-                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
-                    Keystrike's continuous session verification would have blocked unattested commands throughout, neutralising persistent access regardless of entry method.
-                  </td>
-                </tr>
-                <tr className="bg-[#F9FAFB]">
-                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
-                    Utility Identity Compromise (2025) — 81% of water and electricity utility attacks compromise identity systems to pivot into OT networks. (Semperis)
-                  </td>
-                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
-                    Valid stolen credentials provide unrestricted OT command access with no session-level verification in place.
-                  </td>
-                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem] leading-relaxed">
-                    Keystrike blocks commands from stolen credentials that cannot pass physical attestation. Operational integrity is preserved even after full identity compromise.
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          {/* Body Paragraph */}
+          <div className="max-w-[580px] mx-auto mb-10">
+            <p className="text-[#CBD5E1] text-[1rem] leading-[1.75]">
+              Compromised credentials, hijacked sessions, and unverified vendor access are the three most common paths to OT operational disruption. Keystrike closes all three — without replacing existing infrastructure, recording operator activity, or slowing legitimate workflows.
+            </p>
+          </div>
+
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
+            <button className="bg-white text-[#0D1B2A] font-semibold rounded-[5px] px-[28px] py-[14px] hover:bg-[#F0F0F0] transition-colors">
+              See Keystrike in Your OT Environment
+            </button>
+            <button className="bg-transparent border-[1.5px] border-white text-white font-semibold rounded-[5px] px-[28px] py-[14px] hover:bg-white hover:bg-opacity-10 transition-colors">
+              Take the Remote Access Risk Assessment
+            </button>
+          </div>
+
+          {/* Contact Line */}
+          <div className="text-[#64748B] text-[0.8rem] mt-6">
+            To speak with a Keystrike engineer: connect@keystrike.com
           </div>
         </div>
       </section>
+
+    </div>
+  );
+}
 
       {/* Section 6 - Closing CTA */}
       <section className="bg-[#0D1B2A] py-20 text-center">
