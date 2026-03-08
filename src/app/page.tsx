@@ -365,7 +365,7 @@ export default function Home() {
               How Keystrike Closes the Post-Authentication Gap in Your Security Stack
             </h2>
             <p className="text-xl text-text-primary max-w-4xl mx-auto">
-              PAM, IGA, SIEM, and ZTNA were each built to solve a specific problem. None were built to govern what happens inside a privileged remote session after access is granted. Keystrike closes that gap -- without replacing any of them.
+              PAM, IGA, SIEM, and ZTNA were each built to solve a specific problem. None were built to govern what happens inside a privileged remote session after access is granted. Keystrike closes that gap without replacing any of them.
             </p>
           </div>
           
@@ -373,48 +373,48 @@ export default function Home() {
             <table className="w-full bg-white rounded-lg shadow-lg">
               <thead>
                 <tr style={{backgroundColor: 'var(--accent)'}}>
-                  <th className="px-6 py-4 text-left text-white font-bold text-lg">Tool</th>
-                  <th className="px-6 py-4 text-left text-white font-bold text-lg">The Blind Spot</th>
-                  <th className="px-6 py-4 text-left text-white font-bold text-lg">The Fix</th>
-                  <th className="px-6 py-4 text-left text-white font-bold text-lg">Why it Works</th>
+                  <th className="px-6 py-4 text-left text-white font-bold text-lg">Security Tool</th>
+                  <th className="px-6 py-4 text-left text-white font-bold text-lg">Post-Authentication Gap</th>
+                  <th className="px-6 py-4 text-left text-white font-bold text-lg">What Keystrike Adds</th>
+                  <th className="px-6 py-4 text-left text-white font-bold text-lg">How They Work Together</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="bg-white border-b border-gray-100">
                   <td className="px-6 py-6 font-bold text-text-primary text-lg">PAM</td>
-                  <td className="px-6 py-6 text-text-primary">Credentials managed, not continuously verified</td>
+                  <td className="px-6 py-6 text-text-primary">Privileged access management controls credential checkout but does not verify continuous session activity or detect post-authentication misuse.</td>
                   <td className="px-6 py-6 text-text-primary">
-                    <strong>CONTROL:</strong> Cryptographic attestation beyond credential checkout.<br/>
-                    <strong>SEE:</strong> Live map surfaces all access paths outside PAM scope.
+                    <strong>CONTROL:</strong> Keystrike adds continuous cryptographic session verification beyond the credential handoff.<br/>
+                    <strong>SEE:</strong> Live session mapping surfaces all access paths operating outside PAM scope.
                   </td>
-                  <td className="px-6 py-6 text-text-primary">PAM controls the vault. Keystrike verifies who controls every command inside the session — and maps every access path your PAM doesn't manage.</td>
+                  <td className="px-6 py-6 text-text-primary">PAM secures the vault. Keystrike governs every command executed inside the session — and maps every access path your privileged access management platform was not designed to see.</td>
                 </tr>
                 <tr className="bg-gray-50 border-b border-gray-100">
                   <td className="px-6 py-6 font-bold text-text-primary text-lg">IGA / MFA</td>
-                  <td className="px-6 py-6 text-text-primary">Lifecycle focus; slow to detect privilege abuse</td>
+                  <td className="px-6 py-6 text-text-primary">Identity governance and administration manages entitlement lifecycles. Multi-factor authentication confirms identity at login. Neither monitors session behaviour or detects privilege abuse in real time.</td>
                   <td className="px-6 py-6 text-text-primary">
-                    <strong>SEE:</strong> Live map detects misuse across active sessions.<br/>
-                    <strong>CONTROL:</strong> Attestation blocks unauthorized commands in real time.
+                    <strong>SEE:</strong> Keystrike adds live session monitoring across active privileged sessions — detecting entitlement misuse as it happens.<br/>
+                    <strong>CONTROL:</strong> Continuous attestation blocks unauthorised command execution before damage occurs.
                   </td>
-                  <td className="px-6 py-6 text-text-primary">IGA manages entitlements. Keystrike shows when those entitlements are being misused live — and stops the damage before it occurs.</td>
+                  <td className="px-6 py-6 text-text-primary">IGA defines who should have access. MFA confirms who is logging in. Keystrike verifies what they are doing once they are inside — and stops privilege abuse at the moment of execution.</td>
                 </tr>
                 <tr className="bg-white border-b border-gray-100">
                   <td className="px-6 py-6 font-bold text-text-primary text-lg">SIEM</td>
-                  <td className="px-6 py-6 text-text-primary">Log aggregation; delayed alerts on past events</td>
+                  <td className="px-6 py-6 text-text-primary">Security information and event management correlates logs and generates alerts — but only after events have occurred. Detection is delayed and false positive rates are high.</td>
                   <td className="px-6 py-6 text-text-primary">
-                    <strong>SEE:</strong> Live topology as a new data source.<br/>
-                    <strong>CONTROL:</strong> Zero-false-positive attestation failures as definitive IOCs.
+                    <strong>SEE:</strong> Keystrike feeds your SIEM live privileged session topology and cryptographic attestation signals.<br/>
+                    <strong>CONTROL:</strong> Attestation failures are definitive indicators of compromise — not alerts requiring manual investigation.
                   </td>
-                  <td className="px-6 py-6 text-text-primary">SIEM correlates events after the fact. Keystrike feeds it cryptographic signals and live topology data that make every alert more accurate.</td>
+                  <td className="px-6 py-6 text-text-primary">SIEM sees what happened. Keystrike tells it what it means. Cryptographic session signals reduce false positives and give your security operations centre actionable intelligence in real time.</td>
                 </tr>
                 <tr className="bg-gray-50">
                   <td className="px-6 py-6 font-bold text-text-primary text-lg">ZTNA</td>
-                  <td className="px-6 py-6 text-text-primary">Verifies access at connection; cannot see inside the session</td>
+                  <td className="px-6 py-6 text-text-primary">Zero trust network access verifies identity and device posture at the point of connection. It cannot monitor or enforce controls on activity that occurs inside an authorised session.</td>
                   <td className="px-6 py-6 text-text-primary">
-                    <strong>SEE:</strong> Maps east-west movement inside the trusted perimeter.<br/>
-                    <strong>CONTROL:</strong> Extends zero trust from connection grant to command execution.
+                    <strong>SEE:</strong> Live mapping surfaces all east-west movement inside the trusted network perimeter.<br/>
+                    <strong>CONTROL:</strong> Keystrike extends zero trust principles from connection grant to command execution — enforcing least-privilege controls throughout the session, not only at the perimeter.
                   </td>
-                  <td className="px-6 py-6 text-text-primary">ZTNA controls the door. Keystrike verifies every action taken inside the room — and maps everything ZTNA can't see.</td>
+                  <td className="px-6 py-6 text-text-primary">ZTNA controls who enters. Keystrike governs what they do once they are inside. Together they close the gap between network access control and session-level zero trust enforcement.</td>
                 </tr>
               </tbody>
             </table>
