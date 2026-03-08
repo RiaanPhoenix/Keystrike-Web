@@ -1,3 +1,5 @@
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -8,6 +10,7 @@ export const metadata: Metadata = {
 export default function ManufacturingPage() {
   return (
     <div className="min-h-screen bg-[#F4F5F7]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+      <Navigation currentPage="solutions" />
       
       {/* Section 1 - Header */}
       <section className="bg-white py-14 lg:py-20">
@@ -91,12 +94,12 @@ export default function ManufacturingPage() {
         <div className="max-w-[1100px] mx-auto px-4">
           {/* Section Eyebrow */}
           <div className="text-[0.72rem] font-semibold tracking-[0.10em] text-[#0D3D3D] uppercase mb-6 text-center">
-            WHERE OT SECURITY BREAKS DOWN AFTER LOGIN
+            OT Security Incidents · SCADA · Water · Energy · Utilities
           </div>
 
           {/* Section H2 */}
           <h2 className="text-3xl md:text-4xl font-bold text-[#0F1623] text-center mb-12">
-            Three Critical OT Attack Scenarios — and the Real Incidents That Prove the Risk
+            Documented OT Cyberattacks on Water, Energy, and Utility Infrastructure and the Session Gap That Enabled Them
           </h2>
 
           {/* Cards stack */}
@@ -209,55 +212,7 @@ export default function ManufacturingPage() {
         </div>
       </section>
 
-      {/* Section 3 - Regulatory Compliance */}
-      <section className="bg-white py-[72px]">
-        <div className="max-w-[1100px] mx-auto px-4 text-center">
-          {/* Section Eyebrow */}
-          <div className="text-[0.72rem] font-semibold tracking-[0.10em] text-[#0D3D3D] uppercase mb-6">
-            Regulatory Compliance
-          </div>
-
-          {/* Section H2 */}
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0F1623] mb-8">
-            Meeting NERC CIP, IEC 62443, EPA, and NIST Requirements Without Disrupting Operations
-          </h2>
-
-          {/* Body Paragraph */}
-          <div className="max-w-[680px] mx-auto mb-8">
-            <p className="text-[#4A5568] leading-relaxed">
-              Keystrike produces continuous, tamper-evident session records that meet the evidentiary standard required by OT security regulations. Compliance is a byproduct of governance — not additional overhead.
-            </p>
-          </div>
-
-          {/* Badge Pills */}
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {[
-              'NERC CIP',
-              'EPA Safe Drinking Water Act', 
-              'IEC 62443',
-              'ISO 27001',
-              'NIST CSF',
-              'State Energy & Water Regulations'
-            ].map((badge) => (
-              <span 
-                key={badge}
-                className="border-[1.5px] border-solid border-[#0D3D3D] text-[#0D3D3D] text-[0.72rem] font-semibold tracking-[0.08em] px-[14px] py-[6px] rounded-[3px]"
-              >
-                {badge}
-              </span>
-            ))}
-          </div>
-
-          {/* Second Body Paragraph */}
-          <div className="max-w-[680px] mx-auto">
-            <p className="text-[#4A5568] leading-relaxed">
-              Keystrike integrates with SCADA, ICS, IAM, and SIEM systems to enforce policy-driven access, log every operator action, and generate audit-ready evidence for board reporting, incident response, and regulatory review.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 4 - Tech Stack Comparison Table */}
+      {/* Section 3 - Tech Stack Comparison Table */}
       <section className="bg-[#F4F5F7] py-[72px]">
         <div className="max-w-[1100px] mx-auto px-4">
           {/* Section Eyebrow */}
@@ -267,7 +222,7 @@ export default function ManufacturingPage() {
 
           {/* Section H2 */}
           <h2 className="text-3xl md:text-4xl font-bold text-[#0F1623] text-center mb-12">
-            Why Perimeter and Detection Tools Leave OT Exposed After Authentication
+            Why Firewalls, MFA, and SIEM Cannot Secure Privileged Sessions in OT Environments
           </h2>
 
           {/* Table */}
@@ -298,7 +253,7 @@ export default function ManufacturingPage() {
                 </tr>
                 <tr className="bg-[#0D3D3D]">
                   <td className="px-6 py-4 text-white font-semibold text-[0.9rem]">Keystrike</td>
-                  <td className="px-6 py-4 text-white font-semibold text-[0.9rem]">Every command in every privileged session</td>
+                  <td className="px-6 py-4 text-white font-semibold text-[0.9rem]">Every privileged session in OT, ICS, and enterprise environments</td>
                   <td className="px-6 py-4 text-white font-semibold text-[0.9rem]">None. Unauthorised commands blocked before execution.</td>
                 </tr>
               </tbody>
@@ -306,26 +261,125 @@ export default function ManufacturingPage() {
           </div>
 
           {/* Privacy Note */}
-          <div className="text-center max-w-[640px] mx-auto">
-            <p className="text-[#4A5568] text-[0.9rem]">
-              Keystrike does not record keystrokes, commands, or personally identifiable information. Session verification is cryptographic, not behavioural — no false positives, no privacy exposure.
+          <div className="max-w-[640px] mx-auto">
+            <p className="text-[#6B7280] text-[14px] text-left">
+              Keystrike does not record keystrokes, credentials, or personally identifiable information. Session verification is cryptographic — not behavioural — eliminating false positives and privacy exposure.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Section 6 - Closing CTA */}
-      <section className="bg-[#0D1B2A] py-20 text-center">
+      {/* Section 4 - Regulatory Compliance */}
+      <section className="bg-white py-[72px]">
         <div className="max-w-[1100px] mx-auto px-4">
-          {/* H2 */}
-          <h2 className="text-white font-bold text-[1.6rem] max-w-[640px] mx-auto mb-8 leading-tight">
-            Continuous Session Governance for Water, Energy, and Utility Infrastructure
+          {/* Section Eyebrow */}
+          <div className="text-[0.72rem] font-semibold tracking-[0.10em] text-[#0D3D3D] uppercase mb-6 text-center">
+            OT Regulatory Compliance · NERC CIP · IEC 62443 · EPA · NIST
+          </div>
+
+          {/* Section H2 */}
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0F1623] mb-8 text-center">
+            Meeting NERC CIP, IEC 62443, EPA, and NIST Requirements Without Disrupting Operations
           </h2>
 
           {/* Body Paragraph */}
-          <div className="max-w-[580px] mx-auto mb-10">
-            <p className="text-[#CBD5E1] text-[1rem] leading-[1.75]">
-              Compromised credentials, hijacked sessions, and unverified vendor access are the three most common paths to OT operational disruption. Keystrike closes all three — without replacing existing infrastructure, recording operator activity, or slowing legitimate workflows.
+          <div className="max-w-[680px] mb-8">
+            <p className="text-[#4A5568] leading-relaxed text-left">
+              NERC CIP requires organisations to log and monitor all electronic access to critical cyber assets. IEC 62443 mandates access control and security zone enforcement for industrial control systems. EPA guidance requires utilities to document and audit remote access to operational technology. Keystrike satisfies each requirement by producing continuous, tamper-evident, session-level records of every privileged action, without recording personally identifiable information or requiring changes to existing infrastructure.
+            </p>
+          </div>
+
+          {/* Compliance Output Summary - Three Column Block */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <div className="bg-white border border-[#DDE1E9] rounded-md p-6">
+              <div className="flex items-center mb-3">
+                <svg className="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                </svg>
+                <div className="text-[#0F1623] font-semibold text-[0.9rem]">Tamper-Evident Session Records</div>
+              </div>
+              <p className="text-[#4A5568] text-[0.82rem] leading-relaxed">Continuous logs of every privileged action, structured for audit</p>
+            </div>
+
+            <div className="bg-white border border-[#DDE1E9] rounded-md p-6">
+              <div className="flex items-center mb-3">
+                <svg className="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                </svg>
+                <div className="text-[#0F1623] font-semibold text-[0.9rem]">Regulatory-Ready Evidence</div>
+              </div>
+              <p className="text-[#4A5568] text-[0.82rem] leading-relaxed">Session evidence meeting NERC CIP, IEC 62443, and EPA standards</p>
+            </div>
+
+            <div className="bg-white border border-[#DDE1E9] rounded-md p-6">
+              <div className="flex items-center mb-3">
+                <svg className="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                </svg>
+                <div className="text-[#0F1623] font-semibold text-[0.9rem]">Board and Audit Reporting</div>
+              </div>
+              <p className="text-[#4A5568] text-[0.82rem] leading-relaxed">On-demand evidence for regulatory review and incident response</p>
+            </div>
+          </div>
+
+          {/* Horizontal Rule Above Badge Pills */}
+          <div className="h-px bg-[#DDE1E9] w-full mb-5"></div>
+
+          {/* Badge Pills */}
+          <div className="flex flex-wrap justify-center gap-2 mb-5">
+            {[
+              'NERC CIP',
+              'EPA Safe Drinking Water Act', 
+              'IEC 62443',
+              'ISO 27001',
+              'NIST CSF',
+              'State Energy & Water Regulations'
+            ].map((badge) => (
+              <span 
+                key={badge}
+                className="border-[1.5px] border-solid border-[#0D3D3D] text-[#0D3D3D] text-[0.72rem] font-semibold tracking-[0.08em] px-[14px] py-[6px] rounded-[3px]"
+              >
+                {badge}
+              </span>
+            ))}
+          </div>
+
+          {/* Horizontal Rule Below Badge Pills */}
+          <div className="h-px bg-[#DDE1E9] w-full mb-8"></div>
+
+          {/* Second Body Paragraph */}
+          <div className="max-w-[680px] mb-4">
+            <p className="text-[#4A5568] leading-relaxed text-left">
+              Keystrike integrates natively with SCADA, ICS, IAM, and SIEM systems — enforcing policy-driven access controls, logging every operator action, and generating audit-ready evidence for board reporting, incident response, and regulatory review.
+            </p>
+          </div>
+
+          {/* CTA Link */}
+          <div className="max-w-[680px]">
+            <a href="#" className="text-[#0D3D3D] font-semibold text-[0.9rem] hover:underline">
+              See how Keystrike maps to your compliance framework →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 5 - Closing CTA */}
+      <section className="bg-[#0D1B2A] py-20 text-center">
+        <div className="max-w-[1100px] mx-auto px-4">
+          {/* Eyebrow */}
+          <div className="text-[11px] font-normal tracking-[0.15em] text-[#9CA3AF] uppercase mb-4">
+            WATER · ENERGY · UTILITIES · MANUFACTURING
+          </div>
+
+          {/* H2 */}
+          <h2 className="text-white font-bold text-[1.6rem] max-w-[640px] mx-auto mb-8 leading-tight">
+            Close the Post-Authentication Gap Before Your Next Audit — or Incident
+          </h2>
+
+          {/* Body Paragraph */}
+          <div className="max-w-[560px] mx-auto mb-10">
+            <p className="text-[#CBD5E1] text-[16px] leading-[1.6] text-left">
+              Compromised credentials, hijacked sessions, and unverified vendor access remain the three leading causes of OT operational disruption. Keystrike makes every privileged session visible, verifiable, and policy-controlled — deploying alongside your existing infrastructure without replacing tools or disrupting operations.
             </p>
           </div>
 
@@ -346,6 +400,7 @@ export default function ManufacturingPage() {
         </div>
       </section>
 
+      <Footer />
     </div>
   );
 }
