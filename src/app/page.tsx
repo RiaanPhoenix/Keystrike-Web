@@ -490,11 +490,11 @@ export default function Home() {
           <p className="text-xl text-blue-100 mb-8">
             Most security leaders who run their first privileged session audit find active exposure within 48 hours; unmonitored third-party sessions, credentials that should have been revoked, or session activity that has never been reviewed. Keystrike shows you exactly what is happening inside your environment right now.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-            <button className="btn btn-primary text-lg px-8 py-3">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-[16px] mb-8">
+            <button className="w-full sm:w-auto bg-[#FFFFFF] text-[#0D3D3D] hover:bg-[#F0F0F0] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-none transition-colors">
               See Keystrike in Your Environment
             </button>
-            <button className="btn btn-secondary text-lg px-8 py-3">
+            <button className="w-full sm:w-auto bg-transparent text-[#FFFFFF] hover:bg-[rgba(255,255,255,0.10)] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-[1.5px] border-solid border-[#FFFFFF] transition-colors">
               Start a Free Session Audit
             </button>
           </div>
