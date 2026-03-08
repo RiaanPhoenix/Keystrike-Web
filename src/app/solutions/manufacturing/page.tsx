@@ -349,39 +349,3 @@ export default function ManufacturingPage() {
     </div>
   );
 }
-
-      {/* Section 6 - Closing CTA */}
-      <section className="bg-[#0D1B2A] py-20 text-center">
-        <div className="max-w-[1100px] mx-auto px-4">
-          {/* H2 */}
-          <h2 className="text-white font-bold text-[1.6rem] max-w-[640px] mx-auto mb-8 leading-tight">
-            Continuous Session Governance for Water, Energy, and Utility Infrastructure
-          </h2>
-
-          {/* Body Paragraph */}
-          <div className="max-w-[580px] mx-auto mb-10">
-            <p className="text-[#CBD5E1] text-[1rem] leading-[1.75]">
-              Compromised credentials, hijacked sessions, and unverified vendor access are the three most common paths to OT operational disruption. Keystrike closes all three — without replacing existing infrastructure, recording operator activity, or slowing legitimate workflows.
-            </p>
-          </div>
-
-          {/* Buttons */}
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
-            <button className="bg-white text-[#0D1B2A] font-semibold rounded-[5px] px-[28px] py-[14px] hover:bg-[#F0F0F0] transition-colors">
-              See Keystrike in Your OT Environment
-            </button>
-            <button className="bg-transparent border-[1.5px] border-white text-white font-semibold rounded-[5px] px-[28px] py-[14px] hover:bg-white hover:bg-opacity-10 transition-colors">
-              Take the Remote Access Risk Assessment
-            </button>
-          </div>
-
-          {/* Contact Line */}
-          <div className="text-[#64748B] text-[0.8rem] mt-6">
-            To speak with a Keystrike engineer: connect@keystrike.com
-          </div>
-        </div>
-      </section>
-
-    </div>
-  );
-}
