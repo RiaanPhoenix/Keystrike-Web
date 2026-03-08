@@ -514,7 +514,7 @@ export default function FAQ() {
                   </div>
                 </div>
                 <div className="mt-4">
-                  <span className="inline-block bg-accent bg-opacity-10 text-accent px-3 py-1 rounded-full text-sm font-medium">
+                  <span className="inline-block bg-surface-muted text-text-primary px-3 py-1 rounded-full text-sm font-medium border border-border">
                     {faq.category}
                   </span>
                 </div>
