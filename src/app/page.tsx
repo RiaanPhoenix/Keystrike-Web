@@ -488,7 +488,7 @@ export default function Home() {
             Your Privileged Sessions Are Running. Find Out What Is Inside Them.
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Most organizations are surprised by what they find in the first 48 hours. See what's happening inside your sessions → Book a Live Demo
+            Most security leaders who run their first privileged session audit find active exposure within 48 hours; unmonitored third-party sessions, credentials that should have been revoked, or session activity that has never been reviewed. Keystrike shows you exactly what is happening inside your environment right now.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
             <button className="bg-white text-accent px-8 py-3 text-lg font-medium rounded-lg hover:bg-gray-50 transition-colors">
