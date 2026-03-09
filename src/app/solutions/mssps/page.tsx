@@ -632,7 +632,7 @@ export default function MSSPs() {
           </h2>
           
           <p 
-            className="text-center mx-auto"
+            className="text-left mx-auto"
             style={{ 
               fontSize: '16px', 
               color: '#374151',
@@ -665,7 +665,7 @@ export default function MSSPs() {
           </div>
 
           <p 
-            className="text-center mx-auto"
+            className="text-left mx-auto"
             style={{ 
               fontSize: '15px', 
               color: '#374151',
@@ -896,11 +896,12 @@ export default function MSSPs() {
             HOW KEYSTRIKE WORKS
           </div>
           <h2 
-            className="text-center mb-16"
+            className="text-center"
             style={{ 
               fontSize: '34px', 
               fontWeight: '700', 
-              color: '#0F1623'
+              color: '#0F1623',
+              marginBottom: '48px'
             }}
           >
             Deterministic Session Enforcement — Not Probabilistic Detection
@@ -910,7 +911,7 @@ export default function MSSPs() {
             className="grid grid-cols-1 md:grid-cols-3 gap-8 mx-auto"
             style={{ maxWidth: '900px' }}
           >
-            <div className="text-center">
+            <div className="text-center" style={{ maxWidth: '320px', margin: '0 auto' }}>
               <div 
                 className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl"
                 style={{ backgroundColor: '#1B3FC4', width: '32px', height: '32px' }}
@@ -927,11 +928,11 @@ export default function MSSPs() {
                 className="text-left"
                 style={{ fontSize: '14px', color: '#374151', lineHeight: '1.6' }}
               >
-                A lightweight agent on the MSSP engineer's device recognises legitimate physical keystrokes and mouse clicks, and submits cryptographic attestations confirming their legitimacy to the central Keystrike service.
+                A lightweight agent on the MSSP engineer's device recognises legitimate physical keystrokes and mouse clicks across every managed customer session, and submits cryptographic attestations confirming their legitimacy to the central Keystrike service.
               </p>
             </div>
 
-            <div className="text-center">
+            <div className="text-center" style={{ maxWidth: '320px', margin: '0 auto' }}>
               <div 
                 className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl"
                 style={{ backgroundColor: '#1B3FC4', width: '32px', height: '32px' }}
@@ -952,7 +953,7 @@ export default function MSSPs() {
               </p>
             </div>
 
-            <div className="text-center">
+            <div className="text-center" style={{ maxWidth: '320px', margin: '0 auto' }}>
               <div 
                 className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl"
                 style={{ backgroundColor: '#1B3FC4', width: '32px', height: '32px' }}
@@ -969,14 +970,21 @@ export default function MSSPs() {
                 className="text-left"
                 style={{ fontSize: '14px', color: '#374151', lineHeight: '1.6' }}
               >
-                The Keystrike SEE module maps all remote protocols across every managed environment — RDP, SSH, PowerShell Remoting, WinRM, WMI, SMB, and more — surfacing which sessions are governed and where policy gaps remain across your entire customer portfolio.
+                The Keystrike SEE (Session Evidence Engine) module maps all remote protocols across every managed environment — RDP, SSH, PowerShell Remoting, WinRM, WMI, SMB, and more — surfacing which sessions are governed and where policy gaps remain across your entire customer portfolio.
               </p>
             </div>
           </div>
 
           <p 
-            className="text-center mt-12 italic"
-            style={{ fontSize: '14px', color: '#6B7280' }}
+            className="text-center"
+            style={{ 
+              fontStyle: 'normal', 
+              fontSize: '14px', 
+              color: '#4B5563', 
+              textAlign: 'center', 
+              maxWidth: '860px', 
+              margin: '40px auto 0' 
+            }}
           >
             Keystrike deploys in around 20 minutes per environment. No lengthy professional services engagement. Integrates with existing MFA, PAM, and SIEM infrastructure — no rip-and-replace.
           </p>
@@ -1009,38 +1017,47 @@ export default function MSSPs() {
             One Compromised Session Shouldn't Cost You Every Customer You Protect
           </h2>
           <p 
-            className="mb-8 mx-auto text-left"
+            className="mx-auto text-left"
             style={{ 
               fontSize: '16px', 
               color: '#CBD5E1',
-              maxWidth: '560px',
-              lineHeight: '1.6'
+              maxWidth: '680px',
+              lineHeight: '1.6',
+              margin: '0 auto 40px'
             }}
           >
-            Session hijacking, credential abuse, and supply chain exploitation all exploit the same blind spot: the gap between access granted and access governed. Keystrike makes every privileged session across your managed environments visible, verifiable, and policy-controlled — protecting your operations and giving you a differentiated offering to bring to market.
+            Session hijacking, credential abuse, and supply chain exploitation all exploit the same blind spot: the gap between access granted and access governed. Keystrike makes every privileged session across your managed environments visible, verifiable, and policy-controlled — protecting your privileged session infrastructure and giving you a differentiated security offering to bring to market.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-4">
+          <div className="flex justify-center gap-4 mb-4" style={{ gap: '16px' }}>
             <button 
-              className="px-8 py-3 text-lg font-semibold rounded"
+              className="text-lg font-semibold rounded"
               style={{ 
                 backgroundColor: 'white', 
                 color: '#0F1623',
                 height: '48px',
                 borderRadius: '5px',
-                fontWeight: '600'
+                fontWeight: '600',
+                width: 'auto',
+                minWidth: '280px',
+                padding: '16px 36px'
               }}
             >
               See Keystrike in Your Environment
             </button>
             <button 
-              className="px-8 py-3 text-lg font-semibold rounded"
+              className="font-semibold rounded"
               style={{ 
                 backgroundColor: 'transparent', 
                 color: 'white',
                 border: '1px solid white',
-                height: '48px',
+                height: 'auto',
                 borderRadius: '5px',
-                fontWeight: '600'
+                fontWeight: '600',
+                width: 'auto',
+                minWidth: '280px',
+                padding: '16px 28px',
+                fontSize: '15px',
+                whiteSpace: 'nowrap'
               }}
             >
               Take the Remote Access Risk Assessment
@@ -1048,7 +1065,12 @@ export default function MSSPs() {
           </div>
           <p 
             className="text-center"
-            style={{ fontSize: '14px', color: '#9CA3AF' }}
+            style={{ 
+              fontSize: '14px', 
+              color: 'rgba(255, 255, 255, 0.65)', 
+              textAlign: 'center', 
+              marginTop: '24px' 
+            }}
           >
             To speak with a Keystrike engineer: connect@keystrike.com
           </p>
