@@ -1028,36 +1028,44 @@ export default function MSSPs() {
           >
             Session hijacking, credential abuse, and supply chain exploitation all exploit the same blind spot: the gap between access granted and access governed. Keystrike makes every privileged session across your managed environments visible, verifiable, and policy-controlled — protecting your privileged session infrastructure and giving you a differentiated security offering to bring to market.
           </p>
-          <div className="flex justify-center gap-4 mb-4" style={{ gap: '16px' }}>
+          <div className="flex justify-center mb-4" style={{ alignItems: 'center', gap: '16px' }}>
             <button 
-              className="text-lg font-semibold rounded"
+              className="rounded"
               style={{ 
                 backgroundColor: 'white', 
                 color: '#0F1623',
-                height: '48px',
+                height: '64px',
                 borderRadius: '5px',
                 fontWeight: '600',
                 width: 'auto',
                 minWidth: '280px',
-                padding: '16px 36px'
+                padding: '0 32px',
+                fontSize: '16px',
+                whiteSpace: 'nowrap',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
               }}
             >
               See Keystrike in Your Environment
             </button>
             <button 
-              className="font-semibold rounded"
+              className="rounded"
               style={{ 
                 backgroundColor: 'transparent', 
                 color: 'white',
                 border: '1px solid white',
-                height: 'auto',
+                height: '64px',
                 borderRadius: '5px',
                 fontWeight: '600',
                 width: 'auto',
                 minWidth: '280px',
-                padding: '16px 28px',
-                fontSize: '15px',
-                whiteSpace: 'nowrap'
+                padding: '0 32px',
+                fontSize: '16px',
+                whiteSpace: 'nowrap',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
               }}
             >
               Take the Remote Access Risk Assessment
