@@ -11,22 +11,22 @@ const faqData = [
   // Executive Overview
   {
     question: "What problem does Keystrike solve that existing tools do not?",
-    answer: "Most controls (IAM, MFA, VPN/ZTNA, PAM) verify identity and network access at the moment of login, then implicitly trust the session. In reality, credentials, MFA tokens, browser cookies, and RDP/SSH sessions are routinely stolen or hijacked. Once inside, attackers can operate with the victim's privileges until EDR or human analysts catch up. Keystrike removes this implicit trust by continuously validating the legitimacy of every interactive action during a remote session. Each keystroke/mouse click must be cryptographically attested as originating from a verified human on an approved device. If attestation is missing or invalid, the action is blocked in real time.",
+    answer: "Keystrike is a privileged session monitoring platform that closes the post-authentication security gap in enterprise and OT environments. Most controls (IAM, MFA, VPN/ZTNA, PAM) verify identity and network access at the moment of login, then implicitly trust the session. In reality, credentials, MFA tokens, browser cookies, and RDP/SSH sessions are routinely stolen or hijacked. Once inside, attackers can operate with the victim's privileges until EDR or human analysts catch up. Keystrike removes this implicit trust by continuously validating the legitimacy of every interactive action during a remote session. Each keystroke/mouse click must be cryptographically attested as originating from a verified human on an approved device. If attestation is missing or invalid, the action is blocked in real time.",
     category: "Executive Overview"
   },
   {
     question: "How does Keystrike strengthen remote access security?",
-    answer: "Keystrike adds a deterministic, in-band enforcement layer inside RDP, SSH, and similar interactive protocols. Instead of relying on probabilistic anomaly detection, it validates good behavior: only commands backed by real human input from a trusted workstation are allowed to execute. This design shuts down common attacker paths—credential replay, session hijacking, remote command injection, and living-off-the-land techniques—because the adversary cannot generate the required cryptographic proof of physical presence.",
+    answer: "Keystrike adds a deterministic, in-band enforcement layer inside RDP, SSH, and similar interactive protocols. Instead of relying on probabilistic anomaly detection, it validates good behavior: only commands backed by real human input from a trusted workstation are allowed to execute. This design shuts down common attacker paths; credential replay, session hijacking, remote command injection, and living-off-the-land techniques; because the adversary cannot generate the required cryptographic proof of physical presence.",
     category: "Executive Overview"
   },
   {
     question: "Where does Keystrike fit in the security stack?",
-    answer: "Keystrike complements—not replaces—existing identity, endpoint, and monitoring tools. IAM/MFA confirm who logs in, PAM controls when and to what, VPN/ZTNA control network reachability, and EDR/SIEM detect anomalies. Keystrike governs what actually happens after login by enforcing legitimacy at the moment of command execution.",
+    answer: "Keystrike complements, not replaces, existing identity, endpoint, and monitoring tools. IAM/MFA confirm who logs in, PAM controls when and to what, VPN/ZTNA control network reachability, and EDR/SIEM detect anomalies. Keystrike governs what actually happens after login by enforcing legitimacy at the moment of command execution.",
     category: "Executive Overview"
   },
   {
     question: "Is Keystrike a Zero Trust solution?",
-    answer: "Yes. Zero Trust calls for continuous verification, least privilege, and explicit authorization. Keystrike operationalizes this within live sessions by continually validating that actions are coming from a verified human on a verified device—and enforcing policy in real time.",
+    answer: "Yes. Zero Trust calls for continuous verification, least privilege, and explicit authorization. Keystrike operationalizes this within live sessions by continually validating that actions are coming from a verified human on a verified device, and enforcing policy in real time.",
     category: "Executive Overview"
   },
   {
@@ -58,7 +58,7 @@ const faqData = [
   },
   {
     question: "What happens if attestation is missing?",
-    answer: "If the server-side Terminator does not receive valid attestation for incoming input, it treats the input as untrusted. In enforcement mode, Keystrike blocks it immediately and generates an alert—preventing fake commands or session abuse even when credentials or tokens are compromised.",
+    answer: "If the server-side Terminator does not receive valid attestation for incoming input, it treats the input as untrusted. In enforcement mode, Keystrike blocks it immediately and generates an alert, preventing fake commands or session abuse even when credentials or tokens are compromised.",
     category: "How Keystrike Works"
   },
   {
@@ -70,7 +70,7 @@ const faqData = [
   // Interactive vs. Non-Interactive Sessions
   {
     question: "Does enforcement apply to all types of remote access?",
-    answer: "Enforcement applies to interactive, human-driven sessions where input can be validated (e.g., RDP, SSH). Non-interactive mechanisms—PsExec, WMI, SMB/RPC, scheduled tasks, service accounts, or automated scripts—are visible in telemetry but are not blocked by Keystrike because they lack human input to attest. However, with the SEE/visibility function of Keystrike, we monitor all types of remote access which will help segment the network more efficiently.",
+    answer: "Enforcement applies to interactive, human-driven sessions where input can be validated (e.g., RDP, SSH). Non-interactive mechanisms; PsExec, WMI, SMB/RPC, scheduled tasks, service accounts, or automated scripts; are visible in telemetry but are not blocked by Keystrike because they lack human input to attest. However, with the SEE/visibility function of Keystrike, we monitor all types of remote access which will help segment the network more efficiently.",
     category: "Interactive vs. Non-Interactive Sessions"
   },
   {
@@ -87,7 +87,7 @@ const faqData = [
   },
   {
     question: "What if an attacker tries to fake keyboard or mouse input?",
-    answer: "Keystrike assumes a strong attacker and is engineered to sit above them in privilege. To forge valid inputs, an attacker would typically need to escalate to high privilege and craft a custom driver to spoof hardware events while also reproducing cryptographic attestations—work that is complex, risky, and time-consuming even for elite teams.",
+    answer: "Keystrike assumes a strong attacker and is engineered to sit above them in privilege. To forge valid inputs, an attacker would typically need to escalate to high privilege and craft a custom driver to spoof hardware events while also reproducing cryptographic attestations: work that is complex, risky, and time-consuming even for elite teams.",
     category: "Device Authentication & Bypass Resistance"
   },
   {
@@ -108,7 +108,7 @@ const faqData = [
     category: "Architecture, Deployment, and Operations"
   },
   {
-    question: "What operating systems are supported?",
+    question: "What operating systems does Keystrike support?",
     answer: "Windows and Linux are supported on the server side, with the workstation agent available for major desktop OSes. For the most current matrix (including versions such as Windows Server 2016+ and Linux support details), see the documentation: https://docs.keystrike.com/poc/keystrike-overview",
     category: "Architecture, Deployment, and Operations"
   },
@@ -170,7 +170,7 @@ const faqData = [
   
   // Use Cases
   {
-    question: "What are the most common use cases?",
+    question: "What are the most common use cases for Keystrike?",
     answer: "Enterprise IT: Protect domain controllers, AD/Entra services, identity providers, databases, and other crown jewels where a single compromise could be catastrophic.\n\nOT/ICS: Enforce control on jump boxes and bastion hosts at network segment boundaries so only verified human input can operate high-value systems.\n\nDesktop Support (preliminary): Confirm that remote desktop interactions truly originate from authorized IT staff.\n\nData Centers: Ensure every privileged action across critical infrastructure is cryptographically tied to a verified human operator.\n\nMSSPs: Enforce operator accountability across multi-tenant environments, so every keystroke on managed client infrastructure is attributed to a verified human — not a script, bot, or compromised credential.",
     category: "Use Cases"
   },
@@ -226,34 +226,34 @@ const faqData = [
   
   // Competitive Differentiation
   {
-    question: "How is Keystrike different from Privileged Access Management (PAM) solutions?",
+    question: "How is Keystrike different from Privileged Access Management (PAM) solutions like CyberArk or BeyondTrust?",
     answer: "PAM locks away credentials, brokers approval, and elevates privileges. However, PAM typically stops at the moment access is granted. Keystrike governs what happens after login, validating that every action is human and compliant in real time and producing evidence as it happens. Together, PAM + Keystrike close the loop between access approval and access accountability.",
     category: "Competitive Differentiation"
   },
   {
-    question: "How is Keystrike different from SIEM platforms like Splunk?",
-    answer: "SIEM centralizes and correlates logs. It is superb for search and investigation but is reactive by nature. Keystrike acts in-band on the live session: it validates inputs, enforces policy, and generates structured, high-signal evidence—not just raw logs—so investigations start with a trustworthy ground truth.",
+    question: "How is Keystrike different from SIEM platforms like Splunk or Microsoft Sentinel?",
+    answer: "SIEM centralizes and correlates logs. It is superb for search and investigation but is reactive by nature. Keystrike acts in-band on the live session: it validates inputs, enforces policy, and generates structured, high-signal evidence – not just raw logs – so investigations start with a trustworthy ground truth.",
     category: "Competitive Differentiation"
   },
   {
-    question: "How is this different from session recording tools?",
-    answer: "Recording tools capture what happened for later review; they do not stop bad actions in the moment. Keystrike blocks illegitimate inputs before commands run and retain attestations proving why an action was permitted or denied.",
+    question: "How is Keystrike different from session recording tools like CyberArk PSM or BeyondTrust Session Manager?",
+    answer: "Recording tools capture what happened for later review; they do not stop bad actions in the moment. Keystrike blocks illegitimate inputs before commands run and retains attestations proving why an action was permitted or denied.",
     category: "Competitive Differentiation"
   },
   {
-    question: "Why isn't EDR sufficient?",
+    question: "Why isn't EDR, like CrowdStrike or Microsoft Defender, sufficient for privileged session security?",
     answer: "EDR detects and responds to malicious behavior at the endpoint, often probabilistically and post-execution. Keystrike is proactive and deterministic for interactive access: it allows only attested, human-driven actions and denies everything else, reducing the workload on EDR and SOC teams.",
     category: "Competitive Differentiation"
   },
   {
-    question: "If we already use MFA, ZTNA, or VPN controls, why do we need Keystrike?",
+    question: "If we already use MFA, ZTNA, or VPN tools like Okta, Microsoft Entra ID, or Zscaler, why do we need Keystrike?",
     answer: "MFA/ZTNA/VPN validate identity and network access at connection time. They don't continuously validate commands during the session. Keystrike governs the post-login trust gap by enforcing per-action legitimacy throughout the session.",
     category: "Competitive Differentiation"
   },
   
   // Visibility & Discovery
   {
-    question: "What is SEE and what does it monitor?",
+    question: "What is the Keystrike SEE module and what does it monitor?",
     answer: "SEE is a new module in the Keystrike product: a discovery and visibility capability. It maps remote access flows across the organization and surfaces which protocols (RDP, SSH, WinRM, PSExec, WMI, PowerShell remoting, FTP, Telnet, certain RMMs, etc.) are in use, which are secured by Keystrike, and where policy gaps remain.",
     category: "Visibility & Discovery"
   },
@@ -278,57 +278,6 @@ const faqData = [
     question: "How long has Keystrike been around and where is it based?",
     answer: "Keystrike has operated for nearly three years and has been in the market for almost two. The company is headquartered in Iceland and registered in Delaware.",
     category: "Company Information"
-  },
-  
-  {
-    question: "What is physical input verification and how does it work?",
-    answer: "Physical input verification is Keystrike's breakthrough technology that analyzes the unique patterns in how users type - their keystroke dynamics, timing, pressure, and behavioral signatures. Unlike traditional authentication that only verifies credentials, we verify that the person typing is actually the authorized user. This creates an additional layer of security that's nearly impossible to replicate, as each person's typing pattern is as unique as their fingerprint.",
-    category: "Technology"
-  },
-  {
-    question: "How is Keystrike different from other cybersecurity solutions?",
-    answer: "Keystrike is the only cybersecurity platform that provides continuous identity verification at the keystroke level. While other solutions focus on perimeter security or endpoint detection, we verify human identity in real-time during every interaction. Our SEE-CONTROL-PROVE methodology provides live visibility, instant enforcement, and immutable audit trails - all anchored by physical input verification that completes your identity stack.",
-    category: "Product"
-  },
-  {
-    question: "What types of organizations use Keystrike?",
-    answer: "Keystrike serves 10,000+ organizations across finance, healthcare, government, technology, and professional services. Our clients range from Fortune 500 enterprises to growing companies that need enterprise-grade security. We're particularly popular with organizations that have remote workforces, strict compliance requirements, or high-value data that requires continuous governance.",
-    category: "Customers"
-  },
-  {
-    question: "How quickly can Keystrike be implemented?",
-    answer: "Keystrike is designed for rapid deployment. Most organizations see initial protection within 24 hours of installation. Our cloud-native architecture requires no hardware changes, and our agents deploy silently across endpoints. Full enterprise rollouts typically complete within 1-2 weeks, including policy configuration, user training, and compliance setup. We provide dedicated implementation support to ensure smooth deployment.",
-    category: "Implementation"
-  },
-  {
-    question: "What compliance standards does Keystrike meet?",
-    answer: "Keystrike is SOC 2 Type II certified and supports compliance with ISO 27001, PCI DSS, HIPAA, GDPR, and other major frameworks. Our platform provides automated compliance reporting and maintains immutable audit trails that satisfy regulatory requirements. The physical input verification technology actually enhances compliance by providing stronger identity assurance than traditional methods.",
-    category: "Compliance"
-  },
-  {
-    question: "How does pricing work for Keystrike?",
-    answer: "Keystrike uses per-user, per-month pricing that scales with your organization. Pricing includes the full platform (endpoint, network, and cloud security), unlimited support, and all compliance features. We offer 30-day free trials and volume discounts for larger deployments. Contact our sales team for detailed pricing based on your specific needs and deployment size.",
-    category: "Pricing"
-  },
-  {
-    question: "What kind of support does Keystrike provide?",
-    answer: "All Keystrike customers receive 24/7 technical support with average response times under 30 minutes for critical issues. We provide dedicated customer success managers, comprehensive documentation, training programs, and a partner ecosystem for implementation support. Our Nordic-based team ensures high-touch, personalized service for every customer.",
-    category: "Support"
-  },
-  {
-    question: "Can Keystrike integrate with our existing security tools?",
-    answer: "Yes, Keystrike integrates seamlessly with 200+ security tools including SIEM systems, identity providers, endpoint management platforms, and compliance tools. Our RESTful APIs and pre-built integrations ensure that Keystrike enhances rather than replaces your existing security investments. We can push alerts, share threat intelligence, and coordinate response actions across your security stack.",
-    category: "Integration"
-  },
-  {
-    question: "How accurate is physical input verification?",
-    answer: "Keystrike's physical input verification achieves 99.9% accuracy in threat detection with industry-leading false positive rates below 0.1%. Our AI models are trained on millions of keystroke patterns and continuously learn from user behavior. The technology adapts to natural variations in typing while detecting anomalies that indicate compromise or unauthorized access.",
-    category: "Technology"
-  },
-  {
-    question: "What happens if a threat is detected?",
-    answer: "When Keystrike detects a threat through physical input verification, the system can automatically block access, terminate sessions, alert administrators, and initiate forensic capture - all in real-time. Response policies are customizable based on risk levels and organizational needs. All actions are logged in immutable audit trails for compliance and investigation purposes.",
-    category: "Security Response"
   }
 ];
 
@@ -338,7 +287,7 @@ export default function FAQ() {
 
   // Get unique categories from FAQ data
   const categories = useMemo(() => {
-    const uniqueCategories = [...new Set(faqData.map(faq => faq.category))].sort();
+    const uniqueCategories = [...new Set(faqData.map(faq => faq.category))];
     return ['All', ...uniqueCategories];
   }, []);
 
@@ -409,11 +358,10 @@ export default function FAQ() {
       <section className="bg-surface py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
-            Frequently Asked Questions
+            Keystrike FAQ: Privileged Session Monitoring, Remote Access Security, and Zero Trust Enforcement
           </h1>
           <p className="text-xl text-text-secondary mb-8">
-            Get expert answers about Keystrike's physical input verification technology, 
-            implementation, and cybersecurity platform capabilities.
+            Get answers about how Keystrike closes the post-authentication security gap, how it compares to PAM, EDR, and SIEM tools, and how it supports compliance with NERC CIP, IEC 62443, DORA, and NIS2.
           </p>
         </div>
       </section>
