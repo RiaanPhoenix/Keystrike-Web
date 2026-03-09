@@ -463,28 +463,28 @@ export default function BankingPage() {
       <section className="bg-[#0F1623] py-20 text-center">
         <div className="max-w-[1200px] mx-auto px-4">
           {/* Eyebrow */}
-          <div className="text-[11px] font-normal tracking-[0.10em] text-[#9CA3AF] uppercase mb-6">
+          <div className="text-[11px] font-normal tracking-[0.10em] text-[#9CA3AF] uppercase mb-8">
             BANKING · FINANCIAL SERVICES · PAYMENT SYSTEMS · CAPITAL MARKETS
           </div>
 
           {/* H2 */}
-          <h2 className="text-[28px] md:text-[40px] font-bold text-white mb-8 max-w-[640px] mx-auto leading-tight">
-            Close the Post-Authentication Gap Before Your Next Audit — or Incident
+          <h2 className="text-[28px] md:text-[40px] font-bold text-white mb-8 max-w-[580px] mx-auto leading-tight">
+            Close the Post-Authentication Gap Before Your Next Audit or Incident
           </h2>
 
           {/* Body Paragraph */}
-          <div className="max-w-[560px] mx-auto mb-10">
-            <p className="text-[16px] text-[#CBD5E1] leading-[1.6]">
+          <div className="max-w-[520px] mx-auto mb-10">
+            <p className="text-[16px] text-[#CBD5E1] leading-[1.6] text-left">
               Session hijacking, credential abuse, and payment rail fraud all exploit the same blind spot: the gap between access granted and access governed. Keystrike makes every privileged session in your environment visible, verifiable, and policy-controlled — without replacing your existing stack.
             </p>
           </div>
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
-            <button className="bg-white text-[#0F1623] font-semibold rounded-[5px] px-[28px] py-[14px] hover:bg-[#F0F0F0] transition-colors">
+            <button className="bg-white text-[#0F1623] font-bold rounded-[5px] px-[28px] h-[52px] min-w-[260px] hover:bg-[#F0F0F0] transition-colors">
               See Keystrike in Your Environment
             </button>
-            <button className="bg-transparent border-[1.5px] border-white text-white font-semibold rounded-[5px] px-[28px] py-[14px] hover:bg-white hover:bg-opacity-10 transition-colors">
+            <button className="bg-transparent border border-white text-white font-semibold rounded-[5px] px-[28px] h-[52px] hover:bg-white hover:bg-opacity-10 transition-colors">
               Take the Remote Access Risk Assessment
             </button>
           </div>
