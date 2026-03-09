@@ -337,21 +337,23 @@ export default function BankingPage() {
 
       {/* Section 6 - Regulatory Compliance */}
       <section className="bg-white py-20">
-        <div className="max-w-[720px] mx-auto px-4 text-center">
+        <div className="max-w-[720px] mx-auto px-4">
           {/* Eyebrow */}
-          <div className="text-[11px] font-normal tracking-[0.10em] text-[#6B7280] uppercase mb-6">
+          <div className="text-[11px] font-normal tracking-[0.10em] text-[#6B7280] uppercase mb-6 text-center">
             COMPLIANCE AND GOVERNANCE
           </div>
 
           {/* Section H2 */}
-          <h2 className="text-[40px] font-bold text-[#0F1623] mb-8">
+          <h2 className="text-[40px] font-bold text-[#0F1623] mb-8 text-left max-w-[680px] mx-auto">
             Continuous Session Governance for FFIEC, PCI DSS, NYDFS, and GLBA Requirements
           </h2>
 
           {/* Body paragraph 1 */}
-          <p className="text-[16px] text-[#374151] text-center leading-[1.6] mb-8">
-            Every privileged session produces continuous, tamper-evident audit records that satisfy financial services regulatory requirements as a direct output of governance — not as a separate compliance process.
-          </p>
+          <div className="max-w-[640px] mx-auto mb-8">
+            <p className="text-[16px] text-[#374151] text-left leading-[1.6]">
+              Every privileged session produces continuous, tamper-evident audit records that satisfy financial services regulatory requirements as a direct output of governance — not as a separate compliance process.
+            </p>
+          </div>
 
           {/* Badge pills */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">
@@ -360,8 +362,7 @@ export default function BankingPage() {
               'PCI DSS',
               'NYDFS 23 NYCRR 500',
               'GLBA',
-              'OCC',
-              'SOC 2 Type 2'
+              'OCC'
             ].map((badge) => (
               <span 
                 key={badge}
@@ -370,12 +371,17 @@ export default function BankingPage() {
                 {badge}
               </span>
             ))}
+            <span className="bg-[#0F1623] text-white text-[13px] font-semibold px-3 py-2 rounded-lg">
+              SOC 2 Type 2
+            </span>
           </div>
 
           {/* Body paragraph 2 */}
-          <p className="text-[16px] text-[#374151] text-center leading-[1.6]">
-            Keystrike supports compliance with FFIEC, OCC, GLBA, PCI DSS, NYDFS (23 NYCRR Part 500), California DFPI/CCPA, and other banking cybersecurity mandates — through robust access controls, continuous authentication, and ongoing verification of every remote action.
-          </p>
+          <div className="max-w-[640px] mx-auto">
+            <p className="text-[16px] text-[#374151] text-left leading-[1.6]">
+              Keystrike supports compliance with FFIEC, OCC, GLBA, PCI DSS, NYDFS (23 NYCRR Part 500), California DFPI/CCPA, and other banking cybersecurity mandates — through robust access controls, continuous authentication, and ongoing verification of every remote action.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -384,7 +390,7 @@ export default function BankingPage() {
         <div className="max-w-[900px] mx-auto px-4">
           {/* Eyebrow */}
           <div className="text-[11px] font-normal tracking-[0.10em] text-[#6B7280] uppercase mb-6 text-center">
-            ARCHITECTURE
+            HOW KEYSTRIKE WORKS
           </div>
 
           {/* Section H2 */}
@@ -392,44 +398,54 @@ export default function BankingPage() {
             Deterministic Session Enforcement — Not Probabilistic Detection
           </h2>
 
-          {/* Three steps */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center mb-8">
+          {/* Three steps with arrows */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-4 mb-8">
             
             {/* Step 1 */}
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center bg-white border border-[#E5E7EB] rounded-lg p-6 flex-1 max-w-[280px]">
               <div className="w-8 h-8 bg-[#1B3FC4] text-white font-bold text-[16px] flex items-center justify-center rounded-full mb-4">
                 1
               </div>
-              <h3 className="text-[18px] font-bold text-[#0F1623] mb-3">
+              <h3 className="text-[18px] font-bold text-[#0F1623] mb-3 text-center">
                 Workstation Agent
               </h3>
-              <p className="text-[14px] text-[#374151] leading-[1.6]">
+              <p className="text-[14px] text-[#374151] leading-[1.6] text-left">
                 A lightweight agent on the user's device recognises legitimate physical keystrokes and mouse clicks, and submits cryptographic attestations confirming their legitimacy to the central Keystrike service.
               </p>
             </div>
 
+            {/* Arrow 1 */}
+            <div className="hidden md:block text-[#6B7280] text-[40px] px-2">
+              ›
+            </div>
+
             {/* Step 2 */}
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center bg-white border border-[#E5E7EB] rounded-lg p-6 flex-1 max-w-[280px]">
               <div className="w-8 h-8 bg-[#1B3FC4] text-white font-bold text-[16px] flex items-center justify-center rounded-full mb-4">
                 2
               </div>
-              <h3 className="text-[18px] font-bold text-[#0F1623] mb-3">
+              <h3 className="text-[18px] font-bold text-[#0F1623] mb-3 text-center">
                 Server-Side Terminator
               </h3>
-              <p className="text-[14px] text-[#374151] leading-[1.6]">
+              <p className="text-[14px] text-[#374151] leading-[1.6] text-left">
                 A second lightweight agent on the destination server withholds all input until it receives proof of legitimacy. Attested input is processed. Unattested input — from scripts, injected commands, or compromised sessions — is blocked and an alert is generated in real time.
               </p>
             </div>
 
+            {/* Arrow 2 */}
+            <div className="hidden md:block text-[#6B7280] text-[40px] px-2">
+              ›
+            </div>
+
             {/* Step 3 */}
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center bg-white border border-[#E5E7EB] rounded-lg p-6 flex-1 max-w-[280px]">
               <div className="w-8 h-8 bg-[#1B3FC4] text-white font-bold text-[16px] flex items-center justify-center rounded-full mb-4">
                 3
               </div>
-              <h3 className="text-[18px] font-bold text-[#0F1623] mb-3">
+              <h3 className="text-[18px] font-bold text-[#0F1623] mb-3 text-center">
                 Live Visibility
               </h3>
-              <p className="text-[14px] text-[#374151] leading-[1.6]">
+              <p className="text-[14px] text-[#374151] leading-[1.6] text-left">
                 The Keystrike SEE module maps all remote protocols across your environment — RDP, SSH, PowerShell Remoting, WinRM, WMI, SMB, and more — surfacing which sessions are governed and where policy gaps remain.
               </p>
             </div>
