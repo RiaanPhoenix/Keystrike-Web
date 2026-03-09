@@ -41,7 +41,7 @@ export default function Navigation({ currentPage }: { currentPage?: string }) {
                       <div className="text-xs text-text-secondary mt-1">Industrial IoT and SCADA security</div>
                     </a>
                     <a 
-                      href="/solutions/financial" 
+                      href="/solutions/banking" 
                       className="block px-4 py-3 text-sm text-text-primary hover:bg-surface-muted hover:text-accent transition-colors"
                     >
                       <div className="font-medium">Banking</div>
@@ -192,7 +192,7 @@ export default function Navigation({ currentPage }: { currentPage?: string }) {
                       <div className="text-xs text-text-secondary mt-1">Industrial IoT and SCADA security</div>
                     </a>
                     <a 
-                      href="/solutions/financial" 
+                      href="/solutions/banking" 
                       className="block px-3 py-2 text-sm text-text-primary hover:text-accent"
                     >
                       <div className="font-medium">Banking</div>
