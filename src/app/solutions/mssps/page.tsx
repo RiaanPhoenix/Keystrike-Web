@@ -40,7 +40,7 @@ export default function MSSPs() {
             MANAGED SECURITY SERVICE PROVIDERS · SOC OPERATIONS · MDR TEAMS · CYBER INSURERS
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" style={{ fontSize: '56px', fontWeight: '700' }}>
-            Protect Your Operations. Elevate Your Offering.
+            Govern Every Privileged Session. Protect Every Customer.
           </h1>
           <div 
             className="mx-auto mb-8 text-left"
@@ -88,18 +88,18 @@ export default function MSSPs() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 
             className="text-center mb-4"
-            style={{ fontSize: '34px', fontWeight: '700', color: '#0F1623' }}
+            style={{ fontSize: '36px', fontWeight: '700', color: '#0F1623' }}
           >
             MSSPs Face a Security Gap No Perimeter Tool Can Close
           </h2>
           <p 
-            className="text-center mb-12"
-            style={{ fontSize: '18px', color: '#6B7280' }}
+            className="text-center mb-12 mx-auto"
+            style={{ fontSize: '18px', fontWeight: '400', color: '#6B7280', maxWidth: '680px' }}
           >
             Your admin credentials are the most valuable target in your customers' environments — and the hardest to defend with conventional tools.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8" style={{ alignItems: 'stretch' }}>
             <div 
               className="p-8 rounded"
               style={{ 
@@ -111,19 +111,19 @@ export default function MSSPs() {
             >
               <h3 
                 className="mb-3"
-                style={{ fontSize: '18px', fontWeight: '700', color: '#0F1623', marginBottom: '12px' }}
+                style={{ fontSize: '20px', fontWeight: '700', color: '#0F1623', marginBottom: '12px' }}
               >
                 MSSP Accounts as Primary Attack Targets
               </h3>
               <p 
                 className="mb-4 text-left"
-                style={{ fontSize: '14px', color: '#374151', lineHeight: '1.6', marginBottom: '16px' }}
+                style={{ fontSize: '15px', color: '#374151', lineHeight: '1.7', marginBottom: '16px' }}
               >
                 A single compromised MSSP admin credential provides attackers with privileged access across every environment your team manages. MFA confirms the login — it cannot verify what happens inside the session once access is granted. In 2022, the Five Eyes intelligence alliance — comprising CISA, the NCSC, the FBI, and security agencies from Australia, Canada, and New Zealand — issued a joint advisory specifically warning that MSSPs are primary targets for state-sponsored actors and ransomware groups seeking simultaneous access to multiple downstream customer environments.
               </p>
               <ul 
                 className="text-left"
-                style={{ fontSize: '13px', color: '#6B7280', lineHeight: '1.8' }}
+                style={{ fontSize: '14px', color: '#6B7280', lineHeight: '1.6', paddingTop: '12px', paddingBottom: '4px' }}
               >
                 <li>• Admin session verification at the keystroke level</li>
                 <li>• Credential theft and session hijacking prevention</li>
@@ -142,19 +142,19 @@ export default function MSSPs() {
             >
               <h3 
                 className="mb-3"
-                style={{ fontSize: '18px', fontWeight: '700', color: '#0F1623', marginBottom: '12px' }}
+                style={{ fontSize: '20px', fontWeight: '700', color: '#0F1623', marginBottom: '12px' }}
               >
                 Cross-Customer Contamination
               </h3>
               <p 
                 className="mb-4 text-left"
-                style={{ fontSize: '14px', color: '#374151', lineHeight: '1.6', marginBottom: '16px' }}
+                style={{ fontSize: '15px', color: '#374151', lineHeight: '1.7', marginBottom: '16px' }}
               >
                 Attackers who compromise one MSSP session can move laterally across customer environment boundaries — propagating ransomware, exfiltrating data, and establishing persistence across multiple customers before any alert fires. Keystrike blocks lateral movement at the command level before it crosses the customer boundary.
               </p>
               <ul 
                 className="text-left"
-                style={{ fontSize: '13px', color: '#6B7280', lineHeight: '1.8' }}
+                style={{ fontSize: '14px', color: '#6B7280', lineHeight: '1.6', paddingTop: '12px', paddingBottom: '4px' }}
               >
                 <li>• Environment boundary enforcement</li>
                 <li>• Lateral movement prevention</li>
@@ -173,19 +173,19 @@ export default function MSSPs() {
             >
               <h3 
                 className="mb-3"
-                style={{ fontSize: '18px', fontWeight: '700', color: '#0F1623', marginBottom: '12px' }}
+                style={{ fontSize: '20px', fontWeight: '700', color: '#0F1623', marginBottom: '12px' }}
               >
                 Proving Access Integrity to Customers
               </h3>
               <p 
                 className="mb-4 text-left"
-                style={{ fontSize: '14px', color: '#374151', lineHeight: '1.6', marginBottom: '16px' }}
+                style={{ fontSize: '15px', color: '#374151', lineHeight: '1.7', marginBottom: '16px' }}
               >
                 Customers increasingly demand cryptographic proof that their MSSP cannot be impersonated. Keystrike produces tamper-evident session records for every privileged action — giving you the evidence to demonstrate accountability at every level and a differentiated service tier to go with it.
               </p>
               <ul 
                 className="text-left"
-                style={{ fontSize: '13px', color: '#6B7280', lineHeight: '1.8' }}
+                style={{ fontSize: '14px', color: '#6B7280', lineHeight: '1.6', paddingTop: '12px', paddingBottom: '4px' }}
               >
                 <li>• Tamper-evident audit trails for every privileged session</li>
                 <li>• Compliance-ready records for NIS2, ISO 27001, and SOC 2</li>
@@ -198,21 +198,33 @@ export default function MSSPs() {
 
       {/* SECTION 3 — STATISTICS BAR */}
       <section style={{ backgroundColor: '#1B3FC4' }} className="w-full py-8">
-        <div 
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-          style={{ 
-            display: 'flex', 
-            flexDirection: 'row', 
-            justifyContent: 'space-evenly' 
-          }}
-        >
-          <div className="text-center" style={{ maxWidth: '260px' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div 
+            className="text-center mb-6"
+            style={{ 
+              fontSize: '12px', 
+              fontWeight: '600', 
+              letterSpacing: '0.08em', 
+              textTransform: 'uppercase', 
+              color: 'rgba(255, 255, 255, 0.6)' 
+            }}
+          >
+            The Scale of the MSSP Threat
+          </div>
+          <div 
+            style={{ 
+              display: 'flex', 
+              flexDirection: 'row', 
+              justifyContent: 'space-between' 
+            }}
+          >
+          <div className="text-center" style={{ width: '33.33%', padding: '0 32px' }}>
             <div style={{ fontSize: '40px', fontWeight: '700', color: 'white' }}>
               1,500+
             </div>
             <div 
-              className="text-left"
-              style={{ fontSize: '14px', color: '#BFDBFE', lineHeight: '1.5' }}
+              className="text-center"
+              style={{ fontSize: '14px', color: '#FFFFFF', lineHeight: '1.6' }}
             >
               downstream businesses affected when REvil exploited MSP remote access tools in the Kaseya VSA ransomware attack (2021)
             </div>
@@ -220,13 +232,13 @@ export default function MSSPs() {
           
           <div className="hidden md:block w-px bg-white opacity-20"></div>
           
-          <div className="text-center" style={{ maxWidth: '260px' }}>
+          <div className="text-center" style={{ width: '33.33%', padding: '0 32px' }}>
             <div style={{ fontSize: '40px', fontWeight: '700', color: 'white' }}>
               15%
             </div>
             <div 
-              className="text-left"
-              style={{ fontSize: '14px', color: '#BFDBFE', lineHeight: '1.5' }}
+              className="text-center"
+              style={{ fontSize: '14px', color: '#FFFFFF', lineHeight: '1.6' }}
             >
               of all data breaches in 2024 involved a third party, including MSSPs and managed service providers — up year-over-year (Verizon Data Breach Investigations Report, 2024)
             </div>
@@ -234,16 +246,17 @@ export default function MSSPs() {
           
           <div className="hidden md:block w-px bg-white opacity-20"></div>
           
-          <div className="text-center" style={{ maxWidth: '260px' }}>
+          <div className="text-center" style={{ width: '33.33%', padding: '0 32px' }}>
             <div style={{ fontSize: '40px', fontWeight: '700', color: 'white' }}>
               18,000+
             </div>
             <div 
-              className="text-left"
-              style={{ fontSize: '14px', color: '#BFDBFE', lineHeight: '1.5' }}
+              className="text-center"
+              style={{ fontSize: '14px', color: '#FFFFFF', lineHeight: '1.6' }}
             >
-              organisations breached through trusted vendor and MSP supply chain access in the SolarWinds SUNBURST attack (2020)
+              organisations breached through compromised privileged remote access credentials in the SolarWinds SUNBURST supply chain attack (2020)
             </div>
+          </div>
           </div>
         </div>
       </section>
@@ -264,18 +277,19 @@ export default function MSSPs() {
             WHERE EXISTING CONTROLS FALL SHORT
           </div>
           <h2 
-            className="text-center mb-16 mx-auto"
+            className="text-center mx-auto"
             style={{ 
               fontSize: '34px', 
               fontWeight: '700', 
               color: '#0F1623',
-              maxWidth: '700px'
+              maxWidth: '700px',
+              marginBottom: '40px'
             }}
           >
             Three Attack Paths That Bypass MFA, PAM, and EDR in MSSP Environments
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8" style={{ alignItems: 'stretch' }}>
             <div 
               className="p-8 rounded h-full"
               style={{ 
@@ -287,7 +301,7 @@ export default function MSSPs() {
             >
               <h3 
                 className="mb-4"
-                style={{ fontSize: '20px', fontWeight: '700', color: '#0F1623' }}
+                style={{ fontSize: '19px', fontWeight: '700', color: '#0F1623' }}
               >
                 Session Hijacking and Admin Credential Abuse
               </h3>
@@ -299,9 +313,9 @@ export default function MSSPs() {
               </p>
               <p 
                 className="mb-4 text-left"
-                style={{ fontSize: '14px', color: '#0D3D3D', fontWeight: 'bold', marginTop: '16px' }}
+                style={{ fontSize: '14px', color: '#0D3D3D', fontWeight: 'bold', marginTop: '16px', borderTop: '1px solid #E5E7EB', paddingTop: '16px' }}
               >
-                Keystrike closes this gap by continuously validating that every command originates from verified physical input on an approved device — not just at login, but throughout the entire session. The moment that changes, Keystrike acts: blocking the command, isolating the workstation, and triggering automated response before damage spreads.
+                Keystrike's privileged session monitoring closes this gap by continuously validating that every command originates from verified physical input on an approved device — not just at login, but throughout the entire session. The moment that changes, Keystrike acts: blocking the command, isolating the workstation, and triggering automated response before damage spreads.
               </p>
               <div 
                 className="p-4 text-left"
@@ -310,7 +324,8 @@ export default function MSSPs() {
                   borderLeft: '3px solid #1B3FC4',
                   fontSize: '13px',
                   color: '#374151',
-                  padding: '16px'
+                  padding: '16px',
+                  lineHeight: '1.6'
                 }}
               >
                 <strong>Incident:</strong> The 2021 Kaseya VSA ransomware attack exploited MSP remote access tools to deploy REvil ransomware across approximately 1,500 downstream businesses in 17 countries — all through legitimate remote sessions. Keystrike blocks unauthorised remote commands at the keystroke level, preventing deployment regardless of credential validity.
@@ -328,7 +343,7 @@ export default function MSSPs() {
             >
               <h3 
                 className="mb-4"
-                style={{ fontSize: '20px', fontWeight: '700', color: '#0F1623' }}
+                style={{ fontSize: '19px', fontWeight: '700', color: '#0F1623' }}
               >
                 Cross-Customer Lateral Movement
               </h3>
@@ -340,7 +355,7 @@ export default function MSSPs() {
               </p>
               <p 
                 className="mb-4 text-left"
-                style={{ fontSize: '14px', color: '#0D3D3D', fontWeight: 'bold', marginTop: '16px' }}
+                style={{ fontSize: '14px', color: '#0D3D3D', fontWeight: 'bold', marginTop: '16px', borderTop: '1px solid #E5E7EB', paddingTop: '16px' }}
               >
                 Keystrike closes this gap by validating every command that crosses environment boundaries, blocking RDP hijacks, inherited sessions, and credential replay before lateral movement can propagate to downstream customers.
               </p>
@@ -351,7 +366,8 @@ export default function MSSPs() {
                   borderLeft: '3px solid #1B3FC4',
                   fontSize: '13px',
                   color: '#374151',
-                  padding: '16px'
+                  padding: '16px',
+                  lineHeight: '1.6'
                 }}
               >
                 <strong>Incident:</strong> In the SolarWinds SUNBURST attack (2020), attackers used compromised supply chain access to move laterally through 18,000+ organisations — many through MSP and managed service channels. The breach remained undetected for nine months. Keystrike limits attacker dwell time to minutes — not months.
@@ -369,7 +385,7 @@ export default function MSSPs() {
             >
               <h3 
                 className="mb-4"
-                style={{ fontSize: '20px', fontWeight: '700', color: '#0F1623' }}
+                style={{ fontSize: '19px', fontWeight: '700', color: '#0F1623' }}
               >
                 Supply Chain and Remote Tool Exploitation
               </h3>
@@ -381,7 +397,7 @@ export default function MSSPs() {
               </p>
               <p 
                 className="mb-4 text-left"
-                style={{ fontSize: '14px', color: '#0D3D3D', fontWeight: 'bold', marginTop: '16px' }}
+                style={{ fontSize: '14px', color: '#0D3D3D', fontWeight: 'bold', marginTop: '16px', borderTop: '1px solid #E5E7EB', paddingTop: '16px' }}
               >
                 Keystrike closes this gap by requiring every command to be cryptographically attested to physical human input. Automated scripts, injected commands, and remote tool exploitation generate no valid attestation — and are blocked before execution.
               </p>
@@ -392,7 +408,8 @@ export default function MSSPs() {
                   borderLeft: '3px solid #1B3FC4',
                   fontSize: '13px',
                   color: '#374151',
-                  padding: '16px'
+                  padding: '16px',
+                  lineHeight: '1.6'
                 }}
               >
                 <strong>Incident:</strong> The ConnectWise ScreenConnect vulnerability (February 2024) was exploited within 48 hours of disclosure, allowing attackers to push ransomware across MSP customer environments through legitimate remote access tools. With Keystrike, commands from unattested sources are blocked regardless of the delivery mechanism.
@@ -418,12 +435,13 @@ export default function MSSPs() {
             POST-AUTHENTICATION SECURITY GAP
           </div>
           <h2 
-            className="text-center mb-16 mx-auto"
+            className="text-center mx-auto"
             style={{ 
               fontSize: '34px', 
               fontWeight: '700', 
               color: '#0F1623',
-              maxWidth: '760px'
+              maxWidth: '760px',
+              marginBottom: '36px'
             }}
           >
             Why MFA, PAM, and SIEM Cannot Secure Privileged Sessions in MSSP Environments
@@ -431,26 +449,26 @@ export default function MSSPs() {
 
           <div className="overflow-x-auto">
             <table 
-              className="w-full mx-auto"
-              style={{ maxWidth: '980px' }}
+              className="w-full"
+              style={{ maxWidth: '980px', margin: '0 auto', width: '100%' }}
             >
               <thead>
                 <tr style={{ backgroundColor: '#0F1623' }}>
                   <th 
-                    className="p-4 text-left text-white"
-                    style={{ fontSize: '14px', fontWeight: '600', padding: '16px' }}
+                    className="text-left text-white"
+                    style={{ fontSize: '14px', fontWeight: '600', padding: '16px 20px', width: '38%' }}
                   >
                     Security Tool
                   </th>
                   <th 
-                    className="p-4 text-left text-white"
-                    style={{ fontSize: '14px', fontWeight: '600', padding: '16px' }}
+                    className="text-left text-white"
+                    style={{ fontSize: '14px', fontWeight: '600', padding: '16px 20px', width: '27%' }}
                   >
                     What It Protects
                   </th>
                   <th 
-                    className="p-4 text-left text-white"
-                    style={{ fontSize: '14px', fontWeight: '600', padding: '16px' }}
+                    className="text-left text-white"
+                    style={{ fontSize: '14px', fontWeight: '600', padding: '16px 20px', width: '35%' }}
                   >
                     Post-Authentication Gap
                   </th>
@@ -464,20 +482,17 @@ export default function MSSPs() {
                   }}
                 >
                   <td 
-                    className="p-4"
-                    style={{ fontSize: '14px', color: '#374151', padding: '16px' }}
+                    style={{ fontSize: '14px', color: '#374151', padding: '16px 20px' }}
                   >
                     Firewalls / VPN / MFA
                   </td>
                   <td 
-                    className="p-4"
-                    style={{ fontSize: '14px', color: '#374151', padding: '16px' }}
+                    style={{ fontSize: '14px', color: '#374151', padding: '16px 20px' }}
                   >
                     Perimeter and identity at login
                   </td>
                   <td 
-                    className="p-4"
-                    style={{ fontSize: '14px', color: '#374151', padding: '16px' }}
+                    style={{ fontSize: '14px', color: '#374151', padding: '16px 20px' }}
                   >
                     Session activity after access is granted
                   </td>
@@ -489,20 +504,17 @@ export default function MSSPs() {
                   }}
                 >
                   <td 
-                    className="p-4"
-                    style={{ fontSize: '14px', color: '#374151', padding: '16px' }}
+                    style={{ fontSize: '14px', color: '#374151', padding: '16px 20px' }}
                   >
                     PAM — Privileged Access Management (e.g., CyberArk, BeyondTrust)
                   </td>
                   <td 
-                    className="p-4"
-                    style={{ fontSize: '14px', color: '#374151', padding: '16px' }}
+                    style={{ fontSize: '14px', color: '#374151', padding: '16px 20px' }}
                   >
                     Credential vaulting and access controls
                   </td>
                   <td 
-                    className="p-4"
-                    style={{ fontSize: '14px', color: '#374151', padding: '16px' }}
+                    style={{ fontSize: '14px', color: '#374151', padding: '16px 20px' }}
                   >
                     Session activity after the vault is opened
                   </td>
@@ -514,20 +526,17 @@ export default function MSSPs() {
                   }}
                 >
                   <td 
-                    className="p-4"
-                    style={{ fontSize: '14px', color: '#374151', padding: '16px' }}
+                    style={{ fontSize: '14px', color: '#374151', padding: '16px 20px' }}
                   >
                     SIEM — Security Information and Event Management (e.g., Splunk, Microsoft Sentinel)
                   </td>
                   <td 
-                    className="p-4"
-                    style={{ fontSize: '14px', color: '#374151', padding: '16px' }}
+                    style={{ fontSize: '14px', color: '#374151', padding: '16px 20px' }}
                   >
                     Centralised alerts and compliance reporting
                   </td>
                   <td 
-                    className="p-4"
-                    style={{ fontSize: '14px', color: '#374151', padding: '16px' }}
+                    style={{ fontSize: '14px', color: '#374151', padding: '16px 20px' }}
                   >
                     Reactive — alerts after damage is done
                   </td>
@@ -539,20 +548,17 @@ export default function MSSPs() {
                   }}
                 >
                   <td 
-                    className="p-4"
-                    style={{ fontSize: '14px', color: '#374151', padding: '16px' }}
+                    style={{ fontSize: '14px', color: '#374151', padding: '16px 20px' }}
                   >
                     EDR — Endpoint Detection and Response (e.g., CrowdStrike, Microsoft Defender)
                   </td>
                   <td 
-                    className="p-4"
-                    style={{ fontSize: '14px', color: '#374151', padding: '16px' }}
+                    style={{ fontSize: '14px', color: '#374151', padding: '16px 20px' }}
                   >
                     Malware detection and endpoint telemetry
                   </td>
                   <td 
-                    className="p-4"
-                    style={{ fontSize: '14px', color: '#374151', padding: '16px' }}
+                    style={{ fontSize: '14px', color: '#374151', padding: '16px 20px' }}
                   >
                     Blind to valid credential theft and session misuse
                   </td>
@@ -563,20 +569,20 @@ export default function MSSPs() {
                   }}
                 >
                   <td 
-                    className="p-4 text-white"
-                    style={{ fontSize: '14px', fontWeight: '700', padding: '16px' }}
+                    className="text-white"
+                    style={{ fontSize: '14px', fontWeight: '700', padding: '16px 20px' }}
                   >
-                    Keystrike
+                    Keystrike — Privileged Session Monitoring
                   </td>
                   <td 
-                    className="p-4 text-white"
-                    style={{ fontSize: '14px', fontWeight: '700', padding: '16px' }}
+                    className="text-white"
+                    style={{ fontSize: '14px', fontWeight: '700', padding: '16px 20px' }}
                   >
                     Every command in every privileged session
                   </td>
                   <td 
-                    className="p-4 text-white"
-                    style={{ fontSize: '14px', fontWeight: '700', padding: '16px' }}
+                    className="text-white"
+                    style={{ fontSize: '14px', fontWeight: '700', padding: '16px 20px' }}
                   >
                     None. Unauthorised commands blocked before execution.
                   </td>
@@ -586,11 +592,12 @@ export default function MSSPs() {
           </div>
 
           <p 
-            className="text-left mx-auto mt-8"
+            className="text-center mx-auto"
             style={{ 
               fontSize: '14px', 
-              color: '#6B7280',
-              maxWidth: '980px'
+              color: '#4B5563',
+              maxWidth: '860px',
+              margin: '20px auto 0'
             }}
           >
             Keystrike does not record keystrokes, credentials, or personally identifiable information. Session verification is cryptographic — not behavioural — eliminating false positives and analyst alert fatigue.
@@ -621,17 +628,17 @@ export default function MSSPs() {
               color: '#0F1623'
             }}
           >
-            Continuous Session Governance for NIS2, ISO 27001, and SOC 2 Requirements
+            Continuous Session Governance for NIS2, DORA, ISO 27001, and SOC 2 Requirements
           </h2>
           
           <p 
-            className="text-left mx-auto mb-8"
+            className="text-center mx-auto"
             style={{ 
               fontSize: '16px', 
               color: '#374151',
               lineHeight: '1.6',
               maxWidth: '720px',
-              marginBottom: '32px'
+              margin: '0 auto 32px'
             }}
           >
             Every privileged session produces continuous, tamper-evident audit records that satisfy MSSP regulatory and contractual requirements as a direct output of governance — not as a separate compliance process.
@@ -658,13 +665,13 @@ export default function MSSPs() {
           </div>
 
           <p 
-            className="text-left mx-auto mb-12"
+            className="text-center mx-auto"
             style={{ 
-              fontSize: '16px', 
+              fontSize: '15px', 
               color: '#374151',
-              lineHeight: '1.6',
-              maxWidth: '720px',
-              marginTop: '32px'
+              lineHeight: '1.7',
+              maxWidth: '800px',
+              margin: '32px auto 48px'
             }}
           >
             Keystrike supports compliance with NIS2 (Network and Information Security Directive 2), ISO 27001:2022, SOC 2 Type 2, DORA (Digital Operational Resilience Act), NIST Cybersecurity Framework, Cyber Essentials, and applicable data protection regulations — through continuous authentication, policy-driven access controls, and auditable session records for every remote action across every managed environment.
@@ -678,10 +685,9 @@ export default function MSSPs() {
             {/* TABLE 1 — NIS2 COMPLIANCE MAP */}
             <div className="w-full">
               <h3 
-                className="mb-4"
-                style={{ fontSize: '18px', fontWeight: '700', color: '#0F1623', marginBottom: '16px' }}
+                style={{ fontSize: '20px', fontWeight: '700', color: '#0F1623', marginBottom: '16px' }}
               >
-                How Keystrike Supports NIS2 Compliance
+                How Keystrike Supports NIS2 Compliance for MSSPs
               </h3>
               <div className="overflow-hidden" style={{ borderRadius: '8px' }}>
                 <table className="w-full">
@@ -780,12 +786,11 @@ export default function MSSPs() {
             </div>
 
             {/* TABLE 2 — DORA COMPLIANCE MAP */}
-            <div className="w-full" style={{ marginTop: '40px' }}>
+            <div className="w-full" style={{ marginTop: '64px' }}>
               <h3 
-                className="mb-4"
-                style={{ fontSize: '18px', fontWeight: '700', color: '#0F1623', marginBottom: '16px' }}
+                style={{ fontSize: '20px', fontWeight: '700', color: '#0F1623', marginBottom: '16px' }}
               >
-                How Keystrike Supports DORA Compliance
+                How Keystrike Supports DORA Compliance for MSSPs
               </h3>
               <div className="overflow-hidden" style={{ borderRadius: '8px' }}>
                 <table className="w-full">
@@ -817,7 +822,7 @@ export default function MSSPs() {
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>Governance and control framework</td>
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>Supports policy enforcement and access legitimacy across all remote workforce sessions</td>
                     </tr>
-                    <tr style={{ backgroundColor: '#F9FAFB', borderBottom: '1px solid #E5E7EB' }}>
+                    <tr style={{ backgroundColor: '#F8FAFB', borderBottom: '1px solid #E5E7EB' }}>
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>6(1)</td>
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>ICT risk management framework</td>
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>Provides real-time identity risk signals for every privileged session</td>
@@ -827,7 +832,7 @@ export default function MSSPs() {
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>Protection of ICT assets</td>
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>Verifies session-level identity — blocking unauthorised commands before they execute</td>
                     </tr>
-                    <tr style={{ backgroundColor: '#F9FAFB', borderBottom: '1px solid #E5E7EB' }}>
+                    <tr style={{ backgroundColor: '#F8FAFB', borderBottom: '1px solid #E5E7EB' }}>
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>9(1)</td>
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>Continuous monitoring</td>
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>Monitors every session in real time and generates alerts on anomalous or unattested activity</td>
@@ -837,7 +842,7 @@ export default function MSSPs() {
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>System resilience</td>
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>Preserves the authenticity and integrity of access across connected financial and operational systems</td>
                     </tr>
-                    <tr style={{ backgroundColor: '#F9FAFB', borderBottom: '1px solid #E5E7EB' }}>
+                    <tr style={{ backgroundColor: '#F8FAFB', borderBottom: '1px solid #E5E7EB' }}>
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>9(3b)</td>
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>Data protection</td>
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>Detects and blocks unauthorised credential use before data can be accessed or exfiltrated</td>
@@ -847,7 +852,7 @@ export default function MSSPs() {
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>Access policies</td>
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>Detects overprivileged or misused access rights within active sessions</td>
                     </tr>
-                    <tr style={{ backgroundColor: '#F9FAFB', borderBottom: '1px solid #E5E7EB' }}>
+                    <tr style={{ backgroundColor: '#F8FAFB', borderBottom: '1px solid #E5E7EB' }}>
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>9(4d)</td>
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>Strong authentication</td>
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>Provides behaviour-based continuous authentication throughout the lifetime of every session</td>
@@ -857,7 +862,7 @@ export default function MSSPs() {
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>Detection mechanisms</td>
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>Alerts on anomalous activity including session hijacking, credential replay, and injected commands</td>
                     </tr>
-                    <tr style={{ backgroundColor: '#F9FAFB', borderBottom: '1px solid #E5E7EB' }}>
+                    <tr style={{ backgroundColor: '#F8FAFB', borderBottom: '1px solid #E5E7EB' }}>
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>11</td>
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>Business continuity</td>
                       <td style={{ fontSize: '13px', color: '#374151', padding: '14px', textAlign: 'left' }}>Enables early automated response to access compromise — minimising operational disruption</td>
