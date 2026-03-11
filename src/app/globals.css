@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Smooth scroll behavior for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Keystrike Brand Theme - Official brand colors */
 :root {
   /* Brand colors */
