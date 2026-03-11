@@ -3,21 +3,46 @@ import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Keystrike for Data Centers | Privileged Session Security for Critical Infrastructure Operators',
+  title: 'Keystrike for Data Centers | Privileged Session Security',
   description: 'Keystrike protects data center operations from credential abuse, third-party session compromise, and cross-tenant lateral movement — delivering cryptographic proof of access integrity for every privileged session. NIS2, ISO 27001, SOC 2, and PCI-DSS aligned.',
+  keywords: [
+    'data center security',
+    'privileged session monitoring',
+    'cross-tenant lateral movement prevention',
+    'vendor session security',
+    'colocation security',
+    'multi-tenant access governance',
+    'cryptographic attestation',
+    'session governance data centers',
+    'NIS2 compliance data centers',
+    'ISO 27001 data centers',
+    'SOC 2 data centers',
+    'PCI-DSS data centers',
+    'post-authentication security gap'
+  ],
   openGraph: {
-    title: 'Keystrike for Data Centers | Privileged Session Security for Critical Infrastructure Operators',
+    title: 'Keystrike for Data Centers | Privileged Session Security',
     description: 'Keystrike protects data center operations from credential abuse, third-party session compromise, and cross-tenant lateral movement — delivering cryptographic proof of access integrity for every privileged session. NIS2, ISO 27001, SOC 2, and PCI-DSS aligned.',
     type: 'website',
-    url: '/solutions/data-centers',
+    url: 'https://keystrike.com/solutions/data-centers',
+    siteName: 'Keystrike',
+    images: [
+      {
+        url: 'https://keystrike.com/images/og-data-centers.png',
+        width: 1200,
+        height: 630,
+        alt: 'Keystrike — Data Center Session Security',
+      },
+    ],
   },
   twitter: {
-    title: 'Keystrike for Data Centers | Privileged Session Security for Critical Infrastructure Operators',
+    title: 'Keystrike for Data Centers | Privileged Session Security',
     description: 'Keystrike protects data center operations from credential abuse, third-party session compromise, and cross-tenant lateral movement — delivering cryptographic proof of access integrity for every privileged session.',
     card: 'summary_large_image',
+    images: ['https://keystrike.com/images/og-data-centers.png'],
   },
   alternates: {
-    canonical: '/solutions/data-centers'
+    canonical: 'https://keystrike.com/solutions/data-centers'
   },
 };
 
@@ -26,20 +51,106 @@ export default function DataCenters() {
     <div className="min-h-screen bg-background">
       <Navigation currentPage="solutions" />
 
+      {/* Structured Data - Block 1: BreadcrumbList */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://keystrike.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Solutions",
+                "item": "https://keystrike.com/solutions"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Data Centers",
+                "item": "https://keystrike.com/solutions/data-centers"
+              }
+            ]
+          })
+        }}
+      />
+
+      {/* Structured Data - Block 2: FAQPage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How do you prevent cross-tenant lateral movement in data centers?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Keystrike validates every command that traverses tenant environment boundaries using cryptographic attestation of physical human input. It blocks session inheritance, credential replay, and RDP hijacks before lateral movement can propagate to downstream tenants — at the command level, not the network level."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do you secure third-party vendor sessions in data center environments?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Keystrike cryptographically attests every command from vendor and third-party sessions to physical human input on an approved device. If a vendor session is hijacked or a command originates from an unattested source, Keystrike blocks the command, isolates the session, and triggers automated response before the attacker can reach tenant systems."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What compliance frameworks does Keystrike support for data centers?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Keystrike supports compliance with NIS2, ISO 27001:2022, SOC 2 Type 2, PCI-DSS, DORA, NIST Cybersecurity Framework, Cyber Essentials, and applicable data protection regulations — through continuous authentication, policy-driven access controls, and tamper-evident audit records for every privileged session."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why can't MFA and PAM secure privileged sessions in data centers?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "MFA verifies identity at login but cannot verify what happens inside a session after access is granted. PAM vaults credentials and controls checkout but goes blind once the session is open. SIEM detects anomalies after the fact. None of these tools provide continuous governance of actions inside an active privileged session. Keystrike closes this post-authentication gap with cryptographic attestation of every command."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does Keystrike take to deploy in a data center environment?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Keystrike deploys in approximately 20 minutes per managed environment. It requires no lengthy professional services engagement, no complex integration project, and integrates with existing MFA, PAM, and SIEM infrastructure with no rip-and-replace."
+                }
+              }
+            ]
+          })
+        }}
+      />
+
       {/* Hero Section */}
       <section className="bg-surface py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="text-sm text-accent uppercase tracking-wide font-semibold mb-4">
-            DATA CENTER OPERATORS · COLOCATION PROVIDERS · CRITICAL INFRASTRUCTURE · ENTERPRISE IT
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="text-sm text-accent uppercase tracking-wide font-semibold mb-4">
+              DATA CENTER OPERATORS · COLOCATION PROVIDERS · CRITICAL INFRASTRUCTURE · ENTERPRISE IT
+            </div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-text-primary mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-text-primary mb-6 text-left">
             Secure Every Session.{" "}
             <span className="text-accent">Protect Every Tenant.</span>
           </h1>
-          <div className="text-lg text-text-primary mb-8 max-w-3xl mx-auto">
-            <p className="mb-4">Keystrike is a privileged session monitoring platform that continuously validates every remote action in real time — blocking unauthorised commands before they execute, and producing tamper-evident audit records for every session. Built for data center operators who carry privileged access across multi-tenant environments and critical infrastructure.</p>
-          </div>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <p className="text-lg text-text-primary mb-8 max-w-3xl text-left">
+            Keystrike is a privileged session monitoring platform that continuously validates every remote action in real time — blocking unauthorised commands before they execute, and producing tamper-evident audit records for every session. Built for data center operators who carry privileged access across multi-tenant environments and critical infrastructure.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
             <a href="/contact" className="btn btn-primary text-lg px-8 py-3">
               See Keystrike in Your Environment
             </a>
@@ -64,8 +175,8 @@ export default function DataCenters() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="card p-6">
-              <h3 className="text-xl font-bold text-text-primary mb-4">Third-Party and Vendor Sessions as Attack Vectors</h3>
-              <p className="text-text-secondary mb-4">Data centers depend on a complex ecosystem of vendors, contractors, and remote support teams — each carrying privileged access to critical systems. A single compromised vendor credential provides attackers with legitimate session access to infrastructure supporting hundreds of tenants. MFA confirms the login — it cannot verify what happens inside the session. Keystrike validates every command for the lifetime of every session, from every operator.</p>
+              <h3 className="text-2xl font-bold text-text-primary mb-4">Third-Party and Vendor Sessions as Attack Vectors</h3>
+              <p className="text-text-secondary mb-4">A single compromised vendor credential provides attackers with legitimate session access to infrastructure supporting hundreds of tenants. MFA confirms the login — it cannot verify what happens inside the session.</p>
               <ul className="text-sm text-text-secondary space-y-2">
                 <li>• Cryptographic attestation of every vendor and third-party command</li>
                 <li>• Session hijacking and credential abuse prevention</li>
@@ -74,8 +185,8 @@ export default function DataCenters() {
             </div>
 
             <div className="card p-6">
-              <h3 className="text-xl font-bold text-text-primary mb-4">Cross-Tenant Lateral Movement</h3>
-              <p className="text-text-secondary mb-4">An attacker who compromises one privileged session inside a data center environment can move laterally across tenant boundaries — using the same tools and credentials that legitimate administrators use every day. Network segmentation offers no defence against an authenticated session that already has permission to cross boundaries. Keystrike blocks lateral movement at the command level before it reaches adjacent tenant environments.</p>
+              <h3 className="text-2xl font-bold text-text-primary mb-4">Cross-Tenant Lateral Movement</h3>
+              <p className="text-text-secondary mb-4">Attackers move laterally across tenant boundaries using the same tools that legitimate administrators use. Network segmentation offers no defence against authenticated sessions that already have permission to cross boundaries.</p>
               <ul className="text-sm text-text-secondary space-y-2">
                 <li>• Tenant environment boundary enforcement</li>
                 <li>• Lateral movement prevention at the command level</li>
@@ -84,8 +195,8 @@ export default function DataCenters() {
             </div>
 
             <div className="card p-6">
-              <h3 className="text-xl font-bold text-text-primary mb-4">Proving Access Integrity to Tenants</h3>
-              <p className="text-text-secondary mb-4">Enterprise tenants increasingly demand verifiable proof that their data center operator cannot be impersonated and that privileged access to their environment is beyond reproach. Keystrike produces tamper-evident session records for every privileged action — giving you the evidence to demonstrate accountability to tenants and a differentiated service tier to bring to market.</p>
+              <h3 className="text-2xl font-bold text-text-primary mb-4">Proving Access Integrity to Tenants</h3>
+              <p className="text-text-secondary mb-4">Enterprise tenants demand verifiable proof that privileged access to their environment is beyond reproach. Keystrike produces tamper-evident session records for every privileged action.</p>
               <ul className="text-sm text-text-secondary space-y-2">
                 <li>• Tamper-evident audit trails for every privileged session</li>
                 <li>• Compliance-ready records for NIS2, ISO 27001, SOC 2, and PCI-DSS</li>
@@ -100,16 +211,16 @@ export default function DataCenters() {
       <section className="bg-surface py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 text-center">
-            <div className="bg-surface-secondary p-6 rounded-lg">
-              <div className="text-accent font-semibold mb-2">2,000+</div>
+            <div className="bg-surface-secondary p-6 rounded-lg border-l-4 border-red-400">
+              <div className="text-5xl font-bold text-red-600 mb-2">2,000+</div>
               <div className="text-text-secondary text-sm">organisations' credentials exposed when hackers stole data center customer login data across GDS Holdings and ST Telemedia Global Data Centres (Bloomberg, 2023)</div>
             </div>
-            <div className="bg-surface-secondary p-6 rounded-lg">
-              <div className="text-accent font-semibold mb-2">$4.5M</div>
+            <div className="bg-surface-secondary p-6 rounded-lg border-l-4 border-red-400">
+              <div className="text-5xl font-bold text-red-600 mb-2">$4.5M</div>
               <div className="text-text-secondary text-sm">ransom demanded after NetWalker ransomware infiltrated Equinix's internal systems through compromised privileged access (2020)</div>
             </div>
-            <div className="bg-surface-secondary p-6 rounded-lg">
-              <div className="text-accent font-semibold mb-2">20 min</div>
+            <div className="bg-surface-secondary p-6 rounded-lg border-l-4 border-green-500">
+              <div className="text-5xl font-bold text-green-600 mb-2">20 min</div>
               <div className="text-text-secondary text-sm">average Keystrike deployment per managed environment — active protection the same day infrastructure is onboarded</div>
             </div>
           </div>
@@ -129,8 +240,12 @@ export default function DataCenters() {
           </div>
 
           <div className="space-y-16">
-            <div className="card p-8">
+            <div className="card p-8 border-l-4 border-accent">
+              <div className="w-12 h-12 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                <span className="text-accent font-bold text-xl">1</span>
+              </div>
               <h3 className="text-2xl font-bold text-text-primary mb-4">Third-Party Vendor Session Compromise</h3>
+              <p className="text-lg font-bold text-text-primary mb-4">Stolen vendor credentials give attackers legitimate session access to infrastructure supporting hundreds of tenants.</p>
               <div className="text-text-secondary mb-6">
                 <p className="mb-4">Data centers grant privileged access to dozens of third-party vendors, contractors, and remote support teams as a matter of routine. When those vendor credentials are compromised — or when an active support session is hijacked — attackers operate inside a legitimate session that is invisible to MFA, PAM, and behavioural detection. Every command appears authorised. Every action looks like the vendor. The breach propagates through critical infrastructure before any alert fires.</p>
                 <p className="mb-6">Keystrike closes this gap by cryptographically attesting every command to physical human input on an approved device. The moment a vendor session is hijacked or a command originates from an unattested source, Keystrike blocks the command, isolates the session, and triggers automated response — before the attacker can reach tenant systems.</p>
@@ -141,8 +256,12 @@ export default function DataCenters() {
               </div>
             </div>
 
-            <div className="card p-8">
+            <div className="card p-8 border-l-4 border-accent">
+              <div className="w-12 h-12 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                <span className="text-accent font-bold text-xl">2</span>
+              </div>
               <h3 className="text-2xl font-bold text-text-primary mb-4">Cross-Tenant Lateral Movement</h3>
+              <p className="text-lg font-bold text-text-primary mb-4">An attacker in one privileged session can cross tenant boundaries using the same tools administrators use every day.</p>
               <div className="text-text-secondary mb-6">
                 <p className="mb-4">Once inside a data center environment, attackers can pivot across tenant boundaries using the same remote protocols and management tools that operators use legitimately every day. RDP sessions, SSH tunnels, and scripting frameworks designed for administrative efficiency become an attacker's highway across your infrastructure. By the time one tenant environment is confirmed breached, adjacent environments are already compromised.</p>
                 <p className="mb-6">Keystrike closes this gap by validating every command that traverses tenant environment boundaries — blocking session inheritance, credential replay, and RDP hijacks before lateral movement can propagate to downstream tenants.</p>
@@ -153,8 +272,12 @@ export default function DataCenters() {
               </div>
             </div>
 
-            <div className="card p-8">
+            <div className="card p-8 border-l-4 border-accent">
+              <div className="w-12 h-12 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                <span className="text-accent font-bold text-xl">3</span>
+              </div>
               <h3 className="text-2xl font-bold text-text-primary mb-4">Remote Tool and Management Platform Exploitation</h3>
+              <p className="text-lg font-bold text-text-primary mb-4">A single compromised management tool can push malicious commands across every tenant system in minutes.</p>
               <div className="text-text-secondary mb-6">
                 <p className="mb-4">Data center operations depend on remote management platforms, RMM tools, SSH jump servers, and scripting frameworks for day-to-day administration. Attackers increasingly target these tools directly — exploiting vulnerabilities or stolen credentials to push malicious commands across entire infrastructure estates simultaneously. The scale of a data center environment amplifies the blast radius: a single compromised management tool can reach every tenant system in your estate within minutes.</p>
                 <p className="mb-6">Keystrike closes this gap by requiring every command to be cryptographically attested to physical human input. Automated scripts, injected commands, and remote tool exploitation generate no valid attestation — and are blocked before execution, regardless of how the attack was delivered.</p>
@@ -180,13 +303,18 @@ export default function DataCenters() {
             </h2>
           </div>
 
+          <p className="text-lg text-text-secondary mb-8 max-w-4xl mx-auto text-center">
+            Firewalls, VPNs, and MFA protect the perimeter and verify identity at login — but go silent once a session begins. PAM solutions vault credentials but cannot govern what happens after the vault is opened. SIEM platforms generate alerts after damage is done. EDR detects malware but is blind to valid credential theft and session misuse. Keystrike is the only solution that continuously verifies every command inside every privileged session, blocking unauthorized actions before execution with zero false positives.
+          </p>
+
           <div className="overflow-x-auto">
             <table className="w-full bg-surface rounded-lg">
+              <caption className="sr-only">Comparison of security technologies and their gaps in data center privileged session protection</caption>
               <thead>
                 <tr className="border-b border-surface-secondary">
-                  <th className="text-left p-6 text-text-primary font-semibold">Technology</th>
-                  <th className="text-left p-6 text-text-primary font-semibold">What It Protects</th>
-                  <th className="text-left p-6 text-text-primary font-semibold">Security Gap</th>
+                  <th scope="col" className="text-left p-6 text-text-primary font-semibold">Technology</th>
+                  <th scope="col" className="text-left p-6 text-text-primary font-semibold">What It Protects</th>
+                  <th scope="col" className="text-left p-6 text-text-primary font-semibold">Security Gap</th>
                 </tr>
               </thead>
               <tbody>
@@ -210,10 +338,10 @@ export default function DataCenters() {
                   <td className="p-6 text-text-secondary">Malware detection and endpoint telemetry</td>
                   <td className="p-6 text-text-secondary">Blind to valid credential theft and session misuse</td>
                 </tr>
-                <tr className="bg-accent bg-opacity-5">
-                  <td className="p-6 text-accent font-semibold">Keystrike</td>
-                  <td className="p-6 text-text-primary">Every command in every privileged session</td>
-                  <td className="p-6 text-text-primary font-medium">None. Unauthorised commands blocked before execution.</td>
+                <tr className="bg-accent bg-opacity-10 border-2 border-accent">
+                  <td className="p-6 text-accent font-bold">Keystrike</td>
+                  <td className="p-6 text-text-primary font-medium">Every command in every privileged session</td>
+                  <td className="p-6 text-accent font-bold">None. Unauthorised commands blocked before execution.</td>
                 </tr>
               </tbody>
             </table>
@@ -241,11 +369,11 @@ export default function DataCenters() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <span className="bg-accent bg-opacity-10 text-accent px-4 py-2 rounded-full font-medium">NIS2</span>
+            <a href="/solutions/manufacturing" className="bg-accent bg-opacity-10 text-accent px-4 py-2 rounded-full font-medium hover:bg-accent hover:text-white transition-colors">NIS2</a>
             <span className="bg-accent bg-opacity-10 text-accent px-4 py-2 rounded-full font-medium">ISO 27001</span>
             <span className="bg-accent bg-opacity-10 text-accent px-4 py-2 rounded-full font-medium">SOC 2 Type 2</span>
-            <span className="bg-accent bg-opacity-10 text-accent px-4 py-2 rounded-full font-medium">PCI-DSS</span>
-            <span className="bg-accent bg-opacity-10 text-accent px-4 py-2 rounded-full font-medium">DORA</span>
+            <a href="/solutions/banking" className="bg-accent bg-opacity-10 text-accent px-4 py-2 rounded-full font-medium hover:bg-accent hover:text-white transition-colors">PCI-DSS</a>
+            <a href="/solutions/banking" className="bg-accent bg-opacity-10 text-accent px-4 py-2 rounded-full font-medium hover:bg-accent hover:text-white transition-colors">DORA</a>
             <span className="bg-accent bg-opacity-10 text-accent px-4 py-2 rounded-full font-medium">Cyber Essentials</span>
             <span className="bg-accent bg-opacity-10 text-accent px-4 py-2 rounded-full font-medium">GDPR</span>
             <span className="bg-accent bg-opacity-10 text-accent px-4 py-2 rounded-full font-medium">NIST CSF</span>
@@ -254,6 +382,9 @@ export default function DataCenters() {
           <div className="card p-8 max-w-4xl mx-auto">
             <p className="text-text-secondary text-lg leading-relaxed">
               Keystrike supports compliance with NIS2, ISO 27001:2022, SOC 2 Type 2, PCI-DSS, DORA, NIST Cybersecurity Framework, Cyber Essentials, and applicable data protection regulations — through continuous authentication, policy-driven access controls, and auditable session records for every remote action across every system in your estate.
+            </p>
+            <p className="text-text-secondary text-lg leading-relaxed mt-4">
+              See how Keystrike protects <a href="/solutions/banking" className="text-accent hover:underline">banking</a>, <a href="/solutions/government" className="text-accent hover:underline">government</a>, and <a href="/solutions/healthcare" className="text-accent hover:underline">healthcare</a> environments.
             </p>
           </div>
         </div>
@@ -318,7 +449,7 @@ export default function DataCenters() {
             Credential abuse, vendor session compromise, and cross-tenant lateral movement all exploit the same blind spot: the gap between access granted and access governed. Keystrike makes every privileged session across your infrastructure visible, verifiable, and policy-controlled — protecting your operations and giving you a differentiated offering to bring to enterprise tenants.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
-            <a href="/contact" className="bg-white text-accent px-8 py-3 text-lg font-medium rounded-lg hover:bg-gray-50 transition-colors">
+            <a href="/contact" className="bg-accent text-white px-8 py-3 text-lg font-medium rounded-lg hover:bg-accent-dark transition-colors">
               See Keystrike in Your Environment
             </a>
             <a href="/contact" className="border-2 border-white text-white px-8 py-3 text-lg font-medium rounded-lg hover:bg-white hover:text-accent transition-colors">

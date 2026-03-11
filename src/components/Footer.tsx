@@ -15,10 +15,12 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-text-primary mb-4">Solutions</h4>
             <ul className="space-y-2 text-text-secondary text-sm">
-              <li><a href="/solutions/endpoint" className="hover:text-accent">Endpoint Security</a></li>
-              <li><a href="/solutions/network" className="hover:text-accent">Network Protection</a></li>
-              <li><a href="/solutions/cloud" className="hover:text-accent">Cloud Security</a></li>
-              <li><a href="/solutions/enterprise" className="hover:text-accent">Enterprise Suite</a></li>
+              <li><a href="/solutions/manufacturing" className="hover:text-accent">Operational Technology & Manufacturing</a></li>
+              <li><a href="/solutions/banking" className="hover:text-accent">Banking</a></li>
+              <li><a href="/solutions/government" className="hover:text-accent">Government</a></li>
+              <li><a href="/solutions/healthcare" className="hover:text-accent">Healthcare</a></li>
+              <li><a href="/solutions/mssps" className="hover:text-accent">MSSPs</a></li>
+              <li><a href="/solutions/data-centers" className="hover:text-accent">Data Centers</a></li>
             </ul>
           </div>
           <div>
