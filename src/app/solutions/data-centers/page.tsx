@@ -212,12 +212,12 @@ export default function DataCenters() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 text-center">
             <div className="bg-surface-secondary p-6 rounded-lg border-l-4 border-red-400">
-              <div className="text-5xl font-bold text-red-600 mb-2">2,000+</div>
-              <div className="text-text-secondary text-sm text-left">organisations' credentials exposed when hackers stole data center customer login data across GDS Holdings and ST Telemedia Global Data Centres (Bloomberg, 2023)</div>
+              <div className="text-5xl font-bold text-red-600 mb-2">190M</div>
+              <div className="text-text-secondary text-sm text-left">people affected by one stolen credential in a remote access session</div>
             </div>
             <div className="bg-surface-secondary p-6 rounded-lg border-l-4 border-red-400">
-              <div className="text-5xl font-bold text-red-600 mb-2">$4.5M</div>
-              <div className="text-text-secondary text-sm text-left">ransom demanded after NetWalker ransomware infiltrated Equinix's internal systems through compromised privileged access (2020)</div>
+              <div className="text-5xl font-bold text-red-600 mb-2">$22M</div>
+              <div className="text-text-secondary text-sm text-left">ransom paid after a single stolen remote access credential</div>
             </div>
             <div className="bg-surface-secondary p-6 rounded-lg border-l-4 border-green-500">
               <div className="text-5xl font-bold text-green-600 mb-2">20 min</div>
@@ -240,23 +240,11 @@ export default function DataCenters() {
           </div>
 
           <div className="space-y-16">
-            <div className="card p-8 border-l-4 border-accent">
-              <div className="w-12 h-12 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mb-4">
-                <span className="text-accent font-bold text-xl">1</span>
+            {/* Featured Case - CloudNordic (Full Width) */}
+            <div className="card p-10 border-l-4 border-red-600 bg-red-50 bg-opacity-20 relative">
+              <div className="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
+                Featured Data Center Incident
               </div>
-              <h3 className="text-2xl font-bold text-text-primary mb-4">Third-Party Vendor Session Compromise</h3>
-              <p className="text-lg font-bold text-text-primary mb-4">Stolen vendor credentials give attackers legitimate session access to infrastructure supporting hundreds of tenants.</p>
-              <div className="text-text-secondary mb-6 text-left">
-                <p className="mb-4">Data centers grant privileged access to dozens of third-party vendors, contractors, and remote support teams as a matter of routine. When those vendor credentials are compromised — or when an active support session is hijacked — attackers operate inside a legitimate session that is invisible to MFA, PAM, and behavioural detection. Every command appears authorised. Every action looks like the vendor. The breach propagates through critical infrastructure before any alert fires.</p>
-                <p className="mb-6">Keystrike closes this gap by cryptographically attesting every command to physical human input on an approved device. The moment a vendor session is hijacked or a command originates from an unattested source, Keystrike blocks the command, isolates the session, and triggers automated response — before the attacker can reach tenant systems.</p>
-                <div className="bg-surface-secondary p-4 rounded-lg border-l-4 border-accent">
-                  <div className="font-semibold text-text-primary mb-2">Incident:</div>
-                  <div className="text-sm text-left">In 2023, hackers stole credentials for customer support portals at GDS Holdings and ST Telemedia Global Data Centres — two of Asia's largest data center operators. Login data for more than 2,000 customers was compromised, including major technology companies with servers housed at both operators. Keystrike blocks unauthorised commands at the keystroke level — making stolen credentials operationally useless even after login is achieved.</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="card p-8 border-l-4 border-accent">
               <div className="w-12 h-12 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mb-4">
                 <span className="text-accent font-bold text-xl">2</span>
               </div>
@@ -265,25 +253,77 @@ export default function DataCenters() {
               <div className="text-text-secondary mb-6 text-left">
                 <p className="mb-4">Once inside a data center environment, attackers can pivot across tenant boundaries using the same remote protocols and management tools that operators use legitimately every day. RDP sessions, SSH tunnels, and scripting frameworks designed for administrative efficiency become an attacker's highway across your infrastructure. By the time one tenant environment is confirmed breached, adjacent environments are already compromised.</p>
                 <p className="mb-6">Keystrike closes this gap by validating every command that traverses tenant environment boundaries — blocking session inheritance, credential replay, and RDP hijacks before lateral movement can propagate to downstream tenants.</p>
-                <div className="bg-surface-secondary p-4 rounded-lg border-l-4 border-accent">
-                  <div className="font-semibold text-text-primary mb-2">Incident:</div>
-                  <div className="text-sm text-left">The Rackspace Play ransomware attack (December 2022) compromised the hosted Exchange environment of thousands of customers when attackers exploited a vulnerability in Rackspace's shared infrastructure. The breach propagated laterally across the hosted environment before it was contained. Keystrike limits attacker dwell time by blocking anomalous commands the moment they are detected — not after logs are reviewed.</div>
+                <div className="bg-surface-secondary p-6 rounded-lg border-l-4 border-red-600">
+                  <div className="font-bold text-text-primary mb-3 text-lg">CloudNordic & AzeroCloud — Ransomware Destroys All Customer Data</div>
+                  <div className="font-semibold text-text-primary mb-2">August 18, 2023</div>
+                  <div className="text-sm text-left mb-4">
+                    <p className="mb-3"><strong>What happened:</strong></p>
+                    <p className="mb-3">On August 18, 2023, attackers breached the internal administration systems of Danish cloud hosting providers CloudNordic and AzeroCloud. Using privileged access to the shared management infrastructure, they propagated ransomware across every tenant environment on both platforms. The attack encrypted all production servers, all backup systems, and all customer data — websites, email, documents, and databases for hundreds of businesses were destroyed simultaneously. Neither provider could recover. Both stated the data was irrecoverable and effectively ceased operations. Hundreds of businesses lost everything overnight — not because they were individually targeted, but because their hosting provider's privileged sessions were unprotected.</p>
+                    
+                    <p className="mb-3"><strong>How Keystrike would have stopped the impact:</strong></p>
+                    <p className="mb-3">The catastrophic damage was not the initial foothold — it was what happened next. Attackers used legitimate management tools and admin credentials to issue commands across every tenant from privileged sessions on the shared infrastructure. With Keystrike deployed on the management layer, every command entering a tenant system would require cryptographic attestation proving it originated from verified physical human input on an approved device. The ransomware deployment commands — automated, scripted, and originating from the attacker's tooling rather than a human administrator's keyboard — would have failed attestation and been blocked at the session boundary. The blast radius would have been contained to the initially compromised admin session instead of destroying the entire platform.</p>
+                    
+                    <p><strong>Source:</strong> CloudNordic official incident statement, August 2023 · Data Center Dynamics, August 24, 2023 · Help Net Security, August 24, 2023</p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="card p-8 border-l-4 border-accent">
-              <div className="w-12 h-12 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mb-4">
-                <span className="text-accent font-bold text-xl">3</span>
+            {/* Supporting Cases - Side by Side */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="card p-8 border-l-4 border-accent">
+                <div className="w-12 h-12 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                  <span className="text-accent font-bold text-xl">1</span>
+                </div>
+                <h3 className="text-2xl font-bold text-text-primary mb-4">Third-Party Vendor Session Compromise</h3>
+                <p className="text-lg font-bold text-text-primary mb-4">Stolen vendor credentials give attackers legitimate session access to infrastructure supporting hundreds of tenants.</p>
+                <div className="text-text-secondary mb-6 text-left">
+                  <p className="mb-4">Data centers grant privileged access to dozens of third-party vendors, contractors, and remote support teams as a matter of routine. When those vendor credentials are compromised — or when an active support session is hijacked — attackers operate inside a legitimate session that is invisible to MFA, PAM, and behavioural detection. Every command appears authorised. Every action looks like the vendor. The breach propagates through critical infrastructure before any alert fires.</p>
+                  <p className="mb-6">Keystrike closes this gap by cryptographically attesting every command to physical human input on an approved device. The moment a vendor session is hijacked or a command originates from an unattested source, Keystrike blocks the command, isolates the session, and triggers automated response — before the attacker can reach tenant systems.</p>
+                  <div className="bg-surface-secondary p-4 rounded-lg border-l-4 border-accent">
+                    <div className="font-bold text-text-primary mb-2">Change Healthcare — Stolen Remote Access Credentials Trigger $2.5 Billion Breach</div>
+                    <div className="font-semibold text-text-primary mb-2">February 12, 2024</div>
+                    <div className="text-sm text-left mb-3">
+                      <p className="mb-3"><strong>What happened:</strong></p>
+                      <p className="mb-3">The BlackCat/ALPHV ransomware group used stolen credentials to remotely access a Change Healthcare Citrix portal — a remote desktop application used for employee and third-party access to internal systems. The portal did not have multifactor authentication enabled. Once inside the active session, attackers moved laterally through the network, exfiltrated data, and deployed ransomware. The breach exposed the protected health information of 190 million people — the largest healthcare data breach ever reported in the United States. UnitedHealth Group paid a $22 million ransom. Total estimated costs exceeded $2.5 billion.</p>
+                      
+                      <p className="mb-3"><strong>Why this applies to data centers:</strong></p>
+                      <p className="mb-3">Change Healthcare is a healthcare company, not a data center. But the attack vector is identical to what data center operators face every day. Data centers rely on the same Citrix, RDP, and SSH remote access portals to give employees, vendors, and managed service providers access to infrastructure management systems. Every colocation facility has third-party technicians connecting via remote sessions to provision, maintain, and troubleshoot tenant equipment. If a vendor's credentials are stolen — or if MFA is misconfigured, bypassed, or simply not enabled on one portal — the attacker lands inside a live privileged session with access to shared infrastructure. The attack surface is the same. The protocol is the same. The gap is the same.</p>
+                      
+                      <p className="mb-3"><strong>How Keystrike would have stopped the impact:</strong></p>
+                      <p className="mb-3">MFA would have stopped the initial login — but it was not enabled. Once inside the Citrix session, nothing governed the attacker's actions. Keystrike operates inside the session, after authentication. Its workstation agent attests that every keystroke and mouse action originates from verified physical input on an approved device. The server-side terminator blocks any command that lacks valid attestation. The BlackCat attackers — operating remotely through stolen credentials and their own tooling — would have failed attestation on every command. Lateral movement, data exfiltration, and ransomware deployment would have been blocked before they started, regardless of the missing MFA.</p>
+                      
+                      <p><strong>Source:</strong> UnitedHealth Group CEO Andrew Witty, testimony before the U.S. Senate Finance Committee, May 1, 2024 · Cybersecurity Dive, April 30, 2024 · Reuters, April 30, 2024</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-text-primary mb-4">Remote Tool and Management Platform Exploitation</h3>
-              <p className="text-lg font-bold text-text-primary mb-4">A single compromised management tool can push malicious commands across every tenant system in minutes.</p>
-              <div className="text-text-secondary mb-6 text-left">
-                <p className="mb-4">Data center operations depend on remote management platforms, RMM tools, SSH jump servers, and scripting frameworks for day-to-day administration. Attackers increasingly target these tools directly — exploiting vulnerabilities or stolen credentials to push malicious commands across entire infrastructure estates simultaneously. The scale of a data center environment amplifies the blast radius: a single compromised management tool can reach every tenant system in your estate within minutes.</p>
-                <p className="mb-6">Keystrike closes this gap by requiring every command to be cryptographically attested to physical human input. Automated scripts, injected commands, and remote tool exploitation generate no valid attestation — and are blocked before execution, regardless of how the attack was delivered.</p>
-                <div className="bg-surface-secondary p-4 rounded-lg border-l-4 border-accent">
-                  <div className="font-semibold text-text-primary mb-2">Incident:</div>
-                  <div className="text-sm text-left">The 2021 Oldsmar water treatment facility attack saw an attacker access operational systems via a legitimate remote desktop connection and attempt to alter chemical levels serving 15,000 people — all through a valid remote access session, invisible to perimeter controls. With Keystrike, commands from unattested sources are blocked regardless of credential validity or session legitimacy.</div>
+
+              <div className="card p-8 border-l-4 border-accent">
+                <div className="w-12 h-12 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                  <span className="text-accent font-bold text-xl">3</span>
+                </div>
+                <h3 className="text-2xl font-bold text-text-primary mb-4">Remote Tool and Management Platform Exploitation</h3>
+                <p className="text-lg font-bold text-text-primary mb-4">A single compromised management tool can push malicious commands across every tenant system in minutes.</p>
+                <div className="text-text-secondary mb-6 text-left">
+                  <p className="mb-4">Data center operations depend on remote management platforms, RMM tools, SSH jump servers, and scripting frameworks for day-to-day administration. Attackers increasingly target these tools directly — exploiting vulnerabilities or stolen credentials to push malicious commands across entire infrastructure estates simultaneously. The scale of a data center environment amplifies the blast radius: a single compromised management tool can reach every tenant system in your estate within minutes.</p>
+                  <p className="mb-6">Keystrike closes this gap by requiring every command to be cryptographically attested to physical human input. Automated scripts, injected commands, and remote tool exploitation generate no valid attestation — and are blocked before execution, regardless of how the attack was delivered.</p>
+                  <div className="bg-surface-secondary p-4 rounded-lg border-l-4 border-accent">
+                    <div className="font-bold text-text-primary mb-2">Kaseya VSA — Compromised Management Platform Pushes Ransomware to 1,500 Businesses</div>
+                    <div className="font-semibold text-text-primary mb-2">July 2, 2021</div>
+                    <div className="text-sm text-left mb-3">
+                      <p className="mb-3"><strong>What happened:</strong></p>
+                      <p className="mb-3">The REvil ransomware group exploited zero-day vulnerabilities in Kaseya VSA, a remote monitoring and management (RMM) platform used by managed service providers to administer client IT environments. By compromising the VSA server, attackers pushed a malicious update disguised as a legitimate hotfix to approximately 50 MSPs. The ransomware then cascaded through those MSPs to between 800 and 1,500 downstream businesses. REvil demanded $70 million for a universal decryption key. The entire attack — from initial exploit to ransomware deployment across thousands of endpoints — completed within hours.</p>
+                      
+                      <p className="mb-3"><strong>Why this applies to data centers:</strong></p>
+                      <p className="mb-3">Data center operators use the same category of remote management platforms — tools like NinjaOne, ConnectWise, TeamViewer, and DCIM software — to manage infrastructure at scale across tenant environments. These platforms hold broad privileged access: they can push configuration changes, deploy updates, restart services, and execute commands across hundreds or thousands of systems simultaneously. If the management platform itself is compromised, every system it manages is exposed. The Kaseya pattern — a single compromised management tool cascading destruction to every connected environment — is the exact scenario data center operators must defend against with their own RMM, DCIM, and remote access tooling.</p>
+                      
+                      <p className="mb-3"><strong>How Keystrike would have stopped the impact:</strong></p>
+                      <p className="mb-3">The initial compromise was a software vulnerability (CVE-2021-30116) — Keystrike does not patch software vulnerabilities. But the downstream destruction happened because the compromised VSA server pushed automated commands to client endpoints and no tool verified those commands came from legitimate human administrators. Keystrike's server-side terminator, deployed on managed endpoints, requires cryptographic attestation of physical human input before executing any incoming command. The ransomware payload — pushed automatically by the compromised management platform, not typed by a human administrator — would have failed attestation and been blocked at every endpoint. The management platform could be compromised, but the downstream tenant systems would remain protected.</p>
+                      
+                      <p><strong>Source:</strong> CISA Alert AA21-183A · Kaseya official incident statement, July 5, 2021 · DNI.gov Safeguarding Our Future report, August 10, 2021</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
