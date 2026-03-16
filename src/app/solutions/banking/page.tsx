@@ -3,23 +3,30 @@ import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Banking & Financial Services Cybersecurity — Keystrike',
-  description: 'Keystrike blocks unauthorized commands in banking and financial services environments before execution — real-time privileged session security for payment systems, capital markets, and compliance.',
+  title: 'Banking & Financial Services Session Governance — Keystrike',
+  description: 'Keystrike governs every privileged session in banking environments — blocking unauthorized commands before execution with zero false positives. PCI DSS, FFIEC, DORA, and NYDFS compliance built in.',
   keywords: [
     'banking cybersecurity',
     'financial services security',
     'PCI DSS compliance',
     'DORA compliance',
+    'DORA compliance banking',
     'FFIEC compliance',
     'payment system security',
     'capital markets security',
-    'banking fraud prevention',
-    'financial institution security'
+    'banking session governance',
+    'financial institution security',
+    'privileged session governance',
+    'zero false positives cybersecurity'
   ],
   openGraph: {
-    title: 'Keystrike | Banking & Financial Services Cybersecurity',
-    description: 'Protect banking and financial institutions with advanced cybersecurity. PCI DSS, DORA, and FFIEC compliance through privileged session monitoring.',
-    url: '/solutions/banking',
+    title: 'Keystrike | Session Governance for Banking & Financial Services',
+    description: 'Continuous session governance for banking and financial institutions. PCI DSS, DORA, FFIEC, and NYDFS compliance through deterministic enforcement — not probabilistic detection.',
+    url: 'https://keystrike.com/solutions/banking',
+  },
+  twitter: {
+    title: 'Keystrike | Session Governance for Banking & Financial Services',
+    description: 'Continuous session governance for banking and financial institutions. PCI DSS, DORA, FFIEC, and NYDFS compliance through deterministic enforcement.',
   },
 };
 
@@ -27,6 +34,74 @@ export default function BankingPage() {
   return (
     <div className="min-h-screen bg-[#F4F5F7]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
       <Navigation currentPage="solutions" />
+
+      {/* FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Does Keystrike help with PCI DSS 4.0 compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Keystrike provides continuous session-level enforcement and tamper-evident audit records that directly support PCI DSS 4.0 requirements for privileged access governance, including requirements 7, 8, and 10."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does Keystrike address DORA requirements for banking?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The Digital Operational Resilience Act (DORA) requires financial institutions to maintain robust ICT risk management. Keystrike supports DORA compliance through continuous session governance (Article 9), tamper-evident session records (Article 11), governed third-party sessions (Article 15), and verifiable enforcement for resilience testing (Article 26)."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Keystrike a keylogger?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Keystrike does not record keystrokes, credentials, or personally identifiable information. The workstation agent verifies that input originates from physical human interaction on an approved device using cryptographic attestation."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How is Keystrike different from SIEM for banking security?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "SIEM systems log and correlate security events after they occur. Keystrike governs the live session in real time, blocking unauthorised commands before they execute. IAM/PAM grants access, SIEM logs events, Keystrike governs the session."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the false positive rate?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Zero. Keystrike uses deterministic, cryptographic verification — not probabilistic detection. A command either has valid attestation from an approved device or it does not."
+                }
+              }
+            ]
+          }),
+        }}
+      />
+      {/* BreadcrumbList JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://keystrike.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://keystrike.com/solutions" },
+              { "@type": "ListItem", "position": 3, "name": "Banking & Financial Services", "item": "https://keystrike.com/solutions/banking" }
+            ]
+          }),
+        }}
+      />
       
       {/* Section 1 - Hero */}
       <section className="bg-[#0F1623] py-20 text-center">
@@ -38,13 +113,16 @@ export default function BankingPage() {
 
           {/* H1 */}
           <h1 className="text-[36px] md:text-[56px] font-bold text-white mb-6 leading-tight">
-            Protect Every Session, Not Just the Login
+            Continuous Session Governance for Banking and Financial Services
           </h1>
 
           {/* Subheading */}
           <div className="max-w-[560px] mx-auto mb-10">
             <p className="text-[18px] text-[#CBD5E1] leading-[1.6] text-left">
-              Keystrike is a privileged session monitoring platform that continuously validates every remote action in real time — blocking unauthorised commands before they execute, and producing tamper-evident audit records for every session. Built for the security and compliance requirements of financial institutions.
+              Keystrike is a continuous remote access governance platform that validates every privileged action in banking environments in real time — blocking unauthorised commands before they execute, and producing tamper-evident audit records for PCI DSS, FFIEC, DORA, and NYDFS compliance. Keystrike completes your existing security stack.
+            </p>
+            <p className="text-[15px] text-[#9CA3AF] italic mt-4 mb-2">
+              Your IAM grants access. Your SIEM logs events. Keystrike governs the live session.
             </p>
           </div>
 
@@ -65,7 +143,7 @@ export default function BankingPage() {
         <div className="max-w-[1200px] mx-auto px-4">
           {/* Section heading */}
           <h2 className="text-[40px] font-bold text-[#0F1623] text-center mb-4">
-            The Post-Authentication Security Gap Costs Financial Institutions Millions Every Year
+            The Governance Gap Between Access Granted and Access Governed Costs Financial Institutions Millions
           </h2>
           
           {/* Section subheading */}
@@ -94,9 +172,10 @@ export default function BankingPage() {
                 PCI DSS, FFIEC, NYDFS, and DORA require demonstrable controls over privileged access — not just access logs. Keystrike provides continuous, session-level evidence that enforcement was active throughout every session.
               </p>
               <ul className="text-[13px] text-[#374151] space-y-2 leading-[1.8] mt-auto">
-                <li>• Continuous monitoring requirements</li>
+                <li>• Continuous governance and verification requirements</li>
                 <li>• Audit trail obligations</li>
                 <li>• Real-time reporting demands</li>
+                <li>• DORA digital operational resilience obligations</li>
               </ul>
             </div>
 
@@ -117,7 +196,7 @@ export default function BankingPage() {
               <ul className="text-[13px] text-[#374151] space-y-2 leading-[1.8] mt-auto">
                 <li>• Credential stuffing attacks</li>
                 <li>• Account takeover attempts</li>
-                <li>• Insider fraud detection</li>
+                <li>• Insider session abuse — blocked at the command level</li>
               </ul>
             </div>
 
@@ -155,8 +234,8 @@ export default function BankingPage() {
             
             {/* Stat 1 */}
             <div className="flex flex-col items-center text-center" style={{ width: '33.33%' }}>
-              <div className="text-[40px] font-bold text-white mb-2">86%</div>
-              <div className="text-[14px] text-[#BFDBFE] leading-[1.5] max-w-[200px]">of real-world attacks unfold inside legitimate remote sessions (Palo Alto Unit 42, 2025)</div>
+              <div className="text-[40px] font-bold text-white mb-2">~90%</div>
+              <div className="text-[14px] text-[#BFDBFE] leading-[1.5] max-w-[200px]">of security incidents involve identity-related weaknesses as a contributing factor (Palo Alto Unit 42, 2026 Global Incident Response Report)</div>
             </div>
 
             {/* Divider 1 */}
@@ -251,13 +330,13 @@ export default function BankingPage() {
                 Social Engineering and Persistent Session Abuse
               </h3>
               <p className="text-[14px] text-[#374151] leading-[1.6] mb-4">
-                After gaining an initial foothold through social engineering, attackers blend into legitimate session activity — masquerading as the target user, using native tools, and maintaining persistent access for days or weeks. These attacks are cheap to mount and specifically designed to evade behavioural detection models.
+                After gaining an initial foothold through social engineering, attackers blend into legitimate session activity — masquerading as the target user, using native tools, and maintaining persistent access for days or weeks. These attacks are cheap to mount and specifically designed to evade pattern-based detection models.
               </p>
               
               <div className="mt-5 mb-4">
                 <div className="h-px bg-[#E5E7EB] mb-4"></div>
                 <p className="text-[14px] font-bold text-[#0D3D3D]">
-                  Keystrike closes this gap by introducing a definitive, binary signal: physical human input. Commands either originate from verified physical interaction on an approved device — or they do not. There is no behavioural baseline to game.
+                  Keystrike closes this gap by introducing a definitive, binary signal: physical human input. Commands either originate from verified physical interaction on an approved device — or they do not. There is no statistical baseline to game.
                 </p>
               </div>
 
@@ -299,12 +378,12 @@ export default function BankingPage() {
               <tbody>
                 <tr className="bg-white border-b border-[#E5E7EB]">
                   <td className="px-4 py-4 text-[#374151] text-[14px]">Firewalls / IAM / MFA</td>
-                  <td className="px-4 py-4 text-[#374151] text-[14px]">Perimeter and access controls</td>
+                  <td className="px-4 py-4 text-[#374151] text-[14px]">Grants access — perimeter and identity controls</td>
                   <td className="px-4 py-4 text-[#374151] text-[14px]">Session activity after access is granted</td>
                 </tr>
                 <tr className="bg-[#F9FAFB] border-b border-[#E5E7EB]">
                   <td className="px-4 py-4 text-[#374151] text-[14px]">SIEM — Security Information and Event Management</td>
-                  <td className="px-4 py-4 text-[#374151] text-[14px]">Centralised alerts and compliance reporting</td>
+                  <td className="px-4 py-4 text-[#374151] text-[14px]">Logs events — centralised alerts and compliance reporting</td>
                   <td className="px-4 py-4 text-[#374151] text-[14px]">Reactive — alerts after damage is done</td>
                 </tr>
                 <tr className="bg-white border-b border-[#E5E7EB]">
@@ -319,7 +398,7 @@ export default function BankingPage() {
                 </tr>
                 <tr className="bg-[#0D3D3D]">
                   <td className="px-4 py-4 text-white font-bold text-[14px]">Keystrike</td>
-                  <td className="px-4 py-4 text-white font-bold text-[14px]">Every command in every privileged session</td>
+                  <td className="px-4 py-4 text-white font-bold text-[14px]">Governs the live session — every command in every privileged session</td>
                   <td className="px-4 py-4 text-white font-bold text-[14px]">None. Unauthorised commands blocked before execution.</td>
                 </tr>
               </tbody>
@@ -329,7 +408,7 @@ export default function BankingPage() {
           {/* Disclaimer */}
           <div className="max-w-[860px] mx-auto">
             <p className="text-[14px] text-[#6B7280] text-center">
-              Keystrike does not record keystrokes, credentials, or personally identifiable information. Session verification is cryptographic — not behavioural — eliminating false positives and privacy exposure.
+              Keystrike does not record keystrokes, credentials, or personally identifiable information. Session verification is cryptographic — not pattern-based — eliminating false positives and privacy exposure.
             </p>
           </div>
         </div>
@@ -360,6 +439,7 @@ export default function BankingPage() {
             {[
               'FFIEC',
               'PCI DSS',
+              'DORA',
               'NYDFS 23 NYCRR 500',
               'GLBA',
               'OCC'
@@ -382,6 +462,48 @@ export default function BankingPage() {
               Keystrike supports compliance with FFIEC, OCC, GLBA, PCI DSS, NYDFS (23 NYCRR Part 500), California DFPI/CCPA, and other banking cybersecurity mandates — through robust access controls, continuous authentication, and ongoing verification of every remote action.
             </p>
           </div>
+
+          <div className="max-w-[640px] mx-auto mt-8">
+            <h3 className="text-[18px] font-bold text-[#0F1623] mb-3">DORA Compliance for Financial Institutions</h3>
+            <p className="text-[16px] text-[#374151] text-left leading-[1.6]">
+              The Digital Operational Resilience Act (DORA) requires EU financial institutions to maintain robust ICT risk management and third-party oversight. Keystrike supports DORA compliance through continuous session governance (Article 9), tamper-evident session records (Article 11), governed third-party vendor sessions (Article 15), and verifiable enforcement for operational resilience testing (Article 26).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 6b - Persona Entry Points */}
+      <section className="bg-[#F4F5F7] py-16">
+        <div className="max-w-[1200px] mx-auto px-4">
+          <div className="text-[11px] font-normal tracking-[0.10em] text-[#6B7280] uppercase mb-6 text-center">
+            SESSION GOVERNANCE FOR EVERY ROLE
+          </div>
+          <h2 className="text-[32px] font-bold text-[#0F1623] text-center mb-12">
+            Built for How Banking Security Teams Actually Work
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white border border-[#E5E7EB] rounded-lg p-7">
+              <div className="text-[11px] font-bold tracking-[0.10em] text-[#1B3FC4] uppercase mb-3">CONTROL</div>
+              <h3 className="text-[18px] font-bold text-[#0F1623] mb-3">For CISOs</h3>
+              <p className="text-[14px] text-[#374151] leading-[1.6]">
+                Know that every privileged session in your banking environment is deterministically controlled. Keystrike enforces session policy in real time with zero false positives — provable assurance that authorised users operate within policy and unauthorised commands never execute.
+              </p>
+            </div>
+            <div className="bg-white border border-[#E5E7EB] rounded-lg p-7">
+              <div className="text-[11px] font-bold tracking-[0.10em] text-[#1B3FC4] uppercase mb-3">PROVE</div>
+              <h3 className="text-[18px] font-bold text-[#0F1623] mb-3">For Compliance Officers</h3>
+              <p className="text-[14px] text-[#374151] leading-[1.6]">
+                Generate tamper-evident audit records for every governed session — automatically satisfying FFIEC, PCI DSS, DORA, NYDFS 23 NYCRR 500, and GLBA requirements. Compliance becomes a direct output of governance, not a separate evidence-gathering exercise.
+              </p>
+            </div>
+            <div className="bg-white border border-[#E5E7EB] rounded-lg p-7">
+              <div className="text-[11px] font-bold tracking-[0.10em] text-[#1B3FC4] uppercase mb-3">SEE</div>
+              <h3 className="text-[18px] font-bold text-[#0F1623] mb-3">For Security Operations</h3>
+              <p className="text-[14px] text-[#374151] leading-[1.6]">
+                Map every remote access protocol across your banking environment in real time. The Keystrike SEE module shows which sessions are governed, which protocols are active, and where governance gaps remain — across RDP, SSH, PowerShell Remoting, WinRM, WMI, and SMB.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -403,6 +525,7 @@ export default function BankingPage() {
             
             {/* Step 1 */}
             <div className="flex flex-col items-center bg-white border border-[#E5E7EB] rounded-lg p-6 flex-1 max-w-[280px]">
+              <div className="text-[11px] font-bold tracking-[0.10em] text-[#1B3FC4] uppercase mb-2">CONTROL</div>
               <div className="w-8 h-8 bg-[#1B3FC4] text-white font-bold text-[16px] flex items-center justify-center rounded-full mb-4">
                 1
               </div>
@@ -421,6 +544,7 @@ export default function BankingPage() {
 
             {/* Step 2 */}
             <div className="flex flex-col items-center bg-white border border-[#E5E7EB] rounded-lg p-6 flex-1 max-w-[280px]">
+              <div className="text-[11px] font-bold tracking-[0.10em] text-[#1B3FC4] uppercase mb-2">CONTROL</div>
               <div className="w-8 h-8 bg-[#1B3FC4] text-white font-bold text-[16px] flex items-center justify-center rounded-full mb-4">
                 2
               </div>
@@ -439,6 +563,7 @@ export default function BankingPage() {
 
             {/* Step 3 */}
             <div className="flex flex-col items-center bg-white border border-[#E5E7EB] rounded-lg p-6 flex-1 max-w-[280px]">
+              <div className="text-[11px] font-bold tracking-[0.10em] text-[#1B3FC4] uppercase mb-2">SEE</div>
               <div className="w-8 h-8 bg-[#1B3FC4] text-white font-bold text-[16px] flex items-center justify-center rounded-full mb-4">
                 3
               </div>
@@ -452,10 +577,78 @@ export default function BankingPage() {
 
           </div>
 
+          {/* PROVE card */}
+          <div className="flex flex-col items-center bg-[#0D3D3D] border border-[#1B5E5E] rounded-lg p-6 max-w-[860px] mx-auto mt-8 mb-8">
+            <div className="text-[11px] font-bold tracking-[0.10em] text-white uppercase mb-2">PROVE</div>
+            <h3 className="text-[18px] font-bold text-white mb-3 text-center">
+              Continuous Audit Records
+            </h3>
+            <p className="text-[14px] text-[#CBD5E1] leading-[1.6] text-center max-w-[600px]">
+              Every governed session automatically produces tamper-evident, timestamped audit records that satisfy FFIEC, PCI DSS, DORA, and NYDFS requirements. Compliance is a direct output of governance — not a separate evidence-gathering process.
+            </p>
+          </div>
+
           {/* Footer note */}
           <p className="text-[14px] text-[#6B7280] text-center italic">
-            Keystrike integrates with existing MFA, IAM, and SIEM infrastructure. No rip-and-replace. No workflow changes for authorised users.
+            Keystrike completes your existing security stack — integrating with MFA, IAM, SIEM, and EDR infrastructure. No rip-and-replace. No workflow changes for authorised users.
           </p>
+        </div>
+      </section>
+
+      {/* Section 7b - FAQ */}
+      <section className="bg-white py-16">
+        <div className="max-w-[720px] mx-auto px-4">
+          <div className="text-[11px] font-normal tracking-[0.10em] text-[#6B7280] uppercase mb-6 text-center">
+            FREQUENTLY ASKED QUESTIONS
+          </div>
+          <h2 className="text-[32px] font-bold text-[#0F1623] text-center mb-10">
+            Keystrike for Banking — Common Questions
+          </h2>
+          <div className="space-y-6">
+            {[
+              {
+                q: "Does Keystrike help with PCI DSS 4.0 compliance?",
+                a: "Yes. Keystrike provides continuous session-level enforcement and tamper-evident audit records that directly support PCI DSS 4.0 requirements for privileged access governance, including requirements 7, 8, and 10. Session records are produced as a direct output of governance — not as a separate compliance process."
+              },
+              {
+                q: "How does Keystrike address DORA requirements for banking?",
+                a: "The Digital Operational Resilience Act (DORA) requires financial institutions to maintain robust ICT risk management, monitoring, and third-party oversight. Keystrike supports DORA compliance through continuous session governance (Article 9), tamper-evident session records (Article 11), governed third-party sessions (Article 15), and verifiable enforcement for resilience testing (Article 26)."
+              },
+              {
+                q: "Is Keystrike a keylogger?",
+                a: "No. Keystrike does not record keystrokes, credentials, or personally identifiable information. The workstation agent verifies that input originates from physical human interaction on an approved device using cryptographic attestation. The content of the input is not captured or stored."
+              },
+              {
+                q: "How is Keystrike different from SIEM for banking security?",
+                a: "SIEM systems log and correlate security events after they occur. Keystrike governs the live session in real time, blocking unauthorised commands before they execute. Keystrike completes the security stack: IAM/PAM grants access, SIEM logs events, Keystrike governs what happens during the session."
+              },
+              {
+                q: "Does Keystrike work with existing banking security infrastructure?",
+                a: "Yes. Keystrike integrates with existing IAM, PAM, MFA, SIEM, and EDR infrastructure. It adds the session governance layer without requiring any rip-and-replace. Authorised users experience no workflow changes."
+              },
+              {
+                q: "What remote access protocols does Keystrike govern?",
+                a: "Keystrike governs RDP, SSH, PowerShell Remoting, WinRM, WMI, SMB, and additional protocols used in banking environments. The SEE module maps all active remote protocols to identify governance coverage and gaps."
+              },
+              {
+                q: "Can Keystrike protect SWIFT and ACH payment systems?",
+                a: "Yes. Keystrike governs privileged sessions that interact with payment rails including SWIFT, ACH, and other financial messaging systems. Every command within these sessions must be attested to verified physical input — preventing payment rail hijacking through injected commands or stolen credentials."
+              },
+              {
+                q: "What is the false positive rate?",
+                a: "Zero. Keystrike uses deterministic, cryptographic verification — not probabilistic or pattern-based detection. A command either has valid attestation from an approved device or it does not. There is no statistical model to generate false positives."
+              }
+            ].map((faq, i) => (
+              <details key={i} className="border border-[#E5E7EB] rounded-lg overflow-hidden">
+                <summary className="px-6 py-4 cursor-pointer text-[16px] font-semibold text-[#0F1623] hover:bg-[#F9FAFB] transition-colors">
+                  {faq.q}
+                </summary>
+                <div className="px-6 pb-5 pt-2 text-[14px] text-[#374151] leading-[1.6]">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -476,6 +669,9 @@ export default function BankingPage() {
           <div className="max-w-[520px] mx-auto mb-10">
             <p className="text-[16px] text-[#CBD5E1] leading-[1.6] text-left">
               Session hijacking, credential abuse, and payment rail fraud all exploit the same blind spot: the gap between access granted and access governed. Keystrike makes every privileged session in your environment visible, verifiable, and policy-controlled — without replacing your existing stack.
+            </p>
+            <p className="text-[15px] text-[#9CA3AF] italic mt-4">
+              Your IAM grants access. Your SIEM logs events. Keystrike governs the live session.
             </p>
           </div>
 
