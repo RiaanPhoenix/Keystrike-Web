@@ -22,26 +22,26 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Keystrike | Advanced Cybersecurity Simplified",
+    default: "Continuous Remote Access Governance | Keystrike",
     template: "%s | Keystrike"
   },
-  description: "Advanced cybersecurity platform with physical input verification. SEE, CONTROL, and PROVE your security posture with Nordic precision and human-centric innovation. Protect 10,000+ organizations worldwide.",
+  description: "Keystrike provides live session visibility, in-session control, and audit-ready proof of governance for remote access. Complements IAM/PAM/SIEM; closes the governance gap after login.",
   keywords: [
-    "cybersecurity",
-    "endpoint security",
-    "network protection",
-    "cloud security",
-    "physical input verification",
-    "keystroke analysis",
-    "zero trust",
-    "security platform",
-    "threat detection",
-    "compliance automation",
-    "Nordic cybersecurity",
-    "enterprise security",
-    "AI-powered security",
-    "behavioral analytics",
-    "continuous governance"
+    "remote access governance",
+    "privileged session governance",
+    "session-level enforcement",
+    "continuous governance",
+    "cryptographic attestation",
+    "DORA compliance",
+    "NIS2 compliance",
+    "IEC 62443",
+    "SOC 2",
+    "privileged access monitoring",
+    "in-session control",
+    "audit-ready governance",
+    "PAM complement",
+    "SIEM integration",
+    "enterprise security"
   ],
   authors: [{ name: "Keystrike Security" }],
   creator: "Keystrike",
@@ -59,22 +59,22 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://keystrike.com',
-    title: 'Keystrike | Advanced Cybersecurity Simplified',
-    description: 'Advanced cybersecurity platform with physical input verification. Protect your organization with AI-powered security that adapts, learns, and responds to threats in real-time.',
+    title: 'Continuous Remote Access Governance | Keystrike',
+    description: 'Keystrike provides live session visibility, in-session control, and audit-ready proof of governance for remote access. Complements IAM/PAM/SIEM; closes the governance gap after login.',
     siteName: 'Keystrike',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Keystrike - Advanced Cybersecurity Simplified',
+        alt: 'Keystrike — Continuous Remote Access Governance',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Keystrike | Advanced Cybersecurity Simplified',
-    description: 'Advanced cybersecurity platform with physical input verification. Nordic precision meets human-centric innovation.',
+    title: 'Continuous Remote Access Governance | Keystrike',
+    description: 'Keystrike provides live session visibility, in-session control, and audit-ready proof of governance for remote access. Complements IAM/PAM/SIEM; closes the governance gap after login.',
     images: ['/twitter-image.jpg'],
     creator: '@keystrikesec',
   },
@@ -95,101 +95,25 @@ export const metadata: Metadata = {
   },
 };
 
-// Structured data for LLM optimization
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Keystrike",
-  "description": "Advanced cybersecurity platform providing physical input verification, endpoint security, network protection, and cloud security solutions.",
-  "url": "https://keystrike.com",
-  "logo": "https://keystrike.com/logo.png",
-  "foundingDate": "2021",
-  "founder": [
-    {
-      "@type": "Person",
-      "name": "Arni Johannsen",
-      "jobTitle": "Chief Executive Officer"
-    }
-  ],
-  "employees": "100-500",
-  "industry": "Cybersecurity",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Laugavegur 26",
-    "addressLocality": "Reykjavik",
-    "postalCode": "101",
-    "addressCountry": "IS"
-  },
-  "contactPoint": [
-    {
-      "@type": "ContactPoint",
-      "telephone": "+354-555-1234",
-      "contactType": "sales",
-      "areaServed": "Worldwide",
-      "availableLanguage": ["English", "Icelandic"]
-    },
-    {
-      "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
-      "contactType": "customer support",
-      "areaServed": "Worldwide",
-      "availableLanguage": "English"
-    }
-  ],
-  "sameAs": [
-    "https://linkedin.com/company/keystrike",
-    "https://twitter.com/keystrikesec",
-    "https://github.com/keystrike"
-  ],
-  "award": [
-    "SC Media Innovation Award 2024",
-    "Gartner Cool Vendor 2024",
-    "SOC 2 Type II Certified"
-  ],
-  "serviceArea": {
-    "@type": "GeoShape",
-    "name": "Worldwide"
-  }
-};
+// Structured data for LLM optimization — Organization is defined in page.tsx only (deduplicated)
 
 const softwareSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "Keystrike Security Platform",
+  "name": "Keystrike",
   "applicationCategory": "SecurityApplication",
-  "description": "Advanced cybersecurity platform with physical input verification technology. Provides continuous remote access governance through SEE, CONTROL, and PROVE capabilities.",
-  "operatingSystem": "Windows, macOS, Linux, Chrome OS",
-  "price": "Contact for pricing",
-  "priceCurrency": "USD",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD",
-    "description": "30-day free trial",
-    "availability": "InStock"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "247",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
+  "description": "Continuous remote access governance platform delivering live session visibility (SEE), deterministic in-session enforcement (CONTROL), and cryptographically attested audit-ready evidence (PROVE). Supports DORA, NIS2, SOC 2, and IEC 62443 compliance requirements.",
+  "operatingSystem": "Windows, macOS, Linux",
   "featureList": [
-    "Physical input verification",
-    "Keystroke behavior analysis", 
-    "Real-time threat detection",
-    "Automated policy enforcement",
-    "Compliance reporting",
-    "Multi-cloud security",
-    "Zero-trust architecture",
-    "AI-powered analytics"
+    "Live session visibility",
+    "Deterministic in-session enforcement",
+    "Cryptographic attestation",
+    "Continuous governance",
+    "Audit-ready evidence generation",
+    "PAM/SIEM/ZTNA integration",
+    "DORA and NIS2 compliance support"
   ],
-  "screenshot": "https://keystrike.com/platform-screenshot.jpg",
-  "downloadUrl": "https://keystrike.com/download",
-  "installUrl": "https://keystrike.com/install",
-  "softwareVersion": "3.2.1",
-  "dateModified": "2026-02-15"
+  "screenshot": "https://keystrike.com/platform-screenshot.jpg"
 };
 
 export default function RootLayout({
@@ -200,13 +124,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
-        {/* LLM-optimized structured data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema),
-          }}
-        />
+        {/* LLM-optimized structured data — SoftwareApplication */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -218,13 +136,12 @@ export default function RootLayout({
         <meta name="company:founded" content="2021" />
         <meta name="company:industry" content="Cybersecurity" />
         <meta name="company:location" content="Reykjavik, Iceland" />
-        <meta name="company:size" content="100-500 employees" />
-        <meta name="product:category" content="Enterprise Security Software" />
-        <meta name="product:features" content="Physical Input Verification, Keystroke Analysis, Threat Detection, Policy Enforcement" />
-        <meta name="target:audience" content="Enterprise IT Security Teams, CISOs, Security Operations" />
+        <meta name="product:category" content="Remote Access Governance" />
+        <meta name="product:features" content="Live Session Visibility, Deterministic Enforcement, Cryptographic Attestation" />
+        <meta name="target:audience" content="CISOs, Security Operations, Compliance Leaders" />
         <meta name="solution:approach" content="SEE CONTROL PROVE methodology" />
-        <meta name="differentiator" content="Physical input verification at keystroke level" />
-        <meta name="compliance:certifications" content="SOC 2 Type II, ISO 27001" />
+        <meta name="differentiator" content="Continuous governance inside authenticated remote sessions" />
+        <meta name="compliance:frameworks" content="DORA, NIS2, SOC 2, IEC 62443" />
         
         {/* Theme and display optimization */}
         <meta name="theme-color" content="#3b82f6" />

@@ -11,7 +11,7 @@ export default function Navigation({ currentPage }: { currentPage?: string }) {
         <div className="flex justify-between items-center py-6">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <a href="/" className="text-2xl font-bold text-text-primary">Keystrike</a>
+              <a href="/" className="text-2xl font-bold text-text-primary" aria-label="Keystrike — Continuous Remote Access Governance">Keystrike</a>
             </div>
             <nav className="hidden md:ml-10 md:flex md:space-x-8">
               {/* Solutions Dropdown */}

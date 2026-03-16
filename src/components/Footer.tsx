@@ -6,7 +6,7 @@ export default function Footer() {
           <div>
             <div className="text-2xl font-bold text-text-primary mb-4">Keystrike</div>
             <p className="text-text-secondary text-sm mb-4">
-              Advanced cybersecurity. Simplified. Nordic precision meets human-centric innovation.
+              Continuous Remote Access Governance. Deterministic Enforcement. Cryptographic Attestation.
             </p>
             <p className="text-text-muted text-xs">
               © 2026 Keystrike. All rights reserved.

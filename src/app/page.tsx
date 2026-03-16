@@ -4,30 +4,30 @@ import type { Metadata } from 'next';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
 
 export const metadata: Metadata = {
-  title: 'Advanced Cybersecurity Platform | Physical Input Verification',
-  description: 'Keystrike provides advanced cybersecurity with physical input verification. SEE, CONTROL, and PROVE your security posture. Protecting 10,000+ organizations with 99.9% threat detection rate.',
+  title: 'Continuous Remote Access Governance | Deterministic Enforcement & Cryptographic Attestation | Keystrike',
+  description: 'Keystrike provides live session visibility, in-session control, and audit-ready proof of governance for remote access. Complements IAM/PAM/SIEM; closes the governance gap after login.',
   keywords: [
-    'cybersecurity platform',
-    'physical input verification',
-    'keystroke analysis',
-    'endpoint security',
-    'network protection',
-    'cloud security',
-    'zero trust',
-    'AI-powered security',
-    'threat detection',
-    'compliance automation'
+    'continuous remote access governance',
+    'session governance',
+    'deterministic enforcement',
+    'cryptographic attestation',
+    'remote access governance platform',
+    'governance gap after login',
+    'live session visibility',
+    'audit-ready proof of governance',
+    'in-session enforcement',
+    'continuous verification inside the session',
   ],
   openGraph: {
-    title: 'Keystrike | Advanced Cybersecurity Simplified',
-    description: 'Physical input verification technology that completes your identity stack. SEE, CONTROL, and PROVE continuous remote access governance.',
+    title: 'Continuous Remote Access Governance | Deterministic Enforcement & Cryptographic Attestation | Keystrike',
+    description: 'Keystrike provides live session visibility, in-session control, and audit-ready proof of governance for remote access. Complements IAM/PAM/SIEM; closes the governance gap after login.',
     url: '/',
     images: [
       {
         url: '/og-home.jpg',
         width: 1200,
         height: 630,
-        alt: 'Keystrike Homepage - Advanced Cybersecurity Platform',
+        alt: 'Keystrike — Continuous Remote Access Governance Platform',
       },
     ],
   },
@@ -36,23 +36,21 @@ export const metadata: Metadata = {
   },
 };
 
-
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Section - Primary Value Proposition */}
-      <section className="bg-white py-[64px] lg:py-[100px]" itemScope itemType="https://schema.org/Service">
+      {/* Hero Section */}
+      <section id="hero" className="bg-white py-[64px] lg:py-[100px]" itemScope itemType="https://schema.org/Service">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-[64px] items-center">
             {/* Left Column - Text Content */}
             <div className="text-left">
               <h1 className="text-4xl md:text-6xl font-bold text-text-primary mb-6" itemProp="name">
-                <span className="text-accent">Remote Session Security Starts Where Identity Ends</span>
+                <span className="text-accent">Real-Time Session Control through Continuous Remote Access Governance</span>
               </h1>
-              
+
               {/* Regulatory Badges */}
               <div className="flex flex-wrap gap-2 mb-6">
                 {['DORA', 'NIS2', 'IEC 62443'].map((badge) => (
@@ -62,21 +60,23 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="text-text-primary mb-8" itemProp="description">
-                <p className="text-[1.15rem] font-normal text-[#4A5568] mb-2">Your identity stack verifies who logs in. Keystrike governs what they do once they're inside.</p>
-                <p className="text-[1rem] font-normal text-[#4A5568] mt-2">Keystrike is a privileged session monitoring platform that makes every remote action visible, controllable, and provable in real time.</p>
-              </div>
+              <p className="text-[1.15rem] font-normal text-[#4A5568] mb-4" itemProp="description">
+                Live visibility, deterministic enforcement inside the session, and audit-ready proof of governance, without replacing your security stack.
+              </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-[16px]">
-                <a href="/contact" className="w-full sm:w-auto bg-[#0D3D3D] text-[#FFFFFF] hover:bg-[#1A5252] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-none transition-colors text-center" 
-                   data-action="request-demo" data-context="hero-section">
-                  See Keystrike in Your Environment
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-[16px] mt-8">
+                {/* Primary CTA */}
+                <a href="/contact" className="w-full sm:w-auto bg-[#0D3D3D] text-[#FFFFFF] hover:bg-[#1A5252] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-none transition-colors text-center"
+                   data-action="exec-briefing" data-context="hero-section">
+                  Request an Executive Briefing
                 </a>
+                {/* Secondary CTA */}
                 <a href="/contact" className="w-full sm:w-auto bg-transparent text-[#0D3D3D] hover:bg-[rgba(13,61,61,0.08)] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-[1.5px] border-solid border-[#0D3D3D] transition-colors text-center"
-                   data-action="free-trial" data-context="hero-section">
-                  Start a Free Session Audit
+                   data-action="governance-brief" data-context="hero-section">
+                  Download the Remote Access Governance Brief
                 </a>
               </div>
+              <p className="text-sm text-[#4A5568] mt-3">A focused session with the Keystrike team on how continuous remote access governance applies to your environment. No generic demo. No sales deck.</p>
             </div>
 
             {/* Right Column - Visual element */}
@@ -90,67 +90,135 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
-        {/* Structured data for hero section */}
+
+        {/* Structured data — Organization (canonical, single instance) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Service",
-              "name": "Keystrike Cybersecurity Platform",
-              "description": "Advanced cybersecurity platform with physical input verification technology providing continuous remote access governance",
-              "provider": {
+              "@type": "Organization",
+              "name": "Keystrike",
+              "url": "https://keystrike.com",
+              "description": "Keystrike is a continuous remote access governance platform providing deterministic enforcement, live session visibility, and cryptographic attestation for audit-ready governance.",
+              "logo": "https://keystrike.com/logo.png",
+              "foundingDate": "2021",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Laugavegur 26",
+                "addressLocality": "Reykjavik",
+                "postalCode": "101",
+                "addressCountry": "IS"
+              },
+              "sameAs": [
+                "https://linkedin.com/company/keystrike",
+                "https://twitter.com/keystrikesec",
+                "https://github.com/keystrike"
+              ]
+            }),
+          }}
+        />
+
+        {/* Structured data — WebPage */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "Continuous Remote Access Governance | Deterministic Enforcement & Cryptographic Attestation | Keystrike",
+              "description": "Keystrike provides live session visibility, in-session control, and audit-ready proof of governance for remote access. Complements IAM/PAM/SIEM; closes the governance gap after login.",
+              "url": "https://keystrike.com/",
+              "isPartOf": {
                 "@type": "Organization",
                 "name": "Keystrike"
               },
-              "serviceType": "Cybersecurity Software",
-              "audience": {
-                "@type": "Audience",
-                "audienceType": "Enterprise IT Security Teams"
+              "speakable": {
+                "@type": "SpeakableSpecification",
+                "cssSelector": ["#what-is-keystrike", "#faq"]
+              }
+            }),
+          }}
+        />
+
+        {/* Structured data — Product */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Product",
+              "name": "Keystrike",
+              "description": "Continuous remote access governance platform delivering SEE, CONTROL, PROVE — live session visibility, deterministic enforcement, and cryptographic attestation. Supports DORA, NIS2, SOC 2, and IEC 62443 compliance requirements.",
+              "category": "Remote Access Governance / Cybersecurity",
+              "brand": {
+                "@type": "Organization",
+                "name": "Keystrike"
               }
             }),
           }}
         />
       </section>
 
-      {/* Assessment CTA - Moved from Hero */}
-      <section className="bg-white py-12 border-b border-gray-100">
+      {/* Opening Value Proposition */}
+      <section id="opening-value-prop" className="bg-white py-12 border-b border-gray-100">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center">
-            <a href="/contact" className="w-full sm:w-auto bg-transparent text-[#0D3D3D] hover:bg-[rgba(13,61,61,0.08)] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-[1.5px] border-solid border-[#0D3D3D] transition-colors text-center min-w-[320px] sm:min-w-[480px]"
-               data-action="free-overview" data-context="hero-section">
-              Take the Remote Access Risk Assessment
-            </a>
-          </div>
+          <p className="text-xl text-[#4A5568] max-w-3xl mx-auto text-center">
+            Most security investments stop at the login gate. Once access is granted, sessions run unverified, uncontrolled, and unproven. Keystrike closes this governance gap — providing continuous visibility, deterministic enforcement, and cryptographic proof inside every remote session.
+          </p>
         </div>
       </section>
 
-      {/* Testimonials Section - Two Pillar Layout */}
+      {/* What Is Keystrike */}
+      <section id="what-is-keystrike" className="bg-surface py-20">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-6">What Is Keystrike?</h2>
+          <p className="text-xl text-[#4A5568] mb-6">
+            Keystrike is a continuous remote access governance platform. It operates after login, inside live remote sessions, where existing security tools have limited visibility and no enforcement capability.
+          </p>
+          <p className="text-lg text-[#4A5568] mb-6">Keystrike delivers three governance outcomes:</p>
+          <ul className="space-y-4 mb-8">
+            <li className="flex items-start gap-4">
+              <span className="font-bold text-accent text-xl w-24 flex-shrink-0">SEE</span>
+              <span className="text-[#4A5568] text-lg">— live visibility into who is doing what inside active remote sessions</span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="font-bold text-accent text-xl w-24 flex-shrink-0">CONTROL</span>
+              <span className="text-[#4A5568] text-lg">— deterministic, real-time enforcement of governance policies inside the session</span>
+            </li>
+            <li className="flex items-start gap-4">
+              <span className="font-bold text-accent text-xl w-24 flex-shrink-0">PROVE</span>
+              <span className="text-[#4A5568] text-lg">— cryptographically attested, audit-ready evidence that governance was continuously applied</span>
+            </li>
+          </ul>
+          <p className="text-lg text-[#4A5568]">
+            Keystrike complements IAM, PAM, SIEM, SOAR, and XDR. It does not replace them. It governs the space they were never designed to reach: inside the authenticated session itself.
+          </p>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
       <section className="bg-[#0D1B2A]">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
-          {/* Left Pillar - Banner */}
           <div className="flex items-center justify-center px-4 py-8 lg:px-20 lg:py-16">
             <div className="max-w-lg text-center lg:text-left">
               <h2 className="text-3xl md:text-4xl font-light text-white mb-6">
-                What Happens Inside a Remote Session <span className="text-white">Is the Blind Spot</span>
+                What Happens Inside a Remote Session <span className="text-white">Is the Governance Gap</span>
               </h2>
               <p className="text-xl text-gray-100 mb-6 leading-relaxed">
-                Privileged remote access is the most common entry point in OT, ICS, and enterprise breaches. Credential-based attacks succeed not because identity fails but because nothing governs the session after authentication.
+                Privileged remote access is the most common entry point in OT, ICS, and enterprise incidents. Credential-based attacks succeed not because identity fails — but because nothing governs the session after authentication.
               </p>
               <p className="text-xl text-gray-100 mb-6 leading-relaxed">
-                Keystrike enforces session-level controls in real time: continuous user verification, action-level audit trails, and instant interruption of unauthorized execution. No changes to your existing identity infrastructure.
+                Keystrike enforces governance at the session level in real time: continuous verification, deterministic policy enforcement, and cryptographic attestation of every action. No changes to your existing identity infrastructure.
               </p>
               <p className="text-xl text-gray-100 mb-8 leading-relaxed">
                 Built for organizations operating under DORA, NIS2, and IEC 62443.
               </p>
               <a href="/contact" className="inline-block bg-[#FFFFFF] text-[#0D1B2A] hover:bg-[#F0F0F0] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] transition-colors">
-                Close the Post-Authentication Gap
+                Close the Post-Authentication Governance Gap
               </a>
             </div>
           </div>
-
-          {/* Right Pillar - Testimonial Carousel */}
           <div className="flex items-center justify-center px-4 py-8 lg:px-20 lg:py-16">
             <TestimonialCarousel />
           </div>
@@ -161,8 +229,6 @@ export default function Home() {
       <section className="w-full bg-[#0D1B2A] py-10 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-around gap-8 md:gap-4 text-center">
-            
-            {/* Stat 1 */}
             <div className="flex flex-col items-center">
               <div className="mb-1">
                 <span className="text-4xl md:text-5xl font-bold text-white">67%</span>
@@ -170,11 +236,8 @@ export default function Home() {
               </div>
               <span className="text-[10px] text-[#4A5568] uppercase tracking-wider">Verizon DBIR</span>
             </div>
-
             <div className="hidden md:block text-white text-2xl">•</div>
             <div className="block md:hidden w-12 h-px bg-[#4A5568]"></div>
-
-            {/* Stat 2 */}
             <div className="flex flex-col items-center">
               <div className="mb-1">
                 <span className="text-4xl md:text-5xl font-bold text-white">280 days</span>
@@ -182,11 +245,8 @@ export default function Home() {
               </div>
               <span className="text-[10px] text-[#4A5568] uppercase tracking-wider">IBM Cost of a Data Breach Report</span>
             </div>
-
             <div className="hidden md:block text-white text-2xl">•</div>
             <div className="block md:hidden w-12 h-px bg-[#4A5568]"></div>
-
-            {/* Stat 3 */}
             <div className="flex flex-col items-center">
               <div className="mb-1">
                 <span className="text-4xl md:text-5xl font-bold text-white">30%</span>
@@ -194,184 +254,14 @@ export default function Home() {
               </div>
               <span className="text-[10px] text-[#4A5568] uppercase tracking-wider">Verizon DBIR</span>
             </div>
-
             <div className="hidden md:block text-white text-2xl">•</div>
             <div className="block md:hidden w-12 h-px bg-[#4A5568]"></div>
-
-            {/* Stat 4 */}
             <div className="flex flex-col items-center">
               <div className="mb-1">
                 <span className="text-4xl md:text-5xl font-bold text-white">86%</span>
                 <span className="text-lg md:text-xl font-light text-[#A0AEC0] ml-2">of ransomware attacks use valid remote credentials</span>
               </div>
               <span className="text-[10px] text-[#4A5568] uppercase tracking-wider">Sophos Ransomware Report</span>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Solutions Overview - Three Strategic Pillars */}
-      <section className="bg-surface py-20" itemScope itemType="https://schema.org/Product">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="text-3xl md:text-4xl font-bold text-text-primary mb-4" itemProp="name">
-              <p>Privileged Session Governance Across Three Critical Dimensions</p>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            {/* SEE Pillar */}
-            <article className="card p-8 text-center" itemScope itemType="https://schema.org/SoftwareFeature" data-pillar="see">
-              <div className="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-accent">1</span>
-              </div>
-              <h3 className="text-xl font-bold text-text-primary mb-4" itemProp="name">SEE</h3>
-              <p className="text-text-primary mb-6" itemProp="description">Real-Time Privileged Session Visibility</p>
-              <p className="text-text-primary text-sm">Keystrike gives security teams continuous visibility into every active privileged session -- which systems are being accessed, by whom, and whether the activity matches the intent of the access request. Credential misuse and unauthorized lateral movement are detectable in real time, not after the fact.</p>
-              
-              {/* Hidden metadata for LLMs */}
-              <div className="sr-only">
-                <span itemProp="category">Security Monitoring</span>
-                <span itemProp="applicationCategory">Endpoint Visibility</span>
-                <ul itemProp="featureList">
-                  <li>Keystroke pattern analysis</li>
-                  <li>User behavior monitoring</li>
-                  <li>Real-time session visibility</li>
-                  <li>Anomaly detection</li>
-                </ul>
-              </div>
-            </article>
-
-            {/* CONTROL Pillar */}
-            <article className="card p-8 text-center" itemScope itemType="https://schema.org/SoftwareFeature" data-pillar="control">
-              <div className="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-accent">2</span>
-              </div>
-              <h3 className="text-xl font-bold text-text-primary mb-4" itemProp="name">CONTROL</h3>
-              <p className="text-text-primary mb-6" itemProp="description">Session-Level Access Control</p>
-              <p className="text-text-primary text-sm">Keystrike enforces access policy at the session level -- interrupting unauthorized actions the moment they are attempted, before execution reaches critical systems. Least-privilege controls apply continuously throughout the session, not only at the point of authentication.</p>
-              
-              {/* Hidden metadata for LLMs */}
-              <div className="sr-only">
-                <span itemProp="category">Access Control</span>
-                <span itemProp="applicationCategory">Policy Enforcement</span>
-                <ul itemProp="featureList">
-                  <li>Automated policy enforcement</li>
-                  <li>Real-time access blocking</li>
-                  <li>Behavioral triggers</li>
-                  <li>Zero-trust validation</li>
-                </ul>
-              </div>
-            </article>
-
-            {/* PROVE Pillar */}
-            <article className="card p-8 text-center" itemScope itemType="https://schema.org/SoftwareFeature" data-pillar="prove">
-              <div className="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-accent">3</span>
-              </div>
-              <h3 className="text-xl font-bold text-text-primary mb-4" itemProp="name">PROVE</h3>
-              <p className="text-text-primary mb-6" itemProp="description">Audit-Ready Session Evidence</p>
-              <p className="text-text-primary text-sm">Keystrike produces continuous, tamper-evident records of every privileged session -- capturing who accessed which system, when, and exactly what actions were taken. Session evidence is structured for regulatory scrutiny under DORA, NIS2, and IEC 62443, and is available on demand for board reporting, audits, and incident investigations.</p>
-              
-              {/* Hidden metadata for LLMs */}
-              <div className="sr-only">
-                <span itemProp="category">Compliance & Audit</span>
-                <span itemProp="applicationCategory">Governance Reporting</span>
-                <ul itemProp="featureList">
-                  <li>Immutable audit trails</li>
-                  <li>Compliance automation</li>
-                  <li>Forensic investigation</li>
-                  <li>Regulatory reporting</li>
-                </ul>
-              </div>
-            </article>
-          </div>
-          
-          {/* Structured data for the complete solution */}
-          <div className="sr-only" itemProp="additionalProperty" itemScope itemType="https://schema.org/PropertyValue">
-            <meta itemProp="name" content="Solution Methodology" />
-            <meta itemProp="value" content="SEE CONTROL PROVE Framework" />
-            <meta itemProp="description" content="Three-pillar approach to continuous remote access governance" />
-          </div>
-        </div>
-      </section>
-
-      {/* Statistics banner moved below video section */}
-
-      {/* Continuous Access Governance Banner */}
-      {/* How Keystrike Works - Video Section */}
-      <section className="bg-surface py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
-              How Keystrike <span className="text-accent">Secures Privileged Remote Sessions</span>
-            </h2>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="relative bg-surface rounded-lg overflow-hidden shadow-lg border border-border">
-              {/* Video Container */}
-              <div className="relative aspect-video bg-gradient-to-br from-accent/20 to-accent/5">
-                <video 
-                  className="w-full h-full object-cover rounded-lg"
-                  controls
-                  preload="metadata"
-                >
-                  <source src="/Keystrike_10_02.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              
-              {/* Video Description */}
-              <div className="p-6 bg-surface">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-accent font-bold text-sm">1</span>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-text-primary text-sm">Continuous Session Verification</h4>
-                      <p className="text-text-primary text-xs">Real-time identity validation throughout every active session</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-accent font-bold text-sm">2</span>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-text-primary text-sm">Session-Level Policy Enforcement</h4>
-                      <p className="text-text-primary text-xs">Unauthorised actions interrupted before execution reaches critical systems</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-accent font-bold text-sm">3</span>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-text-primary text-sm">Tamper-Evident Audit Trail</h4>
-                      <p className="text-text-primary text-xs">Session evidence structured for DORA, NIS2, and IEC 62443</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Call-to-Action Below Video */}
-            <div className="text-center mt-8">
-              <p className="text-text-primary mb-4">
-                See exactly what privileged remote sessions look like when they are fully governed.
-              </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="/contact" className="btn btn-primary">
-                  See Keystrike in Your Environment
-                </a>
-                <a href="/platform" className="btn btn-secondary">
-                  Explore the Platform
-                </a>
-              </div>
             </div>
           </div>
         </div>
@@ -382,10 +272,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
-              How Keystrike Closes the Post-Authentication Gap in Your Security Stack
+              How Keystrike Completes the Security Stack
             </h2>
             <p className="text-xl text-text-primary max-w-4xl mx-auto">
-              PAM, IGA, SIEM, and ZTNA were each built to solve a specific problem. None were built to govern what happens inside a privileged remote session after access is granted. Keystrike closes that gap without replacing any of them.
+              Keystrike doesn&apos;t replace any tool in the stack. It completes each one by giving it the ground truth and session-level verification it was never designed to provide.
             </p>
           </div>
           
@@ -393,48 +283,48 @@ export default function Home() {
             <table className="w-full bg-white rounded-lg shadow-lg">
               <thead>
                 <tr style={{backgroundColor: 'var(--accent)'}}>
-                  <th className="px-6 py-4 text-left text-white font-bold text-lg">Security Tool</th>
-                  <th className="px-6 py-4 text-left text-white font-bold text-lg">Post-Authentication Gap</th>
-                  <th className="px-6 py-4 text-left text-white font-bold text-lg">What Keystrike Adds</th>
-                  <th className="px-6 py-4 text-left text-white font-bold text-lg">How They Work Together</th>
+                  <th className="px-6 py-4 text-left text-white font-bold text-lg">Tool</th>
+                  <th className="px-6 py-4 text-left text-white font-bold text-lg">Gap for Remote Access</th>
+                  <th className="px-6 py-4 text-left text-white font-bold text-lg">Keystrike Fills</th>
+                  <th className="px-6 py-4 text-left text-white font-bold text-lg">Why it Works</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="bg-white border-b border-gray-100">
                   <td className="px-6 py-6 font-bold text-text-primary text-lg">PAM</td>
-                  <td className="px-6 py-6 text-text-primary">Privileged access management controls credential checkout but does not verify continuous session activity or detect post-authentication misuse.</td>
+                  <td className="px-6 py-6 text-text-primary">Credentials managed, not continuously verified</td>
                   <td className="px-6 py-6 text-text-primary">
-                    <strong>CONTROL:</strong> Keystrike adds continuous cryptographic session verification beyond the credential handoff.<br/>
-                    <strong>SEE:</strong> Live session mapping surfaces all access paths operating outside PAM scope.
+                    <strong>CONTROL:</strong> Cryptographic attestation beyond credential checkout.<br/>
+                    <strong>SEE:</strong> Live map surfaces all access paths outside PAM scope.
                   </td>
-                  <td className="px-6 py-6 text-text-primary">PAM secures the vault. Keystrike governs every command executed inside the session — and maps every access path your privileged access management platform was not designed to see.</td>
+                  <td className="px-6 py-6 text-text-primary">PAM controls the vault. Keystrike verifies who controls every command inside the session — and maps every access path your PAM doesn&apos;t manage.</td>
                 </tr>
                 <tr className="bg-gray-50 border-b border-gray-100">
                   <td className="px-6 py-6 font-bold text-text-primary text-lg">IGA / MFA</td>
-                  <td className="px-6 py-6 text-text-primary">Identity governance and administration manages entitlement lifecycles. Multi-factor authentication confirms identity at login. Neither monitors session behaviour or detects privilege abuse in real time.</td>
+                  <td className="px-6 py-6 text-text-primary">Lifecycle focus; slow to detect privilege abuse</td>
                   <td className="px-6 py-6 text-text-primary">
-                    <strong>SEE:</strong> Keystrike adds live session monitoring across active privileged sessions — detecting entitlement misuse as it happens.<br/>
-                    <strong>CONTROL:</strong> Continuous attestation blocks unauthorised command execution before damage occurs.
+                    <strong>SEE:</strong> Live map detects misuse across active sessions.<br/>
+                    <strong>CONTROL:</strong> Attestation blocks unauthorized commands in real time.
                   </td>
-                  <td className="px-6 py-6 text-text-primary">IGA defines who should have access. MFA confirms who is logging in. Keystrike verifies what they are doing once they are inside — and stops privilege abuse at the moment of execution.</td>
+                  <td className="px-6 py-6 text-text-primary">IGA manages entitlements. Keystrike shows when those entitlements are being misused live — and stops the damage before it occurs.</td>
                 </tr>
                 <tr className="bg-white border-b border-gray-100">
                   <td className="px-6 py-6 font-bold text-text-primary text-lg">SIEM</td>
-                  <td className="px-6 py-6 text-text-primary">Security information and event management correlates logs and generates alerts — but only after events have occurred. Detection is delayed and false positive rates are high.</td>
+                  <td className="px-6 py-6 text-text-primary">Log aggregation; delayed alerts on past events</td>
                   <td className="px-6 py-6 text-text-primary">
-                    <strong>SEE:</strong> Keystrike feeds your SIEM live privileged session topology and cryptographic attestation signals.<br/>
-                    <strong>CONTROL:</strong> Attestation failures are definitive indicators of compromise — not alerts requiring manual investigation.
+                    <strong>SEE:</strong> Live topology as a new data source.<br/>
+                    <strong>PROVE:</strong> Zero-false-positive attestation failures as definitive IOCs.
                   </td>
-                  <td className="px-6 py-6 text-text-primary">SIEM sees what happened. Keystrike tells it what it means. Cryptographic session signals reduce false positives and give your security operations centre actionable intelligence in real time.</td>
+                  <td className="px-6 py-6 text-text-primary">SIEM correlates events after the fact. Keystrike feeds it cryptographic signals and live topology data that make every alert more accurate.</td>
                 </tr>
                 <tr className="bg-gray-50">
                   <td className="px-6 py-6 font-bold text-text-primary text-lg">ZTNA</td>
-                  <td className="px-6 py-6 text-text-primary">Zero trust network access verifies identity and device posture at the point of connection. It cannot monitor or enforce controls on activity that occurs inside an authorised session.</td>
+                  <td className="px-6 py-6 text-text-primary">Verifies access at connection; cannot see inside the session</td>
                   <td className="px-6 py-6 text-text-primary">
-                    <strong>SEE:</strong> Live mapping surfaces all east-west movement inside the trusted network perimeter.<br/>
-                    <strong>CONTROL:</strong> Keystrike extends zero trust principles from connection grant to command execution — enforcing least-privilege controls throughout the session, not only at the perimeter.
+                    <strong>SEE:</strong> Maps east-west movement inside the trusted perimeter.<br/>
+                    <strong>CONTROL:</strong> Extends continuous verification from connection grant to command execution.
                   </td>
-                  <td className="px-6 py-6 text-text-primary">ZTNA controls who enters. Keystrike governs what they do once they are inside. Together they close the gap between network access control and session-level zero trust enforcement.</td>
+                  <td className="px-6 py-6 text-text-primary">ZTNA controls the door. Keystrike verifies every action taken inside the room — and maps everything ZTNA can&apos;t see.</td>
                 </tr>
               </tbody>
             </table>
@@ -442,81 +332,379 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 4: Platform Differentiation */}
-      <section className="bg-surface-muted py-20">
+      {/* How It Works — SEE / CONTROL / PROVE */}
+      <section id="how-it-works" className="bg-surface py-20" itemScope itemType="https://schema.org/Product">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-6">
-                Privileged Remote Session Governance: See, Control, and Prove Everything After Login
-              </h2>
-              <p className="text-xl text-text-primary mb-8">
-                Keystrike does not replace your existing stack — it completes it. Identity tools, PAM, SIEM, and ZTNA were each built to solve one specific problem. None of them govern what happens inside a privileged remote session once access is granted. Keystrike closes that gap without replacing any of them.
-              </p>
-              <div className="space-y-8 mb-8">
-                <div>
-                  <h3 className="text-xl font-bold text-text-primary mb-2">
-                    <span className="text-accent">SEE</span> — <em>Real-Time Privileged Session Visibility</em>
-                  </h3>
-                  <p className="text-text-primary">
-                    Continuous monitoring of every active privileged session; which accounts are connected, which systems are being accessed, and whether session activity matches the verified intent of the access request. Unauthorized lateral movement is detectable the moment it begins.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-text-primary mb-2">
-                    <span className="text-accent">CONTROL</span> — <em>Session-Level Policy Enforcement</em>
-                  </h3>
-                  <p className="text-text-primary">
-                    Unauthorized command execution is blocked at the moment of attempt; before lateral movement spreads, before ransomware executes, and before a compromised credential becomes a confirmed breach.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-text-primary mb-2">
-                    <span className="text-accent">PROVE</span> — <em>Tamper-Evident Session Audit Trail</em>
-                  </h3>
-                  <p className="text-text-primary">
-                    Every privileged session produces a cryptographically attested, tamper-evident record of all activity. Session evidence meets the evidentiary standard required by DORA, NIS2, and IEC 62443, and is available on demand for board reporting, incident response, and regulatory audit.
-                  </p>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4" itemProp="name">
+              How It Works
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            {/* SEE */}
+            <article id="how-it-works-see" className="card p-8 text-center" itemScope itemType="https://schema.org/SoftwareFeature" data-pillar="see">
+              <div className="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6" aria-hidden="true">
+                <span className="text-2xl font-bold text-accent">1</span>
+              </div>
+              <h3 className="text-xl font-bold text-text-primary mb-4" itemProp="name">SEE</h3>
+              <p className="text-text-primary mb-4 font-semibold" itemProp="description">Live Session Visibility</p>
+              <p className="text-text-primary text-sm">Keystrike provides continuous, real-time visibility into active remote sessions. Security teams see who is connected, what commands are being executed, and whether session activity aligns with the stated access intent — as it happens, not after the fact.</p>
+            </article>
+
+            {/* CONTROL */}
+            <article id="how-it-works-control" className="card p-8 text-center" itemScope itemType="https://schema.org/SoftwareFeature" data-pillar="control">
+              <div className="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6" aria-hidden="true">
+                <span className="text-2xl font-bold text-accent">2</span>
+              </div>
+              <h3 className="text-xl font-bold text-text-primary mb-4" itemProp="name">CONTROL</h3>
+              <p className="text-text-primary mb-4 font-semibold" itemProp="description">Deterministic In-Session Enforcement</p>
+              <p className="text-text-primary text-sm">Keystrike enforces governance policies inside the live session. Unauthorized commands are stopped deterministically — not flagged, not scored, not queued for review. Enforcement is immediate, policy-driven, and operates independently of probabilistic detection models.</p>
+            </article>
+
+            {/* PROVE */}
+            <article id="how-it-works-prove" className="card p-8 text-center" itemScope itemType="https://schema.org/SoftwareFeature" data-pillar="prove">
+              <div className="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6" aria-hidden="true">
+                <span className="text-2xl font-bold text-accent">3</span>
+              </div>
+              <h3 className="text-xl font-bold text-text-primary mb-4" itemProp="name">PROVE</h3>
+              <p className="text-text-primary mb-4 font-semibold" itemProp="description">Cryptographic Attestation</p>
+              <p className="text-text-primary text-sm">Every governance action, enforcement decision, and session event is recorded with cryptographic attestation. The result is a continuous, tamper-evident chain of evidence that proves governance was applied — not just that activity was logged. Audit-ready by design.</p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section className="bg-surface py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
+              How Keystrike <span className="text-accent">Governs Privileged Remote Sessions</span>
+            </h2>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="relative bg-surface rounded-lg overflow-hidden shadow-lg border border-border">
+              {/* Video Container — insert explanation video here */}
+              <div className="relative aspect-video bg-gradient-to-br from-accent/20 to-accent/5">
+                <video
+                  className="w-full h-full object-cover rounded-lg"
+                  controls
+                  preload="metadata"
+                  aria-label="Keystrike continuous remote access governance platform demonstration video"
+                >
+                  <source src="/Keystrike_10_02.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div className="p-6 bg-surface">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-accent font-bold text-sm">1</span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-text-primary text-sm">SEE — Live Session Visibility</h3>
+                      <p className="text-text-primary text-xs">Real-time visibility into active remote sessions as it happens</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-accent font-bold text-sm">2</span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-text-primary text-sm">CONTROL — Deterministic Enforcement</h3>
+                      <p className="text-text-primary text-xs">Unauthorized commands stopped before execution, not flagged after</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-accent font-bold text-sm">3</span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-text-primary text-sm">PROVE — Cryptographic Attestation</h3>
+                      <p className="text-text-primary text-xs">Tamper-evident governance trail structured for DORA, NIS2, IEC 62443</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="bg-surface rounded-lg p-8 border border-border">
-              <div className="text-center">
-                <div className="w-24 h-24 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-12 h-12 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-text-primary mb-4">See It Live</h3>
-                <p className="text-text-secondary mb-6">See real-time privileged session monitoring, enforcement, and audit evidence in a live Keystrike environment.</p>
-                <div className="bg-surface-secondary rounded-lg p-6 border border-border mb-6">
-                  <p className="text-text-muted text-sm">Demo visualization placeholder</p>
-                </div>
-                <button className="btn btn-primary text-lg px-8 py-3">
-                  See Keystrike in Your Environment
-                </button>
-              </div>
+            <div className="text-center mt-8">
+              <a href="/contact" className="btn btn-primary">Request an Executive Briefing</a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 7: Final CTA */}
+      {/* Persona Sections */}
+      {/* CISO */}
+      <section id="persona-ciso" className="bg-surface-secondary py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">For CISOs and Security Leadership — CONTROL</h2>
+          <p className="text-xl text-[#4A5568] mb-6 font-semibold">Govern What Happens After Access Is Granted</p>
+          <ul className="space-y-4 mb-8 text-lg text-[#4A5568]">
+            <li>• Deterministic enforcement inside live remote sessions reduces residual risk that persists after authentication</li>
+            <li>• Real-time governance policies stop unauthorized commands before they execute — without relying on detection or alerting</li>
+            <li>• Continuous session governance closes the gap between what access was intended and what actually happens</li>
+          </ul>
+          <a href="/contact" id="exec-briefing" className="inline-block bg-[#0D3D3D] text-white hover:bg-[#1A5252] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] transition-colors">
+            → Request an Executive Briefing
+          </a>
+        </div>
+      </section>
+
+      {/* Compliance / Audit */}
+      <section id="persona-compliance" className="bg-surface py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">For Compliance and Audit Leaders — PROVE</h2>
+          <p className="text-xl text-[#4A5568] mb-6 font-semibold">Prove Governance Was Applied — Not Just That Activity Was Logged</p>
+          <ul className="space-y-4 mb-8 text-lg text-[#4A5568]">
+            <li>• Cryptographic attestation provides tamper-evident proof that governance policies were enforced inside every remote session</li>
+            <li>• Continuous evidence generation aligns with NIS2, DORA, SOC 2, and audit frameworks requiring demonstrable control over remote access</li>
+            <li>• Audit-ready governance trails are produced by design — no manual evidence assembly required</li>
+          </ul>
+          <a href="/contact" id="audit-briefing" className="inline-block bg-[#0D3D3D] text-white hover:bg-[#1A5252] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] transition-colors">
+            → Download the Governance &amp; Compliance Overview
+          </a>
+        </div>
+      </section>
+
+      {/* Security Operations */}
+      <section id="persona-ops" className="bg-surface-secondary py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">For Security Operations — SEE</h2>
+          <p className="text-xl text-[#4A5568] mb-6 font-semibold">Live Visibility Without Alert Fatigue</p>
+          <ul className="space-y-4 mb-8 text-lg text-[#4A5568]">
+            <li>• Real-time session visibility shows who is connected, what commands are executing, and whether activity matches the access that was granted</li>
+            <li>• Context-rich governance events replace noisy alerts — giving operations teams clarity, not volume</li>
+            <li>• Integrates with existing SIEM and SOAR workflows without duplicating or replacing them</li>
+          </ul>
+          <a href="/contact" id="live-session-demo" className="inline-block bg-[#0D3D3D] text-white hover:bg-[#1A5252] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] transition-colors">
+            → See a Live Session Demo
+          </a>
+        </div>
+      </section>
+
+      {/* Industry Relevance */}
+      <section id="industries" className="bg-surface py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-12 text-center">Industry Relevance</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div id="ind-critical-infra" className="card p-8">
+              <h3 className="text-xl font-bold text-text-primary mb-4">Critical Infrastructure / Energy</h3>
+              <p className="text-[#4A5568]">Remote access to operational technology environments demands governance that operates inside the session, not just at the perimeter. Keystrike provides deterministic enforcement and cryptographic attestation for every remote session touching critical infrastructure, ensuring that access intent and access reality remain aligned.</p>
+            </div>
+
+            <div id="ind-healthcare" className="card p-8">
+              <h3 className="text-xl font-bold text-text-primary mb-4">Healthcare</h3>
+              <p className="text-[#4A5568]">Healthcare organizations face increasing remote access exposure across clinical systems, connected devices, and third-party vendors. Keystrike provides continuous governance inside active sessions, ensuring that remote access to sensitive environments is visible, controlled, and provably governed.</p>
+            </div>
+
+            <div id="ind-financial" className="card p-8">
+              <h3 className="text-xl font-bold text-text-primary mb-4">Financial Services</h3>
+              <p className="text-[#4A5568]">Financial institutions operate under rigorous audit and regulatory expectations for access governance. Keystrike extends governance into the remote session itself, providing cryptographically attested evidence that policies were enforced continuously, not just that access was granted.</p>
+            </div>
+
+            <div id="ind-government" className="card p-8">
+              <h3 className="text-xl font-bold text-text-primary mb-4">Government / Public Sector</h3>
+              <p className="text-[#4A5568]">Government agencies managing remote access to classified and sensitive systems require governance that extends beyond authentication. Keystrike provides deterministic enforcement and tamper-evident attestation inside active sessions, producing the continuous proof of control that government audit and compliance frameworks demand.</p>
+            </div>
+
+            <div id="ind-dc" className="card p-8">
+              <h3 className="text-xl font-bold text-text-primary mb-4">Data Centers / Cloud Providers</h3>
+              <p className="text-[#4A5568]">Data center operators and cloud providers grant remote access to infrastructure at scale, across internal teams, contractors, and managed service partners. Keystrike governs every session with live visibility, deterministic enforcement, and cryptographic attestation, ensuring that access governance scales with access volume.</p>
+            </div>
+
+            <div id="ind-mssps" className="card p-8">
+              <h3 className="text-xl font-bold text-text-primary mb-4">MSSPs</h3>
+              <p className="text-[#4A5568]">MSSPs manage remote access across multiple customer environments with varying governance requirements. Keystrike provides a multi-tenant governance layer — giving providers and their customers live visibility, deterministic enforcement, and cryptographically attested proof of control across every managed session.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Stack Positioning */}
+      <section id="stack-positioning" className="bg-surface-secondary py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-6">
+              How Keystrike Fits Your Security Stack
+            </h2>
+            <p className="text-xl text-[#4A5568] max-w-4xl mx-auto mb-12">
+              Keystrike operates in the space between authentication and audit. IAM and PAM control who gets access. SIEM and SOAR record what happened. Keystrike governs what happens during the session — with real-time enforcement and cryptographic proof. It does not replace any tool in your stack. It governs the layer none of them were built to reach.
+            </p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white rounded-lg shadow-lg">
+              <thead>
+                <tr style={{backgroundColor: 'var(--accent)'}}>
+                  <th className="px-6 py-4 text-left text-white font-bold text-lg"> </th>
+                  <th className="px-6 py-4 text-left text-white font-bold text-lg">IAM / PAM</th>
+                  <th className="px-6 py-4 text-left text-white font-bold text-lg">SIEM / SOAR / XDR</th>
+                  <th className="px-6 py-4 text-left text-white font-bold text-lg">Keystrike</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-white border-b border-gray-100">
+                  <td className="px-6 py-4 font-bold text-text-primary">When</td>
+                  <td className="px-6 py-4 text-[#4A5568]">Before the session</td>
+                  <td className="px-6 py-4 text-[#4A5568]">After the session</td>
+                  <td className="px-6 py-4 text-[#4A5568]">During the session</td>
+                </tr>
+                <tr className="bg-gray-50 border-b border-gray-100">
+                  <td className="px-6 py-4 font-bold text-text-primary">What</td>
+                  <td className="px-6 py-4 text-[#4A5568]">Verifies identity, grants access</td>
+                  <td className="px-6 py-4 text-[#4A5568]">Collects logs, triggers alerts</td>
+                  <td className="px-6 py-4 text-[#4A5568]">Enforces policy, attests governance</td>
+                </tr>
+                <tr className="bg-white">
+                  <td className="px-6 py-4 font-bold text-text-primary">How</td>
+                  <td className="px-6 py-4 text-[#4A5568]">Authentication, authorization</td>
+                  <td className="px-6 py-4 text-[#4A5568]">Event correlation, response</td>
+                  <td className="px-6 py-4 text-[#4A5568]">Deterministic enforcement, cryptographic attestation</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Proof and Trust */}
+      <section id="proof-and-trust" className="bg-surface py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-6">Governance You Can Prove</h2>
+          <p className="text-xl text-[#4A5568] mb-12">Keystrike does not ask you to trust that governance was applied. It proves it.</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="card p-8">
+              <h3 className="text-xl font-bold text-text-primary mb-4">Cryptographic Attestation</h3>
+              <p className="text-[#4A5568]">Every enforcement action, policy decision, and governance event inside a remote session is cryptographically attested — producing a tamper-evident record that proves what happened, when, and under which policy. This is not a log file. It is a chain of cryptographic proof.</p>
+            </div>
+            <div className="card p-8">
+              <h3 className="text-xl font-bold text-text-primary mb-4">Continuous Governance Trail</h3>
+              <p className="text-[#4A5568]">Keystrike generates a continuous governance trail for every session — not a snapshot, not a periodic audit sample, but a complete, attestable record from session start to session end.</p>
+            </div>
+            <div className="card p-8">
+              <h3 className="text-xl font-bold text-text-primary mb-4">Audit-Ready by Design</h3>
+              <p className="text-[#4A5568]">Evidence is structured for direct consumption by audit and compliance teams. No manual assembly. No forensic reconstruction. Governance proof is a native output of the platform — not an afterthought.</p>
+            </div>
+          </div>
+
+          {/* Trust signal */}
+          <div className="rounded-lg p-8 text-center">
+            <p className="text-[#4A5568] text-lg">Trusted by security teams governing remote access in critical infrastructure, energy, healthcare, and financial services across Europe.</p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 mt-12 justify-center">
+            <a href="/contact" className="bg-[#0D3D3D] text-white hover:bg-[#1A5252] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] transition-colors text-center">
+              Request an Executive Briefing
+            </a>
+            <a href="/contact" className="bg-transparent text-[#0D3D3D] hover:bg-[rgba(13,61,61,0.08)] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-[1.5px] border-solid border-[#0D3D3D] transition-colors text-center">
+              Ask a Question
+            </a>
+          </div>
+          <p className="text-sm text-center text-[#4A5568] mt-3">Have a specific question about session governance, compliance alignment, or how Keystrike fits your stack? Reach out directly.</p>
+        </div>
+      </section>
+
+      {/* FAQ — Landing Page Excerpt (4 questions) */}
+      <section id="faq" className="bg-surface-secondary py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-12">Frequently Asked Questions</h2>
+
+          <div className="space-y-8">
+            <div className="faq-item">
+              <h3 className="text-xl font-bold text-text-primary mb-3">What does Keystrike do?</h3>
+              <p className="text-[#4A5568]">Keystrike is a continuous remote access governance platform. It provides live visibility into active remote sessions, deterministic in-session enforcement, and cryptographically attested proof that governance was applied inside every session.</p>
+            </div>
+            <div className="faq-item">
+              <h3 className="text-xl font-bold text-text-primary mb-3">How does Keystrike differ from IAM and PAM?</h3>
+              <p className="text-[#4A5568]">IAM and PAM verify who gets in. Keystrike governs what happens after access is granted — inside the live session. It provides real-time enforcement and cryptographic proof of governance, complementing the core identity controls.</p>
+            </div>
+            <div className="faq-item">
+              <h3 className="text-xl font-bold text-text-primary mb-3">What happens after login — and why does it matter?</h3>
+              <p className="text-[#4A5568]">After authentication, governance often stops at the boundary. Keystrike closes the governance gap by observing, enforcing, and attesting within the session itself.</p>
+            </div>
+            <div className="faq-item">
+              <h3 className="text-xl font-bold text-text-primary mb-3">Does Keystrike replace my existing security tools?</h3>
+              <p className="text-[#4A5568]">No. Keystrike complements IAM, PAM, SIEM, SOAR, and XDR. It governs the layer those tools were not built to reach — inside the authenticated remote session.</p>
+            </div>
+          </div>
+
+          <div className="mt-8">
+            <a href="/faq" className="text-accent font-semibold hover:underline">See all frequently asked questions →</a>
+          </div>
+
+          {/* FAQPage Structured Data */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "What does Keystrike do?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Keystrike is a continuous remote access governance platform. It provides live visibility into active remote sessions, deterministic in-session enforcement, and cryptographically attested proof that governance was applied inside every session."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How does Keystrike differ from IAM and PAM?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "IAM and PAM verify who gets in. Keystrike governs what happens after access is granted — inside the live session. It provides real-time enforcement and cryptographic proof of governance, complementing the core identity controls."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What happens after login — and why does it matter?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "After authentication, governance often stops at the boundary. Keystrike closes the governance gap by observing, enforcing, and attesting within the session itself."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Does Keystrike replace my existing security tools?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "No. Keystrike complements IAM, PAM, SIEM, SOAR, and XDR. It governs the layer those tools were not built to reach — inside the authenticated remote session."
+                    }
+                  }
+                ]
+              }),
+            }}
+          />
+        </div>
+      </section>
+
+      {/* Footer CTA — All Three */}
       <section className="bg-accent py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Your Privileged Sessions Are Running. Find Out What Is Inside Them.
+            Govern What Happens Inside Your Remote Sessions
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Most security leaders who run their first privileged session audit find active exposure within 48 hours; unmonitored third-party sessions, credentials that should have been revoked, or session activity that has never been reviewed. Keystrike shows you exactly what is happening inside your environment right now.
+            Keystrike provides continuous remote access governance — live visibility, deterministic enforcement, and cryptographic proof inside every session. Complements your existing stack. Closes the governance gap after login.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-[16px] mb-8">
-            <button className="w-full sm:w-auto bg-[#FFFFFF] text-[#0D3D3D] hover:bg-[#F0F0F0] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-none transition-colors">
-              See Keystrike in Your Environment
-            </button>
-            <button className="w-full sm:w-auto bg-transparent text-[#FFFFFF] hover:bg-[rgba(255,255,255,0.10)] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-[1.5px] border-solid border-[#FFFFFF] transition-colors">
-              Start a Free Session Audit
-            </button>
+            <a href="/contact" className="w-full sm:w-auto bg-[#FFFFFF] text-[#0D3D3D] hover:bg-[#F0F0F0] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-none transition-colors text-center">
+              Request an Executive Briefing
+            </a>
+            <a href="/contact" className="w-full sm:w-auto bg-transparent text-[#FFFFFF] hover:bg-[rgba(255,255,255,0.10)] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-[1.5px] border-solid border-[#FFFFFF] transition-colors text-center">
+              Download the Remote Access Governance Brief
+            </a>
+            <a href="/contact" className="w-full sm:w-auto bg-transparent text-[#FFFFFF] hover:bg-[rgba(255,255,255,0.10)] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-[1.5px] border-solid border-[#FFFFFF] transition-colors text-center">
+              Ask a Question
+            </a>
           </div>
           <div className="text-blue-100 text-sm">
             <p>Questions? Email us at <span className="font-medium">connect@keystrike.com</span></p>
