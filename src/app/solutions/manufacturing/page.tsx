@@ -211,7 +211,7 @@ export default function ManufacturingPage() {
 
           <div className="max-w-[720px] mx-auto mb-12">
             <p className="text-[#4A5568] leading-relaxed text-center">
-              Keystrike adds the Governor layer to your existing security stack — alongside your Gatekeeper (IAM/PAM) and your Historian (SIEM/SOAR/XDR). We are not asking you to rip out or replace the tools you already have. Keystrike is the essential final piece that makes your CyberArk, your Splunk, and your Okta work together to deliver Continuous Access Governance.
+              Your identity tools grant access. Your SIEM logs what happened. Keystrike governs what happens during the live session. You don&apos;t have to rip out or replace the tools you already have. Keystrike is the essential final piece that makes your existing stack deliver Continuous Access Governance.
             </p>
           </div>
 
