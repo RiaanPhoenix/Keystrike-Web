@@ -198,11 +198,11 @@ export default function About() {
                   <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-text-primary mb-2">Arni Thor Arnason</h3>
-              <p className="text-accent text-sm font-medium mb-4">Co-founder, COO</p>
+              <h3 className="text-xl font-bold text-text-primary mb-2">Steindor Gudmundsson</h3>
+              <p className="text-accent text-sm font-medium mb-4">Co-founder, CPO</p>
               <p className="text-text-secondary text-sm">
-                Operations leader focused on scaling global deployment and ensuring customer success 
-                across enterprise environments and critical infrastructure.
+                Product visionary ensuring our cybersecurity solutions meet real-world needs while 
+                maintaining simplicity and ease of deployment for enterprise customers.
               </p>
             </div>
             <div className="card p-8 text-center">
@@ -224,11 +224,11 @@ export default function About() {
                   <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-text-primary mb-2">Steindor Gudmundsson</h3>
-              <p className="text-accent text-sm font-medium mb-4">Co-founder, CPO</p>
+              <h3 className="text-xl font-bold text-text-primary mb-2">Helena Hallgrimsson</h3>
+              <p className="text-accent text-sm font-medium mb-4">VP Marketing</p>
               <p className="text-text-secondary text-sm">
-                Product visionary ensuring our cybersecurity solutions meet real-world needs while 
-                maintaining simplicity and ease of deployment for enterprise customers.
+                Marketing leader driving brand awareness and strategic marketing initiatives to 
+                accelerate market adoption and customer engagement across global markets.
               </p>
             </div>
             <div className="card p-8 text-center">

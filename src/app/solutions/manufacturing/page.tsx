@@ -3,13 +3,118 @@ import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'OT Cybersecurity for Utilities, Energy & Water — Keystrike',
-  description: 'Keystrike blocks unauthorized commands in OT, ICS, and SCADA environments before execution — real-time privileged session security for water, energy, and utility operators.',
+  title: 'OT Session Governance for Water, Energy & Critical Infrastructure — Keystrike',
+  description: 'Keystrike governs every privileged remote session in OT, ICS, and SCADA environments. Block unauthorized commands in real time, prove continuous compliance with NERC CIP and IEC 62443, and deploy in 20 minutes — no endpoint agents required.',
+  keywords: 'OT session governance, OT cybersecurity, SCADA session security, OT remote access governance, critical infrastructure cybersecurity, NERC CIP compliance, IEC 62443, privileged session governance, OT security, water utility cybersecurity, energy sector OT security, industrial control system governance',
+  openGraph: {
+    title: 'OT Session Governance for Water, Energy & Critical Infrastructure | Keystrike',
+    description: 'Govern every privileged remote session in OT, ICS, and SCADA environments. Real-time enforcement. Audit-ready proof. Deploys in 20 minutes.',
+    url: 'https://keystrike.com/solutions/manufacturing',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'OT Session Governance for Water, Energy & Critical Infrastructure | Keystrike',
+    description: 'Govern every privileged remote session in OT, ICS, and SCADA environments. Real-time enforcement. Audit-ready proof. Deploys in 20 minutes.',
+  },
 };
 
 export default function ManufacturingPage() {
   return (
     <div className="min-h-screen bg-[#F4F5F7]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+      {/* Page-specific JSON-LD: FAQPage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is session governance for OT environments?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Session governance for OT environments means continuously verifying and controlling what happens during every privileged remote access session in operational technology infrastructure — including SCADA, ICS, and DCS systems. Unlike perimeter security or identity security, session governance operates after authentication, ensuring that authorised users only execute authorised commands."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does Keystrike differ from OT network monitoring tools like Dragos or Claroty?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "OT network monitoring tools focus on network traffic analysis and asset discovery. Keystrike operates at the session layer — governing what authenticated users do during privileged remote sessions. Keystrike completes the security stack by adding the Governor layer alongside existing Gatekeeper (IAM/PAM) and Historian (SIEM/XDR) tools."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Keystrike require agents on OT endpoints or PLCs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Keystrike deploys without agents on OT endpoints, PLCs, RTUs, or HMIs. It governs sessions transparently within existing remote access workflows. Typical deployment completes in 20 minutes."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Keystrike replace existing PAM, SIEM, or firewall?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Keystrike completes your existing security stack. IAM/PAM grants access, SIEM/XDR logs events, and Keystrike governs the live session in between — making existing tools work together to deliver continuous access governance."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does Keystrike handle third-party vendor remote access?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Keystrike governs third-party vendor sessions transparently — vendors connect through existing remote access tools with no additional steps. Every vendor session is subject to the same deterministic enforcement and generates the same tamper-evident record as internal operator sessions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Keystrike record keystrokes or capture screens?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Keystrike verifies that commands originate from a physical human operator through cryptographic attestation — without recording keystrokes, capturing screens, or conducting behavioural analysis."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can Keystrike operate in air-gapped or segmented OT networks?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Keystrike operates within the access pathways that already exist in Purdue Model architectures — governing sessions at the points where remote access enters the OT network."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What compliance frameworks does Keystrike support for critical infrastructure?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Keystrike maps directly to NERC CIP (CIP-004, CIP-005, CIP-007), IEC 62443, EPA cybersecurity directives for water and wastewater systems, NIST Cybersecurity Framework, and NIST SP 800-82."
+                }
+              }
+            ]
+          }),
+        }}
+      />
+      {/* Page-specific JSON-LD: Product */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Keystrike for OT and Critical Infrastructure",
+            "description": "Continuous remote access governance platform for OT, ICS, and SCADA environments. Governs privileged sessions in real time across water, energy, utility, and manufacturing operations.",
+            "category": "Cybersecurity Software",
+            "brand": {
+              "@type": "Brand",
+              "name": "Keystrike"
+            }
+          }),
+        }}
+      />
       <Navigation currentPage="solutions" />
       
       {/* Section 1 - Header */}
@@ -25,22 +130,26 @@ export default function ManufacturingPage() {
 
               {/* H1 */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0F1623] tracking-[-0.02em] mb-5 leading-tight">
-                Operational Technology Security: Governing Every Privileged Session in Critical Infrastructure
+                OT Session Governance: Continuous Control of Every Privileged Remote Session in Critical Infrastructure
               </h1>
 
               {/* H2 (Subheadline) */}
               <h2 className="text-[1.15rem] font-normal text-[#4A5568] mb-6 leading-relaxed">
-                Perimeter Controls Stop Intrusions. Session-Level Governance Stops Operational Disruption.
+                Your Perimeter Stops Intrusions. Your IAM Grants Access. But Who Governs What Happens During the Session?
               </h2>
 
               {/* Body Paragraphs */}
               <div className="space-y-6 mb-8">
                 <p className="text-[1rem] font-normal text-[#4A5568] leading-relaxed">
-                  Firewalls, VPNs, and MFA protect access points. They do not govern what happens after login. In water, energy, and utility environments, one unauthorised command can trip a breaker, shut down a pump, or contaminate a water supply.
+                  Your firewall, MFA, and PAM confirm who connects to your SCADA systems. But once the session starts, nothing governs what happens inside it — the Governance Gap that enabled unauthorised commands in Oldsmar and persistent state-sponsored access through Volt Typhoon.
                 </p>
 
                 <p className="text-[1rem] font-normal text-[#4A5568] leading-relaxed">
-                  Keystrike is a privileged session monitoring platform that verifies every operator command originates from an authenticated human on an authorized device, before it executes. No infrastructure changes required.
+                  Keystrike closes that gap. Purpose-built for OT, ICS, and SCADA, it maps every remote session in real time, blocks unauthorised commands before execution through deterministic enforcement, and generates cryptographically attested audit records mapped to NERC CIP, IEC 62443, and NIST requirements.
+                </p>
+
+                <p className="text-[1rem] font-normal text-[#4A5568] leading-relaxed">
+                  Deploys in 20 minutes. No endpoint agents. No keylogging.
                 </p>
               </div>
 
@@ -57,10 +166,10 @@ export default function ManufacturingPage() {
               {/* Dark Navy Callout Block */}
               <div className="bg-[#0D1B2A] p-6 rounded-md text-left">
                 <div className="text-white font-bold text-[1.1rem] mb-2">
-                  91% of critical infrastructure organisations experienced OT security breaches in the past 18 months
+                  73% of organisations experienced an OT intrusion in the past year
                 </div>
                 <div className="text-[#94A3B8] text-[0.8rem] font-normal">
-                  with half resulting in service interruptions or system corruption — Chemical Processing, 2025
+                  Fortinet, 2024 State of OT Cybersecurity Report
                 </div>
               </div>
             </div>
@@ -84,6 +193,60 @@ export default function ManufacturingPage() {
                 
                 <div className="mt-8 text-[#94A3B8] text-[0.8rem]">Live Session Dashboard</div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 1b - How Keystrike Governs OT Sessions (SEE / CONTROL / PROVE) */}
+      <section className="bg-[#F4F5F7] py-20">
+        <div className="max-w-[1100px] mx-auto px-4">
+          <div className="text-[0.72rem] font-semibold tracking-[0.10em] text-[#0D3D3D] uppercase mb-6 text-center">
+            Completing the Identity Stack · Gatekeeper · Historian · Governor
+          </div>
+
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0F1623] text-center mb-6">
+            How Keystrike Governs OT Sessions
+          </h2>
+
+          <div className="max-w-[720px] mx-auto mb-12">
+            <p className="text-[#4A5568] leading-relaxed text-center">
+              Keystrike adds the Governor layer to your existing security stack — alongside your Gatekeeper (IAM/PAM) and your Historian (SIEM/SOAR/XDR). We are not asking you to rip out or replace the tools you already have. Keystrike is the essential final piece that makes your CyberArk, your Splunk, and your Okta work together to deliver Continuous Access Governance.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* SEE */}
+            <div className="bg-white border border-[#DDE1E9] rounded-lg p-8">
+              <div className="w-12 h-12 bg-[#0D3D3D] bg-opacity-10 rounded-full flex items-center justify-center mb-5" aria-hidden="true">
+                <span className="text-lg font-bold text-[#0D3D3D]">1</span>
+              </div>
+              <h3 className="text-lg font-bold text-[#0F1623] mb-3">SEE — Live Visibility</h3>
+              <p className="text-[#4A5568] text-[0.9rem] leading-relaxed">
+                Discover and map every remote access session in your OT environment in real time. See sessions across RDP, SSH, PowerShell, WinRM, WMI, SMB, TeamViewer, and NinjaOne — including connections from unmanaged or unknown clients that your existing tools cannot see.
+              </p>
+            </div>
+
+            {/* CONTROL */}
+            <div className="bg-white border border-[#DDE1E9] rounded-lg p-8">
+              <div className="w-12 h-12 bg-[#0D3D3D] bg-opacity-10 rounded-full flex items-center justify-center mb-5" aria-hidden="true">
+                <span className="text-lg font-bold text-[#0D3D3D]">2</span>
+              </div>
+              <h3 className="text-lg font-bold text-[#0F1623] mb-3">CONTROL — Real-Time Enforcement</h3>
+              <p className="text-[#4A5568] text-[0.9rem] leading-relaxed">
+                Verify that every command originates from a verified physical human operator. Block unauthorised commands through deterministic enforcement before they reach your OT systems. Zero false positives — because enforcement is based on cryptographic attestation, not probabilistic analysis.
+              </p>
+            </div>
+
+            {/* PROVE */}
+            <div className="bg-white border border-[#DDE1E9] rounded-lg p-8">
+              <div className="w-12 h-12 bg-[#0D3D3D] bg-opacity-10 rounded-full flex items-center justify-center mb-5" aria-hidden="true">
+                <span className="text-lg font-bold text-[#0D3D3D]">3</span>
+              </div>
+              <h3 className="text-lg font-bold text-[#0F1623] mb-3">PROVE — Continuous Governance</h3>
+              <p className="text-[#4A5568] text-[0.9rem] leading-relaxed">
+                Generate tamper-evident session records for every remote access event. Map directly to NERC CIP, IEC 62443, EPA, and NIST requirements. Deliver audit-ready evidence and board-level governance reporting without manual log compilation.
+              </p>
             </div>
           </div>
         </div>
@@ -126,7 +289,7 @@ export default function ManufacturingPage() {
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <div className="w-1.5 h-1.5 bg-[#0D3D3D] rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span className="text-[#4A5568] text-[0.9rem]">Command-level breach prevention before execution</span>
+                  <span className="text-[#4A5568] text-[0.9rem]">Unauthorised commands stopped before execution</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-1.5 h-1.5 bg-[#0D3D3D] rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -221,39 +384,37 @@ export default function ManufacturingPage() {
           </div>
 
           {/* Section H2 */}
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0F1623] text-center mb-12">
-            Why Firewalls, MFA, and SIEM Cannot Secure Privileged Sessions in OT Environments
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0F1623] text-center mb-4">
+            Completing the OT Security Stack
           </h2>
+          <p className="text-[#4A5568] text-center mb-12 max-w-[640px] mx-auto">
+            Your Gatekeeper grants access. Your Historian logs events. Keystrike is the Governor — governing what happens during the live session.
+          </p>
 
           {/* Table */}
           <div className="overflow-x-auto bg-white rounded-lg shadow-sm mb-8">
             <table className="w-full">
               <thead>
                 <tr className="bg-[#0D3D3D]">
-                  <th className="px-6 py-4 text-left text-white font-semibold text-[0.85rem]">Security Tool</th>
-                  <th className="px-6 py-4 text-left text-white font-semibold text-[0.85rem]">What It Protects</th>
+                  <th className="px-6 py-4 text-left text-white font-semibold text-[0.85rem]">Tools</th>
+                  <th className="px-6 py-4 text-left text-white font-semibold text-[0.85rem]">What It Does</th>
                   <th className="px-6 py-4 text-left text-white font-semibold text-[0.85rem]">Post-Authentication Gap</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="bg-white border-b border-gray-100">
-                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem]">Firewall / VPN</td>
-                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem]">Network perimeter</td>
-                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem]">Session activity after access is granted</td>
+                  <td className="px-6 py-4 text-[#0F1623] font-semibold text-[0.9rem]">IAM / PAM / MFA</td>
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem]">Grants access</td>
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem]">Blind after the session starts</td>
                 </tr>
                 <tr className="bg-[#F9FAFB] border-b border-gray-100">
-                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem]">MFA</td>
-                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem]">Login authentication</td>
-                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem]">Actions inside authenticated sessions</td>
-                </tr>
-                <tr className="bg-white border-b border-gray-100">
-                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem]">EDR / SIEM</td>
-                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem]">Endpoint threats and event correlation</td>
-                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem]">Real-time command execution — detection happens after</td>
+                  <td className="px-6 py-4 text-[#0F1623] font-semibold text-[0.9rem]">SIEM / SOAR / XDR</td>
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem]">Logs events after the fact</td>
+                  <td className="px-6 py-4 text-[#0F1623] text-[0.9rem]">Detection is reactive — damage is already done</td>
                 </tr>
                 <tr className="bg-[#0D3D3D]">
                   <td className="px-6 py-4 text-white font-semibold text-[0.9rem]">Keystrike</td>
-                  <td className="px-6 py-4 text-white font-semibold text-[0.9rem]">Every privileged session in OT, ICS, and enterprise environments</td>
+                  <td className="px-6 py-4 text-white font-semibold text-[0.9rem]">Governs the live session</td>
                   <td className="px-6 py-4 text-white font-semibold text-[0.9rem]">None. Unauthorised commands blocked before execution.</td>
                 </tr>
               </tbody>
@@ -265,6 +426,50 @@ export default function ManufacturingPage() {
             <p className="text-[#6B7280] text-[14px] text-left">
               Keystrike does not record keystrokes, credentials, or personally identifiable information. Session verification is cryptographic — not behavioural — eliminating false positives and privacy exposure.
             </p>
+          </div>
+
+          {/* Industry Statistics */}
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold text-[#0F1623] text-center mb-10">
+              The Post-Authentication Risk in Numbers
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="bg-white border border-[#DDE1E9] rounded-lg p-6 text-center">
+                <span className="block text-4xl font-bold text-[#0D3D3D] mb-2">65%</span>
+                <p className="text-[#4A5568] text-[0.82rem] leading-snug">of OT environments have insecure remote access connections</p>
+                <p className="text-[#9CA3AF] text-[0.7rem] mt-2">Dragos, 2024 OT Cybersecurity Year in Review</p>
+              </div>
+              <div className="bg-white border border-[#DDE1E9] rounded-lg p-6 text-center">
+                <span className="block text-4xl font-bold text-[#0D3D3D] mb-2">70%</span>
+                <p className="text-[#4A5568] text-[0.82rem] leading-snug">of OT vulnerabilities reside in the internal network, post-perimeter</p>
+                <p className="text-[#9CA3AF] text-[0.7rem] mt-2">Dragos, 2024 OT Cybersecurity Year in Review</p>
+              </div>
+              <div className="bg-white border border-[#DDE1E9] rounded-lg p-6 text-center">
+                <span className="block text-4xl font-bold text-[#0D3D3D] mb-2">71%</span>
+                <p className="text-[#4A5568] text-[0.82rem] leading-snug">surge in attacks using stolen credentials in industrial environments</p>
+                <p className="text-[#9CA3AF] text-[0.7rem] mt-2">IBM X-Force, 2024 Threat Intelligence Index</p>
+              </div>
+              <div className="bg-white border border-[#DDE1E9] rounded-lg p-6 text-center">
+                <span className="block text-4xl font-bold text-[#0D3D3D] mb-2">#1</span>
+                <p className="text-[#4A5568] text-[0.82rem] leading-snug">Manufacturing was the most-targeted sector for cyberattacks for the 5th consecutive year</p>
+                <p className="text-[#9CA3AF] text-[0.7rem] mt-2">IBM X-Force, 2025 Threat Intelligence Index</p>
+              </div>
+              <div className="bg-white border border-[#DDE1E9] rounded-lg p-6 text-center">
+                <span className="block text-4xl font-bold text-[#0D3D3D] mb-2">45%</span>
+                <p className="text-[#4A5568] text-[0.82rem] leading-snug">of manufacturing cyberattacks involved credential theft or abuse</p>
+                <p className="text-[#9CA3AF] text-[0.7rem] mt-2">Verizon DBIR 2024</p>
+              </div>
+              <div className="bg-white border border-[#DDE1E9] rounded-lg p-6 text-center">
+                <span className="block text-4xl font-bold text-[#0D3D3D] mb-2">46%</span>
+                <p className="text-[#4A5568] text-[0.82rem] leading-snug">of energy sector breaches involved third-party or partner access</p>
+                <p className="text-[#9CA3AF] text-[0.7rem] mt-2">Verizon DBIR 2024, Energy subset</p>
+              </div>
+              <div className="bg-white border border-[#DDE1E9] rounded-lg p-6 text-center sm:col-span-2">
+                <span className="block text-4xl font-bold text-[#0D3D3D] mb-2">83%</span>
+                <p className="text-[#4A5568] text-[0.82rem] leading-snug">of water and wastewater systems had undocumented remote access connections</p>
+                <p className="text-[#9CA3AF] text-[0.7rem] mt-2">WaterISAC / CISA Advisory, 2024</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -363,7 +568,106 @@ export default function ManufacturingPage() {
         </div>
       </section>
 
-      {/* Section 5 - Closing CTA */}
+      {/* Section 5 - Persona Entry Points */}
+      <section className="bg-[#F4F5F7] py-20">
+        <div className="max-w-[1100px] mx-auto px-4">
+          <div className="text-[0.72rem] font-semibold tracking-[0.10em] text-[#0D3D3D] uppercase mb-6 text-center">
+            Built for Your Role
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0F1623] text-center mb-12">
+            Keystrike Delivers What Your Role Demands
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* CISO → CONTROL */}
+            <div className="bg-white border border-[#DDE1E9] rounded-lg p-8">
+              <div className="text-[0.72rem] font-semibold tracking-[0.10em] text-[#0D3D3D] uppercase mb-3">For the CISO</div>
+              <h3 className="text-lg font-bold text-[#0F1623] mb-4">CONTROL — Real-Time Enforcement</h3>
+              <p className="text-[#4A5568] text-[0.9rem] leading-relaxed">
+                You need certainty that every remote session in your OT environment is governed — not just logged. Keystrike gives you real-time enforcement: deterministic command verification that blocks unauthorised actions before they execute, with zero false positives.
+              </p>
+            </div>
+
+            {/* Compliance → PROVE */}
+            <div className="bg-white border border-[#DDE1E9] rounded-lg p-8">
+              <div className="text-[0.72rem] font-semibold tracking-[0.10em] text-[#0D3D3D] uppercase mb-3">For Compliance and Audit</div>
+              <h3 className="text-lg font-bold text-[#0F1623] mb-4">PROVE — Continuous Governance</h3>
+              <p className="text-[#4A5568] text-[0.9rem] leading-relaxed">
+                You need evidence — not just policies. Keystrike gives you provable governance: tamper-evident session records mapped directly to NERC CIP, IEC 62443, and NIST requirements. Every remote access session generates audit-ready evidence automatically.
+              </p>
+            </div>
+
+            {/* SecOps → SEE */}
+            <div className="bg-white border border-[#DDE1E9] rounded-lg p-8">
+              <div className="text-[0.72rem] font-semibold tracking-[0.10em] text-[#0D3D3D] uppercase mb-3">For Security Operations</div>
+              <h3 className="text-lg font-bold text-[#0F1623] mb-4">SEE — Live Visibility</h3>
+              <p className="text-[#4A5568] text-[0.9rem] leading-relaxed">
+                You need to see what is happening right now — especially the sessions your existing tools miss. Keystrike gives you live visibility: a real-time map of every remote access connection, across every protocol, including sessions from unmanaged and unknown clients.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 6 - FAQ */}
+      <section id="faq" className="bg-white py-20">
+        <div className="max-w-[800px] mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0F1623] text-center mb-12">
+            Frequently Asked Questions
+          </h2>
+
+          <div className="space-y-4">
+            {[
+              {
+                q: "What is session governance for OT environments?",
+                a: "Session governance for OT environments means continuously verifying and controlling what happens during every privileged remote access session in operational technology infrastructure — including SCADA, ICS, and DCS systems. Unlike perimeter security or identity security, session governance operates after authentication, ensuring that authorised users only execute authorised commands."
+              },
+              {
+                q: "How does Keystrike differ from OT network monitoring tools like Dragos or Claroty?",
+                a: "OT network monitoring tools focus on network traffic analysis and asset discovery. Keystrike operates at the session layer — governing what authenticated users do during privileged remote sessions. Keystrike completes the security stack by adding the Governor layer alongside existing Gatekeeper (IAM/PAM) and Historian (SIEM/XDR) tools."
+              },
+              {
+                q: "Does Keystrike require agents on OT endpoints or PLCs?",
+                a: "No. Keystrike deploys without agents on OT endpoints, PLCs, RTUs, or HMIs. It governs sessions transparently within existing remote access workflows. Typical deployment completes in 20 minutes."
+              },
+              {
+                q: "Does Keystrike replace existing PAM, SIEM, or firewall?",
+                a: "No. Keystrike completes your existing security stack. IAM/PAM grants access, SIEM/XDR logs events, and Keystrike governs the live session in between — making existing tools work together to deliver continuous access governance."
+              },
+              {
+                q: "How does Keystrike handle third-party vendor remote access?",
+                a: "Keystrike governs third-party vendor sessions transparently — vendors connect through existing remote access tools with no additional steps. Every vendor session is subject to the same deterministic enforcement and generates the same tamper-evident record as internal operator sessions."
+              },
+              {
+                q: "Does Keystrike record keystrokes or capture screens?",
+                a: "No. Keystrike verifies that commands originate from a physical human operator through cryptographic attestation — without recording keystrokes, capturing screens, or conducting behavioural analysis."
+              },
+              {
+                q: "Can Keystrike operate in air-gapped or segmented OT networks?",
+                a: "Yes. Keystrike operates within the access pathways that already exist in Purdue Model architectures — governing sessions at the points where remote access enters the OT network."
+              },
+              {
+                q: "What compliance frameworks does Keystrike support for critical infrastructure?",
+                a: "Keystrike maps directly to NERC CIP (CIP-004, CIP-005, CIP-007), IEC 62443, EPA cybersecurity directives for water and wastewater systems, NIST Cybersecurity Framework, and NIST SP 800-82."
+              }
+            ].map((faq, index) => (
+              <details key={index} className="border border-[#DDE1E9] rounded-lg bg-white group">
+                <summary className="px-6 py-5 cursor-pointer font-semibold text-[#0F1623] text-[0.95rem] flex justify-between items-center hover:bg-[#F9FAFB] rounded-lg">
+                  <span>{faq.q}</span>
+                  <svg className="w-5 h-5 text-[#0D3D3D] flex-shrink-0 ml-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-6 pb-5 text-[#4A5568] text-[0.9rem] leading-relaxed">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 7 - Closing CTA */}
       <section className="bg-[#0D1B2A] py-20 text-center">
         <div className="max-w-[1100px] mx-auto px-4">
           {/* Eyebrow */}
@@ -384,12 +688,17 @@ export default function ManufacturingPage() {
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-4">
             <button className="bg-white text-[#0D1B2A] font-semibold rounded-[5px] px-[28px] py-[14px] hover:bg-[#F0F0F0] transition-colors">
-              See Keystrike in Your OT Environment
+              See Keystrike Govern a Live OT Session →
             </button>
             <button className="bg-transparent border-[1.5px] border-white text-white font-semibold rounded-[5px] px-[28px] py-[14px] hover:bg-white hover:bg-opacity-10 transition-colors">
-              Take the Remote Access Risk Assessment
+              Take the Remote Access Risk Assessment →
+            </button>
+          </div>
+          <div className="flex justify-center mb-6">
+            <button className="bg-transparent border-[1.5px] border-[#64748B] text-[#CBD5E1] font-semibold rounded-[5px] px-[28px] py-[14px] hover:bg-white hover:bg-opacity-5 transition-colors text-[0.9rem]">
+              Download the OT Compliance Mapping Guide →
             </button>
           </div>
 
