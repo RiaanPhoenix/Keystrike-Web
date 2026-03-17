@@ -36,8 +36,6 @@ export default function Footer() {
             <h4 className="font-semibold text-text-primary mb-4">Support</h4>
             <ul className="space-y-2 text-text-secondary text-sm">
               <li><a href="/docs" className="hover:text-accent">Documentation</a></li>
-              <li><a href="/portal/customer" className="hover:text-accent">Customer Portal</a></li>
-              <li><a href="/portal/partner" className="hover:text-accent">Partner Portal</a></li>
               <li><a href="/support" className="hover:text-accent">Contact Support</a></li>
             </ul>
           </div>

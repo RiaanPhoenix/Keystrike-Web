@@ -179,9 +179,9 @@ export default function Contact() {
                 Existing customer? Access technical support, documentation, and customer success resources
                 through our portal.
               </p>
-              <button className="btn btn-secondary w-full">
-                Customer Portal
-              </button>
+              <a href="/support" className="btn btn-secondary w-full block text-center">
+                Contact Support
+              </a>
               <p className="text-text-muted text-xs mt-4">
                 24/7 support availability
               </p>
@@ -544,8 +544,6 @@ export default function Contact() {
               <h4 className="font-semibold text-text-primary mb-4">Support</h4>
               <ul className="space-y-2 text-text-secondary text-sm">
                 <li><a href="/resources" className="hover:text-accent">Documentation</a></li>
-                <li><a href="/portal/customer" className="hover:text-accent">Customer Portal</a></li>
-                <li><a href="/portal/partner" className="hover:text-accent">Partner Portal</a></li>
                 <li><a href="/support" className="hover:text-accent">Contact Support</a></li>
               </ul>
             </div>
