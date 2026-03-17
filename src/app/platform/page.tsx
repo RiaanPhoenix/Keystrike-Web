@@ -800,7 +800,7 @@ export default function Platform() {
               Security Stack
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Completes Your Security Stack — No Rip and Replace
+              Complete Your Security Stack
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Keystrike is the essential final piece that makes your existing investments in identity, access management, and threat detection work together to deliver Continuous Access Governance.
