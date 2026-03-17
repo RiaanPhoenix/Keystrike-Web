@@ -26,7 +26,7 @@ const faqData = [
   },
   {
     question: "Is Keystrike a Zero Trust solution?",
-    answer: "Yes. Zero Trust calls for continuous verification, least privilege, and explicit authorization. Keystrike operationalizes this within live sessions by continually validating that actions are coming from a verified human on a verified device, and enforcing policy in real time.",
+    answer: "Keystrike aligns with Zero Trust principles — continuous verification, explicit authorization, and per-action enforcement — but it is not a generic Zero Trust platform. Keystrike is a continuous remote access governance platform that operationalizes post-authentication verification inside live sessions. It completes, rather than replaces, the Zero Trust access controls that IAM, MFA, and ZTNA provide.",
     category: "Executive Overview"
   },
   {
@@ -103,69 +103,69 @@ const faqData = [
   
   // Architecture, Deployment, and Operations
   {
-    question: "Is Keystrike a keylogger?",
+    question: "Does Keystrike record or store keystrokes?",
     answer: "No. Keystrike never transmits or stores raw keystrokes. It uses irreversible hashes/attestation artifacts solely to prove that the input was real, protecting user privacy and avoiding the risks of traditional keylogging.",
-    category: "Architecture, Deployment, and Operations"
+    category: "Technical Architecture & Deployment"
   },
   {
     question: "What operating systems does Keystrike support?",
     answer: "Windows and Linux are supported on the server side, with the workstation agent available for major desktop OSes. For the most current matrix (including versions such as Windows Server 2016+ and Linux support details), see the documentation: https://docs.keystrike.com/poc/keystrike-overview",
-    category: "Architecture, Deployment, and Operations"
+    category: "Technical Architecture & Deployment"
   },
   {
     question: "How do we deploy Keystrike?",
     answer: "Install the lightweight agent on user workstations and the Terminator agent on destination servers, then link them. Deployment is designed to be fast (single MSI on Windows, no reboot required) and can be automated via common enterprise tools (e.g., Group Policy).",
-    category: "Architecture, Deployment, and Operations"
+    category: "Technical Architecture & Deployment"
   },
   {
     question: "Will users need training or change their workflow?",
     answer: "No. End users work as usual. On first connection to a Keystrike-protected server, they will be prompted to complete a one-time pairing (mapping their server account to their identity). After that, the experience is transparent.",
-    category: "Architecture, Deployment, and Operations"
+    category: "Technical Architecture & Deployment"
   },
   {
     question: "Will Keystrike be detected or blocked by EDR?",
     answer: "There are no known incompatibilities with major EDR solutions. Keystrike operates as a read-only consumer of input events on the workstation and an inline verifier on servers, with a minimal footprint that avoids typical EDR friction points.",
-    category: "Architecture, Deployment, and Operations"
+    category: "Technical Architecture & Deployment"
   },
   {
     question: "Does Keystrike integrate with my Identity Provider (SSO)?",
     answer: "Yes. The Keystrike admin panel supports SSO with Microsoft and Google today. Additional IDP and SCIM integrations are on the roadmap.",
-    category: "Architecture, Deployment, and Operations"
+    category: "Technical Architecture & Deployment"
   },
   {
     question: "Can Keystrike be hosted entirely on our premises?",
     answer: "Not currently. Keystrike uses a secure, cloud-based dispatch service. For highly restricted environments, discuss options such as limited-connectivity configurations and recovery codes with our team.",
-    category: "Architecture, Deployment, and Operations"
+    category: "Technical Architecture & Deployment"
   },
   {
     question: "What happens if an attacker disables an agent?",
     answer: "Fail-secure behavior applies: if the workstation agent is disabled, no inputs have valid attestation, so the server drops all commands and raises alerts.",
-    category: "Architecture, Deployment, and Operations"
+    category: "Technical Architecture & Deployment"
   },
   {
     question: "What are the network and performance requirements?",
     answer: "Agents make a single outbound, encrypted connection to the dispatch service and use minimal bandwidth. The footprint is lightweight (on the order of a few MB of memory) and not on the system's critical path, so end users and admins generally do not notice any performance impact.",
-    category: "Architecture, Deployment, and Operations"
+    category: "Technical Architecture & Deployment"
   },
   {
     question: "Does Keystrike work with VDI and RMM tools?",
     answer: "Yes. For VDI, install the agent on the endpoint and the VDI session host to maintain the attestation chain. Keystrike also works alongside RMM tools; functionality for platforms like NinjaOne has been validated in recent Terminator versions.",
-    category: "Architecture, Deployment, and Operations"
+    category: "Technical Architecture & Deployment"
   },
   {
     question: "How does Keystrike behave if the dispatch service is unavailable?",
     answer: "Recovery codes allow continued access when needed (e.g., in critical infrastructure scenarios). Administrators can enter a recovery code at the protected system to restore operations safely until connectivity is re-established.",
-    category: "Architecture, Deployment, and Operations"
+    category: "Technical Architecture & Deployment"
   },
   {
     question: "Does Keystrike install kernel drivers or require reboots?",
     answer: "No kernel driver is required on Windows; Keystrike leverages standard OS APIs as a read-only consumer of input events, keeping the footprint small and deployment friction low.",
-    category: "Architecture, Deployment, and Operations"
+    category: "Technical Architecture & Deployment"
   },
   {
     question: "Is agent installation required on every endpoint?",
     answer: "Yes. Keystrike uses an agent-based model: a workstation agent on the user device and a Terminator agent on each protected server. This is essential to bind human input to a specific, approved device and to verify it at the server.",
-    category: "Architecture, Deployment, and Operations"
+    category: "Technical Architecture & Deployment"
   },
   
   // Use Cases
@@ -211,66 +211,66 @@ const faqData = [
   {
     question: "How does Keystrike help demonstrate control to regulators and auditors?",
     answer: "Keystrike produces continuous, session-level evidence that actions were executed only with verified human input and in accordance with policy. This is stronger than traditional access logs because it proves how access was used and preventive controls were actively enforced at the time of action.",
-    category: "Governance & Compliance"
+    category: "PROVE — Governance, Compliance & Audit Evidence"
   },
   {
     question: "How does Keystrike strengthen privileged access governance overall?",
     answer: "It moves organizations from periodic, after-the-fact reviews to continuous governance. With real-time enforcement, device-level authentication, human attestation, and structured telemetry, teams can both prevent misuse and furnish audit-ready evidence on demand—raising control maturity across regulated environments.",
-    category: "Governance & Compliance"
+    category: "PROVE — Governance, Compliance & Audit Evidence"
   },
   {
     question: "What compliance standards/certifications does Keystrike have?",
     answer: "Keystrike is SOC 2 Type 2 certified, with ISO 27001 in progress. The platform's continuous enforcement and evidence artifacts support controls relevant to privileged access, insider risk mitigation, and strong customer authentication themes.",
-    category: "Governance & Compliance"
+    category: "PROVE — Governance, Compliance & Audit Evidence"
   },
   
   // Competitive Differentiation
   {
     question: "How is Keystrike different from Privileged Access Management (PAM) solutions like CyberArk or BeyondTrust?",
     answer: "PAM locks away credentials, brokers approval, and elevates privileges. However, PAM typically stops at the moment access is granted. Keystrike governs what happens after login, validating that every action is human and compliant in real time and producing evidence as it happens. Together, PAM + Keystrike close the loop between access approval and access accountability.",
-    category: "Competitive Differentiation"
+    category: "How Keystrike Compares"
   },
   {
     question: "How is Keystrike different from SIEM platforms like Splunk or Microsoft Sentinel?",
     answer: "SIEM centralizes and correlates logs. It is superb for search and investigation but is reactive by nature. Keystrike acts in-band on the live session: it validates inputs, enforces policy, and generates structured, high-signal evidence – not just raw logs – so investigations start with a trustworthy ground truth.",
-    category: "Competitive Differentiation"
+    category: "How Keystrike Compares"
   },
   {
     question: "How is Keystrike different from session recording tools like CyberArk PSM or BeyondTrust Session Manager?",
     answer: "Recording tools capture what happened for later review; they do not stop bad actions in the moment. Keystrike blocks illegitimate inputs before commands run and retains attestations proving why an action was permitted or denied.",
-    category: "Competitive Differentiation"
+    category: "How Keystrike Compares"
   },
   {
     question: "Why isn't EDR, like CrowdStrike or Microsoft Defender, sufficient for privileged session security?",
     answer: "EDR detects and responds to malicious behavior at the endpoint, often probabilistically and post-execution. Keystrike is proactive and deterministic for interactive access: it allows only attested, human-driven actions and denies everything else, reducing the workload on EDR and SOC teams.",
-    category: "Competitive Differentiation"
+    category: "How Keystrike Compares"
   },
   {
     question: "If we already use MFA, ZTNA, or VPN tools like Okta, Microsoft Entra ID, or Zscaler, why do we need Keystrike?",
     answer: "MFA/ZTNA/VPN validate identity and network access at connection time. They don't continuously validate commands during the session. Keystrike governs the post-login trust gap by enforcing per-action legitimacy throughout the session.",
-    category: "Competitive Differentiation"
+    category: "How Keystrike Compares"
   },
   
   // Visibility & Discovery
   {
     question: "What is the Keystrike SEE module and what does it monitor?",
     answer: "SEE is a new module in the Keystrike product: a discovery and visibility capability. It maps remote access flows across the organization and surfaces which protocols (RDP, SSH, WinRM, PSExec, WMI, PowerShell remoting, FTP, Telnet, certain RMMs, etc.) are in use, which are secured by Keystrike, and where policy gaps remain.",
-    category: "Visibility & Discovery"
+    category: "SEE — Live Visibility & Discovery"
   },
   {
     question: "Where does the SEE Module get its data?",
     answer: "From the same agents that power enforcement. Workstation and server agents report telemetry to the central service, enabling the module to present a unified view of remote access activity and trends across departments and environments.",
-    category: "Visibility & Discovery"
+    category: "SEE — Live Visibility & Discovery"
   },
   {
     question: "Does SEE support natural language queries and scale to enterprises?",
     answer: "The SEE Module translates natural language questions into structured queries behind the scenes, making it accessible to both analysts and managers. It supports enterprise scale with grouping (e.g., via Active Directory departments/OU structures) and visualizations that can be collapsed by team or system role.",
-    category: "Visibility & Discovery"
+    category: "SEE — Live Visibility & Discovery"
   },
   {
     question: "Does SEE provide compliance reporting?",
     answer: "Roadmap capabilities include secure scores, burndown charts, and recommended actions that show progress over time (e.g., percentage of remote access now governed by Keystrike).",
-    category: "Visibility & Discovery"
+    category: "SEE — Live Visibility & Discovery"
   },
   
   // Company Information
@@ -334,13 +334,13 @@ export default function FAQ() {
   return (
     <>
       <Head>
-        <title>Frequently Asked Questions | Keystrike Cybersecurity</title>
-        <meta name="description" content="Common questions about Keystrike cybersecurity platform, physical input verification technology, pricing, implementation, and support. Expert answers from Nordic security innovators." />
-        <meta name="keywords" content="keystrike faq, physical input verification questions, cybersecurity platform help, keystroke analysis faq, enterprise security questions, implementation questions, support questions, pricing questions" />
-        <meta property="og:title" content="Keystrike FAQ | Physical Input Verification Questions" />
-        <meta property="og:description" content="Get answers to common questions about physical input verification technology, implementation, pricing, and cybersecurity platform capabilities." />
-        <meta property="og:url" content="/faq" />
-        <link rel="canonical" href="/faq" />
+        <title>Keystrike FAQ | Remote Access Governance, Session Security & Compliance Questions</title>
+        <meta name="description" content="Answers to the most common questions about Keystrike's continuous remote access governance platform — how it works, how it compares to PAM, SIEM, and EDR, and how it supports NIS2, DORA, HIPAA, and SOC 2 compliance." />
+        <meta name="keywords" content="keystrike faq, remote access governance questions, session governance platform, continuous verification after login, deterministic enforcement, cryptographic attestation, PAM vs keystrike, SIEM vs keystrike, NIS2 remote access compliance, DORA compliance faq, privileged remote access governance" />
+        <meta property="og:title" content="Keystrike FAQ | Remote Access Governance & Session Security Questions" />
+        <meta property="og:description" content="Answers to the most common questions about Keystrike's continuous remote access governance platform — how it works, how it compares to PAM, SIEM, and EDR, and how it supports NIS2, DORA, HIPAA, and SOC 2 compliance." />
+        <meta property="og:url" content="https://keystrike.com/faq" />
+        <link rel="canonical" href="https://keystrike.com/faq" />
       </Head>
       
       <div className="min-h-screen bg-background">
@@ -358,10 +358,13 @@ export default function FAQ() {
       <section className="bg-surface py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
-            Keystrike FAQ: Privileged Session Monitoring, Remote Access Security, and Zero Trust Enforcement
+            Keystrike FAQ: Remote Access Governance, Post-Authentication Security &amp; Compliance
           </h1>
-          <p className="text-xl text-text-secondary mb-8">
-            Get answers about how Keystrike closes the post-authentication security gap, how it compares to PAM, EDR, and SIEM tools, and how it supports compliance with NERC CIP, IEC 62443, DORA, and NIS2.
+          <p className="text-xl text-text-secondary mb-4">
+            Get answers about how Keystrike closes the governance gap between access intent and access reality, how it compares to PAM, SIEM, and EDR, and how it supports compliance with NIS2, DORA, IEC 62443, HIPAA, FedRAMP, and SOC 2.
+          </p>
+          <p className="text-base text-text-secondary max-w-3xl mx-auto mt-2">
+            Keystrike is a continuous remote access governance platform. It governs what happens after login — addressing the governance gap that IAM, PAM, SIEM, and EDR leave open. These questions and answers cover how Keystrike works, how it compares to adjacent tools, and what it means for your security stack and compliance obligations.
           </p>
         </div>
       </section>
@@ -501,23 +504,22 @@ export default function FAQ() {
         </div>
       </section>
 
-      {/* Contact CTA */}
+      {/* CTA */}
       <section className="bg-surface py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="card p-8">
             <h2 className="text-3xl font-bold text-text-primary mb-4">
-              Still Have Questions?
+              See Remote Access Governance in Practice
             </h2>
-            <p className="text-text-secondary mb-6">
-              Our cybersecurity experts are standing by to provide detailed answers 
-              and personalized consultation for your organization's security needs.
+            <p className="text-text-secondary mb-8 max-w-2xl mx-auto">
+              If you&apos;re assessing how to govern authenticated remote sessions in your environment — and what evidence you can produce when an auditor asks — the right first step is a direct conversation with someone who understands your stack.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a href="/contact" className="btn btn-primary">
-                Contact Security Expert
+                Request an Executive Briefing →
               </a>
-              <a href="/contact" className="btn btn-secondary">
-                Schedule Demo
+              <a href="/platform" className="btn btn-secondary">
+                See How the Platform Works →
               </a>
             </div>
           </div>
@@ -528,7 +530,7 @@ export default function FAQ() {
       <div className="sr-only">
         <div itemScope itemType="https://schema.org/Organization">
           <span itemProp="name">Keystrike</span>
-          <span itemProp="description">Advanced cybersecurity platform with physical input verification</span>
+          <span itemProp="description">Continuous remote access governance platform that addresses the Governance Gap between access intent and access reality. Keystrike delivers SEE (live session visibility), CONTROL (deterministic enforcement), and PROVE (cryptographic attestation) inside active remote sessions. It completes IAM, PAM, SIEM, and XDR investments.</span>
           <span itemProp="industry">Cybersecurity Software</span>
           <span itemProp="foundingDate">2021</span>
           <span itemProp="numberOfEmployees">100-500</span>
@@ -541,7 +543,7 @@ export default function FAQ() {
         
         <div itemScope itemType="https://schema.org/SoftwareApplication">
           <span itemProp="name">Keystrike Security Platform</span>
-          <span itemProp="applicationCategory">Enterprise Security Software</span>
+          <span itemProp="applicationCategory">Remote Access Governance Platform</span>
           <span itemProp="operatingSystem">Windows, macOS, Linux, Chrome OS</span>
           <span itemProp="softwareVersion">3.2.1</span>
         </div>
