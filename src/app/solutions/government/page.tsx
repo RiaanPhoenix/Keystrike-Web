@@ -318,6 +318,30 @@ export default function Government() {
         </div>
       </section>
 
+      {/* Customer Testimonial */}
+      <section className="bg-white py-20">
+        <div className="max-w-[800px] mx-auto px-4">
+          <div className="text-[11px] font-normal tracking-[0.10em] text-[#6B7280] uppercase mb-6 text-center">
+            CUSTOMER STORY
+          </div>
+          <div className="bg-[#F4F5F7] rounded-lg p-10 border border-[#E5E7EB]">
+            <p className="text-[15px] font-semibold text-[#0F1623] mb-6">
+              Amer Sports Blocks Lateral Movement
+            </p>
+            <blockquote className="text-[17px] text-[#374151] italic leading-[1.8] mb-8">
+              "When I learned about Keystrike, I loved the simplicity. Keystrike ensures that only our own employees are accessing our servers, not adversaries who have hacked our employees. But Keystrike also doesn't bother or distract our employees at all, which is a great win-win: stronger security without added inconvenience."
+            </blockquote>
+            <div className="flex items-center gap-6">
+              <div>
+                <div className="text-[15px] font-semibold text-[#0F1623]">Heimir Kristjansson</div>
+                <div className="text-[14px] text-[#6B7280]">Cyber Security Operations Manager, Amer Sports</div>
+                <div className="text-[12px] text-[#9CA3AF] mt-1">Sporting Goods / Enterprise</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action */}
       <section className="bg-accent py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
