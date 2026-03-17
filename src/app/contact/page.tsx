@@ -67,12 +67,11 @@ export default function Contact() {
                 <a href="/" className="text-2xl font-bold text-text-primary">Keystrike</a>
               </div>
               <nav className="hidden md:ml-10 md:flex md:space-x-8">
-                <a href="#" className="text-text-secondary hover:text-text-primary px-3 py-2 text-sm font-medium">Solutions</a>
-                <a href="#" className="text-text-secondary hover:text-text-primary px-3 py-2 text-sm font-medium">Platform</a>
-                <a href="#" className="text-text-secondary hover:text-text-primary px-3 py-2 text-sm font-medium">Resources</a>
-                <a href="#" className="text-text-secondary hover:text-text-primary px-3 py-2 text-sm font-medium">Partners</a>
+                <a href="/solutions" className="text-text-secondary hover:text-text-primary px-3 py-2 text-sm font-medium">Solutions</a>
+                <a href="/platform" className="text-text-secondary hover:text-text-primary px-3 py-2 text-sm font-medium">Platform</a>
+                <a href="/resources" className="text-text-secondary hover:text-text-primary px-3 py-2 text-sm font-medium">Resources</a>
                 <a href="/about" className="text-text-secondary hover:text-text-primary px-3 py-2 text-sm font-medium">Company</a>
-                <a href="#" className="text-text-secondary hover:text-text-primary px-3 py-2 text-sm font-medium">Support</a>
+                <a href="/support" className="text-text-secondary hover:text-text-primary px-3 py-2 text-sm font-medium">Support</a>
               </nav>
             </div>
             <div className="flex items-center space-x-4">
@@ -526,28 +525,28 @@ export default function Contact() {
             <div>
               <h4 className="font-semibold text-text-primary mb-4">Solutions</h4>
               <ul className="space-y-2 text-text-secondary text-sm">
-                <li><a href="#" className="hover:text-accent">Remote Access Governance</a></li>
-                <li><a href="#" className="hover:text-accent">Session Governance</a></li>
-                <li><a href="#" className="hover:text-accent">OT / Critical Infrastructure</a></li>
-                <li><a href="#" className="hover:text-accent">Compliance &amp; Audit Readiness</a></li>
+                <li><a href="/solutions" className="hover:text-accent">Remote Access Governance</a></li>
+                <li><a href="/platform" className="hover:text-accent">Session Governance</a></li>
+                <li><a href="/solutions/manufacturing" className="hover:text-accent">OT / Critical Infrastructure</a></li>
+                <li><a href="/solutions" className="hover:text-accent">Compliance &amp; Audit Readiness</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold text-text-primary mb-4">Company</h4>
               <ul className="space-y-2 text-text-secondary text-sm">
                 <li><a href="/about" className="hover:text-accent">About Us</a></li>
-                <li><a href="#" className="hover:text-accent">Leadership</a></li>
-                <li><a href="#" className="hover:text-accent">Careers</a></li>
+                <li><a href="/about" className="hover:text-accent">Leadership</a></li>
+                <li><a href="/about" className="hover:text-accent">Careers</a></li>
                 <li><a href="/contact" className="hover:text-accent">Contact</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold text-text-primary mb-4">Support</h4>
               <ul className="space-y-2 text-text-secondary text-sm">
-                <li><a href="#" className="hover:text-accent">Documentation</a></li>
-                <li><a href="#" className="hover:text-accent">Customer Portal</a></li>
-                <li><a href="#" className="hover:text-accent">Partner Portal</a></li>
-                <li><a href="#" className="hover:text-accent">Contact Support</a></li>
+                <li><a href="/resources" className="hover:text-accent">Documentation</a></li>
+                <li><a href="/portal/customer" className="hover:text-accent">Customer Portal</a></li>
+                <li><a href="/portal/partner" className="hover:text-accent">Partner Portal</a></li>
+                <li><a href="/support" className="hover:text-accent">Contact Support</a></li>
               </ul>
             </div>
           </div>
