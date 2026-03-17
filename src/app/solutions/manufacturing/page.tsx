@@ -56,10 +56,18 @@ export default function ManufacturingPage() {
               },
               {
                 "@type": "Question",
-                "name": "Does Keystrike replace existing PAM, SIEM, or firewall?",
+                "name": "Does Keystrike replace our PAM or IAM?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "No. Keystrike completes your existing security stack. IAM/PAM grants access, SIEM/XDR logs events, and Keystrike governs the live session in between — making existing tools work together to deliver continuous access governance."
+                  "text": "No. Keystrike completes PAM and IAM by governing what happens inside the sessions they grant. PAM controls who gets access to OT systems and manages privileged credentials. Keystrike governs what those users do once they're inside the session — verifying commands in real time and blocking unauthorized actions before they execute."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Keystrike replace our SIEM or XDR?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. SIEM and XDR log events after they occur — detection is inherently reactive. Keystrike complements your SIEM by governing what happens during the live session and generating cryptographically attested session evidence that enriches your existing log data with verified, tamper-proof records."
                 }
               },
               {
@@ -72,7 +80,7 @@ export default function ManufacturingPage() {
               },
               {
                 "@type": "Question",
-                "name": "Does Keystrike record keystrokes or capture screens?",
+                "name": "Does Keystrike record or store keystrokes?",
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "No. Keystrike verifies that commands originate from a physical human operator through cryptographic attestation — without recording keystrokes, capturing screens, or conducting behavioural analysis."
@@ -631,15 +639,19 @@ export default function ManufacturingPage() {
                 a: "No. Keystrike deploys without agents on OT endpoints, PLCs, RTUs, or HMIs. It governs sessions transparently within existing remote access workflows. Typical deployment completes in 20 minutes."
               },
               {
-                q: "Does Keystrike replace existing PAM, SIEM, or firewall?",
-                a: "No. Keystrike completes your existing security stack. IAM/PAM grants access, SIEM/XDR logs events, and Keystrike governs the live session in between — making existing tools work together to deliver continuous access governance."
+                q: "Does Keystrike replace our PAM or IAM?",
+                a: "No. Keystrike completes PAM and IAM by governing what happens inside the sessions they grant. PAM controls who gets access to OT systems and manages privileged credentials. Keystrike governs what those users do once they're inside the session — verifying commands in real time and blocking unauthorized actions before they execute."
+              },
+              {
+                q: "Does Keystrike replace our SIEM or XDR?",
+                a: "No. SIEM and XDR log events after they occur — detection is inherently reactive. Keystrike complements your SIEM by governing what happens during the live session and generating cryptographically attested session evidence that enriches your existing log data with verified, tamper-proof records."
               },
               {
                 q: "How does Keystrike handle third-party vendor remote access?",
                 a: "Keystrike governs third-party vendor sessions transparently — vendors connect through existing remote access tools with no additional steps. Every vendor session is subject to the same deterministic enforcement and generates the same tamper-evident record as internal operator sessions."
               },
               {
-                q: "Does Keystrike record keystrokes or capture screens?",
+                q: "Does Keystrike record or store keystrokes?",
                 a: "No. Keystrike verifies that commands originate from a physical human operator through cryptographic attestation — without recording keystrokes, capturing screens, or conducting behavioural analysis."
               },
               {

@@ -61,7 +61,7 @@ export default function BankingPage() {
               },
               {
                 "@type": "Question",
-                "name": "Is Keystrike a keylogger?",
+                "name": "Does Keystrike record or store keystrokes?",
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "No. Keystrike does not record keystrokes, credentials, or personally identifiable information. The workstation agent verifies that input originates from physical human interaction on an approved device using cryptographic attestation."
@@ -615,7 +615,7 @@ export default function BankingPage() {
                 a: "The Digital Operational Resilience Act (DORA) requires financial institutions to maintain robust ICT risk management, monitoring, and third-party oversight. Keystrike supports DORA compliance through continuous session governance (Article 9), tamper-evident session records (Article 11), governed third-party sessions (Article 15), and verifiable enforcement for resilience testing (Article 26)."
               },
               {
-                q: "Is Keystrike a keylogger?",
+                q: "Does Keystrike record or store keystrokes?",
                 a: "No. Keystrike does not record keystrokes, credentials, or personally identifiable information. The workstation agent verifies that input originates from physical human interaction on an approved device using cryptographic attestation. The content of the input is not captured or stored."
               },
               {

@@ -76,7 +76,7 @@ const jsonLdFaq = {
     },
     {
       '@type': 'Question',
-      name: 'Is Keystrike a keylogger or surveillance tool?',
+      name: 'Does Keystrike record or store keystrokes?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'No. Keystrike does not record keystrokes, credentials, or personally identifiable information. Session verification is cryptographic — the platform verifies that commands originated from legitimate physical human input on an approved device. It does not store what was typed.',
@@ -694,7 +694,7 @@ export default function Healthcare() {
                 a: 'No. Keystrike assumes your identity tools are doing their job. It adds the governance layer they were never designed to provide — controlling what happens inside the session after authentication succeeds.',
               },
               {
-                q: 'Is Keystrike a keylogger or surveillance tool?',
+                q: 'Does Keystrike record or store keystrokes?',
                 a: 'No. Keystrike does not record keystrokes, credentials, or personally identifiable information. Session verification is cryptographic — the platform verifies that commands originated from legitimate physical human input on an approved device. It does not store what was typed.',
               },
               {

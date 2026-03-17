@@ -122,7 +122,7 @@ export default function Platform() {
               },
               {
                 "@type": "Question",
-                "name": "Is Keystrike a keylogger?",
+                "name": "Does Keystrike record or store keystrokes?",
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "No. Keystrike does not record keystrokes, credentials, or PII. It verifies that input originates from a legitimate physical source using cryptographic attestation without capturing or storing the content of what is typed."

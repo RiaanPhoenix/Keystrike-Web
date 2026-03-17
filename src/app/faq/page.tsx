@@ -34,7 +34,22 @@ const faqData = [
     answer: "Keystrike eliminates blind trust in authenticated sessions. Rather than detect misuse after-the-fact, it prevents unauthorized actions as they are attempted and produces continuous, audit-ready evidence that control was enforced throughout the session.",
     category: "Executive Overview"
   },
-  
+  {
+    question: "What is the Governance Gap?",
+    answer: "The Governance Gap is the space between access intent and access reality. When a user authenticates through IAM, PAM, or MFA, the security stack has done its job — up to that point. But authentication answers only one question: should this person be allowed in? It says nothing about what happens inside the session — what commands are run, what files are touched, what systems are reached. That gap — between who was granted access and what they actually did with it — is where authenticated attackers operate, ransomware is deployed through legitimate credentials, and third-party contractors exceed their authorized scope. Keystrike closes this gap by governing the live session itself.",
+    category: "Executive Overview"
+  },
+  {
+    question: "Why isn't MFA enough to secure remote sessions after login?",
+    answer: "MFA verifies identity at the moment of login. Once access is granted, MFA has done its job — it provides no visibility into, or control over, what happens inside the session. An attacker who has stolen valid credentials and MFA tokens, or who has hijacked an active session, operates with full privileges after authentication completes. Keystrike addresses this by continuously verifying every action inside the session — not just the login event — ensuring that commands are deterministically enforced against policy throughout the session, not just at the perimeter.",
+    category: "Executive Overview"
+  },
+  {
+    question: "How does Keystrike govern third-party and contractor remote access?",
+    answer: "Third-party remote access is one of the highest-risk vectors in enterprise environments. Keystrike governs contractor and vendor sessions the same way it governs internal sessions — with live visibility (SEE), deterministic enforcement (CONTROL), and continuous evidence generation (PROVE). This ensures contractors operate within their authorized scope, unauthorized commands are blocked before they execute, and every session produces cryptographically attested audit records. This is directly applicable to NIS2, DORA, and other frameworks that require organizations to govern, not just permit, third-party remote access.",
+    category: "Executive Overview"
+  },
+
   // How Keystrike Works
   {
     question: "How does Keystrike enforce remote access policies?",
@@ -114,7 +129,7 @@ const faqData = [
   },
   {
     question: "How do we deploy Keystrike?",
-    answer: "Install the lightweight agent on user workstations and the Terminator agent on destination servers, then link them. Deployment is designed to be fast (single MSI on Windows, no reboot required) and can be automated via common enterprise tools (e.g., Group Policy).",
+    answer: "Install the lightweight agent on user workstations and the Terminator agent on destination servers, then link them. Deployment is designed to be fast — customers report Keystrike is operational in approximately 20 minutes, with a single MSI on Windows, no reboot required. Deployment can be automated via common enterprise tools (e.g., Group Policy).",
     category: "Technical Architecture & Deployment"
   },
   {

@@ -65,7 +65,7 @@ export default function MSSPs() {
               },
               {
                 "@type": "Question",
-                "name": "Does Keystrike record keystrokes or capture screens?",
+                "name": "Does Keystrike record or store keystrokes?",
                 "acceptedAnswer": { "@type": "Answer", "text": "No. Keystrike verifies that commands originate from a physical human operator through cryptographic attestation — without recording keystrokes, capturing screens, or conducting behavioural analysis. Session verification is deterministic, not probabilistic." }
               },
               {
@@ -1162,7 +1162,7 @@ export default function MSSPs() {
               <p className="text-text-secondary mt-4">Keystrike deploys in approximately 20 minutes per managed environment. No lengthy professional services engagement, no complex integration project. It integrates with existing MFA, PAM, and SIEM infrastructure with no rip-and-replace.</p>
             </details>
             <details className="card p-6 cursor-pointer">
-              <summary className="text-lg font-semibold text-text-primary">Does Keystrike record keystrokes or capture screens?</summary>
+              <summary className="text-lg font-semibold text-text-primary">Does Keystrike record or store keystrokes?</summary>
               <p className="text-text-secondary mt-4">No. Keystrike verifies that commands originate from a physical human operator through cryptographic attestation — without recording keystrokes, capturing screens, or conducting behavioural analysis. Session verification is deterministic, not probabilistic.</p>
             </details>
             <details className="card p-6 cursor-pointer">
