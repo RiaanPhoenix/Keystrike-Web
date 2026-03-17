@@ -417,50 +417,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Global Presence */}
-      <section className="bg-surface py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-text-primary mb-4">Where We Operate</h2>
-            <p className="text-xl text-text-secondary">
-              Global reach from our Nordic research roots
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold text-text-primary mb-1">Nordic Headquarters</h3>
-              <p className="text-accent text-sm font-medium mb-2">Reykjavik, Iceland</p>
-              <p className="text-text-secondary text-sm">Home of our research and engineering team</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold text-text-primary mb-1">North American Office</h3>
-              <p className="text-accent text-sm font-medium mb-2">Austin, Texas</p>
-              <p className="text-text-secondary text-sm">Serving enterprise, financial services, and government customers</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold text-text-primary mb-1">Middle East Office</h3>
-              <p className="text-accent text-sm font-medium mb-2">Dubai, UAE</p>
-              <p className="text-text-secondary text-sm">Serving critical infrastructure, energy, and government sectors</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="bg-accent py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
