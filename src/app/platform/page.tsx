@@ -810,7 +810,6 @@ export default function Platform() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-surface-secondary p-8 rounded-lg border border-gray-700">
               <h3 className="text-xl font-bold text-text-primary mb-4">IAM & PAM</h3>
-              <h4 className="text-lg font-semibold text-text-primary mb-4">The Gatekeeper</h4>
               <p className="text-text-secondary mb-6">
                 Controls who gets in. Without Keystrike, goes blind the moment the session starts.
               </p>
@@ -821,7 +820,6 @@ export default function Platform() {
             
             <div className="bg-surface-secondary p-8 rounded-lg border border-gray-700">
               <h3 className="text-xl font-bold text-text-primary mb-4">SIEM, SOAR & XDR</h3>
-              <h4 className="text-lg font-semibold text-text-primary mb-4">The Historian</h4>
               <p className="text-text-secondary mb-6">
                 Records and correlates events. Without Keystrike, relies on reactive, probabilistic detection.
               </p>
