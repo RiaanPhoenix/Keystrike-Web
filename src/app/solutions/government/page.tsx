@@ -332,6 +332,11 @@ export default function Government() {
               "When I learned about Keystrike, I loved the simplicity. Keystrike ensures that only our own employees are accessing our servers, not adversaries who have hacked our employees. But Keystrike also doesn't bother or distract our employees at all, which is a great win-win: stronger security without added inconvenience."
             </blockquote>
             <div className="flex items-center gap-6">
+              <img
+                src="/logos/amer-sports-logo.png"
+                alt="Amer Sports"
+                className="h-10 w-auto object-contain"
+              />
               <div>
                 <div className="text-[15px] font-semibold text-[#0F1623]">Heimir Kristjansson</div>
                 <div className="text-[14px] text-[#6B7280]">Cyber Security Operations Manager, Amer Sports</div>
