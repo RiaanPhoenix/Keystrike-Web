@@ -868,26 +868,26 @@ export default function Platform() {
           {/* 4-column grid on desktop */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-              <div className="text-4xl font-bold text-accent mb-2">86%</div>
-              <div className="text-lg font-semibold text-text-primary mb-2">of real attacks unfold after access is granted</div>
-              <div className="text-sm text-gray-500 italic">Palo Alto Unit 42, 2025</div>
+              <div className="text-4xl font-bold text-accent mb-2">68%</div>
+              <div className="text-lg font-semibold text-text-primary mb-2">of MSSPs report difficulty providing session-level audit evidence to clients</div>
+              <div className="text-sm text-gray-500 italic">Ponemon / ServiceNow, 2024 MSSP Challenges Report</div>
             </div>
             
             <div className="text-center bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-              <div className="text-4xl font-bold text-accent mb-2">280</div>
-              <div className="text-lg font-semibold text-text-primary mb-2">days average attacker dwell time</div>
-              <div className="text-sm text-gray-500 italic">IBM Cost of a Data Breach Report</div>
+              <div className="text-4xl font-bold text-accent mb-2">35%</div>
+              <div className="text-lg font-semibold text-text-primary mb-2">of data center breaches involved third-party vendor access</div>
+              <div className="text-sm text-gray-500 italic">Verizon DBIR 2024 / Ponemon Third-Party Risk Study</div>
             </div>
             
             <div className="text-center bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-              <div className="text-4xl font-bold text-accent mb-2">19%</div>
-              <div className="text-lg font-semibold text-text-primary mb-2">of attacks complete within one hour of access</div>
-              <div className="text-sm text-gray-500 italic">Verizon DBIR, 2024</div>
+              <div className="text-4xl font-bold text-accent mb-2">60%</div>
+              <div className="text-lg font-semibold text-text-primary mb-2">of OT incidents had remote exploitation as the initial access vector</div>
+              <div className="text-sm text-gray-500 italic">Dragos, 2024 OT Cybersecurity Year in Review</div>
             </div>
             
             <div className="text-center bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-              <div className="text-4xl font-bold text-accent mb-2">19%</div>
-              <div className="text-lg font-semibold text-text-primary mb-2">of attacks complete within one hour</div>
+              <div className="text-4xl font-bold text-accent mb-2">45%</div>
+              <div className="text-lg font-semibold text-text-primary mb-2">of manufacturing cyberattacks involved credential theft or abuse</div>
               <div className="text-sm text-gray-500 italic">Verizon DBIR, 2024</div>
             </div>
           </div>
