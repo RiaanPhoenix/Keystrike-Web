@@ -16,12 +16,6 @@ const TestimonialCarousel = () => {
       author: "CISO",
       organization: "Nordic Central Bank"
     },
-    {
-      id: 3,
-      quote: "For a city government, cybersecurity is about maintaining continuity of essential public services and protecting citizen data. Credential-based attacks against municipal systems can disrupt operations and erode public trust. Keystrike strengthens our resilience by continuously validating real user presence during privileged sessions, reducing the risk of unauthorised access across critical city infrastructure.",
-      author: "CISO",
-      organization: "City of Tulsa"
-    }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
