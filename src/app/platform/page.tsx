@@ -3,21 +3,25 @@ import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Keystrike Platform | Continuous Access Governance for Privileged Sessions',
-  description: 'Keystrike\'s patented platform closes the post-authentication security gap with cryptographic attestation. See, Control, and Prove everything that happens inside privileged remote sessions.',
+  title: 'Continuous Remote Access Governance Platform | Keystrike',
+  description: 'Keystrike is a continuous remote access governance platform. It governs what happens after access is granted — live visibility into every remote session, deterministic enforcement that blocks unauthorized commands before execution, and continuous audit-ready proof of control. Completes IAM, PAM, and SIEM. Deploys in 20 minutes.',
   keywords: [
+    'continuous remote access governance',
+    'remote access governance platform',
+    'governance gap remote access',
+    'session governance platform',
     'keystrike platform',
-    'continuous access governance',
     'cryptographic attestation',
     'privileged session security',
-    'post-authentication gap',
+    'post-authentication security',
+    'deterministic session enforcement',
+    'remote access governance',
     'physical input verification',
-    'real-time session monitoring',
     'tamper-evident audit trails'
   ],
   openGraph: {
-    title: 'Keystrike Platform | Continuous Access Governance',
-    description: 'The patented platform that closes the post-authentication gap. Cryptographic verification of every action inside privileged remote sessions.',
+    title: 'Keystrike | Continuous Remote Access Governance Platform',
+    description: 'Keystrike governs what happens after access is granted — live session visibility, deterministic enforcement, and audit-ready proof of control. Completes IAM, PAM, and SIEM.',
     type: 'website',
     url: 'https://keystrike.com/platform',
     siteName: 'Keystrike',
@@ -32,8 +36,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Keystrike Platform | Continuous Access Governance',
-    description: 'Patented cryptographic attestation closes the post-authentication gap in privileged sessions.',
+    title: 'Keystrike | Continuous Remote Access Governance Platform',
+    description: 'Keystrike governs what happens after access is granted — live session visibility, deterministic enforcement, and audit-ready proof of control. Completes IAM, PAM, and SIEM.',
     images: ['https://keystrike.com/images/og-platform.png'],
   },
   alternates: {
@@ -56,7 +60,7 @@ export default function Platform() {
             "name": "Keystrike Platform",
             "applicationCategory": "SecurityApplication",
             "operatingSystem": "Windows, Linux",
-            "description": "Continuous access governance platform that cryptographically verifies every action inside privileged remote sessions using patented physical input attestation technology.",
+            "description": "Keystrike is a continuous remote access governance platform. It governs what happens after access is granted — providing live visibility into every remote session, deterministic enforcement that blocks unauthorized commands through cryptographic attestation, and continuous audit-ready proof of control. Completes IAM, PAM, and SIEM. Does not replace them.",
             "offers": {
               "@type": "Offer",
               "availability": "https://schema.org/InStock",
@@ -69,10 +73,12 @@ export default function Platform() {
               "foundingLocation": "Reykjavik, Iceland"
             },
             "featureList": [
+              "Continuous remote access governance",
               "Cryptographic attestation of physical input",
-              "Real-time privileged session monitoring",
               "Deterministic enforcement with zero false positives",
               "Session-level policy enforcement",
+              "Live remote session mapping across all protocols",
+              "Governance Gap closure between access intent and access reality",
               "Tamper-evident audit trails",
               "RDP, SSH, PowerShell Remoting, WinRM, WMI, SMB protocol support",
               "20-minute deployment",
@@ -127,7 +133,7 @@ export default function Platform() {
                 "name": "What remote access protocols does Keystrike support?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Keystrike monitors and enforces policy across RDP (Remote Desktop Protocol), SSH, PowerShell Remoting, WinRM, WMI, SMB, and third-party remote access tools including NinjaOne and TeamViewer."
+                  "text": "Keystrike governs and enforces policy across RDP (Remote Desktop Protocol), SSH, PowerShell Remoting, WinRM, WMI, SMB, and third-party remote access tools including NinjaOne and TeamViewer. It also surfaces unknown and unmanaged remote access paths as part of the SEE capability — providing a live map of your entire remote access attack surface."
                 }
               },
               {
@@ -204,17 +210,20 @@ export default function Platform() {
             style={{ 
               fontSize: '18px', 
               color: '#CBD5E1', 
-              maxWidth: '620px'
+              maxWidth: '620px',
+              lineHeight: '1.7'
             }}
           >
-            Identity tools verify who logs in. Keystrike verifies what happens next. Our patented cryptographic attestation platform closes the post-authentication gap — blocking unauthorized actions in real time, with zero false positives.
+            <p className="mb-4">Identity tools verify who logs in. Keystrike governs what happens next.</p>
+            <p className="mb-4">There is a persistent <strong style={{ color: '#FFFFFF' }}>Governance Gap between access intent — who you authorized — and access reality — what actually happens inside the session</strong>. IAM, PAM, MFA, SIEM, and EDR were not designed to close it. Keystrike was.</p>
+            <p>Our continuous remote access governance platform delivers live visibility into every session, deterministic enforcement that blocks unauthorized commands through cryptographic attestation, and continuous audit-ready proof of control — without replacing a single tool in your existing stack.</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-[16px] mb-12">
             <a href="/contact" className="w-full sm:w-auto bg-[#0D3D3D] text-[#FFFFFF] hover:bg-[#1A5252] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-none transition-colors text-center">
               See Keystrike in Your Environment →
             </a>
-            <a href="/resources" className="w-full sm:w-auto bg-transparent text-white hover:bg-[rgba(255,255,255,0.08)] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-[1.5px] border-solid border-white transition-colors text-center">
-              Start a Free Session Audit
+            <a href="/contact?type=assessment" className="w-full sm:w-auto bg-transparent text-white hover:bg-[rgba(255,255,255,0.08)] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-[1.5px] border-solid border-white transition-colors text-center">
+              Start a Free Remote Access Assessment
             </a>
           </div>
 
@@ -263,10 +272,13 @@ export default function Platform() {
               The Problem
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-6">
-              Your Security Stack Has a Blind Spot
+              The Governance Gap: What Happens Between Login and Your Next Alert
             </h2>
-            <p className="text-lg text-text-secondary mb-8 max-w-4xl">
+            <p className="text-lg text-text-secondary mb-6 max-w-4xl">
               Every major security investment you've made — IAM, MFA, PAM, SIEM, EDR — focuses on one of two moments: the point of login or the aftermath of a breach. None of them govern what happens during an active privileged session. Attackers know this.
+            </p>
+            <p className="text-lg text-text-secondary mb-8 max-w-4xl">
+              This is the <strong className="text-text-primary">Governance Gap between access intent and access reality</strong>. IAM grants the key. SIEM stores the record. But between login and the next alert, no tool in your stack governs the session. That is where attackers operate — and where Keystrike closes the gap.
             </p>
           </div>
           
@@ -360,7 +372,7 @@ export default function Platform() {
               The Solution
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Patented Cryptographic Attestation of Physical Input
+              Continuous Remote Access Governance — Built on Patented Cryptographic Attestation
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-4xl">
               Keystrike is built on a foundational insight: the one thing attackers cannot fake is physical human input. Our patented technology cryptographically ties every action inside a remote session to a verified physical keystroke or mouse event on an approved device. No behavioral guessing. No probabilistic scoring. Deterministic verification, every time.
@@ -822,7 +834,7 @@ export default function Platform() {
               <h3 className="text-xl font-bold text-white mb-4">Keystrike</h3>
               <h4 className="text-lg font-semibold text-accent mb-4">The Governor</h4>
               <p className="text-gray-200 mb-6">
-                Continuous, real-time session governance. Every action verified cryptographically from login to logout.
+                Continuous Remote Access Governance. Every action inside the session verified cryptographically from login to logout — closing the Governance Gap that IAM, PAM, and SIEM were never designed to address.
               </p>
               <p className="text-sm text-accent italic">
                 Cryptographic attestation · Deterministic enforcement · Zero false positives
@@ -868,9 +880,9 @@ export default function Platform() {
             </div>
             
             <div className="text-center bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-              <div className="text-4xl font-bold text-accent mb-2">86%</div>
-              <div className="text-lg font-semibold text-text-primary mb-2">of ransomware uses valid remote credentials</div>
-              <div className="text-sm text-gray-500 italic">Sophos Ransomware Report</div>
+              <div className="text-4xl font-bold text-accent mb-2">19%</div>
+              <div className="text-lg font-semibold text-text-primary mb-2">of attacks complete within one hour of access</div>
+              <div className="text-sm text-gray-500 italic">Verizon DBIR, 2024</div>
             </div>
             
             <div className="text-center bg-white p-8 rounded-lg shadow-sm border border-gray-200">
@@ -908,6 +920,7 @@ export default function Platform() {
               <div className="text-text-secondary">
                 <div className="font-semibold">Heimir Kristjansson</div>
                 <div className="text-sm">Cyber Security Operations Manager, Amer Sports</div>
+                <div className="text-xs text-gray-400 mt-1">Sporting Goods / Enterprise</div>
               </div>
             </div>
             
@@ -918,9 +931,13 @@ export default function Platform() {
               <div className="text-text-secondary">
                 <div className="font-semibold">Steven Brill</div>
                 <div className="text-sm">VP of IT Operations and Security, Global Water Resources</div>
+                <div className="text-xs text-gray-400 mt-1">Critical Infrastructure / Water Utility</div>
               </div>
             </div>
           </div>
+          <p className="text-center text-sm text-gray-500 italic mt-10">
+            Keystrike customers include a central bank, a city government, and enterprises across critical infrastructure.
+          </p>
         </div>
       </section>
 
@@ -940,8 +957,11 @@ export default function Platform() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Built for Regulatory Scrutiny
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-300 mb-4 max-w-4xl mx-auto">
               Keystrike's tamper-evident audit trails and cryptographic session evidence are structured to meet the requirements of major regulatory frameworks.
+            </p>
+            <p className="text-sm text-gray-400 max-w-2xl mx-auto mb-8">
+              Keystrike is not a compliance tool. Compliance evidence is a continuous output of governance working as designed — produced as sessions are governed, not assembled under audit pressure.
             </p>
           </div>
           
@@ -979,17 +999,20 @@ export default function Platform() {
       <section style={{ backgroundColor: '#0F1623' }} className="w-full py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Close the Post-Authentication Gap
+            Close the Governance Gap. Govern Every Remote Session.
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            See how Keystrike delivers Continuous Access Governance across your privileged sessions — with a live walkthrough in your environment.
+          <p className="text-xl text-gray-300 mb-4">
+            See how Keystrike delivers Continuous Remote Access Governance across your privileged sessions — with a live walkthrough in your environment.
+          </p>
+          <p className="text-lg text-gray-400 mb-8">
+            Deploys in 20 minutes. No rip-and-replace. Completes your existing stack.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a href="/contact" className="bg-[#0D3D3D] text-[#FFFFFF] hover:bg-[#1A5252] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-none transition-colors text-center">
               Request a Demo →
             </a>
-            <a href="/resources/risk-assessment" className="bg-transparent text-white hover:bg-[rgba(255,255,255,0.08)] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-[1.5px] border-solid border-white transition-colors text-center">
-              Take the Risk Assessment
+            <a href="/contact?type=assessment" className="bg-transparent text-white hover:bg-[rgba(255,255,255,0.08)] px-[28px] py-[14px] text-lg font-semibold rounded-[5px] border-[1.5px] border-solid border-white transition-colors text-center">
+              Take the Remote Access Risk Assessment
             </a>
           </div>
         </div>
