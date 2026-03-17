@@ -234,24 +234,24 @@ export default function Platform() {
           }}>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
-                <div style={{ fontSize: '32px', fontWeight: '700', color: '#FFFFFF', marginBottom: '8px' }}>86%</div>
-                <div style={{ fontSize: '14px', color: '#9CA3AF', marginBottom: '4px' }}>of attacks unfold after access is granted</div>
-                <div style={{ fontSize: '12px', color: '#6B7280', fontStyle: 'italic' }}>Palo Alto Unit 42, 2025</div>
+                <div style={{ fontSize: '32px', fontWeight: '700', color: '#FFFFFF', marginBottom: '8px' }}>71%</div>
+                <div style={{ fontSize: '14px', color: '#9CA3AF', marginBottom: '4px' }}>surge in attacks using stolen credentials in industrial environments</div>
+                <div style={{ fontSize: '12px', color: '#6B7280', fontStyle: 'italic' }}>IBM X-Force, 2024 Threat Intelligence Index</div>
               </div>
               <div className="text-center">
-                <div style={{ fontSize: '32px', fontWeight: '700', color: '#FFFFFF', marginBottom: '8px' }}>280</div>
-                <div style={{ fontSize: '14px', color: '#9CA3AF', marginBottom: '4px' }}>days average attacker dwell time</div>
-                <div style={{ fontSize: '12px', color: '#6B7280', fontStyle: 'italic' }}>IBM Cost of a Data Breach Report</div>
+                <div style={{ fontSize: '32px', fontWeight: '700', color: '#FFFFFF', marginBottom: '8px' }}>48%</div>
+                <div style={{ fontSize: '14px', color: '#9CA3AF', marginBottom: '4px' }}>of financial breaches involved third-party vendors or partners</div>
+                <div style={{ fontSize: '12px', color: '#6B7280', fontStyle: 'italic' }}>Verizon DBIR 2024, Financial Services subset</div>
               </div>
               <div className="text-center">
-                <div style={{ fontSize: '32px', fontWeight: '700', color: '#FFFFFF', marginBottom: '8px' }}>30%</div>
-                <div style={{ fontSize: '14px', color: '#9CA3AF', marginBottom: '4px' }}>of breaches involve third-party access</div>
-                <div style={{ fontSize: '12px', color: '#6B7280', fontStyle: 'italic' }}>Verizon DBIR</div>
+                <div style={{ fontSize: '32px', fontWeight: '700', color: '#FFFFFF', marginBottom: '8px' }}>40%</div>
+                <div style={{ fontSize: '14px', color: '#9CA3AF', marginBottom: '4px' }}>of government breaches involved stolen or compromised credentials</div>
+                <div style={{ fontSize: '12px', color: '#6B7280', fontStyle: 'italic' }}>Verizon DBIR 2024, Public Sector subset</div>
               </div>
               <div className="text-center">
-                <div style={{ fontSize: '32px', fontWeight: '700', color: '#FFFFFF', marginBottom: '8px' }}>~20 min</div>
-                <div style={{ fontSize: '14px', color: '#9CA3AF', marginBottom: '4px' }}>to deploy Keystrike</div>
-                <div style={{ fontSize: '12px', color: '#6B7280', fontStyle: 'italic' }}>—</div>
+                <div style={{ fontSize: '32px', fontWeight: '700', color: '#FFFFFF', marginBottom: '8px' }}>65%</div>
+                <div style={{ fontSize: '14px', color: '#9CA3AF', marginBottom: '4px' }}>of OT environments have insecure remote access</div>
+                <div style={{ fontSize: '12px', color: '#6B7280', fontStyle: 'italic' }}>Dragos, 2024 OT Cybersecurity Year in Review</div>
               </div>
             </div>
           </div>
