@@ -912,26 +912,15 @@ export default function Platform() {
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-              <blockquote className="text-lg text-text-primary mb-6 italic">
-                "Keystrike ensures only our employees access our servers — not adversaries. The simplicity is what I love. No disruption to employees."
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-white p-10 rounded-lg shadow-sm border border-gray-200">
+              <blockquote className="text-lg text-text-primary mb-8 italic leading-relaxed">
+                "In critical infrastructure, protection across all layers of cyber defense is non-negotiable. Keystrike strengthens one of the earliest and most overlooked layers: verifying that the person behind a remote connection is genuinely the human authorized to be there. By inserting an additional control between multi-factor authentication and the first keystroke, it gives us another defensive barrier before any action can take place."
               </blockquote>
               <div className="text-text-secondary">
-                <div className="font-semibold">Heimir Kristjansson</div>
-                <div className="text-sm">Cyber Security Operations Manager, Amer Sports</div>
-                <div className="text-xs text-gray-400 mt-1">Sporting Goods / Enterprise</div>
-              </div>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-              <blockquote className="text-lg text-text-primary mb-6 italic">
-                "We deployed in about 20 minutes. The documentation was clear. It detects lurking attackers and blocks injected commands."
-              </blockquote>
-              <div className="text-text-secondary">
-                <div className="font-semibold">Steven Brill</div>
-                <div className="text-sm">VP of IT Operations and Security, Global Water Resources</div>
-                <div className="text-xs text-gray-400 mt-1">Critical Infrastructure / Water Utility</div>
+                <div className="font-semibold">Chief Information Security Officer</div>
+                <div className="text-sm">National Power Grid Operator</div>
+                <div className="text-xs text-gray-400 mt-1">Critical Infrastructure / Energy</div>
               </div>
             </div>
           </div>
