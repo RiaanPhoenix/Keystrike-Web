@@ -680,10 +680,17 @@ export default function ManufacturingPage() {
             <blockquote className="text-[17px] text-[#374151] italic leading-[1.8] mb-8">
               "In about 20 minutes, I had Keystrike up and running. The deployment is simple, well thought out, with clear documentation. Now Keystrike helps us establish that commands are genuine and trustworthy by detecting lurking attackers and blocking when they inject themselves into active sessions. With the combination of powerful technology and ease of deployment, I highly recommend Keystrike."
             </blockquote>
-            <div>
-              <div className="text-[15px] font-semibold text-[#0F1623]">Steven Brill</div>
-              <div className="text-[14px] text-[#6B7280]">VP of IT Operations and Security, Global Water Resources</div>
-              <div className="text-[12px] text-[#9CA3AF] mt-1">Critical Infrastructure / Water Utility</div>
+            <div className="flex items-center gap-6">
+              <img
+                src="/logos/gwr-logo.png"
+                alt="Global Water Resources"
+                className="h-10 w-auto object-contain"
+              />
+              <div>
+                <div className="text-[15px] font-semibold text-[#0F1623]">Steven Brill</div>
+                <div className="text-[14px] text-[#6B7280]">VP of IT Operations and Security, Global Water Resources</div>
+                <div className="text-[12px] text-[#9CA3AF] mt-1">Critical Infrastructure / Water Utility</div>
+              </div>
             </div>
           </div>
         </div>
