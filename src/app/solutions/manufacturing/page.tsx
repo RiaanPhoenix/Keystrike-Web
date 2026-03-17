@@ -667,7 +667,29 @@ export default function ManufacturingPage() {
         </div>
       </section>
 
-      {/* Section 7 - Closing CTA */}
+      {/* Section 7 - Customer Testimonial */}
+      <section className="bg-white py-20">
+        <div className="max-w-[800px] mx-auto px-4">
+          <div className="text-[11px] font-normal tracking-[0.10em] text-[#6B7280] uppercase mb-6 text-center">
+            CUSTOMER STORY
+          </div>
+          <div className="bg-[#F4F5F7] rounded-lg p-10 border border-[#E5E7EB]">
+            <p className="text-[15px] font-semibold text-[#0F1623] mb-6">
+              Global Water Resources Secures OT Without User Friction
+            </p>
+            <blockquote className="text-[17px] text-[#374151] italic leading-[1.8] mb-8">
+              "In about 20 minutes, I had Keystrike up and running. The deployment is simple, well thought out, with clear documentation. Now Keystrike helps us establish that commands are genuine and trustworthy by detecting lurking attackers and blocking when they inject themselves into active sessions. With the combination of powerful technology and ease of deployment, I highly recommend Keystrike."
+            </blockquote>
+            <div>
+              <div className="text-[15px] font-semibold text-[#0F1623]">Steven Brill</div>
+              <div className="text-[14px] text-[#6B7280]">VP of IT Operations and Security, Global Water Resources</div>
+              <div className="text-[12px] text-[#9CA3AF] mt-1">Critical Infrastructure / Water Utility</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 8 - Closing CTA */}
       <section className="bg-[#0D1B2A] py-20 text-center">
         <div className="max-w-[1100px] mx-auto px-4">
           {/* Eyebrow */}
